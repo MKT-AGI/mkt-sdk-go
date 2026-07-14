@@ -10,14 +10,12 @@ permissions:
 
 jobs:
   publish:
-    runs-on:
-  workflow_dispatch: ubuntu-latest
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-go@v5
         with:
-          go-version:
-  workflow_dispatch: "1.25"
+          go-version: "1.25"
       - run: go build ./...
       - name: Determine version
         run: |
@@ -31,7 +29,6 @@ jobs:
           echo "VERSION=${VERSION}" >> $GITHUB_ENV
       - name: Tag and Release
         run: |
-          [ -z "$VERSION" ] && echo "No version found" && exit 0
           git tag "v${VERSION}" 2>/dev/null || echo "Tag exists"
           git push --tags
           if [ -f CHANGELOG.md ]; then
