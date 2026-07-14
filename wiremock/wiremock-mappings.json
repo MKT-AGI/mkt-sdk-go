@@ -1,0 +1,4801 @@
+{
+  "mappings": [
+    {
+      "id": "7c47b22b-8896-4af9-9156-40766be6a51b",
+      "name": "List all bug reports - default",
+      "request": {
+        "urlPathTemplate": "/admin/bug-reports",
+        "method": "GET",
+        "headers": {
+          "Authorization": {
+            "matches": ".+"
+          }
+        }
+      },
+      "response": {
+        "status": 200,
+        "body": "{\n  \"code\": 1,\n  \"data\": [\n    {\n      \"client_timestamp\": 1,\n      \"created_at\": 1,\n      \"description\": \"description\",\n      \"domain_label\": \"domain_label\",\n      \"github_issue_number\": 1,\n      \"github_issue_url\": \"github_issue_url\",\n      \"id\": 1,\n      \"reporter_id\": 1,\n      \"reporter_name\": \"reporter_name\",\n      \"review_notes\": \"review_notes\",\n      \"reviewer_id\": 1,\n      \"status\": \"status\",\n      \"title\": \"title\",\n      \"updated_at\": 1,\n      \"url\": \"url\"\n    }\n  ],\n  \"limit\": 1,\n  \"message\": \"message\",\n  \"page\": 1,\n  \"total\": 1,\n  \"user_message\": \"user_message\"\n}",
+        "headers": {
+          "Content-Type": "application/json"
+        }
+      },
+      "uuid": "7c47b22b-8896-4af9-9156-40766be6a51b",
+      "persistent": true,
+      "priority": 3,
+      "metadata": {
+        "mocklab": {
+          "created": {
+            "at": "2020-01-01T00:00:00.000Z",
+            "via": "SYSTEM"
+          }
+        }
+      },
+      "postServeActions": []
+    },
+    {
+      "id": "0826e256-b60c-4fa0-9384-4cad7d9bcfe6",
+      "name": "Get bug report by ID - default",
+      "request": {
+        "urlPathTemplate": "/admin/bug-reports/{id}",
+        "method": "GET",
+        "headers": {
+          "Authorization": {
+            "matches": ".+"
+          }
+        },
+        "pathParameters": {
+          "id": {
+            "equalTo": "1"
+          }
+        }
+      },
+      "response": {
+        "status": 200,
+        "body": "{\n  \"code\": 1,\n  \"data\": {\n    \"client_timestamp\": 1,\n    \"created_at\": 1,\n    \"description\": \"description\",\n    \"domain_label\": \"domain_label\",\n    \"element\": {\n      \"classes\": [\n        \"classes\"\n      ],\n      \"computed_styles\": {\n        \"key\": \"value\"\n      },\n      \"id\": \"id\",\n      \"selector\": \"selector\",\n      \"tag_name\": \"tag_name\",\n      \"text_content\": \"text_content\"\n    },\n    \"github_issue_number\": 1,\n    \"github_issue_url\": \"github_issue_url\",\n    \"id\": 1,\n    \"reporter_id\": 1,\n    \"reporter_name\": \"reporter_name\",\n    \"review_notes\": \"review_notes\",\n    \"reviewer_id\": 1,\n    \"status\": \"status\",\n    \"title\": \"title\",\n    \"updated_at\": 1,\n    \"url\": \"url\",\n    \"viewport\": {\n      \"dpr\": 1.1,\n      \"height\": 1,\n      \"width\": 1\n    }\n  },\n  \"limit\": 1,\n  \"message\": \"message\",\n  \"page\": 1,\n  \"total\": 1,\n  \"user_message\": \"user_message\"\n}",
+        "headers": {
+          "Content-Type": "application/json"
+        }
+      },
+      "uuid": "0826e256-b60c-4fa0-9384-4cad7d9bcfe6",
+      "persistent": true,
+      "priority": 3,
+      "metadata": {
+        "mocklab": {
+          "created": {
+            "at": "2020-01-01T00:00:00.000Z",
+            "via": "SYSTEM"
+          }
+        }
+      }
+    },
+    {
+      "id": "a51155b7-d6f6-47e4-adc6-d3d66b7e6df7",
+      "name": "Update bug report - default",
+      "request": {
+        "urlPathTemplate": "/admin/bug-reports/{id}",
+        "method": "PATCH",
+        "headers": {
+          "Authorization": {
+            "matches": ".+"
+          }
+        },
+        "pathParameters": {
+          "id": {
+            "equalTo": "1"
+          }
+        }
+      },
+      "response": {
+        "status": 200,
+        "body": "{\n  \"code\": 1,\n  \"data\": {\n    \"client_timestamp\": 1,\n    \"created_at\": 1,\n    \"description\": \"description\",\n    \"domain_label\": \"domain_label\",\n    \"element\": {\n      \"classes\": [\n        \"classes\"\n      ],\n      \"computed_styles\": {\n        \"key\": \"value\"\n      },\n      \"id\": \"id\",\n      \"selector\": \"selector\",\n      \"tag_name\": \"tag_name\",\n      \"text_content\": \"text_content\"\n    },\n    \"github_issue_number\": 1,\n    \"github_issue_url\": \"github_issue_url\",\n    \"id\": 1,\n    \"reporter_id\": 1,\n    \"reporter_name\": \"reporter_name\",\n    \"review_notes\": \"review_notes\",\n    \"reviewer_id\": 1,\n    \"status\": \"status\",\n    \"title\": \"title\",\n    \"updated_at\": 1,\n    \"url\": \"url\",\n    \"viewport\": {\n      \"dpr\": 1.1,\n      \"height\": 1,\n      \"width\": 1\n    }\n  },\n  \"limit\": 1,\n  \"message\": \"message\",\n  \"page\": 1,\n  \"total\": 1,\n  \"user_message\": \"user_message\"\n}",
+        "headers": {
+          "Content-Type": "application/json"
+        }
+      },
+      "uuid": "a51155b7-d6f6-47e4-adc6-d3d66b7e6df7",
+      "persistent": true,
+      "priority": 3,
+      "metadata": {
+        "mocklab": {
+          "created": {
+            "at": "2020-01-01T00:00:00.000Z",
+            "via": "SYSTEM"
+          }
+        }
+      }
+    },
+    {
+      "id": "943a8ba2-c467-4b9b-893f-124abf8fdb0d",
+      "name": "Publish bug report to GitHub - default",
+      "request": {
+        "urlPathTemplate": "/admin/bug-reports/{id}/publish",
+        "method": "POST",
+        "headers": {
+          "Authorization": {
+            "matches": ".+"
+          }
+        },
+        "pathParameters": {
+          "id": {
+            "equalTo": "1"
+          }
+        }
+      },
+      "response": {
+        "status": 200,
+        "body": "\"\"",
+        "headers": {
+          "Content-Type": "application/json"
+        }
+      },
+      "uuid": "943a8ba2-c467-4b9b-893f-124abf8fdb0d",
+      "persistent": true,
+      "priority": 3,
+      "metadata": {
+        "mocklab": {
+          "created": {
+            "at": "2020-01-01T00:00:00.000Z",
+            "via": "SYSTEM"
+          }
+        }
+      }
+    },
+    {
+      "id": "acc91a7a-4168-46ef-8acc-be3f678477c0",
+      "name": "Submit bug report - default",
+      "request": {
+        "urlPathTemplate": "/bug-reports",
+        "method": "POST",
+        "headers": {
+          "Authorization": {
+            "matches": ".+"
+          }
+        }
+      },
+      "response": {
+        "status": 200,
+        "body": "\"\"",
+        "headers": {
+          "Content-Type": "application/json"
+        }
+      },
+      "uuid": "acc91a7a-4168-46ef-8acc-be3f678477c0",
+      "persistent": true,
+      "priority": 3,
+      "metadata": {
+        "mocklab": {
+          "created": {
+            "at": "2020-01-01T00:00:00.000Z",
+            "via": "SYSTEM"
+          }
+        }
+      }
+    },
+    {
+      "id": "cd6a4031-ad50-4256-a6a2-bff5920a1e02",
+      "name": "List my bug reports - default",
+      "request": {
+        "urlPathTemplate": "/bug-reports/mine",
+        "method": "GET",
+        "headers": {
+          "Authorization": {
+            "matches": ".+"
+          }
+        }
+      },
+      "response": {
+        "status": 200,
+        "body": "{\n  \"code\": 1,\n  \"data\": [\n    {\n      \"client_timestamp\": 1,\n      \"created_at\": 1,\n      \"description\": \"description\",\n      \"domain_label\": \"domain_label\",\n      \"github_issue_number\": 1,\n      \"github_issue_url\": \"github_issue_url\",\n      \"id\": 1,\n      \"reporter_id\": 1,\n      \"reporter_name\": \"reporter_name\",\n      \"review_notes\": \"review_notes\",\n      \"reviewer_id\": 1,\n      \"status\": \"status\",\n      \"title\": \"title\",\n      \"updated_at\": 1,\n      \"url\": \"url\"\n    }\n  ],\n  \"limit\": 1,\n  \"message\": \"message\",\n  \"page\": 1,\n  \"total\": 1,\n  \"user_message\": \"user_message\"\n}",
+        "headers": {
+          "Content-Type": "application/json"
+        }
+      },
+      "uuid": "cd6a4031-ad50-4256-a6a2-bff5920a1e02",
+      "persistent": true,
+      "priority": 3,
+      "metadata": {
+        "mocklab": {
+          "created": {
+            "at": "2020-01-01T00:00:00.000Z",
+            "via": "SYSTEM"
+          }
+        }
+      },
+      "postServeActions": []
+    },
+    {
+      "id": "5f42705f-6b00-40be-9fe0-e9aaaa567ae9",
+      "name": "List all bulletins (admin) - default",
+      "request": {
+        "urlPathTemplate": "/admin/bulletins",
+        "method": "GET"
+      },
+      "response": {
+        "status": 200,
+        "body": "{\n  \"code\": 1,\n  \"data\": [\n    {\n      \"body\": \"body\",\n      \"category\": \"category\",\n      \"created_at\": 1,\n      \"created_by\": 1,\n      \"expires_at\": 1,\n      \"id\": 1,\n      \"parent_id\": 1,\n      \"published_at\": 1,\n      \"section\": \"section\",\n      \"sort_order\": 1,\n      \"status\": \"status\",\n      \"summary\": \"summary\",\n      \"title\": \"title\",\n      \"type\": \"type\",\n      \"updated_at\": 1,\n      \"updated_by\": 1,\n      \"version\": \"version\"\n    }\n  ],\n  \"limit\": 1,\n  \"message\": \"message\",\n  \"page\": 1,\n  \"total\": 1,\n  \"user_message\": \"user_message\"\n}",
+        "headers": {
+          "Content-Type": "application/json"
+        }
+      },
+      "uuid": "5f42705f-6b00-40be-9fe0-e9aaaa567ae9",
+      "persistent": true,
+      "priority": 3,
+      "metadata": {
+        "mocklab": {
+          "created": {
+            "at": "2020-01-01T00:00:00.000Z",
+            "via": "SYSTEM"
+          }
+        }
+      },
+      "postServeActions": []
+    },
+    {
+      "id": "b5c60ada-19c2-4b42-8552-3cd6aa7ee224",
+      "name": "Create a new bulletin - default",
+      "request": {
+        "urlPathTemplate": "/admin/bulletins",
+        "method": "POST"
+      },
+      "response": {
+        "status": 200,
+        "body": "{\n  \"code\": 1,\n  \"data\": {\n    \"body\": \"body\",\n    \"category\": \"category\",\n    \"created_at\": 1,\n    \"created_by\": 1,\n    \"expires_at\": 1,\n    \"id\": 1,\n    \"parent_id\": 1,\n    \"published_at\": 1,\n    \"section\": \"section\",\n    \"sort_order\": 1,\n    \"status\": \"status\",\n    \"summary\": \"summary\",\n    \"title\": \"title\",\n    \"type\": \"type\",\n    \"updated_at\": 1,\n    \"updated_by\": 1,\n    \"version\": \"version\"\n  },\n  \"limit\": 1,\n  \"message\": \"message\",\n  \"page\": 1,\n  \"total\": 1,\n  \"user_message\": \"user_message\"\n}",
+        "headers": {
+          "Content-Type": "application/json"
+        }
+      },
+      "uuid": "b5c60ada-19c2-4b42-8552-3cd6aa7ee224",
+      "persistent": true,
+      "priority": 3,
+      "metadata": {
+        "mocklab": {
+          "created": {
+            "at": "2020-01-01T00:00:00.000Z",
+            "via": "SYSTEM"
+          }
+        }
+      }
+    },
+    {
+      "id": "bbf2b491-1427-422e-9be0-e0e66b027a5a",
+      "name": "Get bulletin by ID (admin) - default",
+      "request": {
+        "urlPathTemplate": "/admin/bulletins/{id}",
+        "method": "GET",
+        "pathParameters": {
+          "id": {
+            "equalTo": "1"
+          }
+        }
+      },
+      "response": {
+        "status": 200,
+        "body": "{\n  \"code\": 1,\n  \"data\": {\n    \"body\": \"body\",\n    \"category\": \"category\",\n    \"created_at\": 1,\n    \"created_by\": 1,\n    \"expires_at\": 1,\n    \"id\": 1,\n    \"parent_id\": 1,\n    \"published_at\": 1,\n    \"section\": \"section\",\n    \"sort_order\": 1,\n    \"status\": \"status\",\n    \"summary\": \"summary\",\n    \"title\": \"title\",\n    \"type\": \"type\",\n    \"updated_at\": 1,\n    \"updated_by\": 1,\n    \"version\": \"version\"\n  },\n  \"limit\": 1,\n  \"message\": \"message\",\n  \"page\": 1,\n  \"total\": 1,\n  \"user_message\": \"user_message\"\n}",
+        "headers": {
+          "Content-Type": "application/json"
+        }
+      },
+      "uuid": "bbf2b491-1427-422e-9be0-e0e66b027a5a",
+      "persistent": true,
+      "priority": 3,
+      "metadata": {
+        "mocklab": {
+          "created": {
+            "at": "2020-01-01T00:00:00.000Z",
+            "via": "SYSTEM"
+          }
+        }
+      }
+    },
+    {
+      "id": "bb636b42-1d10-48f4-92c7-7dae6cff715e",
+      "name": "Update a bulletin - default",
+      "request": {
+        "urlPathTemplate": "/admin/bulletins/{id}",
+        "method": "PUT",
+        "pathParameters": {
+          "id": {
+            "equalTo": "1"
+          }
+        }
+      },
+      "response": {
+        "status": 200,
+        "body": "{\n  \"code\": 1,\n  \"data\": {\n    \"body\": \"body\",\n    \"category\": \"category\",\n    \"created_at\": 1,\n    \"created_by\": 1,\n    \"expires_at\": 1,\n    \"id\": 1,\n    \"parent_id\": 1,\n    \"published_at\": 1,\n    \"section\": \"section\",\n    \"sort_order\": 1,\n    \"status\": \"status\",\n    \"summary\": \"summary\",\n    \"title\": \"title\",\n    \"type\": \"type\",\n    \"updated_at\": 1,\n    \"updated_by\": 1,\n    \"version\": \"version\"\n  },\n  \"limit\": 1,\n  \"message\": \"message\",\n  \"page\": 1,\n  \"total\": 1,\n  \"user_message\": \"user_message\"\n}",
+        "headers": {
+          "Content-Type": "application/json"
+        }
+      },
+      "uuid": "bb636b42-1d10-48f4-92c7-7dae6cff715e",
+      "persistent": true,
+      "priority": 3,
+      "metadata": {
+        "mocklab": {
+          "created": {
+            "at": "2020-01-01T00:00:00.000Z",
+            "via": "SYSTEM"
+          }
+        }
+      }
+    },
+    {
+      "id": "504c3518-59a1-4e10-ab7a-13251d886645",
+      "name": "Delete a bulletin - default",
+      "request": {
+        "urlPathTemplate": "/admin/bulletins/{id}",
+        "method": "DELETE",
+        "pathParameters": {
+          "id": {
+            "equalTo": "1"
+          }
+        }
+      },
+      "response": {
+        "status": 200,
+        "body": "\"\"",
+        "headers": {
+          "Content-Type": "application/json"
+        }
+      },
+      "uuid": "504c3518-59a1-4e10-ab7a-13251d886645",
+      "persistent": true,
+      "priority": 3,
+      "metadata": {
+        "mocklab": {
+          "created": {
+            "at": "2020-01-01T00:00:00.000Z",
+            "via": "SYSTEM"
+          }
+        }
+      }
+    },
+    {
+      "id": "7db49036-f50d-4e2c-b8cb-33f1f95f423c",
+      "name": "Archive a bulletin - default",
+      "request": {
+        "urlPathTemplate": "/admin/bulletins/{id}/archive",
+        "method": "POST",
+        "pathParameters": {
+          "id": {
+            "equalTo": "1"
+          }
+        }
+      },
+      "response": {
+        "status": 200,
+        "body": "\"\"",
+        "headers": {
+          "Content-Type": "application/json"
+        }
+      },
+      "uuid": "7db49036-f50d-4e2c-b8cb-33f1f95f423c",
+      "persistent": true,
+      "priority": 3,
+      "metadata": {
+        "mocklab": {
+          "created": {
+            "at": "2020-01-01T00:00:00.000Z",
+            "via": "SYSTEM"
+          }
+        }
+      }
+    },
+    {
+      "id": "eb0ffd5f-e1fe-4683-aa17-7c0a2d5638bf",
+      "name": "Publish a bulletin - default",
+      "request": {
+        "urlPathTemplate": "/admin/bulletins/{id}/publish",
+        "method": "POST",
+        "pathParameters": {
+          "id": {
+            "equalTo": "1"
+          }
+        }
+      },
+      "response": {
+        "status": 200,
+        "body": "\"\"",
+        "headers": {
+          "Content-Type": "application/json"
+        }
+      },
+      "uuid": "eb0ffd5f-e1fe-4683-aa17-7c0a2d5638bf",
+      "persistent": true,
+      "priority": 3,
+      "metadata": {
+        "mocklab": {
+          "created": {
+            "at": "2020-01-01T00:00:00.000Z",
+            "via": "SYSTEM"
+          }
+        }
+      }
+    },
+    {
+      "id": "600066fe-b7fe-4b07-afd6-c82807da89d9",
+      "name": "List files in directory - default",
+      "request": {
+        "urlPathTemplate": "/admin/files",
+        "method": "GET",
+        "headers": {
+          "Authorization": {
+            "matches": ".+"
+          }
+        }
+      },
+      "response": {
+        "status": 200,
+        "body": "{\n  \"code\": 1,\n  \"data\": [\n    {\n      \"biz_id\": \"biz_id\",\n      \"created_at\": 1,\n      \"etag\": \"etag\",\n      \"id\": 1,\n      \"mime_type\": \"mime_type\",\n      \"name\": \"name\",\n      \"path\": \"path\",\n      \"size\": 1,\n      \"updated_at\": 1,\n      \"user_id\": 1,\n      \"visibility\": \"visibility\"\n    }\n  ],\n  \"limit\": 1,\n  \"message\": \"message\",\n  \"page\": 1,\n  \"total\": 1,\n  \"user_message\": \"user_message\"\n}",
+        "headers": {
+          "Content-Type": "application/json"
+        }
+      },
+      "uuid": "600066fe-b7fe-4b07-afd6-c82807da89d9",
+      "persistent": true,
+      "priority": 3,
+      "metadata": {
+        "mocklab": {
+          "created": {
+            "at": "2020-01-01T00:00:00.000Z",
+            "via": "SYSTEM"
+          }
+        }
+      },
+      "postServeActions": []
+    },
+    {
+      "id": "e5652107-be68-4452-8e09-a1364bea3f97",
+      "name": "Get file - default",
+      "request": {
+        "urlPathTemplate": "/admin/files/{id}",
+        "method": "GET",
+        "headers": {
+          "Authorization": {
+            "matches": ".+"
+          }
+        },
+        "pathParameters": {
+          "id": {
+            "equalTo": "1"
+          }
+        }
+      },
+      "response": {
+        "status": 200,
+        "body": "{\n  \"code\": 1,\n  \"data\": {\n    \"biz_id\": \"biz_id\",\n    \"created_at\": 1,\n    \"etag\": \"etag\",\n    \"id\": 1,\n    \"mime_type\": \"mime_type\",\n    \"name\": \"name\",\n    \"path\": \"path\",\n    \"size\": 1,\n    \"updated_at\": 1,\n    \"user_id\": 1,\n    \"visibility\": \"visibility\"\n  },\n  \"limit\": 1,\n  \"message\": \"message\",\n  \"page\": 1,\n  \"total\": 1,\n  \"user_message\": \"user_message\"\n}",
+        "headers": {
+          "Content-Type": "application/json"
+        }
+      },
+      "uuid": "e5652107-be68-4452-8e09-a1364bea3f97",
+      "persistent": true,
+      "priority": 3,
+      "metadata": {
+        "mocklab": {
+          "created": {
+            "at": "2020-01-01T00:00:00.000Z",
+            "via": "SYSTEM"
+          }
+        }
+      }
+    },
+    {
+      "id": "7774cd91-f6a1-40c1-a7e9-8f8d71dad063",
+      "name": "Delete file - default",
+      "request": {
+        "urlPathTemplate": "/admin/files/{id}",
+        "method": "DELETE",
+        "headers": {
+          "Authorization": {
+            "matches": ".+"
+          }
+        },
+        "pathParameters": {
+          "id": {
+            "equalTo": "1"
+          }
+        }
+      },
+      "response": {
+        "status": 200,
+        "body": "{\n  \"code\": 1,\n  \"data\": {\n    \"deleted\": true\n  },\n  \"limit\": 1,\n  \"message\": \"message\",\n  \"page\": 1,\n  \"total\": 1,\n  \"user_message\": \"user_message\"\n}",
+        "headers": {
+          "Content-Type": "application/json"
+        }
+      },
+      "uuid": "7774cd91-f6a1-40c1-a7e9-8f8d71dad063",
+      "persistent": true,
+      "priority": 3,
+      "metadata": {
+        "mocklab": {
+          "created": {
+            "at": "2020-01-01T00:00:00.000Z",
+            "via": "SYSTEM"
+          }
+        }
+      }
+    },
+    {
+      "id": "db93a194-beca-4b39-8f84-520d2508f1e5",
+      "name": "Update file - default",
+      "request": {
+        "urlPathTemplate": "/admin/files/{id}",
+        "method": "PATCH",
+        "headers": {
+          "Authorization": {
+            "matches": ".+"
+          }
+        },
+        "pathParameters": {
+          "id": {
+            "equalTo": "1"
+          }
+        }
+      },
+      "response": {
+        "status": 200,
+        "body": "{\n  \"code\": 1,\n  \"data\": {\n    \"biz_id\": \"biz_id\",\n    \"created_at\": 1,\n    \"etag\": \"etag\",\n    \"id\": 1,\n    \"mime_type\": \"mime_type\",\n    \"name\": \"name\",\n    \"path\": \"path\",\n    \"size\": 1,\n    \"updated_at\": 1,\n    \"user_id\": 1,\n    \"visibility\": \"visibility\"\n  },\n  \"limit\": 1,\n  \"message\": \"message\",\n  \"page\": 1,\n  \"total\": 1,\n  \"user_message\": \"user_message\"\n}",
+        "headers": {
+          "Content-Type": "application/json"
+        }
+      },
+      "uuid": "db93a194-beca-4b39-8f84-520d2508f1e5",
+      "persistent": true,
+      "priority": 3,
+      "metadata": {
+        "mocklab": {
+          "created": {
+            "at": "2020-01-01T00:00:00.000Z",
+            "via": "SYSTEM"
+          }
+        }
+      }
+    },
+    {
+      "id": "f7bcbb9b-df70-4046-8463-1f6e09b66eee",
+      "name": "Get download URL - default",
+      "request": {
+        "urlPathTemplate": "/admin/files/{id}/download",
+        "method": "GET",
+        "headers": {
+          "Authorization": {
+            "matches": ".+"
+          }
+        },
+        "pathParameters": {
+          "id": {
+            "equalTo": "1"
+          }
+        }
+      },
+      "response": {
+        "status": 200,
+        "body": "{\n  \"code\": 1,\n  \"data\": {\n    \"url\": \"url\"\n  },\n  \"limit\": 1,\n  \"message\": \"message\",\n  \"page\": 1,\n  \"total\": 1,\n  \"user_message\": \"user_message\"\n}",
+        "headers": {
+          "Content-Type": "application/json"
+        }
+      },
+      "uuid": "f7bcbb9b-df70-4046-8463-1f6e09b66eee",
+      "persistent": true,
+      "priority": 3,
+      "metadata": {
+        "mocklab": {
+          "created": {
+            "at": "2020-01-01T00:00:00.000Z",
+            "via": "SYSTEM"
+          }
+        }
+      }
+    },
+    {
+      "id": "91e0b77d-21bb-47c1-b085-066f64839bf2",
+      "name": "Ingest file from URL - default",
+      "request": {
+        "urlPathTemplate": "/admin/files/ingest-url",
+        "method": "POST",
+        "headers": {
+          "Authorization": {
+            "matches": ".+"
+          }
+        }
+      },
+      "response": {
+        "status": 201,
+        "body": "{\n  \"code\": 1,\n  \"data\": {\n    \"biz_id\": \"biz_id\",\n    \"created_at\": 1,\n    \"etag\": \"etag\",\n    \"id\": 1,\n    \"mime_type\": \"mime_type\",\n    \"name\": \"name\",\n    \"path\": \"path\",\n    \"size\": 1,\n    \"updated_at\": 1,\n    \"user_id\": 1,\n    \"visibility\": \"visibility\"\n  },\n  \"limit\": 1,\n  \"message\": \"message\",\n  \"page\": 1,\n  \"total\": 1,\n  \"user_message\": \"user_message\"\n}",
+        "headers": {
+          "Content-Type": "application/json"
+        }
+      },
+      "uuid": "91e0b77d-21bb-47c1-b085-066f64839bf2",
+      "persistent": true,
+      "priority": 3,
+      "metadata": {
+        "mocklab": {
+          "created": {
+            "at": "2020-01-01T00:00:00.000Z",
+            "via": "SYSTEM"
+          }
+        }
+      }
+    },
+    {
+      "id": "d538a861-0761-41c7-80f2-16c7bd62544b",
+      "name": "Top resources ranking (admin) - default",
+      "request": {
+        "urlPathTemplate": "/admin/marketplace/top-resources",
+        "method": "GET",
+        "headers": {
+          "Authorization": {
+            "matches": ".+"
+          }
+        }
+      },
+      "response": {
+        "status": 200,
+        "body": "{\n  \"code\": 1,\n  \"data\": {\n    \"data\": [\n      {}\n    ],\n    \"object\": \"object\"\n  },\n  \"limit\": 1,\n  \"message\": \"message\",\n  \"page\": 1,\n  \"total\": 1,\n  \"user_message\": \"user_message\"\n}",
+        "headers": {
+          "Content-Type": "application/json"
+        }
+      },
+      "uuid": "d538a861-0761-41c7-80f2-16c7bd62544b",
+      "persistent": true,
+      "priority": 3,
+      "metadata": {
+        "mocklab": {
+          "created": {
+            "at": "2020-01-01T00:00:00.000Z",
+            "via": "SYSTEM"
+          }
+        }
+      },
+      "postServeActions": []
+    },
+    {
+      "id": "09203980-f6b8-49ea-94b9-eec538a113c2",
+      "name": "Marketplace fee revenue summary - default",
+      "request": {
+        "urlPathTemplate": "/admin/revenue/fees",
+        "method": "GET",
+        "headers": {
+          "Authorization": {
+            "matches": ".+"
+          }
+        }
+      },
+      "response": {
+        "status": 200,
+        "body": "{\n  \"code\": 1,\n  \"data\": {\n    \"by_resource_type\": [\n      {}\n    ],\n    \"by_seller\": [\n      {}\n    ],\n    \"period\": \"period\",\n    \"total_fee\": 1.1\n  },\n  \"limit\": 1,\n  \"message\": \"message\",\n  \"page\": 1,\n  \"total\": 1,\n  \"user_message\": \"user_message\"\n}",
+        "headers": {
+          "Content-Type": "application/json"
+        }
+      },
+      "uuid": "09203980-f6b8-49ea-94b9-eec538a113c2",
+      "persistent": true,
+      "priority": 3,
+      "metadata": {
+        "mocklab": {
+          "created": {
+            "at": "2020-01-01T00:00:00.000Z",
+            "via": "SYSTEM"
+          }
+        }
+      },
+      "postServeActions": []
+    },
+    {
+      "id": "8b6fdf53-dd69-4e5f-8885-3b16537eb603",
+      "name": "列出所有系统配置项 - default",
+      "request": {
+        "urlPathTemplate": "/admin/sys-config",
+        "method": "GET",
+        "headers": {
+          "Authorization": {
+            "matches": ".+"
+          }
+        }
+      },
+      "response": {
+        "status": 200,
+        "body": "{\n  \"code\": 1,\n  \"data\": {\n    \"key\": \"value\"\n  },\n  \"limit\": 1,\n  \"message\": \"message\",\n  \"page\": 1,\n  \"total\": 1,\n  \"user_message\": \"user_message\"\n}",
+        "headers": {
+          "Content-Type": "application/json"
+        }
+      },
+      "uuid": "8b6fdf53-dd69-4e5f-8885-3b16537eb603",
+      "persistent": true,
+      "priority": 3,
+      "metadata": {
+        "mocklab": {
+          "created": {
+            "at": "2020-01-01T00:00:00.000Z",
+            "via": "SYSTEM"
+          }
+        }
+      },
+      "postServeActions": []
+    },
+    {
+      "id": "d672233c-324f-4ac4-9814-07cd35792c9f",
+      "name": "更新系统配置项 - default",
+      "request": {
+        "urlPathTemplate": "/admin/sys-config/{key}",
+        "method": "PUT",
+        "headers": {
+          "Authorization": {
+            "matches": ".+"
+          }
+        },
+        "pathParameters": {
+          "key": {
+            "equalTo": "key"
+          }
+        }
+      },
+      "response": {
+        "status": 200,
+        "body": "{\n  \"code\": 1,\n  \"data\": {\n    \"key\": \"value\"\n  },\n  \"limit\": 1,\n  \"message\": \"message\",\n  \"page\": 1,\n  \"total\": 1,\n  \"user_message\": \"user_message\"\n}",
+        "headers": {
+          "Content-Type": "application/json"
+        }
+      },
+      "uuid": "d672233c-324f-4ac4-9814-07cd35792c9f",
+      "persistent": true,
+      "priority": 3,
+      "metadata": {
+        "mocklab": {
+          "created": {
+            "at": "2020-01-01T00:00:00.000Z",
+            "via": "SYSTEM"
+          }
+        }
+      }
+    },
+    {
+      "id": "8d3d702d-a746-4913-9557-37d6789d34cc",
+      "name": "重载系统配置缓存 - default",
+      "request": {
+        "urlPathTemplate": "/admin/sys-config/{key}/reload",
+        "method": "POST",
+        "headers": {
+          "Authorization": {
+            "matches": ".+"
+          }
+        },
+        "pathParameters": {
+          "key": {
+            "equalTo": "key"
+          }
+        }
+      },
+      "response": {
+        "status": 200,
+        "body": "{\n  \"code\": 1,\n  \"data\": {\n    \"key\": \"value\"\n  },\n  \"limit\": 1,\n  \"message\": \"message\",\n  \"page\": 1,\n  \"total\": 1,\n  \"user_message\": \"user_message\"\n}",
+        "headers": {
+          "Content-Type": "application/json"
+        }
+      },
+      "uuid": "8d3d702d-a746-4913-9557-37d6789d34cc",
+      "persistent": true,
+      "priority": 3,
+      "metadata": {
+        "mocklab": {
+          "created": {
+            "at": "2020-01-01T00:00:00.000Z",
+            "via": "SYSTEM"
+          }
+        }
+      }
+    },
+    {
+      "id": "d2a6b5b0-2738-49ef-9747-18b8cf57d27f",
+      "name": "List comments (admin) - default",
+      "request": {
+        "urlPathTemplate": "/api/v1/admin/comments",
+        "method": "GET",
+        "headers": {
+          "Authorization": {
+            "matches": ".+"
+          }
+        },
+        "queryParameters": {
+          "target_type": {
+            "equalTo": "target_type"
+          }
+        }
+      },
+      "response": {
+        "status": 200,
+        "body": "{\n  \"code\": 1,\n  \"data\": {\n    \"data\": [\n      {}\n    ],\n    \"next_cursor\": 1\n  },\n  \"limit\": 1,\n  \"message\": \"message\",\n  \"page\": 1,\n  \"total\": 1,\n  \"user_message\": \"user_message\"\n}",
+        "headers": {
+          "Content-Type": "application/json"
+        }
+      },
+      "uuid": "d2a6b5b0-2738-49ef-9747-18b8cf57d27f",
+      "persistent": true,
+      "priority": 3,
+      "metadata": {
+        "mocklab": {
+          "created": {
+            "at": "2020-01-01T00:00:00.000Z",
+            "via": "SYSTEM"
+          }
+        }
+      },
+      "postServeActions": []
+    },
+    {
+      "id": "cbab25db-8422-4102-9e03-27e35cc24372",
+      "name": "List comments - default",
+      "request": {
+        "urlPathTemplate": "/api/v1/comments",
+        "method": "GET",
+        "queryParameters": {
+          "target_type": {
+            "equalTo": "target_type"
+          },
+          "target_id": {
+            "equalTo": "1"
+          }
+        }
+      },
+      "response": {
+        "status": 200,
+        "body": "{\n  \"code\": 1,\n  \"data\": {\n    \"data\": [\n      {}\n    ],\n    \"next_cursor\": 1\n  },\n  \"limit\": 1,\n  \"message\": \"message\",\n  \"page\": 1,\n  \"total\": 1,\n  \"user_message\": \"user_message\"\n}",
+        "headers": {
+          "Content-Type": "application/json"
+        }
+      },
+      "uuid": "cbab25db-8422-4102-9e03-27e35cc24372",
+      "persistent": true,
+      "priority": 3,
+      "metadata": {
+        "mocklab": {
+          "created": {
+            "at": "2020-01-01T00:00:00.000Z",
+            "via": "SYSTEM"
+          }
+        }
+      },
+      "postServeActions": []
+    },
+    {
+      "id": "cf389214-3a5f-428d-9120-de8272e056b1",
+      "name": "Create comment - default",
+      "request": {
+        "urlPathTemplate": "/api/v1/comments",
+        "method": "POST",
+        "headers": {
+          "Authorization": {
+            "matches": ".+"
+          }
+        }
+      },
+      "response": {
+        "status": 201,
+        "body": "{\n  \"code\": 1,\n  \"data\": {\n    \"body\": \"body\",\n    \"created_at\": 1,\n    \"id\": 1,\n    \"parent_id\": 1,\n    \"status\": \"status\",\n    \"target_id\": 1,\n    \"target_type\": \"target_type\",\n    \"updated_at\": 1,\n    \"user_id\": 1\n  },\n  \"limit\": 1,\n  \"message\": \"message\",\n  \"page\": 1,\n  \"total\": 1,\n  \"user_message\": \"user_message\"\n}",
+        "headers": {
+          "Content-Type": "application/json"
+        }
+      },
+      "uuid": "cf389214-3a5f-428d-9120-de8272e056b1",
+      "persistent": true,
+      "priority": 3,
+      "metadata": {
+        "mocklab": {
+          "created": {
+            "at": "2020-01-01T00:00:00.000Z",
+            "via": "SYSTEM"
+          }
+        }
+      }
+    },
+    {
+      "id": "2e2a12d8-a363-4d5c-a924-da4c93431a50",
+      "name": "Update comment - default",
+      "request": {
+        "urlPathTemplate": "/api/v1/comments/{id}",
+        "method": "PUT",
+        "headers": {
+          "Authorization": {
+            "matches": ".+"
+          }
+        },
+        "pathParameters": {
+          "id": {
+            "equalTo": "1"
+          }
+        }
+      },
+      "response": {
+        "status": 200,
+        "body": "{\n  \"code\": 1,\n  \"data\": {\n    \"body\": \"body\",\n    \"created_at\": 1,\n    \"id\": 1,\n    \"parent_id\": 1,\n    \"status\": \"status\",\n    \"target_id\": 1,\n    \"target_type\": \"target_type\",\n    \"updated_at\": 1,\n    \"user_id\": 1\n  },\n  \"limit\": 1,\n  \"message\": \"message\",\n  \"page\": 1,\n  \"total\": 1,\n  \"user_message\": \"user_message\"\n}",
+        "headers": {
+          "Content-Type": "application/json"
+        }
+      },
+      "uuid": "2e2a12d8-a363-4d5c-a924-da4c93431a50",
+      "persistent": true,
+      "priority": 3,
+      "metadata": {
+        "mocklab": {
+          "created": {
+            "at": "2020-01-01T00:00:00.000Z",
+            "via": "SYSTEM"
+          }
+        }
+      }
+    },
+    {
+      "id": "93ac2aae-e162-4ee8-b613-e9aa4e16ba5c",
+      "name": "Delete comment - default",
+      "request": {
+        "urlPathTemplate": "/api/v1/comments/{id}",
+        "method": "DELETE",
+        "headers": {
+          "Authorization": {
+            "matches": ".+"
+          }
+        },
+        "pathParameters": {
+          "id": {
+            "equalTo": "1"
+          }
+        }
+      },
+      "response": {
+        "status": 200,
+        "body": "{\n  \"code\": 1,\n  \"data\": {\n    \"key\": \"value\"\n  },\n  \"limit\": 1,\n  \"message\": \"message\",\n  \"page\": 1,\n  \"total\": 1,\n  \"user_message\": \"user_message\"\n}",
+        "headers": {
+          "Content-Type": "application/json"
+        }
+      },
+      "uuid": "93ac2aae-e162-4ee8-b613-e9aa4e16ba5c",
+      "persistent": true,
+      "priority": 3,
+      "metadata": {
+        "mocklab": {
+          "created": {
+            "at": "2020-01-01T00:00:00.000Z",
+            "via": "SYSTEM"
+          }
+        }
+      }
+    },
+    {
+      "id": "bc982989-2dd6-40a3-ab87-2f6b1b881edd",
+      "name": "Admin send notification - default",
+      "request": {
+        "urlPathTemplate": "/api/v1/admin/notifications",
+        "method": "POST",
+        "headers": {
+          "Authorization": {
+            "matches": ".+"
+          }
+        }
+      },
+      "response": {
+        "status": 200,
+        "body": "\"\"",
+        "headers": {
+          "Content-Type": "application/json"
+        }
+      },
+      "uuid": "bc982989-2dd6-40a3-ab87-2f6b1b881edd",
+      "persistent": true,
+      "priority": 3,
+      "metadata": {
+        "mocklab": {
+          "created": {
+            "at": "2020-01-01T00:00:00.000Z",
+            "via": "SYSTEM"
+          }
+        }
+      }
+    },
+    {
+      "id": "318b48bf-5ee8-41c4-8292-97440c709cb8",
+      "name": "List notifications - default",
+      "request": {
+        "urlPathTemplate": "/api/v1/notifications",
+        "method": "GET",
+        "headers": {
+          "Authorization": {
+            "matches": ".+"
+          }
+        }
+      },
+      "response": {
+        "status": 200,
+        "body": "\"\"",
+        "headers": {
+          "Content-Type": "application/json"
+        }
+      },
+      "uuid": "318b48bf-5ee8-41c4-8292-97440c709cb8",
+      "persistent": true,
+      "priority": 3,
+      "metadata": {
+        "mocklab": {
+          "created": {
+            "at": "2020-01-01T00:00:00.000Z",
+            "via": "SYSTEM"
+          }
+        }
+      },
+      "postServeActions": []
+    },
+    {
+      "id": "e55ed8d1-29f8-4a5b-b204-33c94c71498a",
+      "name": "Mark notification as read - default",
+      "request": {
+        "urlPathTemplate": "/api/v1/notifications/{id}/read",
+        "method": "POST",
+        "headers": {
+          "Authorization": {
+            "matches": ".+"
+          }
+        },
+        "pathParameters": {
+          "id": {
+            "equalTo": "1"
+          }
+        }
+      },
+      "response": {
+        "status": 200,
+        "body": "\"\"",
+        "headers": {
+          "Content-Type": "application/json"
+        }
+      },
+      "uuid": "e55ed8d1-29f8-4a5b-b204-33c94c71498a",
+      "persistent": true,
+      "priority": 3,
+      "metadata": {
+        "mocklab": {
+          "created": {
+            "at": "2020-01-01T00:00:00.000Z",
+            "via": "SYSTEM"
+          }
+        }
+      }
+    },
+    {
+      "id": "28e5eead-07b2-48a1-85f8-224e9951ccd1",
+      "name": "List preferences - default",
+      "request": {
+        "urlPathTemplate": "/api/v1/notifications/preferences",
+        "method": "GET",
+        "headers": {
+          "Authorization": {
+            "matches": ".+"
+          }
+        }
+      },
+      "response": {
+        "status": 200,
+        "body": "\"\"",
+        "headers": {
+          "Content-Type": "application/json"
+        }
+      },
+      "uuid": "28e5eead-07b2-48a1-85f8-224e9951ccd1",
+      "persistent": true,
+      "priority": 3,
+      "metadata": {
+        "mocklab": {
+          "created": {
+            "at": "2020-01-01T00:00:00.000Z",
+            "via": "SYSTEM"
+          }
+        }
+      },
+      "postServeActions": []
+    },
+    {
+      "id": "16725d60-8387-46d2-84b1-7a3cb2723719",
+      "name": "Set preference - default",
+      "request": {
+        "urlPathTemplate": "/api/v1/notifications/preferences",
+        "method": "PUT",
+        "headers": {
+          "Authorization": {
+            "matches": ".+"
+          }
+        }
+      },
+      "response": {
+        "status": 200,
+        "body": "\"\"",
+        "headers": {
+          "Content-Type": "application/json"
+        }
+      },
+      "uuid": "16725d60-8387-46d2-84b1-7a3cb2723719",
+      "persistent": true,
+      "priority": 3,
+      "metadata": {
+        "mocklab": {
+          "created": {
+            "at": "2020-01-01T00:00:00.000Z",
+            "via": "SYSTEM"
+          }
+        }
+      }
+    },
+    {
+      "id": "40b5c68b-62bd-4904-9746-62dad5e4f854",
+      "name": "Mark all as read - default",
+      "request": {
+        "urlPathTemplate": "/api/v1/notifications/read-all",
+        "method": "POST",
+        "headers": {
+          "Authorization": {
+            "matches": ".+"
+          }
+        }
+      },
+      "response": {
+        "status": 200,
+        "body": "\"\"",
+        "headers": {
+          "Content-Type": "application/json"
+        }
+      },
+      "uuid": "40b5c68b-62bd-4904-9746-62dad5e4f854",
+      "persistent": true,
+      "priority": 3,
+      "metadata": {
+        "mocklab": {
+          "created": {
+            "at": "2020-01-01T00:00:00.000Z",
+            "via": "SYSTEM"
+          }
+        }
+      }
+    },
+    {
+      "id": "98394060-19d7-4800-ba61-dd90b72c5ae3",
+      "name": "Get unread count - default",
+      "request": {
+        "urlPathTemplate": "/api/v1/notifications/unread-count",
+        "method": "GET",
+        "headers": {
+          "Authorization": {
+            "matches": ".+"
+          }
+        }
+      },
+      "response": {
+        "status": 200,
+        "body": "\"\"",
+        "headers": {
+          "Content-Type": "application/json"
+        }
+      },
+      "uuid": "98394060-19d7-4800-ba61-dd90b72c5ae3",
+      "persistent": true,
+      "priority": 3,
+      "metadata": {
+        "mocklab": {
+          "created": {
+            "at": "2020-01-01T00:00:00.000Z",
+            "via": "SYSTEM"
+          }
+        }
+      },
+      "postServeActions": []
+    },
+    {
+      "id": "3b73893f-abc0-4a7a-8e94-87b29b1eaab5",
+      "name": "List payment orders - default",
+      "request": {
+        "urlPathTemplate": "/api/v1/payment/orders",
+        "method": "GET",
+        "headers": {
+          "Authorization": {
+            "matches": ".+"
+          }
+        }
+      },
+      "response": {
+        "status": 200,
+        "body": "\"\"",
+        "headers": {
+          "Content-Type": "application/json"
+        }
+      },
+      "uuid": "3b73893f-abc0-4a7a-8e94-87b29b1eaab5",
+      "persistent": true,
+      "priority": 3,
+      "metadata": {
+        "mocklab": {
+          "created": {
+            "at": "2020-01-01T00:00:00.000Z",
+            "via": "SYSTEM"
+          }
+        }
+      },
+      "postServeActions": []
+    },
+    {
+      "id": "5e67fe91-4bf6-409a-be4e-f41a7b308664",
+      "name": "Create payment order - default",
+      "request": {
+        "urlPathTemplate": "/api/v1/payment/orders",
+        "method": "POST",
+        "headers": {
+          "Authorization": {
+            "matches": ".+"
+          }
+        }
+      },
+      "response": {
+        "status": 200,
+        "body": "\"\"",
+        "headers": {
+          "Content-Type": "application/json"
+        }
+      },
+      "uuid": "5e67fe91-4bf6-409a-be4e-f41a7b308664",
+      "persistent": true,
+      "priority": 3,
+      "metadata": {
+        "mocklab": {
+          "created": {
+            "at": "2020-01-01T00:00:00.000Z",
+            "via": "SYSTEM"
+          }
+        }
+      }
+    },
+    {
+      "id": "c1ae5ff1-98ce-4b48-ac7e-eb422d76231a",
+      "name": "Get payment order - default",
+      "request": {
+        "urlPathTemplate": "/api/v1/payment/orders/{id}",
+        "method": "GET",
+        "headers": {
+          "Authorization": {
+            "matches": ".+"
+          }
+        },
+        "pathParameters": {
+          "id": {
+            "equalTo": "1"
+          }
+        }
+      },
+      "response": {
+        "status": 200,
+        "body": "\"\"",
+        "headers": {
+          "Content-Type": "application/json"
+        }
+      },
+      "uuid": "c1ae5ff1-98ce-4b48-ac7e-eb422d76231a",
+      "persistent": true,
+      "priority": 3,
+      "metadata": {
+        "mocklab": {
+          "created": {
+            "at": "2020-01-01T00:00:00.000Z",
+            "via": "SYSTEM"
+          }
+        }
+      }
+    },
+    {
+      "id": "3f5db6f3-8366-4ebc-891b-f50c22ad4f27",
+      "name": "Get transfer detail - default",
+      "request": {
+        "urlPathTemplate": "/api/v1/payment/wallet/transfers/{transfer_no}",
+        "method": "GET",
+        "headers": {
+          "Authorization": {
+            "matches": ".+"
+          }
+        },
+        "pathParameters": {
+          "transfer_no": {
+            "equalTo": "1"
+          }
+        }
+      },
+      "response": {
+        "status": 200,
+        "body": "{\n  \"code\": 1,\n  \"data\": {\n    \"amount\": \"amount\",\n    \"balance_transactions\": [\n      {}\n    ],\n    \"created_at\": 1,\n    \"currency\": \"currency\",\n    \"from_wallet_id\": 1,\n    \"note\": \"note\",\n    \"status\": \"status\",\n    \"to_wallet_id\": 1,\n    \"transfer_no\": 1\n  },\n  \"limit\": 1,\n  \"message\": \"message\",\n  \"page\": 1,\n  \"total\": 1,\n  \"user_message\": \"user_message\"\n}",
+        "headers": {
+          "Content-Type": "application/json"
+        }
+      },
+      "uuid": "3f5db6f3-8366-4ebc-891b-f50c22ad4f27",
+      "persistent": true,
+      "priority": 3,
+      "metadata": {
+        "mocklab": {
+          "created": {
+            "at": "2020-01-01T00:00:00.000Z",
+            "via": "SYSTEM"
+          }
+        }
+      }
+    },
+    {
+      "id": "234f0382-93e7-47cc-ae41-befd913fa2b9",
+      "name": "List wallets - default",
+      "request": {
+        "urlPathTemplate": "/api/v1/payment/wallets",
+        "method": "GET",
+        "headers": {
+          "Authorization": {
+            "matches": ".+"
+          }
+        }
+      },
+      "response": {
+        "status": 200,
+        "body": "{\n  \"code\": 1,\n  \"data\": [\n    {\n      \"balance\": \"balance\",\n      \"created_at\": 1,\n      \"currency\": \"currency\",\n      \"id\": 1,\n      \"kind\": \"kind\",\n      \"name\": \"name\",\n      \"updated_at\": 1,\n      \"user_id\": 1,\n      \"version\": 1\n    }\n  ],\n  \"limit\": 1,\n  \"message\": \"message\",\n  \"page\": 1,\n  \"total\": 1,\n  \"user_message\": \"user_message\"\n}",
+        "headers": {
+          "Content-Type": "application/json"
+        }
+      },
+      "uuid": "234f0382-93e7-47cc-ae41-befd913fa2b9",
+      "persistent": true,
+      "priority": 3,
+      "metadata": {
+        "mocklab": {
+          "created": {
+            "at": "2020-01-01T00:00:00.000Z",
+            "via": "SYSTEM"
+          }
+        }
+      },
+      "postServeActions": []
+    },
+    {
+      "id": "c1b0a314-2195-4c9e-a344-83963328394a",
+      "name": "Get wallet - default",
+      "request": {
+        "urlPathTemplate": "/api/v1/payment/wallets/{id}",
+        "method": "GET",
+        "headers": {
+          "Authorization": {
+            "matches": ".+"
+          }
+        },
+        "pathParameters": {
+          "id": {
+            "equalTo": "1"
+          }
+        }
+      },
+      "response": {
+        "status": 200,
+        "body": "{\n  \"code\": 1,\n  \"data\": {\n    \"balance\": \"balance\",\n    \"created_at\": 1,\n    \"currency\": \"currency\",\n    \"id\": 1,\n    \"kind\": \"kind\",\n    \"name\": \"name\",\n    \"updated_at\": 1,\n    \"user_id\": 1,\n    \"version\": 1\n  },\n  \"limit\": 1,\n  \"message\": \"message\",\n  \"page\": 1,\n  \"total\": 1,\n  \"user_message\": \"user_message\"\n}",
+        "headers": {
+          "Content-Type": "application/json"
+        }
+      },
+      "uuid": "c1b0a314-2195-4c9e-a344-83963328394a",
+      "persistent": true,
+      "priority": 3,
+      "metadata": {
+        "mocklab": {
+          "created": {
+            "at": "2020-01-01T00:00:00.000Z",
+            "via": "SYSTEM"
+          }
+        }
+      }
+    },
+    {
+      "id": "8995f911-485c-4265-a50a-2b1cf2d69fa7",
+      "name": "Convert wallet currency - default",
+      "request": {
+        "urlPathTemplate": "/api/v1/payment/wallets/{id}/convert-currency",
+        "method": "POST",
+        "headers": {
+          "Authorization": {
+            "matches": ".+"
+          }
+        },
+        "pathParameters": {
+          "id": {
+            "equalTo": "1"
+          }
+        }
+      },
+      "response": {
+        "status": 200,
+        "body": "\"\"",
+        "headers": {
+          "Content-Type": "application/json"
+        }
+      },
+      "uuid": "8995f911-485c-4265-a50a-2b1cf2d69fa7",
+      "persistent": true,
+      "priority": 3,
+      "metadata": {
+        "mocklab": {
+          "created": {
+            "at": "2020-01-01T00:00:00.000Z",
+            "via": "SYSTEM"
+          }
+        }
+      }
+    },
+    {
+      "id": "a1f3e25a-a4f3-4f82-89d2-f789238035c2",
+      "name": "List wallet transactions - default",
+      "request": {
+        "urlPathTemplate": "/api/v1/payment/wallets/{id}/transactions",
+        "method": "GET",
+        "headers": {
+          "Authorization": {
+            "matches": ".+"
+          }
+        },
+        "pathParameters": {
+          "id": {
+            "equalTo": "1"
+          }
+        }
+      },
+      "response": {
+        "status": 200,
+        "body": "\"\"",
+        "headers": {
+          "Content-Type": "application/json"
+        }
+      },
+      "uuid": "a1f3e25a-a4f3-4f82-89d2-f789238035c2",
+      "persistent": true,
+      "priority": 3,
+      "metadata": {
+        "mocklab": {
+          "created": {
+            "at": "2020-01-01T00:00:00.000Z",
+            "via": "SYSTEM"
+          }
+        }
+      }
+    },
+    {
+      "id": "e44e7b3d-3cc6-42c9-bbeb-73ff37b89eb8",
+      "name": "Transfer between wallets - default",
+      "request": {
+        "urlPathTemplate": "/api/v1/payment/wallets/{id}/transfer",
+        "method": "POST",
+        "headers": {
+          "Authorization": {
+            "matches": ".+"
+          }
+        },
+        "pathParameters": {
+          "id": {
+            "equalTo": "1"
+          }
+        }
+      },
+      "response": {
+        "status": 200,
+        "body": "{\n  \"code\": 1,\n  \"data\": {\n    \"balance_transactions\": [\n      {}\n    ],\n    \"transfer\": {\n      \"amount\": \"amount\",\n      \"balance_transactions\": [\n        {}\n      ],\n      \"created_at\": 1,\n      \"currency\": \"currency\",\n      \"from_wallet_id\": 1,\n      \"note\": \"note\",\n      \"status\": \"status\",\n      \"to_wallet_id\": 1,\n      \"transfer_no\": 1\n    },\n    \"transfer_no\": 1\n  },\n  \"limit\": 1,\n  \"message\": \"message\",\n  \"page\": 1,\n  \"total\": 1,\n  \"user_message\": \"user_message\"\n}",
+        "headers": {
+          "Content-Type": "application/json"
+        }
+      },
+      "uuid": "e44e7b3d-3cc6-42c9-bbeb-73ff37b89eb8",
+      "persistent": true,
+      "priority": 3,
+      "metadata": {
+        "mocklab": {
+          "created": {
+            "at": "2020-01-01T00:00:00.000Z",
+            "via": "SYSTEM"
+          }
+        }
+      }
+    },
+    {
+      "id": "4452c875-c58a-4322-98f3-9d71acda767a",
+      "name": "Transfer revenue wallet balance to main wallet - default",
+      "request": {
+        "urlPathTemplate": "/api/v1/payment/wallets/{id}/transfer-to-main",
+        "method": "POST",
+        "headers": {
+          "Authorization": {
+            "matches": ".+"
+          }
+        },
+        "pathParameters": {
+          "id": {
+            "equalTo": "1"
+          }
+        }
+      },
+      "response": {
+        "status": 200,
+        "body": "{\n  \"code\": 1,\n  \"data\": {\n    \"balance_transactions\": [\n      {}\n    ],\n    \"transfer\": {\n      \"amount\": \"amount\",\n      \"balance_transactions\": [\n        {}\n      ],\n      \"created_at\": 1,\n      \"currency\": \"currency\",\n      \"from_wallet_id\": 1,\n      \"note\": \"note\",\n      \"status\": \"status\",\n      \"to_wallet_id\": 1,\n      \"transfer_no\": 1\n    },\n    \"transfer_no\": 1\n  },\n  \"limit\": 1,\n  \"message\": \"message\",\n  \"page\": 1,\n  \"total\": 1,\n  \"user_message\": \"user_message\"\n}",
+        "headers": {
+          "Content-Type": "application/json"
+        }
+      },
+      "uuid": "4452c875-c58a-4322-98f3-9d71acda767a",
+      "persistent": true,
+      "priority": 3,
+      "metadata": {
+        "mocklab": {
+          "created": {
+            "at": "2020-01-01T00:00:00.000Z",
+            "via": "SYSTEM"
+          }
+        }
+      }
+    },
+    {
+      "id": "8a9dce69-a4de-496e-811e-9308ea0d9d5d",
+      "name": "Generate image captcha - default",
+      "request": {
+        "urlPathTemplate": "/auth/captcha",
+        "method": "GET"
+      },
+      "response": {
+        "status": 200,
+        "body": "{\n  \"code\": 1,\n  \"data\": {\n    \"image_base64\": \"image_base64\",\n    \"token\": \"token\"\n  },\n  \"limit\": 1,\n  \"message\": \"message\",\n  \"page\": 1,\n  \"total\": 1,\n  \"user_message\": \"user_message\"\n}",
+        "headers": {
+          "Content-Type": "application/json"
+        }
+      },
+      "uuid": "8a9dce69-a4de-496e-811e-9308ea0d9d5d",
+      "persistent": true,
+      "priority": 3,
+      "metadata": {
+        "mocklab": {
+          "created": {
+            "at": "2020-01-01T00:00:00.000Z",
+            "via": "SYSTEM"
+          }
+        }
+      },
+      "postServeActions": []
+    },
+    {
+      "id": "e620dd48-79c1-4197-8284-01f2d7150f61",
+      "name": "Send email verification code - default",
+      "request": {
+        "urlPathTemplate": "/auth/email/send",
+        "method": "POST"
+      },
+      "response": {
+        "status": 200,
+        "body": "\"\"",
+        "headers": {
+          "Content-Type": "application/json"
+        }
+      },
+      "uuid": "e620dd48-79c1-4197-8284-01f2d7150f61",
+      "persistent": true,
+      "priority": 3,
+      "metadata": {
+        "mocklab": {
+          "created": {
+            "at": "2020-01-01T00:00:00.000Z",
+            "via": "SYSTEM"
+          }
+        }
+      }
+    },
+    {
+      "id": "5f7765b5-798a-441a-9612-2736bdf69eef",
+      "name": "Verify email code and authenticate - default",
+      "request": {
+        "urlPathTemplate": "/auth/email/verify",
+        "method": "POST"
+      },
+      "response": {
+        "status": 200,
+        "body": "{\n  \"code\": 1,\n  \"data\": {\n    \"is_new_user\": true,\n    \"user\": {\n      \"key\": \"value\"\n    }\n  },\n  \"limit\": 1,\n  \"message\": \"message\",\n  \"page\": 1,\n  \"total\": 1,\n  \"user_message\": \"user_message\"\n}",
+        "headers": {
+          "Content-Type": "application/json"
+        }
+      },
+      "uuid": "5f7765b5-798a-441a-9612-2736bdf69eef",
+      "persistent": true,
+      "priority": 3,
+      "metadata": {
+        "mocklab": {
+          "created": {
+            "at": "2020-01-01T00:00:00.000Z",
+            "via": "SYSTEM"
+          }
+        }
+      }
+    },
+    {
+      "id": "3bf1a60c-7907-468c-a546-f4ab1a4be117",
+      "name": "Exchange GitHub code for tokens (API) - default",
+      "request": {
+        "urlPathTemplate": "/auth/github",
+        "method": "POST"
+      },
+      "response": {
+        "status": 200,
+        "body": "\"\"",
+        "headers": {
+          "Content-Type": "application/json"
+        }
+      },
+      "uuid": "3bf1a60c-7907-468c-a546-f4ab1a4be117",
+      "persistent": true,
+      "priority": 3,
+      "metadata": {
+        "mocklab": {
+          "created": {
+            "at": "2020-01-01T00:00:00.000Z",
+            "via": "SYSTEM"
+          }
+        }
+      }
+    },
+    {
+      "id": "262a5411-9b88-4858-b67f-44be4d931d98",
+      "name": "GitHub OAuth callback (web) - default",
+      "request": {
+        "urlPathTemplate": "/auth/github/callback",
+        "method": "GET",
+        "queryParameters": {
+          "state": {
+            "equalTo": "state"
+          },
+          "code": {
+            "equalTo": "code"
+          }
+        }
+      },
+      "response": {
+        "status": 200,
+        "body": "\"\"",
+        "headers": {
+          "Content-Type": "application/json"
+        }
+      },
+      "uuid": "262a5411-9b88-4858-b67f-44be4d931d98",
+      "persistent": true,
+      "priority": 3,
+      "metadata": {
+        "mocklab": {
+          "created": {
+            "at": "2020-01-01T00:00:00.000Z",
+            "via": "SYSTEM"
+          }
+        }
+      },
+      "postServeActions": []
+    },
+    {
+      "id": "7e71e7dc-07c7-44dc-8e02-f87271f17c2e",
+      "name": "Initiate GitHub OAuth - default",
+      "request": {
+        "urlPathTemplate": "/auth/github/login",
+        "method": "GET",
+        "queryParameters": {
+          "ref_uri": {
+            "equalTo": "ref_uri"
+          }
+        }
+      },
+      "response": {
+        "status": 200,
+        "body": "\"\"",
+        "headers": {
+          "Content-Type": "application/json"
+        }
+      },
+      "uuid": "7e71e7dc-07c7-44dc-8e02-f87271f17c2e",
+      "persistent": true,
+      "priority": 3,
+      "metadata": {
+        "mocklab": {
+          "created": {
+            "at": "2020-01-01T00:00:00.000Z",
+            "via": "SYSTEM"
+          }
+        }
+      },
+      "postServeActions": []
+    },
+    {
+      "id": "cc828af7-21d1-40b2-9aab-3e1465840f83",
+      "name": "Exchange Google code for tokens (API) - default",
+      "request": {
+        "urlPathTemplate": "/auth/google",
+        "method": "POST"
+      },
+      "response": {
+        "status": 200,
+        "body": "\"\"",
+        "headers": {
+          "Content-Type": "application/json"
+        }
+      },
+      "uuid": "cc828af7-21d1-40b2-9aab-3e1465840f83",
+      "persistent": true,
+      "priority": 3,
+      "metadata": {
+        "mocklab": {
+          "created": {
+            "at": "2020-01-01T00:00:00.000Z",
+            "via": "SYSTEM"
+          }
+        }
+      }
+    },
+    {
+      "id": "42adafef-ee73-4db2-a5a6-32128766f06d",
+      "name": "Google OAuth callback (web) - default",
+      "request": {
+        "urlPathTemplate": "/auth/google/callback",
+        "method": "GET",
+        "queryParameters": {
+          "state": {
+            "equalTo": "state"
+          },
+          "code": {
+            "equalTo": "code"
+          }
+        }
+      },
+      "response": {
+        "status": 200,
+        "body": "\"\"",
+        "headers": {
+          "Content-Type": "application/json"
+        }
+      },
+      "uuid": "42adafef-ee73-4db2-a5a6-32128766f06d",
+      "persistent": true,
+      "priority": 3,
+      "metadata": {
+        "mocklab": {
+          "created": {
+            "at": "2020-01-01T00:00:00.000Z",
+            "via": "SYSTEM"
+          }
+        }
+      },
+      "postServeActions": []
+    },
+    {
+      "id": "bfafcf0a-a319-4a44-b4fc-b645596b01af",
+      "name": "Initiate Google OAuth - default",
+      "request": {
+        "urlPathTemplate": "/auth/google/login",
+        "method": "GET",
+        "queryParameters": {
+          "ref_uri": {
+            "equalTo": "ref_uri"
+          }
+        }
+      },
+      "response": {
+        "status": 200,
+        "body": "\"\"",
+        "headers": {
+          "Content-Type": "application/json"
+        }
+      },
+      "uuid": "bfafcf0a-a319-4a44-b4fc-b645596b01af",
+      "persistent": true,
+      "priority": 3,
+      "metadata": {
+        "mocklab": {
+          "created": {
+            "at": "2020-01-01T00:00:00.000Z",
+            "via": "SYSTEM"
+          }
+        }
+      },
+      "postServeActions": []
+    },
+    {
+      "id": "83c80746-0882-4b9e-83af-6a4fa84ffd89",
+      "name": "Logout current user - default",
+      "request": {
+        "urlPathTemplate": "/auth/logout",
+        "method": "POST",
+        "headers": {
+          "Authorization": {
+            "matches": ".+"
+          }
+        }
+      },
+      "response": {
+        "status": 200,
+        "body": "\"\"",
+        "headers": {
+          "Content-Type": "application/json"
+        }
+      },
+      "uuid": "83c80746-0882-4b9e-83af-6a4fa84ffd89",
+      "persistent": true,
+      "priority": 3,
+      "metadata": {
+        "mocklab": {
+          "created": {
+            "at": "2020-01-01T00:00:00.000Z",
+            "via": "SYSTEM"
+          }
+        }
+      }
+    },
+    {
+      "id": "1f25f5e2-1f55-45d4-94be-243bfd83c0b4",
+      "name": "Send SMS verification code - default",
+      "request": {
+        "urlPathTemplate": "/auth/sms/send",
+        "method": "POST"
+      },
+      "response": {
+        "status": 200,
+        "body": "\"\"",
+        "headers": {
+          "Content-Type": "application/json"
+        }
+      },
+      "uuid": "1f25f5e2-1f55-45d4-94be-243bfd83c0b4",
+      "persistent": true,
+      "priority": 3,
+      "metadata": {
+        "mocklab": {
+          "created": {
+            "at": "2020-01-01T00:00:00.000Z",
+            "via": "SYSTEM"
+          }
+        }
+      }
+    },
+    {
+      "id": "d65be037-16aa-4ec8-b46e-a74d28d958f6",
+      "name": "Verify SMS code and authenticate - default",
+      "request": {
+        "urlPathTemplate": "/auth/sms/verify",
+        "method": "POST"
+      },
+      "response": {
+        "status": 200,
+        "body": "{\n  \"code\": 1,\n  \"data\": {\n    \"is_new_user\": true,\n    \"user\": {\n      \"key\": \"value\"\n    }\n  },\n  \"limit\": 1,\n  \"message\": \"message\",\n  \"page\": 1,\n  \"total\": 1,\n  \"user_message\": \"user_message\"\n}",
+        "headers": {
+          "Content-Type": "application/json"
+        }
+      },
+      "uuid": "d65be037-16aa-4ec8-b46e-a74d28d958f6",
+      "persistent": true,
+      "priority": 3,
+      "metadata": {
+        "mocklab": {
+          "created": {
+            "at": "2020-01-01T00:00:00.000Z",
+            "via": "SYSTEM"
+          }
+        }
+      }
+    },
+    {
+      "id": "fe4361eb-bf79-4dd8-81a7-b9cbecb40485",
+      "name": "List published bulletins - default",
+      "request": {
+        "urlPathTemplate": "/bulletins",
+        "method": "GET"
+      },
+      "response": {
+        "status": 200,
+        "body": "{\n  \"code\": 1,\n  \"data\": [\n    {\n      \"body\": \"body\",\n      \"category\": \"category\",\n      \"created_at\": 1,\n      \"created_by\": 1,\n      \"expires_at\": 1,\n      \"id\": 1,\n      \"parent_id\": 1,\n      \"published_at\": 1,\n      \"section\": \"section\",\n      \"sort_order\": 1,\n      \"status\": \"status\",\n      \"summary\": \"summary\",\n      \"title\": \"title\",\n      \"type\": \"type\",\n      \"updated_at\": 1,\n      \"updated_by\": 1,\n      \"version\": \"version\"\n    }\n  ],\n  \"limit\": 1,\n  \"message\": \"message\",\n  \"page\": 1,\n  \"total\": 1,\n  \"user_message\": \"user_message\"\n}",
+        "headers": {
+          "Content-Type": "application/json"
+        }
+      },
+      "uuid": "fe4361eb-bf79-4dd8-81a7-b9cbecb40485",
+      "persistent": true,
+      "priority": 3,
+      "metadata": {
+        "mocklab": {
+          "created": {
+            "at": "2020-01-01T00:00:00.000Z",
+            "via": "SYSTEM"
+          }
+        }
+      },
+      "postServeActions": []
+    },
+    {
+      "id": "80fd3712-03e8-4abc-8b7c-2bbcdc86d105",
+      "name": "Get bulletin by ID - default",
+      "request": {
+        "urlPathTemplate": "/bulletins/{id}",
+        "method": "GET",
+        "pathParameters": {
+          "id": {
+            "equalTo": "1"
+          }
+        }
+      },
+      "response": {
+        "status": 200,
+        "body": "{\n  \"code\": 1,\n  \"data\": {\n    \"body\": \"body\",\n    \"category\": \"category\",\n    \"created_at\": 1,\n    \"created_by\": 1,\n    \"expires_at\": 1,\n    \"id\": 1,\n    \"parent_id\": 1,\n    \"published_at\": 1,\n    \"section\": \"section\",\n    \"sort_order\": 1,\n    \"status\": \"status\",\n    \"summary\": \"summary\",\n    \"title\": \"title\",\n    \"type\": \"type\",\n    \"updated_at\": 1,\n    \"updated_by\": 1,\n    \"version\": \"version\"\n  },\n  \"limit\": 1,\n  \"message\": \"message\",\n  \"page\": 1,\n  \"total\": 1,\n  \"user_message\": \"user_message\"\n}",
+        "headers": {
+          "Content-Type": "application/json"
+        }
+      },
+      "uuid": "80fd3712-03e8-4abc-8b7c-2bbcdc86d105",
+      "persistent": true,
+      "priority": 3,
+      "metadata": {
+        "mocklab": {
+          "created": {
+            "at": "2020-01-01T00:00:00.000Z",
+            "via": "SYSTEM"
+          }
+        }
+      }
+    },
+    {
+      "id": "d5f07cfa-b4e8-4a9c-a449-00c0af4bda18",
+      "name": "Send a chat completion request - default",
+      "request": {
+        "urlPathTemplate": "/chat/completions",
+        "method": "POST",
+        "headers": {
+          "Authorization": {
+            "matches": ".+"
+          }
+        }
+      },
+      "response": {
+        "status": 200,
+        "body": "{\n  \"code\": 1,\n  \"data\": {\n    \"key\": \"value\"\n  },\n  \"limit\": 1,\n  \"message\": \"message\",\n  \"page\": 1,\n  \"total\": 1,\n  \"user_message\": \"user_message\"\n}",
+        "headers": {
+          "Content-Type": "application/json"
+        }
+      },
+      "uuid": "d5f07cfa-b4e8-4a9c-a449-00c0af4bda18",
+      "persistent": true,
+      "priority": 3,
+      "metadata": {
+        "mocklab": {
+          "created": {
+            "at": "2020-01-01T00:00:00.000Z",
+            "via": "SYSTEM"
+          }
+        }
+      }
+    },
+    {
+      "id": "e3e8d7e5-2c26-42b4-94d2-c8bdff1e112f",
+      "name": "Send an Anthropic-compatible message request - default",
+      "request": {
+        "urlPathTemplate": "/messages",
+        "method": "POST",
+        "headers": {
+          "Authorization": {
+            "matches": ".+"
+          }
+        }
+      },
+      "response": {
+        "status": 200,
+        "body": "{\n  \"code\": 1,\n  \"data\": {\n    \"content\": [\n      {}\n    ],\n    \"id\": \"id\",\n    \"model\": \"model\",\n    \"role\": \"role\",\n    \"stop_reason\": \"stop_reason\",\n    \"stop_sequence\": \"stop_sequence\",\n    \"type\": \"type\",\n    \"usage\": {\n      \"cache_creation_input_tokens\": 1,\n      \"cache_read_input_tokens\": 1,\n      \"input_tokens\": 1,\n      \"output_tokens\": 1\n    }\n  },\n  \"limit\": 1,\n  \"message\": \"message\",\n  \"page\": 1,\n  \"total\": 1,\n  \"user_message\": \"user_message\"\n}",
+        "headers": {
+          "Content-Type": "application/json"
+        }
+      },
+      "uuid": "e3e8d7e5-2c26-42b4-94d2-c8bdff1e112f",
+      "persistent": true,
+      "priority": 3,
+      "metadata": {
+        "mocklab": {
+          "created": {
+            "at": "2020-01-01T00:00:00.000Z",
+            "via": "SYSTEM"
+          }
+        }
+      }
+    },
+    {
+      "id": "c887cb4c-e4d6-47dd-9f46-bf50c903cafa",
+      "name": "List available models - default",
+      "request": {
+        "urlPathTemplate": "/models",
+        "method": "GET",
+        "headers": {
+          "Authorization": {
+            "matches": ".+"
+          }
+        }
+      },
+      "response": {
+        "status": 200,
+        "body": "{\n  \"code\": 1,\n  \"data\": {\n    \"key\": \"value\"\n  },\n  \"limit\": 1,\n  \"message\": \"message\",\n  \"page\": 1,\n  \"total\": 1,\n  \"user_message\": \"user_message\"\n}",
+        "headers": {
+          "Content-Type": "application/json"
+        }
+      },
+      "uuid": "c887cb4c-e4d6-47dd-9f46-bf50c903cafa",
+      "persistent": true,
+      "priority": 3,
+      "metadata": {
+        "mocklab": {
+          "created": {
+            "at": "2020-01-01T00:00:00.000Z",
+            "via": "SYSTEM"
+          }
+        }
+      },
+      "postServeActions": []
+    },
+    {
+      "id": "477d977f-7310-4737-a0c0-e9594afb2ac7",
+      "name": "Send a Responses API request - default",
+      "request": {
+        "urlPathTemplate": "/responses",
+        "method": "POST",
+        "headers": {
+          "Authorization": {
+            "matches": ".+"
+          }
+        }
+      },
+      "response": {
+        "status": 200,
+        "body": "{\n  \"code\": 1,\n  \"data\": {\n    \"key\": \"value\"\n  },\n  \"limit\": 1,\n  \"message\": \"message\",\n  \"page\": 1,\n  \"total\": 1,\n  \"user_message\": \"user_message\"\n}",
+        "headers": {
+          "Content-Type": "application/json"
+        }
+      },
+      "uuid": "477d977f-7310-4737-a0c0-e9594afb2ac7",
+      "persistent": true,
+      "priority": 3,
+      "metadata": {
+        "mocklab": {
+          "created": {
+            "at": "2020-01-01T00:00:00.000Z",
+            "via": "SYSTEM"
+          }
+        }
+      }
+    },
+    {
+      "id": "d0300517-3c16-4297-a573-658d7ee42681",
+      "name": "List public communities - default",
+      "request": {
+        "urlPathTemplate": "/community",
+        "method": "GET"
+      },
+      "response": {
+        "status": 200,
+        "body": "\"\"",
+        "headers": {
+          "Content-Type": "application/json"
+        }
+      },
+      "uuid": "d0300517-3c16-4297-a573-658d7ee42681",
+      "persistent": true,
+      "priority": 3,
+      "metadata": {
+        "mocklab": {
+          "created": {
+            "at": "2020-01-01T00:00:00.000Z",
+            "via": "SYSTEM"
+          }
+        }
+      },
+      "postServeActions": []
+    },
+    {
+      "id": "128b4b71-24de-465d-99f2-0fd4283da07c",
+      "name": "List user models - default",
+      "request": {
+        "urlPathTemplate": "/gateway/{user_id}/models",
+        "method": "GET",
+        "headers": {
+          "Authorization": {
+            "matches": ".+"
+          }
+        },
+        "pathParameters": {
+          "user_id": {
+            "equalTo": "1"
+          }
+        }
+      },
+      "response": {
+        "status": 200,
+        "body": "{\n  \"code\": 1,\n  \"data\": [\n    {\n      \"billing_mode\": \"billing_mode\",\n      \"cache_hit_price\": 1.1,\n      \"created_at\": 1,\n      \"currency\": \"currency\",\n      \"description\": \"description\",\n      \"enabled\": true,\n      \"id\": 1,\n      \"input_price\": 1.1,\n      \"is_default\": true,\n      \"listed_at\": 1,\n      \"max_output_tokens\": 1,\n      \"name\": \"name\",\n      \"output_price\": 1.1,\n      \"provider_id\": 1,\n      \"updated_at\": 1,\n      \"upstream_name\": \"upstream_name\",\n      \"user_id\": 1,\n      \"visibility\": \"visibility\",\n      \"wallet_id\": 1\n    }\n  ],\n  \"limit\": 1,\n  \"message\": \"message\",\n  \"page\": 1,\n  \"total\": 1,\n  \"user_message\": \"user_message\"\n}",
+        "headers": {
+          "Content-Type": "application/json"
+        }
+      },
+      "uuid": "128b4b71-24de-465d-99f2-0fd4283da07c",
+      "persistent": true,
+      "priority": 3,
+      "metadata": {
+        "mocklab": {
+          "created": {
+            "at": "2020-01-01T00:00:00.000Z",
+            "via": "SYSTEM"
+          }
+        }
+      }
+    },
+    {
+      "id": "3419d0d5-f276-419f-8929-8557bbdc508d",
+      "name": "Create user model - default",
+      "request": {
+        "urlPathTemplate": "/gateway/{user_id}/models",
+        "method": "POST",
+        "headers": {
+          "Authorization": {
+            "matches": ".+"
+          }
+        },
+        "pathParameters": {
+          "user_id": {
+            "equalTo": "1"
+          }
+        }
+      },
+      "response": {
+        "status": 201,
+        "body": "{\n  \"code\": 1,\n  \"data\": {\n    \"billing_mode\": \"billing_mode\",\n    \"cache_hit_price\": 1.1,\n    \"capabilities\": {\n      \"audio\": true,\n      \"image\": true,\n      \"pdf\": true,\n      \"reasoning\": true,\n      \"streaming\": true,\n      \"tools\": true,\n      \"video\": true\n    },\n    \"created_at\": 1,\n    \"currency\": \"currency\",\n    \"description\": \"description\",\n    \"enabled\": true,\n    \"id\": 1,\n    \"input_price\": 1.1,\n    \"is_default\": true,\n    \"listed_at\": 1,\n    \"max_output_tokens\": 1,\n    \"name\": \"name\",\n    \"output_price\": 1.1,\n    \"provider_id\": 1,\n    \"updated_at\": 1,\n    \"upstream_name\": \"upstream_name\",\n    \"user_id\": 1,\n    \"visibility\": \"visibility\",\n    \"wallet_id\": 1\n  },\n  \"limit\": 1,\n  \"message\": \"message\",\n  \"page\": 1,\n  \"total\": 1,\n  \"user_message\": \"user_message\"\n}",
+        "headers": {
+          "Content-Type": "application/json"
+        }
+      },
+      "uuid": "3419d0d5-f276-419f-8929-8557bbdc508d",
+      "persistent": true,
+      "priority": 3,
+      "metadata": {
+        "mocklab": {
+          "created": {
+            "at": "2020-01-01T00:00:00.000Z",
+            "via": "SYSTEM"
+          }
+        }
+      }
+    },
+    {
+      "id": "35548f07-f514-41d2-a3ae-e96ea07c136c",
+      "name": "Get visible user model - default",
+      "request": {
+        "urlPathTemplate": "/gateway/{user_id}/models/{id}",
+        "method": "GET",
+        "headers": {
+          "Authorization": {
+            "matches": ".+"
+          }
+        },
+        "pathParameters": {
+          "user_id": {
+            "equalTo": "1"
+          },
+          "id": {
+            "equalTo": "1"
+          }
+        }
+      },
+      "response": {
+        "status": 200,
+        "body": "{\n  \"code\": 1,\n  \"data\": {\n    \"billing_mode\": \"billing_mode\",\n    \"cache_hit_price\": 1.1,\n    \"capabilities\": {\n      \"audio\": true,\n      \"image\": true,\n      \"pdf\": true,\n      \"reasoning\": true,\n      \"streaming\": true,\n      \"tools\": true,\n      \"video\": true\n    },\n    \"created_at\": 1,\n    \"currency\": \"currency\",\n    \"description\": \"description\",\n    \"enabled\": true,\n    \"id\": 1,\n    \"input_price\": 1.1,\n    \"is_default\": true,\n    \"listed_at\": 1,\n    \"max_output_tokens\": 1,\n    \"name\": \"name\",\n    \"output_price\": 1.1,\n    \"provider_id\": 1,\n    \"updated_at\": 1,\n    \"upstream_name\": \"upstream_name\",\n    \"user_id\": 1,\n    \"visibility\": \"visibility\",\n    \"wallet_id\": 1\n  },\n  \"limit\": 1,\n  \"message\": \"message\",\n  \"page\": 1,\n  \"total\": 1,\n  \"user_message\": \"user_message\"\n}",
+        "headers": {
+          "Content-Type": "application/json"
+        }
+      },
+      "uuid": "35548f07-f514-41d2-a3ae-e96ea07c136c",
+      "persistent": true,
+      "priority": 3,
+      "metadata": {
+        "mocklab": {
+          "created": {
+            "at": "2020-01-01T00:00:00.000Z",
+            "via": "SYSTEM"
+          }
+        }
+      }
+    },
+    {
+      "id": "7a3cd224-eea6-43e7-840b-e1c1f09fc707",
+      "name": "Update user model - default",
+      "request": {
+        "urlPathTemplate": "/gateway/{user_id}/models/{id}",
+        "method": "PUT",
+        "headers": {
+          "Authorization": {
+            "matches": ".+"
+          }
+        },
+        "pathParameters": {
+          "user_id": {
+            "equalTo": "1"
+          },
+          "id": {
+            "equalTo": "1"
+          }
+        }
+      },
+      "response": {
+        "status": 200,
+        "body": "{\n  \"code\": 1,\n  \"data\": {\n    \"billing_mode\": \"billing_mode\",\n    \"cache_hit_price\": 1.1,\n    \"capabilities\": {\n      \"audio\": true,\n      \"image\": true,\n      \"pdf\": true,\n      \"reasoning\": true,\n      \"streaming\": true,\n      \"tools\": true,\n      \"video\": true\n    },\n    \"created_at\": 1,\n    \"currency\": \"currency\",\n    \"description\": \"description\",\n    \"enabled\": true,\n    \"id\": 1,\n    \"input_price\": 1.1,\n    \"is_default\": true,\n    \"listed_at\": 1,\n    \"max_output_tokens\": 1,\n    \"name\": \"name\",\n    \"output_price\": 1.1,\n    \"provider_id\": 1,\n    \"updated_at\": 1,\n    \"upstream_name\": \"upstream_name\",\n    \"user_id\": 1,\n    \"visibility\": \"visibility\",\n    \"wallet_id\": 1\n  },\n  \"limit\": 1,\n  \"message\": \"message\",\n  \"page\": 1,\n  \"total\": 1,\n  \"user_message\": \"user_message\"\n}",
+        "headers": {
+          "Content-Type": "application/json"
+        }
+      },
+      "uuid": "7a3cd224-eea6-43e7-840b-e1c1f09fc707",
+      "persistent": true,
+      "priority": 3,
+      "metadata": {
+        "mocklab": {
+          "created": {
+            "at": "2020-01-01T00:00:00.000Z",
+            "via": "SYSTEM"
+          }
+        }
+      }
+    },
+    {
+      "id": "f9740582-9624-45fe-b831-9d0d76bb8468",
+      "name": "Delete user model - default",
+      "request": {
+        "urlPathTemplate": "/gateway/{user_id}/models/{id}",
+        "method": "DELETE",
+        "headers": {
+          "Authorization": {
+            "matches": ".+"
+          }
+        },
+        "pathParameters": {
+          "user_id": {
+            "equalTo": "1"
+          },
+          "id": {
+            "equalTo": "1"
+          }
+        }
+      },
+      "response": {
+        "status": 204,
+        "body": "{\n  \"code\": 1,\n  \"data\": {\n    \"key\": \"value\"\n  },\n  \"limit\": 1,\n  \"message\": \"message\",\n  \"page\": 1,\n  \"total\": 1,\n  \"user_message\": \"user_message\"\n}",
+        "headers": {
+          "Content-Type": "application/json"
+        }
+      },
+      "uuid": "f9740582-9624-45fe-b831-9d0d76bb8468",
+      "persistent": true,
+      "priority": 3,
+      "metadata": {
+        "mocklab": {
+          "created": {
+            "at": "2020-01-01T00:00:00.000Z",
+            "via": "SYSTEM"
+          }
+        }
+      }
+    },
+    {
+      "id": "fb5cfd17-613e-437f-a41a-49e545ef9957",
+      "name": "List a model to marketplace - default",
+      "request": {
+        "urlPathTemplate": "/gateway/{user_id}/models/{id}/list",
+        "method": "POST",
+        "headers": {
+          "Authorization": {
+            "matches": ".+"
+          }
+        },
+        "pathParameters": {
+          "user_id": {
+            "equalTo": "1"
+          },
+          "id": {
+            "equalTo": "1"
+          }
+        }
+      },
+      "response": {
+        "status": 200,
+        "body": "{\n  \"code\": 1,\n  \"data\": {\n    \"billing_mode\": \"billing_mode\",\n    \"cache_hit_price\": 1.1,\n    \"capabilities\": {\n      \"audio\": true,\n      \"image\": true,\n      \"pdf\": true,\n      \"reasoning\": true,\n      \"streaming\": true,\n      \"tools\": true,\n      \"video\": true\n    },\n    \"created_at\": 1,\n    \"currency\": \"currency\",\n    \"description\": \"description\",\n    \"enabled\": true,\n    \"id\": 1,\n    \"input_price\": 1.1,\n    \"is_default\": true,\n    \"listed_at\": 1,\n    \"max_output_tokens\": 1,\n    \"name\": \"name\",\n    \"output_price\": 1.1,\n    \"provider_id\": 1,\n    \"updated_at\": 1,\n    \"upstream_name\": \"upstream_name\",\n    \"user_id\": 1,\n    \"visibility\": \"visibility\",\n    \"wallet_id\": 1\n  },\n  \"limit\": 1,\n  \"message\": \"message\",\n  \"page\": 1,\n  \"total\": 1,\n  \"user_message\": \"user_message\"\n}",
+        "headers": {
+          "Content-Type": "application/json"
+        }
+      },
+      "uuid": "fb5cfd17-613e-437f-a41a-49e545ef9957",
+      "persistent": true,
+      "priority": 3,
+      "metadata": {
+        "mocklab": {
+          "created": {
+            "at": "2020-01-01T00:00:00.000Z",
+            "via": "SYSTEM"
+          }
+        }
+      }
+    },
+    {
+      "id": "b787785f-de5c-464e-b745-c5f328e2219d",
+      "name": "Unlist a model from marketplace - default",
+      "request": {
+        "urlPathTemplate": "/gateway/{user_id}/models/{id}/unlist",
+        "method": "POST",
+        "headers": {
+          "Authorization": {
+            "matches": ".+"
+          }
+        },
+        "pathParameters": {
+          "user_id": {
+            "equalTo": "1"
+          },
+          "id": {
+            "equalTo": "1"
+          }
+        }
+      },
+      "response": {
+        "status": 200,
+        "body": "{\n  \"code\": 1,\n  \"data\": {\n    \"billing_mode\": \"billing_mode\",\n    \"cache_hit_price\": 1.1,\n    \"capabilities\": {\n      \"audio\": true,\n      \"image\": true,\n      \"pdf\": true,\n      \"reasoning\": true,\n      \"streaming\": true,\n      \"tools\": true,\n      \"video\": true\n    },\n    \"created_at\": 1,\n    \"currency\": \"currency\",\n    \"description\": \"description\",\n    \"enabled\": true,\n    \"id\": 1,\n    \"input_price\": 1.1,\n    \"is_default\": true,\n    \"listed_at\": 1,\n    \"max_output_tokens\": 1,\n    \"name\": \"name\",\n    \"output_price\": 1.1,\n    \"provider_id\": 1,\n    \"updated_at\": 1,\n    \"upstream_name\": \"upstream_name\",\n    \"user_id\": 1,\n    \"visibility\": \"visibility\",\n    \"wallet_id\": 1\n  },\n  \"limit\": 1,\n  \"message\": \"message\",\n  \"page\": 1,\n  \"total\": 1,\n  \"user_message\": \"user_message\"\n}",
+        "headers": {
+          "Content-Type": "application/json"
+        }
+      },
+      "uuid": "b787785f-de5c-464e-b745-c5f328e2219d",
+      "persistent": true,
+      "priority": 3,
+      "metadata": {
+        "mocklab": {
+          "created": {
+            "at": "2020-01-01T00:00:00.000Z",
+            "via": "SYSTEM"
+          }
+        }
+      }
+    },
+    {
+      "id": "8807f66d-136d-4d16-bdaf-49869f8f17df",
+      "name": "List model visibility filters - default",
+      "request": {
+        "urlPathTemplate": "/gateway/{user_id}/models/{id}/filters",
+        "method": "GET",
+        "headers": {
+          "Authorization": {
+            "matches": ".+"
+          }
+        },
+        "pathParameters": {
+          "user_id": {
+            "equalTo": "1"
+          },
+          "id": {
+            "equalTo": "1"
+          }
+        }
+      },
+      "response": {
+        "status": 200,
+        "body": "{\n  \"code\": 1,\n  \"data\": [\n    1\n  ],\n  \"limit\": 1,\n  \"message\": \"message\",\n  \"page\": 1,\n  \"total\": 1,\n  \"user_message\": \"user_message\"\n}",
+        "headers": {
+          "Content-Type": "application/json"
+        }
+      },
+      "uuid": "8807f66d-136d-4d16-bdaf-49869f8f17df",
+      "persistent": true,
+      "priority": 3,
+      "metadata": {
+        "mocklab": {
+          "created": {
+            "at": "2020-01-01T00:00:00.000Z",
+            "via": "SYSTEM"
+          }
+        }
+      }
+    },
+    {
+      "id": "e20e0689-8ae1-4611-acd0-cdf139bf9bfe",
+      "name": "Add model visibility filter - default",
+      "request": {
+        "urlPathTemplate": "/gateway/{user_id}/models/{id}/filters",
+        "method": "POST",
+        "headers": {
+          "Authorization": {
+            "matches": ".+"
+          }
+        },
+        "pathParameters": {
+          "user_id": {
+            "equalTo": "1"
+          },
+          "id": {
+            "equalTo": "1"
+          }
+        }
+      },
+      "response": {
+        "status": 201,
+        "body": "{\n  \"code\": 1,\n  \"data\": {\n    \"key\": \"value\"\n  },\n  \"limit\": 1,\n  \"message\": \"message\",\n  \"page\": 1,\n  \"total\": 1,\n  \"user_message\": \"user_message\"\n}",
+        "headers": {
+          "Content-Type": "application/json"
+        }
+      },
+      "uuid": "e20e0689-8ae1-4611-acd0-cdf139bf9bfe",
+      "persistent": true,
+      "priority": 3,
+      "metadata": {
+        "mocklab": {
+          "created": {
+            "at": "2020-01-01T00:00:00.000Z",
+            "via": "SYSTEM"
+          }
+        }
+      }
+    },
+    {
+      "id": "312778a5-c351-4b99-88e7-1bfdcead9ad9",
+      "name": "Remove model visibility filter - default",
+      "request": {
+        "urlPathTemplate": "/gateway/{user_id}/models/{id}/filters/{target_user_id}",
+        "method": "DELETE",
+        "headers": {
+          "Authorization": {
+            "matches": ".+"
+          }
+        },
+        "pathParameters": {
+          "user_id": {
+            "equalTo": "1"
+          },
+          "id": {
+            "equalTo": "1"
+          },
+          "target_user_id": {
+            "equalTo": "1"
+          }
+        }
+      },
+      "response": {
+        "status": 204,
+        "body": "{\n  \"code\": 1,\n  \"data\": {\n    \"key\": \"value\"\n  },\n  \"limit\": 1,\n  \"message\": \"message\",\n  \"page\": 1,\n  \"total\": 1,\n  \"user_message\": \"user_message\"\n}",
+        "headers": {
+          "Content-Type": "application/json"
+        }
+      },
+      "uuid": "312778a5-c351-4b99-88e7-1bfdcead9ad9",
+      "persistent": true,
+      "priority": 3,
+      "metadata": {
+        "mocklab": {
+          "created": {
+            "at": "2020-01-01T00:00:00.000Z",
+            "via": "SYSTEM"
+          }
+        }
+      }
+    },
+    {
+      "id": "0163667e-9db0-446f-877b-7894ce927c05",
+      "name": "List visible providers - default",
+      "request": {
+        "urlPathTemplate": "/gateway/{user_id}/providers",
+        "method": "GET",
+        "pathParameters": {
+          "user_id": {
+            "equalTo": "1"
+          }
+        }
+      },
+      "response": {
+        "status": 200,
+        "body": "{\n  \"code\": 1,\n  \"data\": [\n    {\n      \"api_key\": \"api_key\",\n      \"base_url\": \"base_url\",\n      \"created_at\": 1,\n      \"enabled\": true,\n      \"id\": 1,\n      \"name\": \"name\",\n      \"protocol\": \"protocol\",\n      \"updated_at\": 1,\n      \"user_id\": 1,\n      \"visibility\": \"visibility\"\n    }\n  ],\n  \"limit\": 1,\n  \"message\": \"message\",\n  \"page\": 1,\n  \"total\": 1,\n  \"user_message\": \"user_message\"\n}",
+        "headers": {
+          "Content-Type": "application/json"
+        }
+      },
+      "uuid": "0163667e-9db0-446f-877b-7894ce927c05",
+      "persistent": true,
+      "priority": 3,
+      "metadata": {
+        "mocklab": {
+          "created": {
+            "at": "2020-01-01T00:00:00.000Z",
+            "via": "SYSTEM"
+          }
+        }
+      }
+    },
+    {
+      "id": "87fab0ab-fd74-449f-a9f0-d9cd7dd5ad10",
+      "name": "Create user provider - default",
+      "request": {
+        "urlPathTemplate": "/gateway/{user_id}/providers",
+        "method": "POST",
+        "pathParameters": {
+          "user_id": {
+            "equalTo": "1"
+          }
+        }
+      },
+      "response": {
+        "status": 201,
+        "body": "{\n  \"code\": 1,\n  \"data\": {\n    \"api_key\": \"api_key\",\n    \"base_url\": \"base_url\",\n    \"created_at\": 1,\n    \"enabled\": true,\n    \"id\": 1,\n    \"name\": \"name\",\n    \"protocol\": \"protocol\",\n    \"updated_at\": 1,\n    \"user_id\": 1,\n    \"visibility\": \"visibility\"\n  },\n  \"limit\": 1,\n  \"message\": \"message\",\n  \"page\": 1,\n  \"total\": 1,\n  \"user_message\": \"user_message\"\n}",
+        "headers": {
+          "Content-Type": "application/json"
+        }
+      },
+      "uuid": "87fab0ab-fd74-449f-a9f0-d9cd7dd5ad10",
+      "persistent": true,
+      "priority": 3,
+      "metadata": {
+        "mocklab": {
+          "created": {
+            "at": "2020-01-01T00:00:00.000Z",
+            "via": "SYSTEM"
+          }
+        }
+      }
+    },
+    {
+      "id": "77815ccd-e7d2-4370-96e4-200c11adab9f",
+      "name": "Get visible provider - default",
+      "request": {
+        "urlPathTemplate": "/gateway/{user_id}/providers/{id}",
+        "method": "GET",
+        "pathParameters": {
+          "user_id": {
+            "equalTo": "1"
+          },
+          "id": {
+            "equalTo": "1"
+          }
+        }
+      },
+      "response": {
+        "status": 200,
+        "body": "{\n  \"code\": 1,\n  \"data\": {\n    \"api_key\": \"api_key\",\n    \"base_url\": \"base_url\",\n    \"created_at\": 1,\n    \"enabled\": true,\n    \"id\": 1,\n    \"name\": \"name\",\n    \"protocol\": \"protocol\",\n    \"updated_at\": 1,\n    \"user_id\": 1,\n    \"visibility\": \"visibility\"\n  },\n  \"limit\": 1,\n  \"message\": \"message\",\n  \"page\": 1,\n  \"total\": 1,\n  \"user_message\": \"user_message\"\n}",
+        "headers": {
+          "Content-Type": "application/json"
+        }
+      },
+      "uuid": "77815ccd-e7d2-4370-96e4-200c11adab9f",
+      "persistent": true,
+      "priority": 3,
+      "metadata": {
+        "mocklab": {
+          "created": {
+            "at": "2020-01-01T00:00:00.000Z",
+            "via": "SYSTEM"
+          }
+        }
+      }
+    },
+    {
+      "id": "b44e8d18-fc46-4d29-a3ff-a9f130d4c053",
+      "name": "Update user provider - default",
+      "request": {
+        "urlPathTemplate": "/gateway/{user_id}/providers/{id}",
+        "method": "PUT",
+        "pathParameters": {
+          "user_id": {
+            "equalTo": "1"
+          },
+          "id": {
+            "equalTo": "1"
+          }
+        }
+      },
+      "response": {
+        "status": 200,
+        "body": "{\n  \"code\": 1,\n  \"data\": {\n    \"api_key\": \"api_key\",\n    \"base_url\": \"base_url\",\n    \"created_at\": 1,\n    \"enabled\": true,\n    \"id\": 1,\n    \"name\": \"name\",\n    \"protocol\": \"protocol\",\n    \"updated_at\": 1,\n    \"user_id\": 1,\n    \"visibility\": \"visibility\"\n  },\n  \"limit\": 1,\n  \"message\": \"message\",\n  \"page\": 1,\n  \"total\": 1,\n  \"user_message\": \"user_message\"\n}",
+        "headers": {
+          "Content-Type": "application/json"
+        }
+      },
+      "uuid": "b44e8d18-fc46-4d29-a3ff-a9f130d4c053",
+      "persistent": true,
+      "priority": 3,
+      "metadata": {
+        "mocklab": {
+          "created": {
+            "at": "2020-01-01T00:00:00.000Z",
+            "via": "SYSTEM"
+          }
+        }
+      }
+    },
+    {
+      "id": "11f0c012-9204-4a46-8f5a-bb3638ab4744",
+      "name": "Delete user provider - default",
+      "request": {
+        "urlPathTemplate": "/gateway/{user_id}/providers/{id}",
+        "method": "DELETE",
+        "pathParameters": {
+          "user_id": {
+            "equalTo": "1"
+          },
+          "id": {
+            "equalTo": "1"
+          }
+        }
+      },
+      "response": {
+        "status": 200,
+        "body": "\"\"",
+        "headers": {
+          "Content-Type": "application/json"
+        }
+      },
+      "uuid": "11f0c012-9204-4a46-8f5a-bb3638ab4744",
+      "persistent": true,
+      "priority": 3,
+      "metadata": {
+        "mocklab": {
+          "created": {
+            "at": "2020-01-01T00:00:00.000Z",
+            "via": "SYSTEM"
+          }
+        }
+      }
+    },
+    {
+      "id": "5cbd4ff8-270e-40fd-b2f9-a8a92bddfe40",
+      "name": "Test existing provider - default",
+      "request": {
+        "urlPathTemplate": "/gateway/{user_id}/providers/{id}/test",
+        "method": "POST",
+        "pathParameters": {
+          "user_id": {
+            "equalTo": "1"
+          },
+          "id": {
+            "equalTo": "1"
+          }
+        }
+      },
+      "response": {
+        "status": 200,
+        "body": "{\n  \"code\": 1,\n  \"data\": {\n    \"error\": \"error\",\n    \"latency_ms\": 1,\n    \"models\": [\n      {}\n    ],\n    \"success\": true\n  },\n  \"limit\": 1,\n  \"message\": \"message\",\n  \"page\": 1,\n  \"total\": 1,\n  \"user_message\": \"user_message\"\n}",
+        "headers": {
+          "Content-Type": "application/json"
+        }
+      },
+      "uuid": "5cbd4ff8-270e-40fd-b2f9-a8a92bddfe40",
+      "persistent": true,
+      "priority": 3,
+      "metadata": {
+        "mocklab": {
+          "created": {
+            "at": "2020-01-01T00:00:00.000Z",
+            "via": "SYSTEM"
+          }
+        }
+      }
+    },
+    {
+      "id": "27218f9b-aebc-49e7-83af-6fb128b3bd95",
+      "name": "Test provider connection - default",
+      "request": {
+        "urlPathTemplate": "/gateway/{user_id}/providers/test",
+        "method": "POST",
+        "pathParameters": {
+          "user_id": {
+            "equalTo": "1"
+          }
+        }
+      },
+      "response": {
+        "status": 200,
+        "body": "{\n  \"code\": 1,\n  \"data\": {\n    \"error\": \"error\",\n    \"latency_ms\": 1,\n    \"models\": [\n      {}\n    ],\n    \"success\": true\n  },\n  \"limit\": 1,\n  \"message\": \"message\",\n  \"page\": 1,\n  \"total\": 1,\n  \"user_message\": \"user_message\"\n}",
+        "headers": {
+          "Content-Type": "application/json"
+        }
+      },
+      "uuid": "27218f9b-aebc-49e7-83af-6fb128b3bd95",
+      "persistent": true,
+      "priority": 3,
+      "metadata": {
+        "mocklab": {
+          "created": {
+            "at": "2020-01-01T00:00:00.000Z",
+            "via": "SYSTEM"
+          }
+        }
+      }
+    },
+    {
+      "id": "7728e0f9-743b-4e82-8b29-db7c4e5a1552",
+      "name": "List user model routes - default",
+      "request": {
+        "urlPathTemplate": "/gateway/{user_id}/routes",
+        "method": "GET",
+        "pathParameters": {
+          "user_id": {
+            "equalTo": "1"
+          }
+        }
+      },
+      "response": {
+        "status": 200,
+        "body": "{\n  \"code\": 1,\n  \"data\": [\n    {\n      \"algorithm\": \"algorithm\",\n      \"description\": \"description\",\n      \"id\": 1,\n      \"name\": \"name\",\n      \"targets\": [\n        1\n      ],\n      \"user_id\": 1,\n      \"visibility\": \"visibility\"\n    }\n  ],\n  \"limit\": 1,\n  \"message\": \"message\",\n  \"page\": 1,\n  \"total\": 1,\n  \"user_message\": \"user_message\"\n}",
+        "headers": {
+          "Content-Type": "application/json"
+        }
+      },
+      "uuid": "7728e0f9-743b-4e82-8b29-db7c4e5a1552",
+      "persistent": true,
+      "priority": 3,
+      "metadata": {
+        "mocklab": {
+          "created": {
+            "at": "2020-01-01T00:00:00.000Z",
+            "via": "SYSTEM"
+          }
+        }
+      }
+    },
+    {
+      "id": "38af46ee-1372-4efb-b8eb-69a3b827c56c",
+      "name": "Create user model route - default",
+      "request": {
+        "urlPathTemplate": "/gateway/{user_id}/routes",
+        "method": "POST",
+        "pathParameters": {
+          "user_id": {
+            "equalTo": "1"
+          }
+        }
+      },
+      "response": {
+        "status": 201,
+        "body": "{\n  \"code\": 1,\n  \"data\": {\n    \"algorithm\": \"algorithm\",\n    \"description\": \"description\",\n    \"id\": 1,\n    \"name\": \"name\",\n    \"targets\": [\n      1\n    ],\n    \"user_id\": 1,\n    \"visibility\": \"visibility\"\n  },\n  \"limit\": 1,\n  \"message\": \"message\",\n  \"page\": 1,\n  \"total\": 1,\n  \"user_message\": \"user_message\"\n}",
+        "headers": {
+          "Content-Type": "application/json"
+        }
+      },
+      "uuid": "38af46ee-1372-4efb-b8eb-69a3b827c56c",
+      "persistent": true,
+      "priority": 3,
+      "metadata": {
+        "mocklab": {
+          "created": {
+            "at": "2020-01-01T00:00:00.000Z",
+            "via": "SYSTEM"
+          }
+        }
+      }
+    },
+    {
+      "id": "daa19bac-15e7-4c0f-b1d0-ec0d524f1265",
+      "name": "Get user model route - default",
+      "request": {
+        "urlPathTemplate": "/gateway/{user_id}/routes/{id}",
+        "method": "GET",
+        "pathParameters": {
+          "user_id": {
+            "equalTo": "1"
+          },
+          "id": {
+            "equalTo": "1"
+          }
+        }
+      },
+      "response": {
+        "status": 200,
+        "body": "{\n  \"code\": 1,\n  \"data\": {\n    \"algorithm\": \"algorithm\",\n    \"description\": \"description\",\n    \"id\": 1,\n    \"name\": \"name\",\n    \"targets\": [\n      1\n    ],\n    \"user_id\": 1,\n    \"visibility\": \"visibility\"\n  },\n  \"limit\": 1,\n  \"message\": \"message\",\n  \"page\": 1,\n  \"total\": 1,\n  \"user_message\": \"user_message\"\n}",
+        "headers": {
+          "Content-Type": "application/json"
+        }
+      },
+      "uuid": "daa19bac-15e7-4c0f-b1d0-ec0d524f1265",
+      "persistent": true,
+      "priority": 3,
+      "metadata": {
+        "mocklab": {
+          "created": {
+            "at": "2020-01-01T00:00:00.000Z",
+            "via": "SYSTEM"
+          }
+        }
+      }
+    },
+    {
+      "id": "87767124-1562-454f-8546-08700747b7de",
+      "name": "Delete user model route - default",
+      "request": {
+        "urlPathTemplate": "/gateway/{user_id}/routes/{id}",
+        "method": "DELETE",
+        "pathParameters": {
+          "user_id": {
+            "equalTo": "1"
+          },
+          "id": {
+            "equalTo": "1"
+          }
+        }
+      },
+      "response": {
+        "status": 200,
+        "body": "{\n  \"code\": 1,\n  \"data\": {\n    \"key\": \"value\"\n  },\n  \"limit\": 1,\n  \"message\": \"message\",\n  \"page\": 1,\n  \"total\": 1,\n  \"user_message\": \"user_message\"\n}",
+        "headers": {
+          "Content-Type": "application/json"
+        }
+      },
+      "uuid": "87767124-1562-454f-8546-08700747b7de",
+      "persistent": true,
+      "priority": 3,
+      "metadata": {
+        "mocklab": {
+          "created": {
+            "at": "2020-01-01T00:00:00.000Z",
+            "via": "SYSTEM"
+          }
+        }
+      }
+    },
+    {
+      "id": "c36159a7-9fb6-431f-9985-0f0ecea45703",
+      "name": "List route visibility filters - default",
+      "request": {
+        "urlPathTemplate": "/gateway/{user_id}/routes/{id}/filters",
+        "method": "GET",
+        "headers": {
+          "Authorization": {
+            "matches": ".+"
+          }
+        },
+        "pathParameters": {
+          "user_id": {
+            "equalTo": "1"
+          },
+          "id": {
+            "equalTo": "1"
+          }
+        }
+      },
+      "response": {
+        "status": 200,
+        "body": "{\n  \"code\": 1,\n  \"data\": [\n    1\n  ],\n  \"limit\": 1,\n  \"message\": \"message\",\n  \"page\": 1,\n  \"total\": 1,\n  \"user_message\": \"user_message\"\n}",
+        "headers": {
+          "Content-Type": "application/json"
+        }
+      },
+      "uuid": "c36159a7-9fb6-431f-9985-0f0ecea45703",
+      "persistent": true,
+      "priority": 3,
+      "metadata": {
+        "mocklab": {
+          "created": {
+            "at": "2020-01-01T00:00:00.000Z",
+            "via": "SYSTEM"
+          }
+        }
+      }
+    },
+    {
+      "id": "d37463de-a13c-4285-a129-3b4a3638234f",
+      "name": "Add route visibility filter - default",
+      "request": {
+        "urlPathTemplate": "/gateway/{user_id}/routes/{id}/filters",
+        "method": "POST",
+        "headers": {
+          "Authorization": {
+            "matches": ".+"
+          }
+        },
+        "pathParameters": {
+          "user_id": {
+            "equalTo": "1"
+          },
+          "id": {
+            "equalTo": "1"
+          }
+        }
+      },
+      "response": {
+        "status": 201,
+        "body": "{\n  \"code\": 1,\n  \"data\": {\n    \"key\": \"value\"\n  },\n  \"limit\": 1,\n  \"message\": \"message\",\n  \"page\": 1,\n  \"total\": 1,\n  \"user_message\": \"user_message\"\n}",
+        "headers": {
+          "Content-Type": "application/json"
+        }
+      },
+      "uuid": "d37463de-a13c-4285-a129-3b4a3638234f",
+      "persistent": true,
+      "priority": 3,
+      "metadata": {
+        "mocklab": {
+          "created": {
+            "at": "2020-01-01T00:00:00.000Z",
+            "via": "SYSTEM"
+          }
+        }
+      }
+    },
+    {
+      "id": "6ce3852a-d018-41e4-9d22-cd1cb167c560",
+      "name": "Remove route visibility filter - default",
+      "request": {
+        "urlPathTemplate": "/gateway/{user_id}/routes/{id}/filters/{target_user_id}",
+        "method": "DELETE",
+        "headers": {
+          "Authorization": {
+            "matches": ".+"
+          }
+        },
+        "pathParameters": {
+          "user_id": {
+            "equalTo": "1"
+          },
+          "id": {
+            "equalTo": "1"
+          },
+          "target_user_id": {
+            "equalTo": "1"
+          }
+        }
+      },
+      "response": {
+        "status": 204,
+        "body": "{\n  \"code\": 1,\n  \"data\": {\n    \"key\": \"value\"\n  },\n  \"limit\": 1,\n  \"message\": \"message\",\n  \"page\": 1,\n  \"total\": 1,\n  \"user_message\": \"user_message\"\n}",
+        "headers": {
+          "Content-Type": "application/json"
+        }
+      },
+      "uuid": "6ce3852a-d018-41e4-9d22-cd1cb167c560",
+      "persistent": true,
+      "priority": 3,
+      "metadata": {
+        "mocklab": {
+          "created": {
+            "at": "2020-01-01T00:00:00.000Z",
+            "via": "SYSTEM"
+          }
+        }
+      }
+    },
+    {
+      "id": "d9ed2b52-80ee-4aa8-b012-3fdaca079dd7",
+      "name": "Test model connectivity - default",
+      "request": {
+        "urlPathTemplate": "/gateway/{user_id}/test_model",
+        "method": "POST",
+        "headers": {
+          "Authorization": {
+            "matches": ".+"
+          }
+        },
+        "pathParameters": {
+          "user_id": {
+            "equalTo": "1"
+          }
+        }
+      },
+      "response": {
+        "status": 200,
+        "body": "{\n  \"code\": 1,\n  \"data\": {\n    \"error\": \"error\",\n    \"latency_ms\": 1,\n    \"response\": \"response\",\n    \"success\": true\n  },\n  \"limit\": 1,\n  \"message\": \"message\",\n  \"page\": 1,\n  \"total\": 1,\n  \"user_message\": \"user_message\"\n}",
+        "headers": {
+          "Content-Type": "application/json"
+        }
+      },
+      "uuid": "d9ed2b52-80ee-4aa8-b012-3fdaca079dd7",
+      "persistent": true,
+      "priority": 3,
+      "metadata": {
+        "mocklab": {
+          "created": {
+            "at": "2020-01-01T00:00:00.000Z",
+            "via": "SYSTEM"
+          }
+        }
+      }
+    },
+    {
+      "id": "308ce912-18fb-4834-98eb-5c416f2c332f",
+      "name": "List request logs - default",
+      "request": {
+        "urlPathTemplate": "/gateway/logs",
+        "method": "GET",
+        "headers": {
+          "Authorization": {
+            "matches": ".+"
+          }
+        }
+      },
+      "response": {
+        "status": 200,
+        "body": "{\n  \"code\": 1,\n  \"data\": {\n    \"data\": [\n      {}\n    ],\n    \"object\": \"object\",\n    \"total\": 1\n  },\n  \"limit\": 1,\n  \"message\": \"message\",\n  \"page\": 1,\n  \"total\": 1,\n  \"user_message\": \"user_message\"\n}",
+        "headers": {
+          "Content-Type": "application/json"
+        }
+      },
+      "uuid": "308ce912-18fb-4834-98eb-5c416f2c332f",
+      "persistent": true,
+      "priority": 3,
+      "metadata": {
+        "mocklab": {
+          "created": {
+            "at": "2020-01-01T00:00:00.000Z",
+            "via": "SYSTEM"
+          }
+        }
+      },
+      "postServeActions": []
+    },
+    {
+      "id": "da883aa1-71e4-49a3-831f-15647f620d55",
+      "name": "List models visible to current principal - default",
+      "request": {
+        "urlPathTemplate": "/gateway/models",
+        "method": "GET"
+      },
+      "response": {
+        "status": 200,
+        "body": "{\n  \"code\": 1,\n  \"data\": {\n    \"key\": \"value\"\n  },\n  \"limit\": 1,\n  \"message\": \"message\",\n  \"page\": 1,\n  \"total\": 1,\n  \"user_message\": \"user_message\"\n}",
+        "headers": {
+          "Content-Type": "application/json"
+        }
+      },
+      "uuid": "da883aa1-71e4-49a3-831f-15647f620d55",
+      "persistent": true,
+      "priority": 3,
+      "metadata": {
+        "mocklab": {
+          "created": {
+            "at": "2020-01-01T00:00:00.000Z",
+            "via": "SYSTEM"
+          }
+        }
+      },
+      "postServeActions": []
+    },
+    {
+      "id": "d0cf5a45-c1ed-4156-8c15-a880ff960b4e",
+      "name": "Seller revenue summary - default",
+      "request": {
+        "urlPathTemplate": "/gateway/seller/revenue",
+        "method": "GET",
+        "headers": {
+          "Authorization": {
+            "matches": ".+"
+          }
+        }
+      },
+      "response": {
+        "status": 200,
+        "body": "{\n  \"code\": 1,\n  \"data\": {\n    \"data\": [\n      {}\n    ],\n    \"object\": \"object\"\n  },\n  \"limit\": 1,\n  \"message\": \"message\",\n  \"page\": 1,\n  \"total\": 1,\n  \"user_message\": \"user_message\"\n}",
+        "headers": {
+          "Content-Type": "application/json"
+        }
+      },
+      "uuid": "d0cf5a45-c1ed-4156-8c15-a880ff960b4e",
+      "persistent": true,
+      "priority": 3,
+      "metadata": {
+        "mocklab": {
+          "created": {
+            "at": "2020-01-01T00:00:00.000Z",
+            "via": "SYSTEM"
+          }
+        }
+      },
+      "postServeActions": []
+    },
+    {
+      "id": "0916c4eb-4975-45a7-a658-c78af6161549",
+      "name": "List usage records - default",
+      "request": {
+        "urlPathTemplate": "/gateway/usage",
+        "method": "GET",
+        "headers": {
+          "Authorization": {
+            "matches": ".+"
+          }
+        }
+      },
+      "response": {
+        "status": 200,
+        "body": "{\n  \"code\": 1,\n  \"data\": {\n    \"data\": [\n      {}\n    ],\n    \"object\": \"object\"\n  },\n  \"limit\": 1,\n  \"message\": \"message\",\n  \"page\": 1,\n  \"total\": 1,\n  \"user_message\": \"user_message\"\n}",
+        "headers": {
+          "Content-Type": "application/json"
+        }
+      },
+      "uuid": "0916c4eb-4975-45a7-a658-c78af6161549",
+      "persistent": true,
+      "priority": 3,
+      "metadata": {
+        "mocklab": {
+          "created": {
+            "at": "2020-01-01T00:00:00.000Z",
+            "via": "SYSTEM"
+          }
+        }
+      },
+      "postServeActions": []
+    },
+    {
+      "id": "e5ad0e12-020e-4afe-8260-e72ce416d8a2",
+      "name": "List AI sessions - default",
+      "request": {
+        "urlPathTemplate": "/gateway/sessions",
+        "method": "GET",
+        "headers": {
+          "Authorization": {
+            "matches": ".+"
+          }
+        }
+      },
+      "response": {
+        "status": 200,
+        "body": "{\n  \"code\": 1,\n  \"data\": [\n    {\n      \"created_at\": 1,\n      \"deleted_at\": 1,\n      \"id\": \"0\",\n      \"subject_id\": 1,\n      \"subject_type\": \"subject_type\",\n      \"title\": \"title\",\n      \"updated_at\": 1,\n      \"uuid\": \"uuid\"\n    }\n  ],\n  \"limit\": 1,\n  \"message\": \"message\",\n  \"page\": 1,\n  \"total\": 1,\n  \"user_message\": \"user_message\"\n}",
+        "headers": {
+          "Content-Type": "application/json"
+        }
+      },
+      "uuid": "e5ad0e12-020e-4afe-8260-e72ce416d8a2",
+      "persistent": true,
+      "priority": 3,
+      "metadata": {
+        "mocklab": {
+          "created": {
+            "at": "2020-01-01T00:00:00.000Z",
+            "via": "SYSTEM"
+          }
+        }
+      },
+      "postServeActions": []
+    },
+    {
+      "id": "de566d37-6750-474b-adc3-22cebf26ee72",
+      "name": "Create AI session - default",
+      "request": {
+        "urlPathTemplate": "/gateway/sessions",
+        "method": "POST",
+        "headers": {
+          "Authorization": {
+            "matches": ".+"
+          }
+        }
+      },
+      "response": {
+        "status": 201,
+        "body": "{\n  \"code\": 1,\n  \"data\": {\n    \"created_at\": 1,\n    \"deleted_at\": 1,\n    \"id\": \"0\",\n    \"subject_id\": 1,\n    \"subject_type\": \"subject_type\",\n    \"title\": \"title\",\n    \"updated_at\": 1,\n    \"uuid\": \"uuid\"\n  },\n  \"limit\": 1,\n  \"message\": \"message\",\n  \"page\": 1,\n  \"total\": 1,\n  \"user_message\": \"user_message\"\n}",
+        "headers": {
+          "Content-Type": "application/json"
+        }
+      },
+      "uuid": "de566d37-6750-474b-adc3-22cebf26ee72",
+      "persistent": true,
+      "priority": 3,
+      "metadata": {
+        "mocklab": {
+          "created": {
+            "at": "2020-01-01T00:00:00.000Z",
+            "via": "SYSTEM"
+          }
+        }
+      }
+    },
+    {
+      "id": "6bcb94a8-51e5-4f54-a627-4c24562517b3",
+      "name": "Delete AI session - default",
+      "request": {
+        "urlPathTemplate": "/gateway/sessions/{id}",
+        "method": "DELETE",
+        "headers": {
+          "Authorization": {
+            "matches": ".+"
+          }
+        },
+        "pathParameters": {
+          "id": {
+            "equalTo": "1"
+          }
+        }
+      },
+      "response": {
+        "status": 200,
+        "body": "{\n  \"code\": 1,\n  \"data\": {\n    \"key\": \"value\"\n  },\n  \"limit\": 1,\n  \"message\": \"message\",\n  \"page\": 1,\n  \"total\": 1,\n  \"user_message\": \"user_message\"\n}",
+        "headers": {
+          "Content-Type": "application/json"
+        }
+      },
+      "uuid": "6bcb94a8-51e5-4f54-a627-4c24562517b3",
+      "persistent": true,
+      "priority": 3,
+      "metadata": {
+        "mocklab": {
+          "created": {
+            "at": "2020-01-01T00:00:00.000Z",
+            "via": "SYSTEM"
+          }
+        }
+      }
+    },
+    {
+      "id": "732ae14d-d6c2-458a-a8c1-d90a9e5fb7ab",
+      "name": "Update AI session - default",
+      "request": {
+        "urlPathTemplate": "/gateway/sessions/{id}",
+        "method": "PATCH",
+        "headers": {
+          "Authorization": {
+            "matches": ".+"
+          }
+        },
+        "pathParameters": {
+          "id": {
+            "equalTo": "1"
+          }
+        }
+      },
+      "response": {
+        "status": 200,
+        "body": "{\n  \"code\": 1,\n  \"data\": {\n    \"key\": \"value\"\n  },\n  \"limit\": 1,\n  \"message\": \"message\",\n  \"page\": 1,\n  \"total\": 1,\n  \"user_message\": \"user_message\"\n}",
+        "headers": {
+          "Content-Type": "application/json"
+        }
+      },
+      "uuid": "732ae14d-d6c2-458a-a8c1-d90a9e5fb7ab",
+      "persistent": true,
+      "priority": 3,
+      "metadata": {
+        "mocklab": {
+          "created": {
+            "at": "2020-01-01T00:00:00.000Z",
+            "via": "SYSTEM"
+          }
+        }
+      }
+    },
+    {
+      "id": "0bbcc252-e889-4488-9f58-8549f385f796",
+      "name": "List API keys - default",
+      "request": {
+        "urlPathTemplate": "/iam/api-keys",
+        "method": "GET",
+        "headers": {
+          "Authorization": {
+            "matches": ".+"
+          }
+        }
+      },
+      "response": {
+        "status": 200,
+        "body": "{\n  \"code\": 1,\n  \"data\": [\n    {\n      \"enabled\": true,\n      \"id\": 1,\n      \"key_prefix\": \"key_prefix\",\n      \"scopes\": [\n        \"scopes\"\n      ]\n    }\n  ],\n  \"limit\": 1,\n  \"message\": \"message\",\n  \"page\": 1,\n  \"total\": 1,\n  \"user_message\": \"user_message\"\n}",
+        "headers": {
+          "Content-Type": "application/json"
+        }
+      },
+      "uuid": "0bbcc252-e889-4488-9f58-8549f385f796",
+      "persistent": true,
+      "priority": 3,
+      "metadata": {
+        "mocklab": {
+          "created": {
+            "at": "2020-01-01T00:00:00.000Z",
+            "via": "SYSTEM"
+          }
+        }
+      },
+      "postServeActions": []
+    },
+    {
+      "id": "37def75a-6552-4b5c-92b0-0ccd87dc4892",
+      "name": "Create API key - default",
+      "request": {
+        "urlPathTemplate": "/iam/api-keys",
+        "method": "POST",
+        "headers": {
+          "Authorization": {
+            "matches": ".+"
+          }
+        }
+      },
+      "response": {
+        "status": 200,
+        "body": "{\n  \"code\": 1,\n  \"data\": {\n    \"api_key\": \"api_key\",\n    \"id\": 1,\n    \"key_prefix\": \"key_prefix\",\n    \"scopes\": [\n      \"scopes\"\n    ]\n  },\n  \"limit\": 1,\n  \"message\": \"message\",\n  \"page\": 1,\n  \"total\": 1,\n  \"user_message\": \"user_message\"\n}",
+        "headers": {
+          "Content-Type": "application/json"
+        }
+      },
+      "uuid": "37def75a-6552-4b5c-92b0-0ccd87dc4892",
+      "persistent": true,
+      "priority": 3,
+      "metadata": {
+        "mocklab": {
+          "created": {
+            "at": "2020-01-01T00:00:00.000Z",
+            "via": "SYSTEM"
+          }
+        }
+      }
+    },
+    {
+      "id": "8494a674-cc9d-4724-afdf-c1ec7a051051",
+      "name": "Revoke API key - default",
+      "request": {
+        "urlPathTemplate": "/iam/api-keys/{id}",
+        "method": "DELETE",
+        "headers": {
+          "Authorization": {
+            "matches": ".+"
+          }
+        },
+        "pathParameters": {
+          "id": {
+            "equalTo": "1"
+          }
+        }
+      },
+      "response": {
+        "status": 200,
+        "body": "\"\"",
+        "headers": {
+          "Content-Type": "application/json"
+        }
+      },
+      "uuid": "8494a674-cc9d-4724-afdf-c1ec7a051051",
+      "persistent": true,
+      "priority": 3,
+      "metadata": {
+        "mocklab": {
+          "created": {
+            "at": "2020-01-01T00:00:00.000Z",
+            "via": "SYSTEM"
+          }
+        }
+      }
+    },
+    {
+      "id": "5fa0469b-f121-4fa9-bf67-e5602132125a",
+      "name": "List visibility filters - default",
+      "request": {
+        "urlPathTemplate": "/iam/visibility-filters",
+        "method": "GET",
+        "headers": {
+          "Authorization": {
+            "matches": ".+"
+          }
+        },
+        "queryParameters": {
+          "resource_type": {
+            "equalTo": "resource_type"
+          },
+          "resource_id": {
+            "equalTo": "1"
+          }
+        }
+      },
+      "response": {
+        "status": 200,
+        "body": "{\n  \"code\": 1,\n  \"data\": [\n    1\n  ],\n  \"limit\": 1,\n  \"message\": \"message\",\n  \"page\": 1,\n  \"total\": 1,\n  \"user_message\": \"user_message\"\n}",
+        "headers": {
+          "Content-Type": "application/json"
+        }
+      },
+      "uuid": "5fa0469b-f121-4fa9-bf67-e5602132125a",
+      "persistent": true,
+      "priority": 3,
+      "metadata": {
+        "mocklab": {
+          "created": {
+            "at": "2020-01-01T00:00:00.000Z",
+            "via": "SYSTEM"
+          }
+        }
+      },
+      "postServeActions": []
+    },
+    {
+      "id": "0423caac-cabd-4710-8880-687a94569106",
+      "name": "Add visibility filter - default",
+      "request": {
+        "urlPathTemplate": "/iam/visibility-filters",
+        "method": "POST",
+        "headers": {
+          "Authorization": {
+            "matches": ".+"
+          }
+        }
+      },
+      "response": {
+        "status": 200,
+        "body": "\"\"",
+        "headers": {
+          "Content-Type": "application/json"
+        }
+      },
+      "uuid": "0423caac-cabd-4710-8880-687a94569106",
+      "persistent": true,
+      "priority": 3,
+      "metadata": {
+        "mocklab": {
+          "created": {
+            "at": "2020-01-01T00:00:00.000Z",
+            "via": "SYSTEM"
+          }
+        }
+      }
+    },
+    {
+      "id": "0ece0ca9-3e50-47a3-bd81-5e4cf2eef202",
+      "name": "Remove visibility filter - default",
+      "request": {
+        "urlPathTemplate": "/iam/visibility-filters/{resource_type}/{resource_id}/{user_id}",
+        "method": "DELETE",
+        "headers": {
+          "Authorization": {
+            "matches": ".+"
+          }
+        },
+        "pathParameters": {
+          "resource_type": {
+            "equalTo": "resource_type"
+          },
+          "resource_id": {
+            "equalTo": "1"
+          },
+          "user_id": {
+            "equalTo": "1"
+          }
+        }
+      },
+      "response": {
+        "status": 200,
+        "body": "\"\"",
+        "headers": {
+          "Content-Type": "application/json"
+        }
+      },
+      "uuid": "0ece0ca9-3e50-47a3-bd81-5e4cf2eef202",
+      "persistent": true,
+      "priority": 3,
+      "metadata": {
+        "mocklab": {
+          "created": {
+            "at": "2020-01-01T00:00:00.000Z",
+            "via": "SYSTEM"
+          }
+        }
+      }
+    },
+    {
+      "id": "f4f030cd-282e-48bb-8e76-5e817c42b117",
+      "name": "List marketplace models - default",
+      "request": {
+        "urlPathTemplate": "/marketplace/models",
+        "method": "GET"
+      },
+      "response": {
+        "status": 200,
+        "body": "{\n  \"code\": 1,\n  \"data\": {\n    \"data\": [\n      {}\n    ],\n    \"limit\": 1,\n    \"object\": \"object\",\n    \"page\": 1,\n    \"total\": 1\n  },\n  \"limit\": 1,\n  \"message\": \"message\",\n  \"page\": 1,\n  \"total\": 1,\n  \"user_message\": \"user_message\"\n}",
+        "headers": {
+          "Content-Type": "application/json"
+        }
+      },
+      "uuid": "f4f030cd-282e-48bb-8e76-5e817c42b117",
+      "persistent": true,
+      "priority": 3,
+      "metadata": {
+        "mocklab": {
+          "created": {
+            "at": "2020-01-01T00:00:00.000Z",
+            "via": "SYSTEM"
+          }
+        }
+      },
+      "postServeActions": []
+    },
+    {
+      "id": "341ec777-3755-4121-b919-9d88c9358185",
+      "name": "List conversations - default",
+      "request": {
+        "urlPathTemplate": "/messaging/conversations",
+        "method": "GET",
+        "headers": {
+          "Authorization": {
+            "matches": ".+"
+          }
+        }
+      },
+      "response": {
+        "status": 200,
+        "body": "{\n  \"code\": 1,\n  \"data\": [\n    {\n      \"created_at\": 1,\n      \"created_by\": 1,\n      \"id\": 1,\n      \"last_message\": \"last_message\",\n      \"last_msg_at\": 1,\n      \"max_seq\": 1,\n      \"read_seq\": 1,\n      \"synced_seq\": 1,\n      \"title\": \"title\",\n      \"type\": \"type\",\n      \"uid\": \"uid\",\n      \"unread_count\": 1,\n      \"updated_at\": 1\n    }\n  ],\n  \"limit\": 1,\n  \"message\": \"message\",\n  \"page\": 1,\n  \"total\": 1,\n  \"user_message\": \"user_message\"\n}",
+        "headers": {
+          "Content-Type": "application/json"
+        }
+      },
+      "uuid": "341ec777-3755-4121-b919-9d88c9358185",
+      "persistent": true,
+      "priority": 3,
+      "metadata": {
+        "mocklab": {
+          "created": {
+            "at": "2020-01-01T00:00:00.000Z",
+            "via": "SYSTEM"
+          }
+        }
+      },
+      "postServeActions": []
+    },
+    {
+      "id": "37d6e23e-d0c6-48fd-8bf5-9969ecff380b",
+      "name": "Create conversation - default",
+      "request": {
+        "urlPathTemplate": "/messaging/conversations",
+        "method": "POST",
+        "headers": {
+          "Authorization": {
+            "matches": ".+"
+          }
+        }
+      },
+      "response": {
+        "status": 201,
+        "body": "{\n  \"code\": 1,\n  \"data\": {\n    \"created_at\": 1,\n    \"created_by\": 1,\n    \"id\": 1,\n    \"last_message\": \"last_message\",\n    \"last_msg_at\": 1,\n    \"max_seq\": 1,\n    \"title\": \"title\",\n    \"type\": \"type\",\n    \"uid\": \"uid\",\n    \"updated_at\": 1\n  },\n  \"limit\": 1,\n  \"message\": \"message\",\n  \"page\": 1,\n  \"total\": 1,\n  \"user_message\": \"user_message\"\n}",
+        "headers": {
+          "Content-Type": "application/json"
+        }
+      },
+      "uuid": "37d6e23e-d0c6-48fd-8bf5-9969ecff380b",
+      "persistent": true,
+      "priority": 3,
+      "metadata": {
+        "mocklab": {
+          "created": {
+            "at": "2020-01-01T00:00:00.000Z",
+            "via": "SYSTEM"
+          }
+        }
+      }
+    },
+    {
+      "id": "d9736068-b4ef-4bf3-b186-61848708d95a",
+      "name": "Get conversation - default",
+      "request": {
+        "urlPathTemplate": "/messaging/conversations/{conv_id}",
+        "method": "GET",
+        "headers": {
+          "Authorization": {
+            "matches": ".+"
+          }
+        },
+        "pathParameters": {
+          "conv_id": {
+            "equalTo": "1"
+          }
+        }
+      },
+      "response": {
+        "status": 200,
+        "body": "{\n  \"code\": 1,\n  \"data\": {\n    \"created_at\": 1,\n    \"created_by\": 1,\n    \"id\": 1,\n    \"last_message\": \"last_message\",\n    \"last_msg_at\": 1,\n    \"max_seq\": 1,\n    \"title\": \"title\",\n    \"type\": \"type\",\n    \"uid\": \"uid\",\n    \"updated_at\": 1\n  },\n  \"limit\": 1,\n  \"message\": \"message\",\n  \"page\": 1,\n  \"total\": 1,\n  \"user_message\": \"user_message\"\n}",
+        "headers": {
+          "Content-Type": "application/json"
+        }
+      },
+      "uuid": "d9736068-b4ef-4bf3-b186-61848708d95a",
+      "persistent": true,
+      "priority": 3,
+      "metadata": {
+        "mocklab": {
+          "created": {
+            "at": "2020-01-01T00:00:00.000Z",
+            "via": "SYSTEM"
+          }
+        }
+      }
+    },
+    {
+      "id": "d1df8408-4632-4e6a-b24b-438f7009c253",
+      "name": "Add participant - default",
+      "request": {
+        "urlPathTemplate": "/messaging/conversations/{conv_id}/participants",
+        "method": "POST",
+        "headers": {
+          "Authorization": {
+            "matches": ".+"
+          }
+        },
+        "pathParameters": {
+          "conv_id": {
+            "equalTo": "1"
+          }
+        }
+      },
+      "response": {
+        "status": 200,
+        "body": "\"\"",
+        "headers": {
+          "Content-Type": "application/json"
+        }
+      },
+      "uuid": "d1df8408-4632-4e6a-b24b-438f7009c253",
+      "persistent": true,
+      "priority": 3,
+      "metadata": {
+        "mocklab": {
+          "created": {
+            "at": "2020-01-01T00:00:00.000Z",
+            "via": "SYSTEM"
+          }
+        }
+      }
+    },
+    {
+      "id": "ae9ff611-6d58-4cf7-9d14-527c83766539",
+      "name": "Get messages - default",
+      "request": {
+        "urlPathTemplate": "/messaging/conversations/{conv_id}/messages",
+        "method": "GET",
+        "headers": {
+          "Authorization": {
+            "matches": ".+"
+          }
+        },
+        "pathParameters": {
+          "conv_id": {
+            "equalTo": "1"
+          }
+        }
+      },
+      "response": {
+        "status": 200,
+        "body": "{\n  \"code\": 1,\n  \"data\": [\n    {\n      \"content\": \"content\",\n      \"content_type\": \"content_type\",\n      \"conv_id\": 1,\n      \"created_at\": 1,\n      \"id\": 1,\n      \"mentioned_user_ids\": [\n        1\n      ],\n      \"metadata\": \"metadata\",\n      \"reply_to_seq\": 1,\n      \"sender_id\": 1,\n      \"seq\": 1\n    }\n  ],\n  \"limit\": 1,\n  \"message\": \"message\",\n  \"page\": 1,\n  \"total\": 1,\n  \"user_message\": \"user_message\"\n}",
+        "headers": {
+          "Content-Type": "application/json"
+        }
+      },
+      "uuid": "ae9ff611-6d58-4cf7-9d14-527c83766539",
+      "persistent": true,
+      "priority": 3,
+      "metadata": {
+        "mocklab": {
+          "created": {
+            "at": "2020-01-01T00:00:00.000Z",
+            "via": "SYSTEM"
+          }
+        }
+      }
+    },
+    {
+      "id": "1f441877-49bb-4970-a3fc-947f54e3a161",
+      "name": "Send message - default",
+      "request": {
+        "urlPathTemplate": "/messaging/conversations/{conv_id}/messages",
+        "method": "POST",
+        "headers": {
+          "Authorization": {
+            "matches": ".+"
+          }
+        },
+        "pathParameters": {
+          "conv_id": {
+            "equalTo": "1"
+          }
+        }
+      },
+      "response": {
+        "status": 201,
+        "body": "{\n  \"code\": 1,\n  \"data\": {\n    \"content\": \"content\",\n    \"content_type\": \"content_type\",\n    \"conv_id\": 1,\n    \"created_at\": 1,\n    \"id\": 1,\n    \"mentioned_user_ids\": [\n      1\n    ],\n    \"metadata\": \"metadata\",\n    \"reply_to_seq\": 1,\n    \"sender_id\": 1,\n    \"seq\": 1\n  },\n  \"limit\": 1,\n  \"message\": \"message\",\n  \"page\": 1,\n  \"total\": 1,\n  \"user_message\": \"user_message\"\n}",
+        "headers": {
+          "Content-Type": "application/json"
+        }
+      },
+      "uuid": "1f441877-49bb-4970-a3fc-947f54e3a161",
+      "persistent": true,
+      "priority": 3,
+      "metadata": {
+        "mocklab": {
+          "created": {
+            "at": "2020-01-01T00:00:00.000Z",
+            "via": "SYSTEM"
+          }
+        }
+      }
+    },
+    {
+      "id": "82e87699-3628-45e4-9d73-8dd460029eed",
+      "name": "Mark messages as read - default",
+      "request": {
+        "urlPathTemplate": "/messaging/read",
+        "method": "POST",
+        "headers": {
+          "Authorization": {
+            "matches": ".+"
+          }
+        }
+      },
+      "response": {
+        "status": 200,
+        "body": "\"\"",
+        "headers": {
+          "Content-Type": "application/json"
+        }
+      },
+      "uuid": "82e87699-3628-45e4-9d73-8dd460029eed",
+      "persistent": true,
+      "priority": 3,
+      "metadata": {
+        "mocklab": {
+          "created": {
+            "at": "2020-01-01T00:00:00.000Z",
+            "via": "SYSTEM"
+          }
+        }
+      }
+    },
+    {
+      "id": "cf122743-f372-4eb9-a2c5-934726c301ac",
+      "name": "Register device - default",
+      "request": {
+        "urlPathTemplate": "/messaging/devices",
+        "method": "POST",
+        "headers": {
+          "Authorization": {
+            "matches": ".+"
+          }
+        }
+      },
+      "response": {
+        "status": 200,
+        "body": "\"\"",
+        "headers": {
+          "Content-Type": "application/json"
+        }
+      },
+      "uuid": "cf122743-f372-4eb9-a2c5-934726c301ac",
+      "persistent": true,
+      "priority": 3,
+      "metadata": {
+        "mocklab": {
+          "created": {
+            "at": "2020-01-01T00:00:00.000Z",
+            "via": "SYSTEM"
+          }
+        }
+      }
+    },
+    {
+      "id": "ea5ca9fa-d9dd-4272-89be-0c592c8d3e7a",
+      "name": "Unregister device - default",
+      "request": {
+        "urlPathTemplate": "/messaging/devices/{device_id}",
+        "method": "DELETE",
+        "headers": {
+          "Authorization": {
+            "matches": ".+"
+          }
+        },
+        "pathParameters": {
+          "device_id": {
+            "equalTo": "1"
+          }
+        }
+      },
+      "response": {
+        "status": 200,
+        "body": "\"\"",
+        "headers": {
+          "Content-Type": "application/json"
+        }
+      },
+      "uuid": "ea5ca9fa-d9dd-4272-89be-0c592c8d3e7a",
+      "persistent": true,
+      "priority": 3,
+      "metadata": {
+        "mocklab": {
+          "created": {
+            "at": "2020-01-01T00:00:00.000Z",
+            "via": "SYSTEM"
+          }
+        }
+      }
+    },
+    {
+      "id": "984d4034-0e5a-4ad1-a2cb-5b6b565a0fc6",
+      "name": "List public contents - default",
+      "request": {
+        "urlPathTemplate": "/public/wisdom",
+        "method": "GET"
+      },
+      "response": {
+        "status": 200,
+        "body": "\"\"",
+        "headers": {
+          "Content-Type": "application/json"
+        }
+      },
+      "uuid": "984d4034-0e5a-4ad1-a2cb-5b6b565a0fc6",
+      "persistent": true,
+      "priority": 3,
+      "metadata": {
+        "mocklab": {
+          "created": {
+            "at": "2020-01-01T00:00:00.000Z",
+            "via": "SYSTEM"
+          }
+        }
+      },
+      "postServeActions": []
+    },
+    {
+      "id": "4d92f7d2-4bf3-4398-9844-f9b551fddaf1",
+      "name": "List user secrets - default",
+      "request": {
+        "urlPathTemplate": "/secrets/{user_id}",
+        "method": "GET",
+        "headers": {
+          "Authorization": {
+            "matches": ".+"
+          }
+        },
+        "pathParameters": {
+          "user_id": {
+            "equalTo": "1"
+          }
+        }
+      },
+      "response": {
+        "status": 200,
+        "body": "{\n  \"code\": 1,\n  \"data\": [\n    {\n      \"created_at\": 1,\n      \"description\": \"description\",\n      \"key\": \"key\",\n      \"updated_at\": 1,\n      \"user_id\": 1\n    }\n  ],\n  \"limit\": 1,\n  \"message\": \"message\",\n  \"page\": 1,\n  \"total\": 1,\n  \"user_message\": \"user_message\"\n}",
+        "headers": {
+          "Content-Type": "application/json"
+        }
+      },
+      "uuid": "4d92f7d2-4bf3-4398-9844-f9b551fddaf1",
+      "persistent": true,
+      "priority": 3,
+      "metadata": {
+        "mocklab": {
+          "created": {
+            "at": "2020-01-01T00:00:00.000Z",
+            "via": "SYSTEM"
+          }
+        }
+      }
+    },
+    {
+      "id": "66d9ef2f-7568-42b7-80b4-8b4c40a305eb",
+      "name": "Get user secret - default",
+      "request": {
+        "urlPathTemplate": "/secrets/{user_id}/{key}",
+        "method": "GET",
+        "headers": {
+          "Authorization": {
+            "matches": ".+"
+          }
+        },
+        "pathParameters": {
+          "user_id": {
+            "equalTo": "1"
+          },
+          "key": {
+            "equalTo": "key"
+          }
+        }
+      },
+      "response": {
+        "status": 200,
+        "body": "{\n  \"code\": 1,\n  \"data\": {\n    \"created_at\": 1,\n    \"description\": \"description\",\n    \"key\": \"key\",\n    \"updated_at\": 1,\n    \"user_id\": 1,\n    \"value\": \"value\"\n  },\n  \"limit\": 1,\n  \"message\": \"message\",\n  \"page\": 1,\n  \"total\": 1,\n  \"user_message\": \"user_message\"\n}",
+        "headers": {
+          "Content-Type": "application/json"
+        }
+      },
+      "uuid": "66d9ef2f-7568-42b7-80b4-8b4c40a305eb",
+      "persistent": true,
+      "priority": 3,
+      "metadata": {
+        "mocklab": {
+          "created": {
+            "at": "2020-01-01T00:00:00.000Z",
+            "via": "SYSTEM"
+          }
+        }
+      }
+    },
+    {
+      "id": "fd9f090f-4e86-4e53-a2ea-476af3959e60",
+      "name": "Create or update user secret - default",
+      "request": {
+        "urlPathTemplate": "/secrets/{user_id}/{key}",
+        "method": "PUT",
+        "headers": {
+          "Authorization": {
+            "matches": ".+"
+          }
+        },
+        "pathParameters": {
+          "user_id": {
+            "equalTo": "1"
+          },
+          "key": {
+            "equalTo": "key"
+          }
+        }
+      },
+      "response": {
+        "status": 200,
+        "body": "{\n  \"code\": 1,\n  \"data\": {\n    \"created_at\": 1,\n    \"description\": \"description\",\n    \"key\": \"key\",\n    \"updated_at\": 1,\n    \"user_id\": 1\n  },\n  \"limit\": 1,\n  \"message\": \"message\",\n  \"page\": 1,\n  \"total\": 1,\n  \"user_message\": \"user_message\"\n}",
+        "headers": {
+          "Content-Type": "application/json"
+        }
+      },
+      "uuid": "fd9f090f-4e86-4e53-a2ea-476af3959e60",
+      "persistent": true,
+      "priority": 3,
+      "metadata": {
+        "mocklab": {
+          "created": {
+            "at": "2020-01-01T00:00:00.000Z",
+            "via": "SYSTEM"
+          }
+        }
+      }
+    },
+    {
+      "id": "ab3a32af-091f-4bfd-b2dd-9391c27d9022",
+      "name": "Delete user secret - default",
+      "request": {
+        "urlPathTemplate": "/secrets/{user_id}/{key}",
+        "method": "DELETE",
+        "headers": {
+          "Authorization": {
+            "matches": ".+"
+          }
+        },
+        "pathParameters": {
+          "user_id": {
+            "equalTo": "1"
+          },
+          "key": {
+            "equalTo": "key"
+          }
+        }
+      },
+      "response": {
+        "status": 200,
+        "body": "{\n  \"code\": 1,\n  \"data\": {\n    \"deleted\": true\n  },\n  \"limit\": 1,\n  \"message\": \"message\",\n  \"page\": 1,\n  \"total\": 1,\n  \"user_message\": \"user_message\"\n}",
+        "headers": {
+          "Content-Type": "application/json"
+        }
+      },
+      "uuid": "ab3a32af-091f-4bfd-b2dd-9391c27d9022",
+      "persistent": true,
+      "priority": 3,
+      "metadata": {
+        "mocklab": {
+          "created": {
+            "at": "2020-01-01T00:00:00.000Z",
+            "via": "SYSTEM"
+          }
+        }
+      }
+    },
+    {
+      "id": "59831333-3a97-485d-874a-6038e40edb45",
+      "name": "Get current user profile - default",
+      "request": {
+        "urlPathTemplate": "/user/me",
+        "method": "GET",
+        "headers": {
+          "Authorization": {
+            "matches": ".+"
+          }
+        }
+      },
+      "response": {
+        "status": 200,
+        "body": "{\n  \"code\": 1,\n  \"data\": {\n    \"avatar_url\": \"avatar_url\",\n    \"email\": \"email\",\n    \"has_password\": true,\n    \"id\": 1,\n    \"name\": \"name\",\n    \"parent_user_id\": 1,\n    \"phone\": \"phone\",\n    \"preferences\": {\n      \"lang\": \"lang\",\n      \"theme\": \"theme\"\n    },\n    \"role\": \"role\"\n  },\n  \"limit\": 1,\n  \"message\": \"message\",\n  \"page\": 1,\n  \"total\": 1,\n  \"user_message\": \"user_message\"\n}",
+        "headers": {
+          "Content-Type": "application/json"
+        }
+      },
+      "uuid": "59831333-3a97-485d-874a-6038e40edb45",
+      "persistent": true,
+      "priority": 3,
+      "metadata": {
+        "mocklab": {
+          "created": {
+            "at": "2020-01-01T00:00:00.000Z",
+            "via": "SYSTEM"
+          }
+        }
+      },
+      "postServeActions": []
+    },
+    {
+      "id": "3ea4b06c-1522-48c5-9dbb-d770f67f2023",
+      "name": "Update current user profile - default",
+      "request": {
+        "urlPathTemplate": "/user/me",
+        "method": "PATCH",
+        "headers": {
+          "Authorization": {
+            "matches": ".+"
+          }
+        }
+      },
+      "response": {
+        "status": 200,
+        "body": "{\n  \"code\": 1,\n  \"data\": {\n    \"avatar_url\": \"avatar_url\",\n    \"email\": \"email\",\n    \"has_password\": true,\n    \"id\": 1,\n    \"name\": \"name\",\n    \"parent_user_id\": 1,\n    \"phone\": \"phone\",\n    \"preferences\": {\n      \"lang\": \"lang\",\n      \"theme\": \"theme\"\n    },\n    \"role\": \"role\"\n  },\n  \"limit\": 1,\n  \"message\": \"message\",\n  \"page\": 1,\n  \"total\": 1,\n  \"user_message\": \"user_message\"\n}",
+        "headers": {
+          "Content-Type": "application/json"
+        }
+      },
+      "uuid": "3ea4b06c-1522-48c5-9dbb-d770f67f2023",
+      "persistent": true,
+      "priority": 3,
+      "metadata": {
+        "mocklab": {
+          "created": {
+            "at": "2020-01-01T00:00:00.000Z",
+            "via": "SYSTEM"
+          }
+        }
+      }
+    },
+    {
+      "id": "c4cd4cef-c64d-495b-8e0a-d04afed030d1",
+      "name": "Get presigned avatar upload URL - default",
+      "request": {
+        "urlPathTemplate": "/user/me/avatar/upload-url",
+        "method": "POST",
+        "headers": {
+          "Authorization": {
+            "matches": ".+"
+          }
+        }
+      },
+      "response": {
+        "status": 200,
+        "body": "{\n  \"code\": 1,\n  \"data\": {\n    \"key\": \"key\",\n    \"public_url\": \"public_url\",\n    \"upload_url\": \"upload_url\"\n  },\n  \"limit\": 1,\n  \"message\": \"message\",\n  \"page\": 1,\n  \"total\": 1,\n  \"user_message\": \"user_message\"\n}",
+        "headers": {
+          "Content-Type": "application/json"
+        }
+      },
+      "uuid": "c4cd4cef-c64d-495b-8e0a-d04afed030d1",
+      "persistent": true,
+      "priority": 3,
+      "metadata": {
+        "mocklab": {
+          "created": {
+            "at": "2020-01-01T00:00:00.000Z",
+            "via": "SYSTEM"
+          }
+        }
+      }
+    },
+    {
+      "id": "847f984f-8c3a-44a3-abc0-bb63e0cc841e",
+      "name": "Confirm and soft-delete the account - default",
+      "request": {
+        "urlPathTemplate": "/user/me/deletion/confirm",
+        "method": "POST",
+        "headers": {
+          "Authorization": {
+            "matches": ".+"
+          }
+        }
+      },
+      "response": {
+        "status": 200,
+        "body": "\"\"",
+        "headers": {
+          "Content-Type": "application/json"
+        }
+      },
+      "uuid": "847f984f-8c3a-44a3-abc0-bb63e0cc841e",
+      "persistent": true,
+      "priority": 3,
+      "metadata": {
+        "mocklab": {
+          "created": {
+            "at": "2020-01-01T00:00:00.000Z",
+            "via": "SYSTEM"
+          }
+        }
+      }
+    },
+    {
+      "id": "1da4ec3b-8853-47c2-8fd1-6565833468d2",
+      "name": "Send account-deletion confirmation code - default",
+      "request": {
+        "urlPathTemplate": "/user/me/deletion/send",
+        "method": "POST",
+        "headers": {
+          "Authorization": {
+            "matches": ".+"
+          }
+        }
+      },
+      "response": {
+        "status": 200,
+        "body": "\"\"",
+        "headers": {
+          "Content-Type": "application/json"
+        }
+      },
+      "uuid": "1da4ec3b-8853-47c2-8fd1-6565833468d2",
+      "persistent": true,
+      "priority": 3,
+      "metadata": {
+        "mocklab": {
+          "created": {
+            "at": "2020-01-01T00:00:00.000Z",
+            "via": "SYSTEM"
+          }
+        }
+      }
+    },
+    {
+      "id": "9471f6b3-91ba-4d1b-a47b-85e1414fcb8b",
+      "name": "Switch current session user - default",
+      "request": {
+        "urlPathTemplate": "/user/switch",
+        "method": "POST",
+        "headers": {
+          "Authorization": {
+            "matches": ".+"
+          }
+        }
+      },
+      "response": {
+        "status": 200,
+        "body": "{\n  \"code\": 1,\n  \"data\": {\n    \"avatar_url\": \"avatar_url\",\n    \"email\": \"email\",\n    \"has_password\": true,\n    \"id\": 1,\n    \"name\": \"name\",\n    \"parent_user_id\": 1,\n    \"phone\": \"phone\",\n    \"preferences\": {\n      \"lang\": \"lang\",\n      \"theme\": \"theme\"\n    },\n    \"role\": \"role\"\n  },\n  \"limit\": 1,\n  \"message\": \"message\",\n  \"page\": 1,\n  \"total\": 1,\n  \"user_message\": \"user_message\"\n}",
+        "headers": {
+          "Content-Type": "application/json"
+        }
+      },
+      "uuid": "9471f6b3-91ba-4d1b-a47b-85e1414fcb8b",
+      "persistent": true,
+      "priority": 3,
+      "metadata": {
+        "mocklab": {
+          "created": {
+            "at": "2020-01-01T00:00:00.000Z",
+            "via": "SYSTEM"
+          }
+        }
+      }
+    },
+    {
+      "id": "66822fda-47bd-48a2-b5e1-1ae028dde98e",
+      "name": "List switchable users - default",
+      "request": {
+        "urlPathTemplate": "/user/switch-targets",
+        "method": "GET",
+        "headers": {
+          "Authorization": {
+            "matches": ".+"
+          }
+        }
+      },
+      "response": {
+        "status": 200,
+        "body": "{\n  \"code\": 1,\n  \"data\": [\n    {\n      \"avatar_url\": \"avatar_url\",\n      \"email\": \"email\",\n      \"has_password\": true,\n      \"id\": 1,\n      \"name\": \"name\",\n      \"parent_user_id\": 1,\n      \"phone\": \"phone\",\n      \"role\": \"role\"\n    }\n  ],\n  \"limit\": 1,\n  \"message\": \"message\",\n  \"page\": 1,\n  \"total\": 1,\n  \"user_message\": \"user_message\"\n}",
+        "headers": {
+          "Content-Type": "application/json"
+        }
+      },
+      "uuid": "66822fda-47bd-48a2-b5e1-1ae028dde98e",
+      "persistent": true,
+      "priority": 3,
+      "metadata": {
+        "mocklab": {
+          "created": {
+            "at": "2020-01-01T00:00:00.000Z",
+            "via": "SYSTEM"
+          }
+        }
+      },
+      "postServeActions": []
+    },
+    {
+      "id": "9daa1ea0-d24c-438d-b731-e0095af4113e",
+      "name": "Receive GitHub webhook events - default",
+      "request": {
+        "urlPathTemplate": "/webhook/github/callback",
+        "method": "POST"
+      },
+      "response": {
+        "status": 200,
+        "body": "\"\"",
+        "headers": {
+          "Content-Type": "application/json"
+        }
+      },
+      "uuid": "9daa1ea0-d24c-438d-b731-e0095af4113e",
+      "persistent": true,
+      "priority": 3,
+      "metadata": {
+        "mocklab": {
+          "created": {
+            "at": "2020-01-01T00:00:00.000Z",
+            "via": "SYSTEM"
+          }
+        }
+      }
+    },
+    {
+      "id": "97828a53-b040-4753-9a86-4011b034f50c",
+      "name": "List contents - default",
+      "request": {
+        "urlPathTemplate": "/wisdom",
+        "method": "GET",
+        "headers": {
+          "Authorization": {
+            "matches": ".+"
+          }
+        }
+      },
+      "response": {
+        "status": 200,
+        "body": "\"\"",
+        "headers": {
+          "Content-Type": "application/json"
+        }
+      },
+      "uuid": "97828a53-b040-4753-9a86-4011b034f50c",
+      "persistent": true,
+      "priority": 3,
+      "metadata": {
+        "mocklab": {
+          "created": {
+            "at": "2020-01-01T00:00:00.000Z",
+            "via": "SYSTEM"
+          }
+        }
+      },
+      "postServeActions": []
+    },
+    {
+      "id": "211bface-5ea4-459a-80e1-f304ac4edc51",
+      "name": "Create content - default",
+      "request": {
+        "urlPathTemplate": "/wisdom",
+        "method": "POST",
+        "headers": {
+          "Authorization": {
+            "matches": ".+"
+          }
+        }
+      },
+      "response": {
+        "status": 200,
+        "body": "{\n  \"code\": 1,\n  \"data\": {\n    \"body\": \"body\",\n    \"changelog\": \"changelog\",\n    \"community_id\": 1,\n    \"confidence\": 1.1,\n    \"created_at\": 1,\n    \"defencer\": \"defencer\",\n    \"description\": \"description\",\n    \"id\": 1,\n    \"kind\": \"kind\",\n    \"pre_body\": \"pre_body\",\n    \"promise\": \"promise\",\n    \"props\": [\n      1\n    ],\n    \"reference_count\": 1,\n    \"reflector\": \"reflector\",\n    \"rev\": 1,\n    \"search_hit_count\": 1,\n    \"slug\": \"slug\",\n    \"title\": \"title\",\n    \"type\": \"type\",\n    \"updated_at\": 1,\n    \"user_id\": 1,\n    \"username\": \"username\",\n    \"version\": 1\n  },\n  \"limit\": 1,\n  \"message\": \"message\",\n  \"page\": 1,\n  \"total\": 1,\n  \"user_message\": \"user_message\"\n}",
+        "headers": {
+          "Content-Type": "application/json"
+        }
+      },
+      "uuid": "211bface-5ea4-459a-80e1-f304ac4edc51",
+      "persistent": true,
+      "priority": 3,
+      "metadata": {
+        "mocklab": {
+          "created": {
+            "at": "2020-01-01T00:00:00.000Z",
+            "via": "SYSTEM"
+          }
+        }
+      }
+    },
+    {
+      "id": "46ab03ac-8c6f-4013-93f7-17fc95950d6c",
+      "name": "Get content - default",
+      "request": {
+        "urlPathTemplate": "/wisdom/{id}",
+        "method": "GET",
+        "headers": {
+          "Authorization": {
+            "matches": ".+"
+          }
+        },
+        "pathParameters": {
+          "id": {
+            "equalTo": "1"
+          }
+        }
+      },
+      "response": {
+        "status": 200,
+        "body": "{\n  \"code\": 1,\n  \"data\": {\n    \"incoming\": [\n      {}\n    ],\n    \"outgoing\": [\n      {}\n    ],\n    \"wisdom\": {\n      \"body\": \"body\",\n      \"changelog\": \"changelog\",\n      \"community_id\": 1,\n      \"confidence\": 1.1,\n      \"created_at\": 1,\n      \"defencer\": \"defencer\",\n      \"description\": \"description\",\n      \"id\": 1,\n      \"kind\": \"kind\",\n      \"pre_body\": \"pre_body\",\n      \"promise\": \"promise\",\n      \"props\": [\n        1\n      ],\n      \"reference_count\": 1,\n      \"reflector\": \"reflector\",\n      \"rev\": 1,\n      \"search_hit_count\": 1,\n      \"slug\": \"slug\",\n      \"title\": \"title\",\n      \"type\": \"type\",\n      \"updated_at\": 1,\n      \"user_id\": 1,\n      \"username\": \"username\",\n      \"version\": 1\n    }\n  },\n  \"limit\": 1,\n  \"message\": \"message\",\n  \"page\": 1,\n  \"total\": 1,\n  \"user_message\": \"user_message\"\n}",
+        "headers": {
+          "Content-Type": "application/json"
+        }
+      },
+      "uuid": "46ab03ac-8c6f-4013-93f7-17fc95950d6c",
+      "persistent": true,
+      "priority": 3,
+      "metadata": {
+        "mocklab": {
+          "created": {
+            "at": "2020-01-01T00:00:00.000Z",
+            "via": "SYSTEM"
+          }
+        }
+      }
+    },
+    {
+      "id": "ada89413-14ba-4fc2-98c9-55abfdac6df1",
+      "name": "Delete content - default",
+      "request": {
+        "urlPathTemplate": "/wisdom/{id}",
+        "method": "DELETE",
+        "headers": {
+          "Authorization": {
+            "matches": ".+"
+          }
+        },
+        "pathParameters": {
+          "id": {
+            "equalTo": "1"
+          }
+        }
+      },
+      "response": {
+        "status": 200,
+        "body": "{\n  \"code\": 1,\n  \"data\": {\n    \"deleted\": true\n  },\n  \"limit\": 1,\n  \"message\": \"message\",\n  \"page\": 1,\n  \"total\": 1,\n  \"user_message\": \"user_message\"\n}",
+        "headers": {
+          "Content-Type": "application/json"
+        }
+      },
+      "uuid": "ada89413-14ba-4fc2-98c9-55abfdac6df1",
+      "persistent": true,
+      "priority": 3,
+      "metadata": {
+        "mocklab": {
+          "created": {
+            "at": "2020-01-01T00:00:00.000Z",
+            "via": "SYSTEM"
+          }
+        }
+      }
+    },
+    {
+      "id": "8c72f951-1113-4a22-bb6c-61179ad6bbbc",
+      "name": "Update content - default",
+      "request": {
+        "urlPathTemplate": "/wisdom/{id}",
+        "method": "PATCH",
+        "headers": {
+          "Authorization": {
+            "matches": ".+"
+          }
+        },
+        "pathParameters": {
+          "id": {
+            "equalTo": "1"
+          }
+        }
+      },
+      "response": {
+        "status": 200,
+        "body": "{\n  \"code\": 1,\n  \"data\": {\n    \"body\": \"body\",\n    \"changelog\": \"changelog\",\n    \"community_id\": 1,\n    \"confidence\": 1.1,\n    \"created_at\": 1,\n    \"defencer\": \"defencer\",\n    \"description\": \"description\",\n    \"id\": 1,\n    \"kind\": \"kind\",\n    \"pre_body\": \"pre_body\",\n    \"promise\": \"promise\",\n    \"props\": [\n      1\n    ],\n    \"reference_count\": 1,\n    \"reflector\": \"reflector\",\n    \"rev\": 1,\n    \"search_hit_count\": 1,\n    \"slug\": \"slug\",\n    \"title\": \"title\",\n    \"type\": \"type\",\n    \"updated_at\": 1,\n    \"user_id\": 1,\n    \"username\": \"username\",\n    \"version\": 1\n  },\n  \"limit\": 1,\n  \"message\": \"message\",\n  \"page\": 1,\n  \"total\": 1,\n  \"user_message\": \"user_message\"\n}",
+        "headers": {
+          "Content-Type": "application/json"
+        }
+      },
+      "uuid": "8c72f951-1113-4a22-bb6c-61179ad6bbbc",
+      "persistent": true,
+      "priority": 3,
+      "metadata": {
+        "mocklab": {
+          "created": {
+            "at": "2020-01-01T00:00:00.000Z",
+            "via": "SYSTEM"
+          }
+        }
+      }
+    },
+    {
+      "id": "3270d746-ace8-416a-be37-89e37f196bf4",
+      "name": "Get content logs - default",
+      "request": {
+        "urlPathTemplate": "/wisdom/{id}/logs",
+        "method": "GET",
+        "headers": {
+          "Authorization": {
+            "matches": ".+"
+          }
+        },
+        "pathParameters": {
+          "id": {
+            "equalTo": "1"
+          }
+        }
+      },
+      "response": {
+        "status": 200,
+        "body": "{\n  \"code\": 1,\n  \"data\": [\n    {\n      \"action\": \"action\",\n      \"created_at\": 1,\n      \"detail\": \"detail\",\n      \"id\": 1,\n      \"user_id\": 1,\n      \"username\": \"username\",\n      \"wisdom_id\": 1\n    }\n  ],\n  \"limit\": 1,\n  \"message\": \"message\",\n  \"page\": 1,\n  \"total\": 1,\n  \"user_message\": \"user_message\"\n}",
+        "headers": {
+          "Content-Type": "application/json"
+        }
+      },
+      "uuid": "3270d746-ace8-416a-be37-89e37f196bf4",
+      "persistent": true,
+      "priority": 3,
+      "metadata": {
+        "mocklab": {
+          "created": {
+            "at": "2020-01-01T00:00:00.000Z",
+            "via": "SYSTEM"
+          }
+        }
+      }
+    },
+    {
+      "id": "edb23707-c849-4e29-b249-7d547b3f3027",
+      "name": "Add relation - default",
+      "request": {
+        "urlPathTemplate": "/wisdom/{id}/relations",
+        "method": "POST",
+        "headers": {
+          "Authorization": {
+            "matches": ".+"
+          }
+        },
+        "pathParameters": {
+          "id": {
+            "equalTo": "1"
+          }
+        }
+      },
+      "response": {
+        "status": 200,
+        "body": "{\n  \"code\": 1,\n  \"data\": {\n    \"confidence\": \"confidence\",\n    \"created_at\": 1,\n    \"id\": 1,\n    \"props\": [\n      1\n    ],\n    \"relation\": \"relation\",\n    \"source_id\": 1,\n    \"target_id\": 1,\n    \"weight\": 1.1\n  },\n  \"limit\": 1,\n  \"message\": \"message\",\n  \"page\": 1,\n  \"total\": 1,\n  \"user_message\": \"user_message\"\n}",
+        "headers": {
+          "Content-Type": "application/json"
+        }
+      },
+      "uuid": "edb23707-c849-4e29-b249-7d547b3f3027",
+      "persistent": true,
+      "priority": 3,
+      "metadata": {
+        "mocklab": {
+          "created": {
+            "at": "2020-01-01T00:00:00.000Z",
+            "via": "SYSTEM"
+          }
+        }
+      }
+    },
+    {
+      "id": "6303a2fd-d558-49c5-b7c9-c3cef689fc16",
+      "name": "Remove relation - default",
+      "request": {
+        "urlPathTemplate": "/wisdom/{id}/relations/{rid}",
+        "method": "DELETE",
+        "headers": {
+          "Authorization": {
+            "matches": ".+"
+          }
+        },
+        "pathParameters": {
+          "id": {
+            "equalTo": "1"
+          },
+          "rid": {
+            "equalTo": "1"
+          }
+        }
+      },
+      "response": {
+        "status": 200,
+        "body": "{\n  \"code\": 1,\n  \"data\": {\n    \"deleted\": true\n  },\n  \"limit\": 1,\n  \"message\": \"message\",\n  \"page\": 1,\n  \"total\": 1,\n  \"user_message\": \"user_message\"\n}",
+        "headers": {
+          "Content-Type": "application/json"
+        }
+      },
+      "uuid": "6303a2fd-d558-49c5-b7c9-c3cef689fc16",
+      "persistent": true,
+      "priority": 3,
+      "metadata": {
+        "mocklab": {
+          "created": {
+            "at": "2020-01-01T00:00:00.000Z",
+            "via": "SYSTEM"
+          }
+        }
+      }
+    },
+    {
+      "id": "c31b4dc7-60d9-4ef8-9baf-7a9ed8df1dbc",
+      "name": "Cluster contents - default",
+      "request": {
+        "urlPathTemplate": "/wisdom/cluster",
+        "method": "POST",
+        "headers": {
+          "Authorization": {
+            "matches": ".+"
+          }
+        }
+      },
+      "response": {
+        "status": 200,
+        "body": "{\n  \"code\": 1,\n  \"data\": {\n    \"status\": \"status\"\n  },\n  \"limit\": 1,\n  \"message\": \"message\",\n  \"page\": 1,\n  \"total\": 1,\n  \"user_message\": \"user_message\"\n}",
+        "headers": {
+          "Content-Type": "application/json"
+        }
+      },
+      "uuid": "c31b4dc7-60d9-4ef8-9baf-7a9ed8df1dbc",
+      "persistent": true,
+      "priority": 3,
+      "metadata": {
+        "mocklab": {
+          "created": {
+            "at": "2020-01-01T00:00:00.000Z",
+            "via": "SYSTEM"
+          }
+        }
+      }
+    },
+    {
+      "id": "5941a133-61b1-4c85-a87b-81cf921636bc",
+      "name": "Get subgraph - default",
+      "request": {
+        "urlPathTemplate": "/wisdom/subgraph",
+        "method": "GET",
+        "headers": {
+          "Authorization": {
+            "matches": ".+"
+          }
+        },
+        "queryParameters": {
+          "community_id": {
+            "equalTo": "1"
+          }
+        }
+      },
+      "response": {
+        "status": 200,
+        "body": "{\n  \"code\": 1,\n  \"data\": {\n    \"edges\": [\n      {}\n    ],\n    \"nodes\": [\n      {}\n    ]\n  },\n  \"limit\": 1,\n  \"message\": \"message\",\n  \"page\": 1,\n  \"total\": 1,\n  \"user_message\": \"user_message\"\n}",
+        "headers": {
+          "Content-Type": "application/json"
+        }
+      },
+      "uuid": "5941a133-61b1-4c85-a87b-81cf921636bc",
+      "persistent": true,
+      "priority": 3,
+      "metadata": {
+        "mocklab": {
+          "created": {
+            "at": "2020-01-01T00:00:00.000Z",
+            "via": "SYSTEM"
+          }
+        }
+      },
+      "postServeActions": []
+    },
+    {
+      "id": "4d339190-3934-43f0-b630-08bff6449412",
+      "name": "List communities - default",
+      "request": {
+        "urlPathTemplate": "/wisdom/community",
+        "method": "GET",
+        "headers": {
+          "Authorization": {
+            "matches": ".+"
+          }
+        }
+      },
+      "response": {
+        "status": 200,
+        "body": "\"\"",
+        "headers": {
+          "Content-Type": "application/json"
+        }
+      },
+      "uuid": "4d339190-3934-43f0-b630-08bff6449412",
+      "persistent": true,
+      "priority": 3,
+      "metadata": {
+        "mocklab": {
+          "created": {
+            "at": "2020-01-01T00:00:00.000Z",
+            "via": "SYSTEM"
+          }
+        }
+      },
+      "postServeActions": []
+    },
+    {
+      "id": "86da7392-52a4-4052-9bdd-08ec5000ebc6",
+      "name": "Create community - default",
+      "request": {
+        "urlPathTemplate": "/wisdom/community",
+        "method": "POST",
+        "headers": {
+          "Authorization": {
+            "matches": ".+"
+          }
+        }
+      },
+      "response": {
+        "status": 200,
+        "body": "{\n  \"code\": 1,\n  \"data\": {\n    \"confidence\": 1.1,\n    \"created_at\": 1,\n    \"defencer\": \"defencer\",\n    \"description\": \"description\",\n    \"id\": 1,\n    \"instructions\": \"instructions\",\n    \"label\": \"label\",\n    \"member_count\": 1,\n    \"modularity\": 1.1,\n    \"promise\": \"promise\",\n    \"props\": [\n      1\n    ],\n    \"reflector\": \"reflector\",\n    \"resolution\": 1.1,\n    \"slug\": \"slug\",\n    \"style\": \"style\",\n    \"updated_at\": 1,\n    \"user_id\": 1,\n    \"visibility\": \"visibility\",\n    \"want_capability\": \"want_capability\"\n  },\n  \"limit\": 1,\n  \"message\": \"message\",\n  \"page\": 1,\n  \"total\": 1,\n  \"user_message\": \"user_message\"\n}",
+        "headers": {
+          "Content-Type": "application/json"
+        }
+      },
+      "uuid": "86da7392-52a4-4052-9bdd-08ec5000ebc6",
+      "persistent": true,
+      "priority": 3,
+      "metadata": {
+        "mocklab": {
+          "created": {
+            "at": "2020-01-01T00:00:00.000Z",
+            "via": "SYSTEM"
+          }
+        }
+      }
+    },
+    {
+      "id": "e04129ac-1006-4d1f-a369-3e327c88f939",
+      "name": "Get community - default",
+      "request": {
+        "urlPathTemplate": "/wisdom/community/{id}",
+        "method": "GET",
+        "headers": {
+          "Authorization": {
+            "matches": ".+"
+          }
+        },
+        "pathParameters": {
+          "id": {
+            "equalTo": "1"
+          }
+        }
+      },
+      "response": {
+        "status": 200,
+        "body": "{\n  \"code\": 1,\n  \"data\": {\n    \"confidence\": 1.1,\n    \"created_at\": 1,\n    \"defencer\": \"defencer\",\n    \"description\": \"description\",\n    \"id\": 1,\n    \"instructions\": \"instructions\",\n    \"label\": \"label\",\n    \"member_count\": 1,\n    \"modularity\": 1.1,\n    \"promise\": \"promise\",\n    \"props\": [\n      1\n    ],\n    \"reflector\": \"reflector\",\n    \"resolution\": 1.1,\n    \"slug\": \"slug\",\n    \"style\": \"style\",\n    \"updated_at\": 1,\n    \"user_id\": 1,\n    \"visibility\": \"visibility\",\n    \"want_capability\": \"want_capability\"\n  },\n  \"limit\": 1,\n  \"message\": \"message\",\n  \"page\": 1,\n  \"total\": 1,\n  \"user_message\": \"user_message\"\n}",
+        "headers": {
+          "Content-Type": "application/json"
+        }
+      },
+      "uuid": "e04129ac-1006-4d1f-a369-3e327c88f939",
+      "persistent": true,
+      "priority": 3,
+      "metadata": {
+        "mocklab": {
+          "created": {
+            "at": "2020-01-01T00:00:00.000Z",
+            "via": "SYSTEM"
+          }
+        }
+      }
+    },
+    {
+      "id": "79a7fd95-2387-4226-81df-039b184e276c",
+      "name": "Delete community - default",
+      "request": {
+        "urlPathTemplate": "/wisdom/community/{id}",
+        "method": "DELETE",
+        "headers": {
+          "Authorization": {
+            "matches": ".+"
+          }
+        },
+        "pathParameters": {
+          "id": {
+            "equalTo": "1"
+          }
+        }
+      },
+      "response": {
+        "status": 200,
+        "body": "{\n  \"code\": 1,\n  \"data\": {\n    \"deleted\": true\n  },\n  \"limit\": 1,\n  \"message\": \"message\",\n  \"page\": 1,\n  \"total\": 1,\n  \"user_message\": \"user_message\"\n}",
+        "headers": {
+          "Content-Type": "application/json"
+        }
+      },
+      "uuid": "79a7fd95-2387-4226-81df-039b184e276c",
+      "persistent": true,
+      "priority": 3,
+      "metadata": {
+        "mocklab": {
+          "created": {
+            "at": "2020-01-01T00:00:00.000Z",
+            "via": "SYSTEM"
+          }
+        }
+      }
+    },
+    {
+      "id": "8778c473-ff22-4bf3-adac-80982e655533",
+      "name": "Update community - default",
+      "request": {
+        "urlPathTemplate": "/wisdom/community/{id}",
+        "method": "PATCH",
+        "headers": {
+          "Authorization": {
+            "matches": ".+"
+          }
+        },
+        "pathParameters": {
+          "id": {
+            "equalTo": "1"
+          }
+        }
+      },
+      "response": {
+        "status": 200,
+        "body": "{\n  \"code\": 1,\n  \"data\": {\n    \"confidence\": 1.1,\n    \"created_at\": 1,\n    \"defencer\": \"defencer\",\n    \"description\": \"description\",\n    \"id\": 1,\n    \"instructions\": \"instructions\",\n    \"label\": \"label\",\n    \"member_count\": 1,\n    \"modularity\": 1.1,\n    \"promise\": \"promise\",\n    \"props\": [\n      1\n    ],\n    \"reflector\": \"reflector\",\n    \"resolution\": 1.1,\n    \"slug\": \"slug\",\n    \"style\": \"style\",\n    \"updated_at\": 1,\n    \"user_id\": 1,\n    \"visibility\": \"visibility\",\n    \"want_capability\": \"want_capability\"\n  },\n  \"limit\": 1,\n  \"message\": \"message\",\n  \"page\": 1,\n  \"total\": 1,\n  \"user_message\": \"user_message\"\n}",
+        "headers": {
+          "Content-Type": "application/json"
+        }
+      },
+      "uuid": "8778c473-ff22-4bf3-adac-80982e655533",
+      "persistent": true,
+      "priority": 3,
+      "metadata": {
+        "mocklab": {
+          "created": {
+            "at": "2020-01-01T00:00:00.000Z",
+            "via": "SYSTEM"
+          }
+        }
+      }
+    },
+    {
+      "id": "05fbb993-5293-4f0c-adef-3969cbb5a143",
+      "name": "Create initial superadmin - default",
+      "request": {
+        "urlPathTemplate": "/setup",
+        "method": "POST"
+      },
+      "response": {
+        "status": 201,
+        "body": "{\n  \"code\": 1,\n  \"data\": {\n    \"is_new_user\": true,\n    \"user\": {\n      \"key\": \"value\"\n    }\n  },\n  \"limit\": 1,\n  \"message\": \"message\",\n  \"page\": 1,\n  \"total\": 1,\n  \"user_message\": \"user_message\"\n}",
+        "headers": {
+          "Content-Type": "application/json"
+        }
+      },
+      "uuid": "05fbb993-5293-4f0c-adef-3969cbb5a143",
+      "persistent": true,
+      "priority": 3,
+      "metadata": {
+        "mocklab": {
+          "created": {
+            "at": "2020-01-01T00:00:00.000Z",
+            "via": "SYSTEM"
+          }
+        }
+      }
+    },
+    {
+      "id": "c0bc893c-6de6-4fcd-926d-f705d7944512",
+      "name": "Check system setup status - default",
+      "request": {
+        "urlPathTemplate": "/setup/status",
+        "method": "GET"
+      },
+      "response": {
+        "status": 200,
+        "body": "\"\"",
+        "headers": {
+          "Content-Type": "application/json"
+        }
+      },
+      "uuid": "c0bc893c-6de6-4fcd-926d-f705d7944512",
+      "persistent": true,
+      "priority": 3,
+      "metadata": {
+        "mocklab": {
+          "created": {
+            "at": "2020-01-01T00:00:00.000Z",
+            "via": "SYSTEM"
+          }
+        }
+      },
+      "postServeActions": []
+    }
+  ],
+  "meta": {
+    "total": 144
+  }
+}
