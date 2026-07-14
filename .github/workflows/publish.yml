@@ -1,0 +1,43 @@
+name: Publish
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+
+permissions:
+  contents: write
+
+jobs:
+  publish:
+    runs-on:
+  workflow_dispatch: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-go@v5
+        with:
+          go-version:
+  workflow_dispatch: "1.25"
+      - run: go build ./...
+      - name: Determine version
+        run: |
+          LATEST=$(git tag --sort=-v:refname 2>/dev/null | grep -E '^v[0-9]' | head -1)
+          if [ -z "$LATEST" ]; then
+            VERSION="0.0.1"
+          else
+            PATCH=$(echo "$LATEST" | grep -oP '\d+\.\d+\.\K\d+')
+            VERSION="0.0.$((PATCH + 1))"
+          fi
+          echo "VERSION=${VERSION}" >> $GITHUB_ENV
+      - name: Tag and Release
+        run: |
+          [ -z "$VERSION" ] && echo "No version found" && exit 0
+          git tag "v${VERSION}" 2>/dev/null || echo "Tag exists"
+          git push --tags
+          if [ -f CHANGELOG.md ]; then
+            gh release create "v${VERSION}" --title "v${VERSION}" --notes-file CHANGELOG.md
+          else
+            gh release create "v${VERSION}" --title "v${VERSION}" --generate-notes
+          fi
+        env:
+          GH_TOKEN: ${{ github.token }}
