@@ -7,7 +7,7 @@
       "path": "github.com/MKT-AGI/mkt-sdk-go"
     }
   },
-  "originGitCommit": "3d29e079a758ef1236707547aa72329a218cc571",
+  "originGitCommit": "964c6113e90b781cbc9b6d345cbbbd15aaa3760d",
   "originGitCommitIsDirty": false,
   "invokedBy": "ci",
   "ciProvider": "github"
