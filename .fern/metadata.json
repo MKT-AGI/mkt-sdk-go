@@ -1,0 +1,16 @@
+{
+  "cliVersion": "5.70.0",
+  "generatorName": "fernapi/fern-go-sdk",
+  "generatorVersion": "1.47.3",
+  "generatorConfig": {
+    "module": {
+      "path": "github.com/MKT-AGI/mkt-sdk-go"
+    }
+  },
+  "originGitCommit": "c086228078e4132cef8d4d9a304aa87c199845f5",
+  "originGitCommitIsDirty": false,
+  "invokedBy": "ci",
+  "requestedVersion": "0.0.2",
+  "ciProvider": "github",
+  "sdkVersion": "v0.0.2"
+}
