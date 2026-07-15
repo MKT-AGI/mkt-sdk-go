@@ -25,8 +25,17 @@ jobs:
           if [ -z "$LATEST" ]; then
             VERSION="0.0.1"
           else
-            PATCH=$(echo "$LATEST" | grep -oP '\d+\.\d+\.\K\d+')
-            VERSION="0.0.$((PATCH + 1))"
+            V="${LATEST#v}"
+            MAJOR=$(echo "$V" | cut -d. -f1)
+            MINOR=$(echo "$V" | cut -d. -f2)
+            PATCH=$(echo "$V" | cut -d. -f3)
+            if [ "$PATCH" -ge 99 ]; then
+              MINOR=$((MINOR + 1))
+              PATCH=0
+            else
+              PATCH=$((PATCH + 1))
+            fi
+            VERSION="${MAJOR}.${MINOR}.${PATCH}"
           fi
           echo "VERSION=${VERSION}" >> $GITHUB_ENV
       - name: Tag and Release
