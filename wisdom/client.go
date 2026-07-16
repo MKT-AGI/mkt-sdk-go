@@ -185,6 +185,21 @@ func (c *Client) ClusterContents(
 	return response.Body, nil
 }
 
+// List the current user's purchased community access grants
+func (c *Client) ListPurchasedCommunities(
+	ctx context.Context,
+	opts ...option.RequestOption,
+) (*mktsdkgo.GithubComMktAgiAixInternalPkgGinxResultArrayInternalWisdomInternalWebPurchaseItemResponse, error) {
+	response, err := c.WithRawResponse.ListPurchasedCommunities(
+		ctx,
+		opts...,
+	)
+	if err != nil {
+		return nil, err
+	}
+	return response.Body, nil
+}
+
 // Get the content subgraph for a specific community
 func (c *Client) GetSubgraph(
 	ctx context.Context,

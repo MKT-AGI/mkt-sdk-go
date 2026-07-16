@@ -118,19 +118,23 @@ func (d *DeleteIamGrantsResourceTypeResourceIDUserIDRequest) SetUserID(userID in
 }
 
 var (
-	githubComMktAgiAixInternalIamInternalDomainAccessGrantFieldCreatedAt = big.NewInt(1 << 0)
-	githubComMktAgiAixInternalIamInternalDomainAccessGrantFieldCreatedBy = big.NewInt(1 << 1)
-	githubComMktAgiAixInternalIamInternalDomainAccessGrantFieldExpiresAt = big.NewInt(1 << 2)
-	githubComMktAgiAixInternalIamInternalDomainAccessGrantFieldOrderNo   = big.NewInt(1 << 3)
-	githubComMktAgiAixInternalIamInternalDomainAccessGrantFieldSource    = big.NewInt(1 << 4)
-	githubComMktAgiAixInternalIamInternalDomainAccessGrantFieldUserID    = big.NewInt(1 << 5)
+	githubComMktAgiAixInternalIamInternalDomainAccessGrantFieldCreatedAt    = big.NewInt(1 << 0)
+	githubComMktAgiAixInternalIamInternalDomainAccessGrantFieldCreatedBy    = big.NewInt(1 << 1)
+	githubComMktAgiAixInternalIamInternalDomainAccessGrantFieldExpiresAt    = big.NewInt(1 << 2)
+	githubComMktAgiAixInternalIamInternalDomainAccessGrantFieldOrderNo      = big.NewInt(1 << 3)
+	githubComMktAgiAixInternalIamInternalDomainAccessGrantFieldResourceID   = big.NewInt(1 << 4)
+	githubComMktAgiAixInternalIamInternalDomainAccessGrantFieldResourceType = big.NewInt(1 << 5)
+	githubComMktAgiAixInternalIamInternalDomainAccessGrantFieldSource       = big.NewInt(1 << 6)
+	githubComMktAgiAixInternalIamInternalDomainAccessGrantFieldUserID       = big.NewInt(1 << 7)
 )
 
 type GithubComMktAgiAixInternalIamInternalDomainAccessGrant struct {
-	CreatedAt *int    `json:"createdAt,omitempty" url:"createdAt,omitempty"`
-	CreatedBy *int    `json:"createdBy,omitempty" url:"createdBy,omitempty"`
-	ExpiresAt *int    `json:"expiresAt,omitempty" url:"expiresAt,omitempty"`
-	OrderNo   *string `json:"orderNo,omitempty" url:"orderNo,omitempty"`
+	CreatedAt    *int    `json:"createdAt,omitempty" url:"createdAt,omitempty"`
+	CreatedBy    *int    `json:"createdBy,omitempty" url:"createdBy,omitempty"`
+	ExpiresAt    *int    `json:"expiresAt,omitempty" url:"expiresAt,omitempty"`
+	OrderNo      *string `json:"orderNo,omitempty" url:"orderNo,omitempty"`
+	ResourceID   *int    `json:"resourceID,omitempty" url:"resourceID,omitempty"`
+	ResourceType *string `json:"resourceType,omitempty" url:"resourceType,omitempty"`
 	// "grant" | "purchase"
 	Source *string `json:"source,omitempty" url:"source,omitempty"`
 	UserID *int    `json:"userID,omitempty" url:"userID,omitempty"`
@@ -168,6 +172,20 @@ func (g *GithubComMktAgiAixInternalIamInternalDomainAccessGrant) GetOrderNo() *s
 		return nil
 	}
 	return g.OrderNo
+}
+
+func (g *GithubComMktAgiAixInternalIamInternalDomainAccessGrant) GetResourceID() *int {
+	if g == nil {
+		return nil
+	}
+	return g.ResourceID
+}
+
+func (g *GithubComMktAgiAixInternalIamInternalDomainAccessGrant) GetResourceType() *string {
+	if g == nil {
+		return nil
+	}
+	return g.ResourceType
 }
 
 func (g *GithubComMktAgiAixInternalIamInternalDomainAccessGrant) GetSource() *string {
@@ -224,6 +242,20 @@ func (g *GithubComMktAgiAixInternalIamInternalDomainAccessGrant) SetExpiresAt(ex
 func (g *GithubComMktAgiAixInternalIamInternalDomainAccessGrant) SetOrderNo(orderNo *string) {
 	g.OrderNo = orderNo
 	g.require(githubComMktAgiAixInternalIamInternalDomainAccessGrantFieldOrderNo)
+}
+
+// SetResourceID sets the ResourceID field and marks it as non-optional;
+// this prevents an empty or null value for this field from being omitted during serialization.
+func (g *GithubComMktAgiAixInternalIamInternalDomainAccessGrant) SetResourceID(resourceID *int) {
+	g.ResourceID = resourceID
+	g.require(githubComMktAgiAixInternalIamInternalDomainAccessGrantFieldResourceID)
+}
+
+// SetResourceType sets the ResourceType field and marks it as non-optional;
+// this prevents an empty or null value for this field from being omitted during serialization.
+func (g *GithubComMktAgiAixInternalIamInternalDomainAccessGrant) SetResourceType(resourceType *string) {
+	g.ResourceType = resourceType
+	g.require(githubComMktAgiAixInternalIamInternalDomainAccessGrantFieldResourceType)
 }
 
 // SetSource sets the Source field and marks it as non-optional;

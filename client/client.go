@@ -39,6 +39,7 @@ import (
 	wisdom "github.com/MKT-AGI/mkt-sdk-go/wisdom"
 	wisdomcommunity "github.com/MKT-AGI/mkt-sdk-go/wisdomcommunity"
 	wisdomcommunitypublic "github.com/MKT-AGI/mkt-sdk-go/wisdomcommunitypublic"
+	wisdommarketplace "github.com/MKT-AGI/mkt-sdk-go/wisdommarketplace"
 	wisdompublic "github.com/MKT-AGI/mkt-sdk-go/wisdompublic"
 )
 
@@ -75,6 +76,7 @@ type Client struct {
 	Accounts              *accounts.Client
 	Wisdom                *wisdom.Client
 	WisdomCommunity       *wisdomcommunity.Client
+	WisdomMarketplace     *wisdommarketplace.Client
 
 	options *core.RequestOptions
 	baseURL string
@@ -115,6 +117,7 @@ func NewClient(opts ...option.RequestOption) *Client {
 		Accounts:              accounts.NewClient(options),
 		Wisdom:                wisdom.NewClient(options),
 		WisdomCommunity:       wisdomcommunity.NewClient(options),
+		WisdomMarketplace:     wisdommarketplace.NewClient(options),
 		WithRawResponse:       NewRawClient(options),
 		options:               options,
 		baseURL:               options.BaseURL,

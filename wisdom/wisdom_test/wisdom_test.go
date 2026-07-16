@@ -318,6 +318,28 @@ func TestWisdomClusterContentsWithWireMock(
 	VerifyRequestCount(t, "TestWisdomClusterContentsWithWireMock", "POST", "/wisdom/cluster", nil, 1)
 }
 
+func TestWisdomListPurchasedCommunitiesWithWireMock(
+	t *testing.T,
+) {
+	WireMockBaseURL := os.Getenv("WIREMOCK_URL")
+	if WireMockBaseURL == "" {
+		WireMockBaseURL = "http://localhost:8080"
+	}
+	client := client.NewClient(
+		option.WithBaseURL(WireMockBaseURL),
+		option.WithAPIKey("test-value"),
+	)
+	_, invocationErr := client.Wisdom.ListPurchasedCommunities(
+		context.TODO(),
+		option.WithHTTPHeader(
+			http.Header{"X-Test-Id": []string{"TestWisdomListPurchasedCommunitiesWithWireMock"}},
+		),
+	)
+
+	require.NoError(t, invocationErr, "Client method call should succeed")
+	VerifyRequestCount(t, "TestWisdomListPurchasedCommunitiesWithWireMock", "GET", "/wisdom/purchases", nil, 1)
+}
+
 func TestWisdomGetSubgraphWithWireMock(
 	t *testing.T,
 ) {

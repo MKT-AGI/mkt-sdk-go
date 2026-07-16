@@ -466,6 +466,186 @@ func (g *GithubComMktAgiAixInternalPkgGinxResultArrayInternalWisdomInternalWebLo
 }
 
 var (
+	githubComMktAgiAixInternalPkgGinxResultArrayInternalWisdomInternalWebPurchaseItemResponseFieldCode        = big.NewInt(1 << 0)
+	githubComMktAgiAixInternalPkgGinxResultArrayInternalWisdomInternalWebPurchaseItemResponseFieldData        = big.NewInt(1 << 1)
+	githubComMktAgiAixInternalPkgGinxResultArrayInternalWisdomInternalWebPurchaseItemResponseFieldLimit       = big.NewInt(1 << 2)
+	githubComMktAgiAixInternalPkgGinxResultArrayInternalWisdomInternalWebPurchaseItemResponseFieldMessage     = big.NewInt(1 << 3)
+	githubComMktAgiAixInternalPkgGinxResultArrayInternalWisdomInternalWebPurchaseItemResponseFieldPage        = big.NewInt(1 << 4)
+	githubComMktAgiAixInternalPkgGinxResultArrayInternalWisdomInternalWebPurchaseItemResponseFieldTotal       = big.NewInt(1 << 5)
+	githubComMktAgiAixInternalPkgGinxResultArrayInternalWisdomInternalWebPurchaseItemResponseFieldUserMessage = big.NewInt(1 << 6)
+)
+
+type GithubComMktAgiAixInternalPkgGinxResultArrayInternalWisdomInternalWebPurchaseItemResponse struct {
+	Code        *int                                             `json:"code,omitempty" url:"code,omitempty"`
+	Data        []*InternalWisdomInternalWebPurchaseItemResponse `json:"data,omitempty" url:"data,omitempty"`
+	Limit       *int                                             `json:"limit,omitempty" url:"limit,omitempty"`
+	Message     *string                                          `json:"message,omitempty" url:"message,omitempty"`
+	Page        *int                                             `json:"page,omitempty" url:"page,omitempty"`
+	Total       *int                                             `json:"total,omitempty" url:"total,omitempty"`
+	UserMessage *string                                          `json:"user_message,omitempty" url:"user_message,omitempty"`
+
+	// Private bitmask of fields set to an explicit value and therefore not to be omitted
+	explicitFields *big.Int `json:"-" url:"-"`
+
+	extraProperties map[string]interface{}
+	rawJSON         json.RawMessage
+}
+
+func (g *GithubComMktAgiAixInternalPkgGinxResultArrayInternalWisdomInternalWebPurchaseItemResponse) GetCode() *int {
+	if g == nil {
+		return nil
+	}
+	return g.Code
+}
+
+func (g *GithubComMktAgiAixInternalPkgGinxResultArrayInternalWisdomInternalWebPurchaseItemResponse) GetData() []*InternalWisdomInternalWebPurchaseItemResponse {
+	if g == nil {
+		return nil
+	}
+	return g.Data
+}
+
+func (g *GithubComMktAgiAixInternalPkgGinxResultArrayInternalWisdomInternalWebPurchaseItemResponse) GetLimit() *int {
+	if g == nil {
+		return nil
+	}
+	return g.Limit
+}
+
+func (g *GithubComMktAgiAixInternalPkgGinxResultArrayInternalWisdomInternalWebPurchaseItemResponse) GetMessage() *string {
+	if g == nil {
+		return nil
+	}
+	return g.Message
+}
+
+func (g *GithubComMktAgiAixInternalPkgGinxResultArrayInternalWisdomInternalWebPurchaseItemResponse) GetPage() *int {
+	if g == nil {
+		return nil
+	}
+	return g.Page
+}
+
+func (g *GithubComMktAgiAixInternalPkgGinxResultArrayInternalWisdomInternalWebPurchaseItemResponse) GetTotal() *int {
+	if g == nil {
+		return nil
+	}
+	return g.Total
+}
+
+func (g *GithubComMktAgiAixInternalPkgGinxResultArrayInternalWisdomInternalWebPurchaseItemResponse) GetUserMessage() *string {
+	if g == nil {
+		return nil
+	}
+	return g.UserMessage
+}
+
+func (g *GithubComMktAgiAixInternalPkgGinxResultArrayInternalWisdomInternalWebPurchaseItemResponse) GetExtraProperties() map[string]interface{} {
+	if g == nil {
+		return nil
+	}
+	return g.extraProperties
+}
+
+func (g *GithubComMktAgiAixInternalPkgGinxResultArrayInternalWisdomInternalWebPurchaseItemResponse) require(field *big.Int) {
+	if g.explicitFields == nil {
+		g.explicitFields = big.NewInt(0)
+	}
+	g.explicitFields.Or(g.explicitFields, field)
+}
+
+// SetCode sets the Code field and marks it as non-optional;
+// this prevents an empty or null value for this field from being omitted during serialization.
+func (g *GithubComMktAgiAixInternalPkgGinxResultArrayInternalWisdomInternalWebPurchaseItemResponse) SetCode(code *int) {
+	g.Code = code
+	g.require(githubComMktAgiAixInternalPkgGinxResultArrayInternalWisdomInternalWebPurchaseItemResponseFieldCode)
+}
+
+// SetData sets the Data field and marks it as non-optional;
+// this prevents an empty or null value for this field from being omitted during serialization.
+func (g *GithubComMktAgiAixInternalPkgGinxResultArrayInternalWisdomInternalWebPurchaseItemResponse) SetData(data []*InternalWisdomInternalWebPurchaseItemResponse) {
+	g.Data = data
+	g.require(githubComMktAgiAixInternalPkgGinxResultArrayInternalWisdomInternalWebPurchaseItemResponseFieldData)
+}
+
+// SetLimit sets the Limit field and marks it as non-optional;
+// this prevents an empty or null value for this field from being omitted during serialization.
+func (g *GithubComMktAgiAixInternalPkgGinxResultArrayInternalWisdomInternalWebPurchaseItemResponse) SetLimit(limit *int) {
+	g.Limit = limit
+	g.require(githubComMktAgiAixInternalPkgGinxResultArrayInternalWisdomInternalWebPurchaseItemResponseFieldLimit)
+}
+
+// SetMessage sets the Message field and marks it as non-optional;
+// this prevents an empty or null value for this field from being omitted during serialization.
+func (g *GithubComMktAgiAixInternalPkgGinxResultArrayInternalWisdomInternalWebPurchaseItemResponse) SetMessage(message *string) {
+	g.Message = message
+	g.require(githubComMktAgiAixInternalPkgGinxResultArrayInternalWisdomInternalWebPurchaseItemResponseFieldMessage)
+}
+
+// SetPage sets the Page field and marks it as non-optional;
+// this prevents an empty or null value for this field from being omitted during serialization.
+func (g *GithubComMktAgiAixInternalPkgGinxResultArrayInternalWisdomInternalWebPurchaseItemResponse) SetPage(page *int) {
+	g.Page = page
+	g.require(githubComMktAgiAixInternalPkgGinxResultArrayInternalWisdomInternalWebPurchaseItemResponseFieldPage)
+}
+
+// SetTotal sets the Total field and marks it as non-optional;
+// this prevents an empty or null value for this field from being omitted during serialization.
+func (g *GithubComMktAgiAixInternalPkgGinxResultArrayInternalWisdomInternalWebPurchaseItemResponse) SetTotal(total *int) {
+	g.Total = total
+	g.require(githubComMktAgiAixInternalPkgGinxResultArrayInternalWisdomInternalWebPurchaseItemResponseFieldTotal)
+}
+
+// SetUserMessage sets the UserMessage field and marks it as non-optional;
+// this prevents an empty or null value for this field from being omitted during serialization.
+func (g *GithubComMktAgiAixInternalPkgGinxResultArrayInternalWisdomInternalWebPurchaseItemResponse) SetUserMessage(userMessage *string) {
+	g.UserMessage = userMessage
+	g.require(githubComMktAgiAixInternalPkgGinxResultArrayInternalWisdomInternalWebPurchaseItemResponseFieldUserMessage)
+}
+
+func (g *GithubComMktAgiAixInternalPkgGinxResultArrayInternalWisdomInternalWebPurchaseItemResponse) UnmarshalJSON(data []byte) error {
+	type unmarshaler GithubComMktAgiAixInternalPkgGinxResultArrayInternalWisdomInternalWebPurchaseItemResponse
+	var value unmarshaler
+	if err := json.Unmarshal(data, &value); err != nil {
+		return err
+	}
+	*g = GithubComMktAgiAixInternalPkgGinxResultArrayInternalWisdomInternalWebPurchaseItemResponse(value)
+	extraProperties, err := internal.ExtractExtraProperties(data, *g)
+	if err != nil {
+		return err
+	}
+	g.extraProperties = extraProperties
+	g.rawJSON = json.RawMessage(data)
+	return nil
+}
+
+func (g *GithubComMktAgiAixInternalPkgGinxResultArrayInternalWisdomInternalWebPurchaseItemResponse) MarshalJSON() ([]byte, error) {
+	type embed GithubComMktAgiAixInternalPkgGinxResultArrayInternalWisdomInternalWebPurchaseItemResponse
+	var marshaler = struct {
+		embed
+	}{
+		embed: embed(*g),
+	}
+	explicitMarshaler := internal.HandleExplicitFields(marshaler, g.explicitFields)
+	return json.Marshal(explicitMarshaler)
+}
+
+func (g *GithubComMktAgiAixInternalPkgGinxResultArrayInternalWisdomInternalWebPurchaseItemResponse) String() string {
+	if g == nil {
+		return "<nil>"
+	}
+	if len(g.rawJSON) > 0 {
+		if value, err := internal.StringifyJSON(g.rawJSON); err == nil {
+			return value
+		}
+	}
+	if value, err := internal.StringifyJSON(g); err == nil {
+		return value
+	}
+	return fmt.Sprintf("%#v", g)
+}
+
+var (
 	githubComMktAgiAixInternalPkgGinxResultInternalWisdomInternalWebGraphResponseFieldCode        = big.NewInt(1 << 0)
 	githubComMktAgiAixInternalPkgGinxResultInternalWisdomInternalWebGraphResponseFieldData        = big.NewInt(1 << 1)
 	githubComMktAgiAixInternalPkgGinxResultInternalWisdomInternalWebGraphResponseFieldLimit       = big.NewInt(1 << 2)
@@ -2031,6 +2211,138 @@ func (i *InternalWisdomInternalWebLogResponse) MarshalJSON() ([]byte, error) {
 }
 
 func (i *InternalWisdomInternalWebLogResponse) String() string {
+	if i == nil {
+		return "<nil>"
+	}
+	if len(i.rawJSON) > 0 {
+		if value, err := internal.StringifyJSON(i.rawJSON); err == nil {
+			return value
+		}
+	}
+	if value, err := internal.StringifyJSON(i); err == nil {
+		return value
+	}
+	return fmt.Sprintf("%#v", i)
+}
+
+var (
+	internalWisdomInternalWebPurchaseItemResponseFieldCommunityID = big.NewInt(1 << 0)
+	internalWisdomInternalWebPurchaseItemResponseFieldCreatedAt   = big.NewInt(1 << 1)
+	internalWisdomInternalWebPurchaseItemResponseFieldOrderNo     = big.NewInt(1 << 2)
+	internalWisdomInternalWebPurchaseItemResponseFieldSource      = big.NewInt(1 << 3)
+)
+
+type InternalWisdomInternalWebPurchaseItemResponse struct {
+	CommunityID *int    `json:"community_id,omitempty" url:"community_id,omitempty"`
+	CreatedAt   *int    `json:"created_at,omitempty" url:"created_at,omitempty"`
+	OrderNo     *string `json:"order_no,omitempty" url:"order_no,omitempty"`
+	Source      *string `json:"source,omitempty" url:"source,omitempty"`
+
+	// Private bitmask of fields set to an explicit value and therefore not to be omitted
+	explicitFields *big.Int `json:"-" url:"-"`
+
+	extraProperties map[string]interface{}
+	rawJSON         json.RawMessage
+}
+
+func (i *InternalWisdomInternalWebPurchaseItemResponse) GetCommunityID() *int {
+	if i == nil {
+		return nil
+	}
+	return i.CommunityID
+}
+
+func (i *InternalWisdomInternalWebPurchaseItemResponse) GetCreatedAt() *int {
+	if i == nil {
+		return nil
+	}
+	return i.CreatedAt
+}
+
+func (i *InternalWisdomInternalWebPurchaseItemResponse) GetOrderNo() *string {
+	if i == nil {
+		return nil
+	}
+	return i.OrderNo
+}
+
+func (i *InternalWisdomInternalWebPurchaseItemResponse) GetSource() *string {
+	if i == nil {
+		return nil
+	}
+	return i.Source
+}
+
+func (i *InternalWisdomInternalWebPurchaseItemResponse) GetExtraProperties() map[string]interface{} {
+	if i == nil {
+		return nil
+	}
+	return i.extraProperties
+}
+
+func (i *InternalWisdomInternalWebPurchaseItemResponse) require(field *big.Int) {
+	if i.explicitFields == nil {
+		i.explicitFields = big.NewInt(0)
+	}
+	i.explicitFields.Or(i.explicitFields, field)
+}
+
+// SetCommunityID sets the CommunityID field and marks it as non-optional;
+// this prevents an empty or null value for this field from being omitted during serialization.
+func (i *InternalWisdomInternalWebPurchaseItemResponse) SetCommunityID(communityID *int) {
+	i.CommunityID = communityID
+	i.require(internalWisdomInternalWebPurchaseItemResponseFieldCommunityID)
+}
+
+// SetCreatedAt sets the CreatedAt field and marks it as non-optional;
+// this prevents an empty or null value for this field from being omitted during serialization.
+func (i *InternalWisdomInternalWebPurchaseItemResponse) SetCreatedAt(createdAt *int) {
+	i.CreatedAt = createdAt
+	i.require(internalWisdomInternalWebPurchaseItemResponseFieldCreatedAt)
+}
+
+// SetOrderNo sets the OrderNo field and marks it as non-optional;
+// this prevents an empty or null value for this field from being omitted during serialization.
+func (i *InternalWisdomInternalWebPurchaseItemResponse) SetOrderNo(orderNo *string) {
+	i.OrderNo = orderNo
+	i.require(internalWisdomInternalWebPurchaseItemResponseFieldOrderNo)
+}
+
+// SetSource sets the Source field and marks it as non-optional;
+// this prevents an empty or null value for this field from being omitted during serialization.
+func (i *InternalWisdomInternalWebPurchaseItemResponse) SetSource(source *string) {
+	i.Source = source
+	i.require(internalWisdomInternalWebPurchaseItemResponseFieldSource)
+}
+
+func (i *InternalWisdomInternalWebPurchaseItemResponse) UnmarshalJSON(data []byte) error {
+	type unmarshaler InternalWisdomInternalWebPurchaseItemResponse
+	var value unmarshaler
+	if err := json.Unmarshal(data, &value); err != nil {
+		return err
+	}
+	*i = InternalWisdomInternalWebPurchaseItemResponse(value)
+	extraProperties, err := internal.ExtractExtraProperties(data, *i)
+	if err != nil {
+		return err
+	}
+	i.extraProperties = extraProperties
+	i.rawJSON = json.RawMessage(data)
+	return nil
+}
+
+func (i *InternalWisdomInternalWebPurchaseItemResponse) MarshalJSON() ([]byte, error) {
+	type embed InternalWisdomInternalWebPurchaseItemResponse
+	var marshaler = struct {
+		embed
+	}{
+		embed: embed(*i),
+	}
+	explicitMarshaler := internal.HandleExplicitFields(marshaler, i.explicitFields)
+	return json.Marshal(explicitMarshaler)
+}
+
+func (i *InternalWisdomInternalWebPurchaseItemResponse) String() string {
 	if i == nil {
 		return "<nil>"
 	}

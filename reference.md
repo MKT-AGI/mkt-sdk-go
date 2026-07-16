@@ -9354,6 +9354,48 @@ client.Wisdom.ClusterContents(
 </dl>
 </details>
 
+<details><summary><code>client.Wisdom.ListPurchasedCommunities() -> *mktsdkgo.GithubComMktAgiAixInternalPkgGinxResultArrayInternalWisdomInternalWebPurchaseItemResponse</code></summary>
+<dl>
+<dd>
+
+#### 📝 Description
+
+<dl>
+<dd>
+
+<dl>
+<dd>
+
+List the current user's purchased community access grants
+</dd>
+</dl>
+</dd>
+</dl>
+
+#### 🔌 Usage
+
+<dl>
+<dd>
+
+<dl>
+<dd>
+
+```go
+client.Wisdom.ListPurchasedCommunities(
+        context.TODO(),
+    )
+}
+```
+</dd>
+</dl>
+</dd>
+</dl>
+
+
+</dd>
+</dl>
+</details>
+
 <details><summary><code>client.Wisdom.GetSubgraph() -> *mktsdkgo.GithubComMktAgiAixInternalPkgGinxResultInternalWisdomInternalWebGraphResponse</code></summary>
 <dl>
 <dd>
@@ -9731,6 +9773,249 @@ client.WisdomCommunity.UpdateCommunity(
 <dd>
 
 **request:** `*mktsdkgo.PatchWisdomCommunityIDRequestBody` 
+    
+</dd>
+</dl>
+</dd>
+</dl>
+
+
+</dd>
+</dl>
+</details>
+
+<details><summary><code>client.WisdomCommunity.SetCommunityPricing(ID, request) -> *mktsdkgo.GithubComMktAgiAixInternalPkgGinxResultInternalWisdomInternalWebCommunityResponse</code></summary>
+<dl>
+<dd>
+
+#### 📝 Description
+
+<dl>
+<dd>
+
+<dl>
+<dd>
+
+Set the price, pricing model, and listing status for a community
+</dd>
+</dl>
+</dd>
+</dl>
+
+#### 🔌 Usage
+
+<dl>
+<dd>
+
+<dl>
+<dd>
+
+```go
+request := &mktsdkgo.PutWisdomCommunityIDPricingRequest{
+        ID: 1,
+        Body: &mktsdkgo.PutWisdomCommunityIDPricingRequestBody{
+            StringUnknownMap: map[string]any{
+                "key": "value",
+            },
+        },
+    }
+client.WisdomCommunity.SetCommunityPricing(
+        context.TODO(),
+        request,
+    )
+}
+```
+</dd>
+</dl>
+</dd>
+</dl>
+
+#### ⚙️ Parameters
+
+<dl>
+<dd>
+
+<dl>
+<dd>
+
+**id:** `int` — Community ID
+    
+</dd>
+</dl>
+
+<dl>
+<dd>
+
+**request:** `*mktsdkgo.PutWisdomCommunityIDPricingRequestBody` 
+    
+</dd>
+</dl>
+</dd>
+</dl>
+
+
+</dd>
+</dl>
+</details>
+
+<details><summary><code>client.WisdomCommunity.PurchaseCommunity(ID) -> *mktsdkgo.GithubComMktAgiAixInternalPkgGinxResultMapStringString</code></summary>
+<dl>
+<dd>
+
+#### 📝 Description
+
+<dl>
+<dd>
+
+<dl>
+<dd>
+
+Purchase access to a paid community
+</dd>
+</dl>
+</dd>
+</dl>
+
+#### 🔌 Usage
+
+<dl>
+<dd>
+
+<dl>
+<dd>
+
+```go
+request := &mktsdkgo.PostWisdomCommunityIDPurchaseRequest{
+        ID: 1,
+    }
+client.WisdomCommunity.PurchaseCommunity(
+        context.TODO(),
+        request,
+    )
+}
+```
+</dd>
+</dl>
+</dd>
+</dl>
+
+#### ⚙️ Parameters
+
+<dl>
+<dd>
+
+<dl>
+<dd>
+
+**id:** `int` — Community ID
+    
+</dd>
+</dl>
+</dd>
+</dl>
+
+
+</dd>
+</dl>
+</details>
+
+## WisdomMarketplace
+<details><summary><code>client.WisdomMarketplace.ListMarketplaceCommunities() -> *mktsdkgo.GithubComMktAgiAixInternalPkgGinxResultInternalWisdomInternalWebMarketplaceListResponse</code></summary>
+<dl>
+<dd>
+
+#### 📝 Description
+
+<dl>
+<dd>
+
+<dl>
+<dd>
+
+List published communities in the marketplace with optional filters
+</dd>
+</dl>
+</dd>
+</dl>
+
+#### 🔌 Usage
+
+<dl>
+<dd>
+
+<dl>
+<dd>
+
+```go
+request := &mktsdkgo.GetWisdomMarketplaceRequest{}
+client.WisdomMarketplace.ListMarketplaceCommunities(
+        context.TODO(),
+        request,
+    )
+}
+```
+</dd>
+</dl>
+</dd>
+</dl>
+
+#### ⚙️ Parameters
+
+<dl>
+<dd>
+
+<dl>
+<dd>
+
+**search:** `*string` — Search by label
+    
+</dd>
+</dl>
+
+<dl>
+<dd>
+
+**minPrice:** `*float64` — Minimum price filter
+    
+</dd>
+</dl>
+
+<dl>
+<dd>
+
+**maxPrice:** `*float64` — Maximum price filter
+    
+</dd>
+</dl>
+
+<dl>
+<dd>
+
+**sort:** `*string` — Sort field: created_at, price, member_count
+    
+</dd>
+</dl>
+
+<dl>
+<dd>
+
+**order:** `*string` — Sort order: asc, desc
+    
+</dd>
+</dl>
+
+<dl>
+<dd>
+
+**page:** `*int` — Page number, default 1
+    
+</dd>
+</dl>
+
+<dl>
+<dd>
+
+**limit:** `*int` — Page limit, default 20, max 100
     
 </dd>
 </dl>

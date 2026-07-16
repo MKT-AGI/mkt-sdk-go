@@ -118,3 +118,37 @@ func (c *Client) UpdateCommunity(
 	}
 	return response.Body, nil
 }
+
+// Set the price, pricing model, and listing status for a community
+func (c *Client) SetCommunityPricing(
+	ctx context.Context,
+	request *mktsdkgo.PutWisdomCommunityIDPricingRequest,
+	opts ...option.RequestOption,
+) (*mktsdkgo.GithubComMktAgiAixInternalPkgGinxResultInternalWisdomInternalWebCommunityResponse, error) {
+	response, err := c.WithRawResponse.SetCommunityPricing(
+		ctx,
+		request,
+		opts...,
+	)
+	if err != nil {
+		return nil, err
+	}
+	return response.Body, nil
+}
+
+// Purchase access to a paid community
+func (c *Client) PurchaseCommunity(
+	ctx context.Context,
+	request *mktsdkgo.PostWisdomCommunityIDPurchaseRequest,
+	opts ...option.RequestOption,
+) (*mktsdkgo.GithubComMktAgiAixInternalPkgGinxResultMapStringString, error) {
+	response, err := c.WithRawResponse.PurchaseCommunity(
+		ctx,
+		request,
+		opts...,
+	)
+	if err != nil {
+		return nil, err
+	}
+	return response.Body, nil
+}
