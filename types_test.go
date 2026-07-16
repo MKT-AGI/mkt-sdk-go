@@ -1734,6 +1734,22 @@ func TestSettersGithubComMktAgiAixInternalIamAccessGrant(t *testing.T) {
 		assert.NotNil(t, obj.explicitFields)
 	})
 
+	t.Run("SetResourceID", func(t *testing.T) {
+		obj := &GithubComMktAgiAixInternalIamAccessGrant{}
+		var fernTestValueResourceID *int
+		obj.SetResourceID(fernTestValueResourceID)
+		assert.Equal(t, fernTestValueResourceID, obj.ResourceID)
+		assert.NotNil(t, obj.explicitFields)
+	})
+
+	t.Run("SetResourceType", func(t *testing.T) {
+		obj := &GithubComMktAgiAixInternalIamAccessGrant{}
+		var fernTestValueResourceType *string
+		obj.SetResourceType(fernTestValueResourceType)
+		assert.Equal(t, fernTestValueResourceType, obj.ResourceType)
+		assert.NotNil(t, obj.explicitFields)
+	})
+
 	t.Run("SetSource", func(t *testing.T) {
 		obj := &GithubComMktAgiAixInternalIamAccessGrant{}
 		var fernTestValueSource *string
@@ -1883,6 +1899,72 @@ func TestGettersGithubComMktAgiAixInternalIamAccessGrant(t *testing.T) {
 			}
 		}()
 		_ = obj.GetOrderNo() // Should return zero value
+	})
+
+	t.Run("GetResourceID", func(t *testing.T) {
+		t.Parallel()
+		// Arrange
+		obj := &GithubComMktAgiAixInternalIamAccessGrant{}
+		var expected *int
+		obj.ResourceID = expected
+
+		// Act & Assert
+		assert.Equal(t, expected, obj.GetResourceID(), "getter should return the property value")
+	})
+
+	t.Run("GetResourceID_NilValue", func(t *testing.T) {
+		t.Parallel()
+		// Arrange
+		obj := &GithubComMktAgiAixInternalIamAccessGrant{}
+		obj.ResourceID = nil
+
+		// Act & Assert
+		assert.Nil(t, obj.GetResourceID(), "getter should return nil when property is nil")
+	})
+
+	t.Run("GetResourceID_NilReceiver", func(t *testing.T) {
+		t.Parallel()
+		var obj *GithubComMktAgiAixInternalIamAccessGrant
+		// Should not panic - getters should handle nil receiver gracefully
+		defer func() {
+			if r := recover(); r != nil {
+				t.Errorf("Getter panicked on nil receiver: %v", r)
+			}
+		}()
+		_ = obj.GetResourceID() // Should return zero value
+	})
+
+	t.Run("GetResourceType", func(t *testing.T) {
+		t.Parallel()
+		// Arrange
+		obj := &GithubComMktAgiAixInternalIamAccessGrant{}
+		var expected *string
+		obj.ResourceType = expected
+
+		// Act & Assert
+		assert.Equal(t, expected, obj.GetResourceType(), "getter should return the property value")
+	})
+
+	t.Run("GetResourceType_NilValue", func(t *testing.T) {
+		t.Parallel()
+		// Arrange
+		obj := &GithubComMktAgiAixInternalIamAccessGrant{}
+		obj.ResourceType = nil
+
+		// Act & Assert
+		assert.Nil(t, obj.GetResourceType(), "getter should return nil when property is nil")
+	})
+
+	t.Run("GetResourceType_NilReceiver", func(t *testing.T) {
+		t.Parallel()
+		var obj *GithubComMktAgiAixInternalIamAccessGrant
+		// Should not panic - getters should handle nil receiver gracefully
+		defer func() {
+			if r := recover(); r != nil {
+				t.Errorf("Getter panicked on nil receiver: %v", r)
+			}
+		}()
+		_ = obj.GetResourceType() // Should return zero value
 	})
 
 	t.Run("GetSource", func(t *testing.T) {
@@ -2055,6 +2137,68 @@ func TestSettersMarkExplicitGithubComMktAgiAixInternalIamAccessGrant(t *testing.
 
 		// Act
 		obj.SetOrderNo(fernTestValueOrderNo)
+
+		// Assert - object with explicitly set field can be marshaled/unmarshaled
+		bytes, err := json.Marshal(obj)
+		require.NoError(t, err, "marshaling should succeed for test setup")
+
+		// This test ensures JSON marshaling and unmarshaling succeed when the field has a zero/nil value
+		// Detect if marshaled JSON is an object or primitive to use correct unmarshal target
+		if len(bytes) > 0 && bytes[0] == '{' {
+			// JSON object - unmarshal into map
+			var unmarshaled map[string]interface{}
+			err = json.Unmarshal(bytes, &unmarshaled)
+			require.NoError(t, err, "unmarshaling should succeed for test verification")
+		} else {
+			// JSON primitive (string, number, boolean, null) - unmarshal into interface{}
+			var unmarshaled interface{}
+			err = json.Unmarshal(bytes, &unmarshaled)
+			require.NoError(t, err, "unmarshaling should succeed for test verification")
+		}
+
+		// Note: This does not explicitly assert the presence of a specific JSON field
+		// It verifies that setting a field via setter allows successful JSON round-trip
+	})
+
+	t.Run("SetResourceID_MarksExplicit", func(t *testing.T) {
+		t.Parallel()
+		// Arrange
+		obj := &GithubComMktAgiAixInternalIamAccessGrant{}
+		var fernTestValueResourceID *int
+
+		// Act
+		obj.SetResourceID(fernTestValueResourceID)
+
+		// Assert - object with explicitly set field can be marshaled/unmarshaled
+		bytes, err := json.Marshal(obj)
+		require.NoError(t, err, "marshaling should succeed for test setup")
+
+		// This test ensures JSON marshaling and unmarshaling succeed when the field has a zero/nil value
+		// Detect if marshaled JSON is an object or primitive to use correct unmarshal target
+		if len(bytes) > 0 && bytes[0] == '{' {
+			// JSON object - unmarshal into map
+			var unmarshaled map[string]interface{}
+			err = json.Unmarshal(bytes, &unmarshaled)
+			require.NoError(t, err, "unmarshaling should succeed for test verification")
+		} else {
+			// JSON primitive (string, number, boolean, null) - unmarshal into interface{}
+			var unmarshaled interface{}
+			err = json.Unmarshal(bytes, &unmarshaled)
+			require.NoError(t, err, "unmarshaling should succeed for test verification")
+		}
+
+		// Note: This does not explicitly assert the presence of a specific JSON field
+		// It verifies that setting a field via setter allows successful JSON round-trip
+	})
+
+	t.Run("SetResourceType_MarksExplicit", func(t *testing.T) {
+		t.Parallel()
+		// Arrange
+		obj := &GithubComMktAgiAixInternalIamAccessGrant{}
+		var fernTestValueResourceType *string
+
+		// Act
+		obj.SetResourceType(fernTestValueResourceType)
 
 		// Assert - object with explicitly set field can be marshaled/unmarshaled
 		bytes, err := json.Marshal(obj)

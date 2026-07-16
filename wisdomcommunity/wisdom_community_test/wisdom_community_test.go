@@ -211,3 +211,60 @@ func TestWisdomCommunityUpdateCommunityWithWireMock(
 	require.NoError(t, invocationErr, "Client method call should succeed")
 	VerifyRequestCount(t, "TestWisdomCommunityUpdateCommunityWithWireMock", "PATCH", "/wisdom/community/1", nil, 1)
 }
+
+func TestWisdomCommunitySetCommunityPricingWithWireMock(
+	t *testing.T,
+) {
+	WireMockBaseURL := os.Getenv("WIREMOCK_URL")
+	if WireMockBaseURL == "" {
+		WireMockBaseURL = "http://localhost:8080"
+	}
+	client := client.NewClient(
+		option.WithBaseURL(WireMockBaseURL),
+		option.WithAPIKey("test-value"),
+	)
+	request := &mktsdkgo.PutWisdomCommunityIDPricingRequest{
+		ID: 1,
+		Body: &mktsdkgo.PutWisdomCommunityIDPricingRequestBody{
+			StringUnknownMap: map[string]any{
+				"key": "value",
+			},
+		},
+	}
+	_, invocationErr := client.WisdomCommunity.SetCommunityPricing(
+		context.TODO(),
+		request,
+		option.WithHTTPHeader(
+			http.Header{"X-Test-Id": []string{"TestWisdomCommunitySetCommunityPricingWithWireMock"}},
+		),
+	)
+
+	require.NoError(t, invocationErr, "Client method call should succeed")
+	VerifyRequestCount(t, "TestWisdomCommunitySetCommunityPricingWithWireMock", "PUT", "/wisdom/community/1/pricing", nil, 1)
+}
+
+func TestWisdomCommunityPurchaseCommunityWithWireMock(
+	t *testing.T,
+) {
+	WireMockBaseURL := os.Getenv("WIREMOCK_URL")
+	if WireMockBaseURL == "" {
+		WireMockBaseURL = "http://localhost:8080"
+	}
+	client := client.NewClient(
+		option.WithBaseURL(WireMockBaseURL),
+		option.WithAPIKey("test-value"),
+	)
+	request := &mktsdkgo.PostWisdomCommunityIDPurchaseRequest{
+		ID: 1,
+	}
+	_, invocationErr := client.WisdomCommunity.PurchaseCommunity(
+		context.TODO(),
+		request,
+		option.WithHTTPHeader(
+			http.Header{"X-Test-Id": []string{"TestWisdomCommunityPurchaseCommunityWithWireMock"}},
+		),
+	)
+
+	require.NoError(t, invocationErr, "Client method call should succeed")
+	VerifyRequestCount(t, "TestWisdomCommunityPurchaseCommunityWithWireMock", "POST", "/wisdom/community/1/purchase", nil, 1)
+}

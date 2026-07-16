@@ -653,19 +653,23 @@ func (g *GithubComMktAgiAixInternalBulletinInternalDomainBulletin) String() stri
 }
 
 var (
-	githubComMktAgiAixInternalIamAccessGrantFieldCreatedAt = big.NewInt(1 << 0)
-	githubComMktAgiAixInternalIamAccessGrantFieldCreatedBy = big.NewInt(1 << 1)
-	githubComMktAgiAixInternalIamAccessGrantFieldExpiresAt = big.NewInt(1 << 2)
-	githubComMktAgiAixInternalIamAccessGrantFieldOrderNo   = big.NewInt(1 << 3)
-	githubComMktAgiAixInternalIamAccessGrantFieldSource    = big.NewInt(1 << 4)
-	githubComMktAgiAixInternalIamAccessGrantFieldUserID    = big.NewInt(1 << 5)
+	githubComMktAgiAixInternalIamAccessGrantFieldCreatedAt    = big.NewInt(1 << 0)
+	githubComMktAgiAixInternalIamAccessGrantFieldCreatedBy    = big.NewInt(1 << 1)
+	githubComMktAgiAixInternalIamAccessGrantFieldExpiresAt    = big.NewInt(1 << 2)
+	githubComMktAgiAixInternalIamAccessGrantFieldOrderNo      = big.NewInt(1 << 3)
+	githubComMktAgiAixInternalIamAccessGrantFieldResourceID   = big.NewInt(1 << 4)
+	githubComMktAgiAixInternalIamAccessGrantFieldResourceType = big.NewInt(1 << 5)
+	githubComMktAgiAixInternalIamAccessGrantFieldSource       = big.NewInt(1 << 6)
+	githubComMktAgiAixInternalIamAccessGrantFieldUserID       = big.NewInt(1 << 7)
 )
 
 type GithubComMktAgiAixInternalIamAccessGrant struct {
-	CreatedAt *int    `json:"createdAt,omitempty" url:"createdAt,omitempty"`
-	CreatedBy *int    `json:"createdBy,omitempty" url:"createdBy,omitempty"`
-	ExpiresAt *int    `json:"expiresAt,omitempty" url:"expiresAt,omitempty"`
-	OrderNo   *string `json:"orderNo,omitempty" url:"orderNo,omitempty"`
+	CreatedAt    *int    `json:"createdAt,omitempty" url:"createdAt,omitempty"`
+	CreatedBy    *int    `json:"createdBy,omitempty" url:"createdBy,omitempty"`
+	ExpiresAt    *int    `json:"expiresAt,omitempty" url:"expiresAt,omitempty"`
+	OrderNo      *string `json:"orderNo,omitempty" url:"orderNo,omitempty"`
+	ResourceID   *int    `json:"resourceID,omitempty" url:"resourceID,omitempty"`
+	ResourceType *string `json:"resourceType,omitempty" url:"resourceType,omitempty"`
 	// "grant" | "purchase"
 	Source *string `json:"source,omitempty" url:"source,omitempty"`
 	UserID *int    `json:"userID,omitempty" url:"userID,omitempty"`
@@ -703,6 +707,20 @@ func (g *GithubComMktAgiAixInternalIamAccessGrant) GetOrderNo() *string {
 		return nil
 	}
 	return g.OrderNo
+}
+
+func (g *GithubComMktAgiAixInternalIamAccessGrant) GetResourceID() *int {
+	if g == nil {
+		return nil
+	}
+	return g.ResourceID
+}
+
+func (g *GithubComMktAgiAixInternalIamAccessGrant) GetResourceType() *string {
+	if g == nil {
+		return nil
+	}
+	return g.ResourceType
 }
 
 func (g *GithubComMktAgiAixInternalIamAccessGrant) GetSource() *string {
@@ -759,6 +777,20 @@ func (g *GithubComMktAgiAixInternalIamAccessGrant) SetExpiresAt(expiresAt *int) 
 func (g *GithubComMktAgiAixInternalIamAccessGrant) SetOrderNo(orderNo *string) {
 	g.OrderNo = orderNo
 	g.require(githubComMktAgiAixInternalIamAccessGrantFieldOrderNo)
+}
+
+// SetResourceID sets the ResourceID field and marks it as non-optional;
+// this prevents an empty or null value for this field from being omitted during serialization.
+func (g *GithubComMktAgiAixInternalIamAccessGrant) SetResourceID(resourceID *int) {
+	g.ResourceID = resourceID
+	g.require(githubComMktAgiAixInternalIamAccessGrantFieldResourceID)
+}
+
+// SetResourceType sets the ResourceType field and marks it as non-optional;
+// this prevents an empty or null value for this field from being omitted during serialization.
+func (g *GithubComMktAgiAixInternalIamAccessGrant) SetResourceType(resourceType *string) {
+	g.ResourceType = resourceType
+	g.require(githubComMktAgiAixInternalIamAccessGrantFieldResourceType)
 }
 
 // SetSource sets the Source field and marks it as non-optional;

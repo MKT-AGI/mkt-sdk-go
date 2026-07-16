@@ -98,6 +98,72 @@ func (g *GetWisdomCommunityRequest) SetLimit(limit *int) {
 }
 
 var (
+	postWisdomCommunityIDPurchaseRequestFieldID = big.NewInt(1 << 0)
+)
+
+type PostWisdomCommunityIDPurchaseRequest struct {
+	// Community ID
+	ID int `json:"-" url:"-"`
+
+	// Private bitmask of fields set to an explicit value and therefore not to be omitted
+	explicitFields *big.Int `json:"-" url:"-"`
+}
+
+func (p *PostWisdomCommunityIDPurchaseRequest) require(field *big.Int) {
+	if p.explicitFields == nil {
+		p.explicitFields = big.NewInt(0)
+	}
+	p.explicitFields.Or(p.explicitFields, field)
+}
+
+// SetID sets the ID field and marks it as non-optional;
+// this prevents an empty or null value for this field from being omitted during serialization.
+func (p *PostWisdomCommunityIDPurchaseRequest) SetID(id int) {
+	p.ID = id
+	p.require(postWisdomCommunityIDPurchaseRequestFieldID)
+}
+
+var (
+	putWisdomCommunityIDPricingRequestFieldID = big.NewInt(1 << 0)
+)
+
+type PutWisdomCommunityIDPricingRequest struct {
+	// Community ID
+	ID   int                                     `json:"-" url:"-"`
+	Body *PutWisdomCommunityIDPricingRequestBody `json:"-" url:"-"`
+
+	// Private bitmask of fields set to an explicit value and therefore not to be omitted
+	explicitFields *big.Int `json:"-" url:"-"`
+}
+
+func (p *PutWisdomCommunityIDPricingRequest) require(field *big.Int) {
+	if p.explicitFields == nil {
+		p.explicitFields = big.NewInt(0)
+	}
+	p.explicitFields.Or(p.explicitFields, field)
+}
+
+// SetID sets the ID field and marks it as non-optional;
+// this prevents an empty or null value for this field from being omitted during serialization.
+func (p *PutWisdomCommunityIDPricingRequest) SetID(id int) {
+	p.ID = id
+	p.require(putWisdomCommunityIDPricingRequestFieldID)
+}
+
+func (p *PutWisdomCommunityIDPricingRequest) UnmarshalJSON(data []byte) error {
+	body := new(PutWisdomCommunityIDPricingRequestBody)
+	if err := json.Unmarshal(data, &body); err != nil {
+		return err
+	}
+	p.Body = body
+	return nil
+}
+
+func (p *PutWisdomCommunityIDPricingRequest) MarshalJSON() ([]byte, error) {
+	return json.Marshal(p.Body)
+}
+
+var (
 	githubComMktAgiAixInternalPkgGinxResultInternalWisdomInternalWebCommunityResponseFieldCode        = big.NewInt(1 << 0)
 	githubComMktAgiAixInternalPkgGinxResultInternalWisdomInternalWebCommunityResponseFieldData        = big.NewInt(1 << 1)
 	githubComMktAgiAixInternalPkgGinxResultInternalWisdomInternalWebCommunityResponseFieldLimit       = big.NewInt(1 << 2)
@@ -278,6 +344,186 @@ func (g *GithubComMktAgiAixInternalPkgGinxResultInternalWisdomInternalWebCommuni
 }
 
 var (
+	githubComMktAgiAixInternalPkgGinxResultMapStringStringFieldCode        = big.NewInt(1 << 0)
+	githubComMktAgiAixInternalPkgGinxResultMapStringStringFieldData        = big.NewInt(1 << 1)
+	githubComMktAgiAixInternalPkgGinxResultMapStringStringFieldLimit       = big.NewInt(1 << 2)
+	githubComMktAgiAixInternalPkgGinxResultMapStringStringFieldMessage     = big.NewInt(1 << 3)
+	githubComMktAgiAixInternalPkgGinxResultMapStringStringFieldPage        = big.NewInt(1 << 4)
+	githubComMktAgiAixInternalPkgGinxResultMapStringStringFieldTotal       = big.NewInt(1 << 5)
+	githubComMktAgiAixInternalPkgGinxResultMapStringStringFieldUserMessage = big.NewInt(1 << 6)
+)
+
+type GithubComMktAgiAixInternalPkgGinxResultMapStringString struct {
+	Code        *int             `json:"code,omitempty" url:"code,omitempty"`
+	Data        *MapStringString `json:"data,omitempty" url:"data,omitempty"`
+	Limit       *int             `json:"limit,omitempty" url:"limit,omitempty"`
+	Message     *string          `json:"message,omitempty" url:"message,omitempty"`
+	Page        *int             `json:"page,omitempty" url:"page,omitempty"`
+	Total       *int             `json:"total,omitempty" url:"total,omitempty"`
+	UserMessage *string          `json:"user_message,omitempty" url:"user_message,omitempty"`
+
+	// Private bitmask of fields set to an explicit value and therefore not to be omitted
+	explicitFields *big.Int `json:"-" url:"-"`
+
+	extraProperties map[string]interface{}
+	rawJSON         json.RawMessage
+}
+
+func (g *GithubComMktAgiAixInternalPkgGinxResultMapStringString) GetCode() *int {
+	if g == nil {
+		return nil
+	}
+	return g.Code
+}
+
+func (g *GithubComMktAgiAixInternalPkgGinxResultMapStringString) GetData() *MapStringString {
+	if g == nil {
+		return nil
+	}
+	return g.Data
+}
+
+func (g *GithubComMktAgiAixInternalPkgGinxResultMapStringString) GetLimit() *int {
+	if g == nil {
+		return nil
+	}
+	return g.Limit
+}
+
+func (g *GithubComMktAgiAixInternalPkgGinxResultMapStringString) GetMessage() *string {
+	if g == nil {
+		return nil
+	}
+	return g.Message
+}
+
+func (g *GithubComMktAgiAixInternalPkgGinxResultMapStringString) GetPage() *int {
+	if g == nil {
+		return nil
+	}
+	return g.Page
+}
+
+func (g *GithubComMktAgiAixInternalPkgGinxResultMapStringString) GetTotal() *int {
+	if g == nil {
+		return nil
+	}
+	return g.Total
+}
+
+func (g *GithubComMktAgiAixInternalPkgGinxResultMapStringString) GetUserMessage() *string {
+	if g == nil {
+		return nil
+	}
+	return g.UserMessage
+}
+
+func (g *GithubComMktAgiAixInternalPkgGinxResultMapStringString) GetExtraProperties() map[string]interface{} {
+	if g == nil {
+		return nil
+	}
+	return g.extraProperties
+}
+
+func (g *GithubComMktAgiAixInternalPkgGinxResultMapStringString) require(field *big.Int) {
+	if g.explicitFields == nil {
+		g.explicitFields = big.NewInt(0)
+	}
+	g.explicitFields.Or(g.explicitFields, field)
+}
+
+// SetCode sets the Code field and marks it as non-optional;
+// this prevents an empty or null value for this field from being omitted during serialization.
+func (g *GithubComMktAgiAixInternalPkgGinxResultMapStringString) SetCode(code *int) {
+	g.Code = code
+	g.require(githubComMktAgiAixInternalPkgGinxResultMapStringStringFieldCode)
+}
+
+// SetData sets the Data field and marks it as non-optional;
+// this prevents an empty or null value for this field from being omitted during serialization.
+func (g *GithubComMktAgiAixInternalPkgGinxResultMapStringString) SetData(data *MapStringString) {
+	g.Data = data
+	g.require(githubComMktAgiAixInternalPkgGinxResultMapStringStringFieldData)
+}
+
+// SetLimit sets the Limit field and marks it as non-optional;
+// this prevents an empty or null value for this field from being omitted during serialization.
+func (g *GithubComMktAgiAixInternalPkgGinxResultMapStringString) SetLimit(limit *int) {
+	g.Limit = limit
+	g.require(githubComMktAgiAixInternalPkgGinxResultMapStringStringFieldLimit)
+}
+
+// SetMessage sets the Message field and marks it as non-optional;
+// this prevents an empty or null value for this field from being omitted during serialization.
+func (g *GithubComMktAgiAixInternalPkgGinxResultMapStringString) SetMessage(message *string) {
+	g.Message = message
+	g.require(githubComMktAgiAixInternalPkgGinxResultMapStringStringFieldMessage)
+}
+
+// SetPage sets the Page field and marks it as non-optional;
+// this prevents an empty or null value for this field from being omitted during serialization.
+func (g *GithubComMktAgiAixInternalPkgGinxResultMapStringString) SetPage(page *int) {
+	g.Page = page
+	g.require(githubComMktAgiAixInternalPkgGinxResultMapStringStringFieldPage)
+}
+
+// SetTotal sets the Total field and marks it as non-optional;
+// this prevents an empty or null value for this field from being omitted during serialization.
+func (g *GithubComMktAgiAixInternalPkgGinxResultMapStringString) SetTotal(total *int) {
+	g.Total = total
+	g.require(githubComMktAgiAixInternalPkgGinxResultMapStringStringFieldTotal)
+}
+
+// SetUserMessage sets the UserMessage field and marks it as non-optional;
+// this prevents an empty or null value for this field from being omitted during serialization.
+func (g *GithubComMktAgiAixInternalPkgGinxResultMapStringString) SetUserMessage(userMessage *string) {
+	g.UserMessage = userMessage
+	g.require(githubComMktAgiAixInternalPkgGinxResultMapStringStringFieldUserMessage)
+}
+
+func (g *GithubComMktAgiAixInternalPkgGinxResultMapStringString) UnmarshalJSON(data []byte) error {
+	type unmarshaler GithubComMktAgiAixInternalPkgGinxResultMapStringString
+	var value unmarshaler
+	if err := json.Unmarshal(data, &value); err != nil {
+		return err
+	}
+	*g = GithubComMktAgiAixInternalPkgGinxResultMapStringString(value)
+	extraProperties, err := internal.ExtractExtraProperties(data, *g)
+	if err != nil {
+		return err
+	}
+	g.extraProperties = extraProperties
+	g.rawJSON = json.RawMessage(data)
+	return nil
+}
+
+func (g *GithubComMktAgiAixInternalPkgGinxResultMapStringString) MarshalJSON() ([]byte, error) {
+	type embed GithubComMktAgiAixInternalPkgGinxResultMapStringString
+	var marshaler = struct {
+		embed
+	}{
+		embed: embed(*g),
+	}
+	explicitMarshaler := internal.HandleExplicitFields(marshaler, g.explicitFields)
+	return json.Marshal(explicitMarshaler)
+}
+
+func (g *GithubComMktAgiAixInternalPkgGinxResultMapStringString) String() string {
+	if g == nil {
+		return "<nil>"
+	}
+	if len(g.rawJSON) > 0 {
+		if value, err := internal.StringifyJSON(g.rawJSON); err == nil {
+			return value
+		}
+	}
+	if value, err := internal.StringifyJSON(g); err == nil {
+		return value
+	}
+	return fmt.Sprintf("%#v", g)
+}
+
+var (
 	internalWisdomInternalWebCommunityResponseFieldConfidence     = big.NewInt(1 << 0)
 	internalWisdomInternalWebCommunityResponseFieldCreatedAt      = big.NewInt(1 << 1)
 	internalWisdomInternalWebCommunityResponseFieldDefencer       = big.NewInt(1 << 2)
@@ -285,18 +531,21 @@ var (
 	internalWisdomInternalWebCommunityResponseFieldID             = big.NewInt(1 << 4)
 	internalWisdomInternalWebCommunityResponseFieldInstructions   = big.NewInt(1 << 5)
 	internalWisdomInternalWebCommunityResponseFieldLabel          = big.NewInt(1 << 6)
-	internalWisdomInternalWebCommunityResponseFieldMemberCount    = big.NewInt(1 << 7)
-	internalWisdomInternalWebCommunityResponseFieldModularity     = big.NewInt(1 << 8)
-	internalWisdomInternalWebCommunityResponseFieldPromise        = big.NewInt(1 << 9)
-	internalWisdomInternalWebCommunityResponseFieldProps          = big.NewInt(1 << 10)
-	internalWisdomInternalWebCommunityResponseFieldReflector      = big.NewInt(1 << 11)
-	internalWisdomInternalWebCommunityResponseFieldResolution     = big.NewInt(1 << 12)
-	internalWisdomInternalWebCommunityResponseFieldSlug           = big.NewInt(1 << 13)
-	internalWisdomInternalWebCommunityResponseFieldStyle          = big.NewInt(1 << 14)
-	internalWisdomInternalWebCommunityResponseFieldUpdatedAt      = big.NewInt(1 << 15)
-	internalWisdomInternalWebCommunityResponseFieldUserID         = big.NewInt(1 << 16)
-	internalWisdomInternalWebCommunityResponseFieldVisibility     = big.NewInt(1 << 17)
-	internalWisdomInternalWebCommunityResponseFieldWantCapability = big.NewInt(1 << 18)
+	internalWisdomInternalWebCommunityResponseFieldListingStatus  = big.NewInt(1 << 7)
+	internalWisdomInternalWebCommunityResponseFieldMemberCount    = big.NewInt(1 << 8)
+	internalWisdomInternalWebCommunityResponseFieldModularity     = big.NewInt(1 << 9)
+	internalWisdomInternalWebCommunityResponseFieldPrice          = big.NewInt(1 << 10)
+	internalWisdomInternalWebCommunityResponseFieldPricingModel   = big.NewInt(1 << 11)
+	internalWisdomInternalWebCommunityResponseFieldPromise        = big.NewInt(1 << 12)
+	internalWisdomInternalWebCommunityResponseFieldProps          = big.NewInt(1 << 13)
+	internalWisdomInternalWebCommunityResponseFieldReflector      = big.NewInt(1 << 14)
+	internalWisdomInternalWebCommunityResponseFieldResolution     = big.NewInt(1 << 15)
+	internalWisdomInternalWebCommunityResponseFieldSlug           = big.NewInt(1 << 16)
+	internalWisdomInternalWebCommunityResponseFieldStyle          = big.NewInt(1 << 17)
+	internalWisdomInternalWebCommunityResponseFieldUpdatedAt      = big.NewInt(1 << 18)
+	internalWisdomInternalWebCommunityResponseFieldUserID         = big.NewInt(1 << 19)
+	internalWisdomInternalWebCommunityResponseFieldVisibility     = big.NewInt(1 << 20)
+	internalWisdomInternalWebCommunityResponseFieldWantCapability = big.NewInt(1 << 21)
 )
 
 type InternalWisdomInternalWebCommunityResponse struct {
@@ -314,10 +563,16 @@ type InternalWisdomInternalWebCommunityResponse struct {
 	Instructions *string `json:"instructions,omitempty" url:"instructions,omitempty"`
 	// 标签
 	Label *string `json:"label,omitempty" url:"label,omitempty"`
+	// 上架状态
+	ListingStatus *string `json:"listing_status,omitempty" url:"listing_status,omitempty"`
 	// 成员数
 	MemberCount *int `json:"member_count,omitempty" url:"member_count,omitempty"`
 	// 模块度
 	Modularity *float64 `json:"modularity,omitempty" url:"modularity,omitempty"`
+	// 价格
+	Price *float64 `json:"price,omitempty" url:"price,omitempty"`
+	// 定价模型
+	PricingModel *string `json:"pricing_model,omitempty" url:"pricing_model,omitempty"`
 	// 承诺
 	Promise *string `json:"promise,omitempty" url:"promise,omitempty"`
 	// 扩展属性
@@ -395,6 +650,13 @@ func (i *InternalWisdomInternalWebCommunityResponse) GetLabel() *string {
 	return i.Label
 }
 
+func (i *InternalWisdomInternalWebCommunityResponse) GetListingStatus() *string {
+	if i == nil {
+		return nil
+	}
+	return i.ListingStatus
+}
+
 func (i *InternalWisdomInternalWebCommunityResponse) GetMemberCount() *int {
 	if i == nil {
 		return nil
@@ -407,6 +669,20 @@ func (i *InternalWisdomInternalWebCommunityResponse) GetModularity() *float64 {
 		return nil
 	}
 	return i.Modularity
+}
+
+func (i *InternalWisdomInternalWebCommunityResponse) GetPrice() *float64 {
+	if i == nil {
+		return nil
+	}
+	return i.Price
+}
+
+func (i *InternalWisdomInternalWebCommunityResponse) GetPricingModel() *string {
+	if i == nil {
+		return nil
+	}
+	return i.PricingModel
 }
 
 func (i *InternalWisdomInternalWebCommunityResponse) GetPromise() *string {
@@ -542,6 +818,13 @@ func (i *InternalWisdomInternalWebCommunityResponse) SetLabel(label *string) {
 	i.require(internalWisdomInternalWebCommunityResponseFieldLabel)
 }
 
+// SetListingStatus sets the ListingStatus field and marks it as non-optional;
+// this prevents an empty or null value for this field from being omitted during serialization.
+func (i *InternalWisdomInternalWebCommunityResponse) SetListingStatus(listingStatus *string) {
+	i.ListingStatus = listingStatus
+	i.require(internalWisdomInternalWebCommunityResponseFieldListingStatus)
+}
+
 // SetMemberCount sets the MemberCount field and marks it as non-optional;
 // this prevents an empty or null value for this field from being omitted during serialization.
 func (i *InternalWisdomInternalWebCommunityResponse) SetMemberCount(memberCount *int) {
@@ -554,6 +837,20 @@ func (i *InternalWisdomInternalWebCommunityResponse) SetMemberCount(memberCount 
 func (i *InternalWisdomInternalWebCommunityResponse) SetModularity(modularity *float64) {
 	i.Modularity = modularity
 	i.require(internalWisdomInternalWebCommunityResponseFieldModularity)
+}
+
+// SetPrice sets the Price field and marks it as non-optional;
+// this prevents an empty or null value for this field from being omitted during serialization.
+func (i *InternalWisdomInternalWebCommunityResponse) SetPrice(price *float64) {
+	i.Price = price
+	i.require(internalWisdomInternalWebCommunityResponseFieldPrice)
+}
+
+// SetPricingModel sets the PricingModel field and marks it as non-optional;
+// this prevents an empty or null value for this field from being omitted during serialization.
+func (i *InternalWisdomInternalWebCommunityResponse) SetPricingModel(pricingModel *string) {
+	i.PricingModel = pricingModel
+	i.require(internalWisdomInternalWebCommunityResponseFieldPricingModel)
 }
 
 // SetPromise sets the Promise field and marks it as non-optional;
@@ -673,12 +970,15 @@ var (
 	internalWisdomInternalWebCreateCommunityRequestFieldDescription    = big.NewInt(1 << 1)
 	internalWisdomInternalWebCreateCommunityRequestFieldInstructions   = big.NewInt(1 << 2)
 	internalWisdomInternalWebCreateCommunityRequestFieldLabel          = big.NewInt(1 << 3)
-	internalWisdomInternalWebCreateCommunityRequestFieldPromise        = big.NewInt(1 << 4)
-	internalWisdomInternalWebCreateCommunityRequestFieldProps          = big.NewInt(1 << 5)
-	internalWisdomInternalWebCreateCommunityRequestFieldSlug           = big.NewInt(1 << 6)
-	internalWisdomInternalWebCreateCommunityRequestFieldStyle          = big.NewInt(1 << 7)
-	internalWisdomInternalWebCreateCommunityRequestFieldVisibility     = big.NewInt(1 << 8)
-	internalWisdomInternalWebCreateCommunityRequestFieldWantCapability = big.NewInt(1 << 9)
+	internalWisdomInternalWebCreateCommunityRequestFieldListingStatus  = big.NewInt(1 << 4)
+	internalWisdomInternalWebCreateCommunityRequestFieldPrice          = big.NewInt(1 << 5)
+	internalWisdomInternalWebCreateCommunityRequestFieldPricingModel   = big.NewInt(1 << 6)
+	internalWisdomInternalWebCreateCommunityRequestFieldPromise        = big.NewInt(1 << 7)
+	internalWisdomInternalWebCreateCommunityRequestFieldProps          = big.NewInt(1 << 8)
+	internalWisdomInternalWebCreateCommunityRequestFieldSlug           = big.NewInt(1 << 9)
+	internalWisdomInternalWebCreateCommunityRequestFieldStyle          = big.NewInt(1 << 10)
+	internalWisdomInternalWebCreateCommunityRequestFieldVisibility     = big.NewInt(1 << 11)
+	internalWisdomInternalWebCreateCommunityRequestFieldWantCapability = big.NewInt(1 << 12)
 )
 
 type InternalWisdomInternalWebCreateCommunityRequest struct {
@@ -690,6 +990,12 @@ type InternalWisdomInternalWebCreateCommunityRequest struct {
 	Instructions *string `json:"instructions,omitempty" url:"instructions,omitempty"`
 	// 标签
 	Label *string `json:"label,omitempty" url:"label,omitempty"`
+	// 上架状态
+	ListingStatus *string `json:"listing_status,omitempty" url:"listing_status,omitempty"`
+	// 价格
+	Price *float64 `json:"price,omitempty" url:"price,omitempty"`
+	// 定价模型
+	PricingModel *string `json:"pricing_model,omitempty" url:"pricing_model,omitempty"`
 	// 承诺
 	Promise *string `json:"promise,omitempty" url:"promise,omitempty"`
 	// 扩展属性
@@ -736,6 +1042,27 @@ func (i *InternalWisdomInternalWebCreateCommunityRequest) GetLabel() *string {
 		return nil
 	}
 	return i.Label
+}
+
+func (i *InternalWisdomInternalWebCreateCommunityRequest) GetListingStatus() *string {
+	if i == nil {
+		return nil
+	}
+	return i.ListingStatus
+}
+
+func (i *InternalWisdomInternalWebCreateCommunityRequest) GetPrice() *float64 {
+	if i == nil {
+		return nil
+	}
+	return i.Price
+}
+
+func (i *InternalWisdomInternalWebCreateCommunityRequest) GetPricingModel() *string {
+	if i == nil {
+		return nil
+	}
+	return i.PricingModel
 }
 
 func (i *InternalWisdomInternalWebCreateCommunityRequest) GetPromise() *string {
@@ -820,6 +1147,27 @@ func (i *InternalWisdomInternalWebCreateCommunityRequest) SetInstructions(instru
 func (i *InternalWisdomInternalWebCreateCommunityRequest) SetLabel(label *string) {
 	i.Label = label
 	i.require(internalWisdomInternalWebCreateCommunityRequestFieldLabel)
+}
+
+// SetListingStatus sets the ListingStatus field and marks it as non-optional;
+// this prevents an empty or null value for this field from being omitted during serialization.
+func (i *InternalWisdomInternalWebCreateCommunityRequest) SetListingStatus(listingStatus *string) {
+	i.ListingStatus = listingStatus
+	i.require(internalWisdomInternalWebCreateCommunityRequestFieldListingStatus)
+}
+
+// SetPrice sets the Price field and marks it as non-optional;
+// this prevents an empty or null value for this field from being omitted during serialization.
+func (i *InternalWisdomInternalWebCreateCommunityRequest) SetPrice(price *float64) {
+	i.Price = price
+	i.require(internalWisdomInternalWebCreateCommunityRequestFieldPrice)
+}
+
+// SetPricingModel sets the PricingModel field and marks it as non-optional;
+// this prevents an empty or null value for this field from being omitted during serialization.
+func (i *InternalWisdomInternalWebCreateCommunityRequest) SetPricingModel(pricingModel *string) {
+	i.PricingModel = pricingModel
+	i.require(internalWisdomInternalWebCreateCommunityRequestFieldPricingModel)
 }
 
 // SetPromise sets the Promise field and marks it as non-optional;
@@ -907,16 +1255,135 @@ func (i *InternalWisdomInternalWebCreateCommunityRequest) String() string {
 }
 
 var (
+	internalWisdomInternalWebSetPricingRequestFieldListingStatus = big.NewInt(1 << 0)
+	internalWisdomInternalWebSetPricingRequestFieldPrice         = big.NewInt(1 << 1)
+	internalWisdomInternalWebSetPricingRequestFieldPricingModel  = big.NewInt(1 << 2)
+)
+
+type InternalWisdomInternalWebSetPricingRequest struct {
+	ListingStatus *string  `json:"listing_status,omitempty" url:"listing_status,omitempty"`
+	Price         *float64 `json:"price,omitempty" url:"price,omitempty"`
+	PricingModel  *string  `json:"pricing_model,omitempty" url:"pricing_model,omitempty"`
+
+	// Private bitmask of fields set to an explicit value and therefore not to be omitted
+	explicitFields *big.Int `json:"-" url:"-"`
+
+	extraProperties map[string]interface{}
+	rawJSON         json.RawMessage
+}
+
+func (i *InternalWisdomInternalWebSetPricingRequest) GetListingStatus() *string {
+	if i == nil {
+		return nil
+	}
+	return i.ListingStatus
+}
+
+func (i *InternalWisdomInternalWebSetPricingRequest) GetPrice() *float64 {
+	if i == nil {
+		return nil
+	}
+	return i.Price
+}
+
+func (i *InternalWisdomInternalWebSetPricingRequest) GetPricingModel() *string {
+	if i == nil {
+		return nil
+	}
+	return i.PricingModel
+}
+
+func (i *InternalWisdomInternalWebSetPricingRequest) GetExtraProperties() map[string]interface{} {
+	if i == nil {
+		return nil
+	}
+	return i.extraProperties
+}
+
+func (i *InternalWisdomInternalWebSetPricingRequest) require(field *big.Int) {
+	if i.explicitFields == nil {
+		i.explicitFields = big.NewInt(0)
+	}
+	i.explicitFields.Or(i.explicitFields, field)
+}
+
+// SetListingStatus sets the ListingStatus field and marks it as non-optional;
+// this prevents an empty or null value for this field from being omitted during serialization.
+func (i *InternalWisdomInternalWebSetPricingRequest) SetListingStatus(listingStatus *string) {
+	i.ListingStatus = listingStatus
+	i.require(internalWisdomInternalWebSetPricingRequestFieldListingStatus)
+}
+
+// SetPrice sets the Price field and marks it as non-optional;
+// this prevents an empty or null value for this field from being omitted during serialization.
+func (i *InternalWisdomInternalWebSetPricingRequest) SetPrice(price *float64) {
+	i.Price = price
+	i.require(internalWisdomInternalWebSetPricingRequestFieldPrice)
+}
+
+// SetPricingModel sets the PricingModel field and marks it as non-optional;
+// this prevents an empty or null value for this field from being omitted during serialization.
+func (i *InternalWisdomInternalWebSetPricingRequest) SetPricingModel(pricingModel *string) {
+	i.PricingModel = pricingModel
+	i.require(internalWisdomInternalWebSetPricingRequestFieldPricingModel)
+}
+
+func (i *InternalWisdomInternalWebSetPricingRequest) UnmarshalJSON(data []byte) error {
+	type unmarshaler InternalWisdomInternalWebSetPricingRequest
+	var value unmarshaler
+	if err := json.Unmarshal(data, &value); err != nil {
+		return err
+	}
+	*i = InternalWisdomInternalWebSetPricingRequest(value)
+	extraProperties, err := internal.ExtractExtraProperties(data, *i)
+	if err != nil {
+		return err
+	}
+	i.extraProperties = extraProperties
+	i.rawJSON = json.RawMessage(data)
+	return nil
+}
+
+func (i *InternalWisdomInternalWebSetPricingRequest) MarshalJSON() ([]byte, error) {
+	type embed InternalWisdomInternalWebSetPricingRequest
+	var marshaler = struct {
+		embed
+	}{
+		embed: embed(*i),
+	}
+	explicitMarshaler := internal.HandleExplicitFields(marshaler, i.explicitFields)
+	return json.Marshal(explicitMarshaler)
+}
+
+func (i *InternalWisdomInternalWebSetPricingRequest) String() string {
+	if i == nil {
+		return "<nil>"
+	}
+	if len(i.rawJSON) > 0 {
+		if value, err := internal.StringifyJSON(i.rawJSON); err == nil {
+			return value
+		}
+	}
+	if value, err := internal.StringifyJSON(i); err == nil {
+		return value
+	}
+	return fmt.Sprintf("%#v", i)
+}
+
+var (
 	internalWisdomInternalWebUpdateCommunityRequestFieldDefencer       = big.NewInt(1 << 0)
 	internalWisdomInternalWebUpdateCommunityRequestFieldDescription    = big.NewInt(1 << 1)
 	internalWisdomInternalWebUpdateCommunityRequestFieldInstructions   = big.NewInt(1 << 2)
 	internalWisdomInternalWebUpdateCommunityRequestFieldLabel          = big.NewInt(1 << 3)
-	internalWisdomInternalWebUpdateCommunityRequestFieldPromise        = big.NewInt(1 << 4)
-	internalWisdomInternalWebUpdateCommunityRequestFieldProps          = big.NewInt(1 << 5)
-	internalWisdomInternalWebUpdateCommunityRequestFieldSlug           = big.NewInt(1 << 6)
-	internalWisdomInternalWebUpdateCommunityRequestFieldStyle          = big.NewInt(1 << 7)
-	internalWisdomInternalWebUpdateCommunityRequestFieldVisibility     = big.NewInt(1 << 8)
-	internalWisdomInternalWebUpdateCommunityRequestFieldWantCapability = big.NewInt(1 << 9)
+	internalWisdomInternalWebUpdateCommunityRequestFieldListingStatus  = big.NewInt(1 << 4)
+	internalWisdomInternalWebUpdateCommunityRequestFieldPrice          = big.NewInt(1 << 5)
+	internalWisdomInternalWebUpdateCommunityRequestFieldPricingModel   = big.NewInt(1 << 6)
+	internalWisdomInternalWebUpdateCommunityRequestFieldPromise        = big.NewInt(1 << 7)
+	internalWisdomInternalWebUpdateCommunityRequestFieldProps          = big.NewInt(1 << 8)
+	internalWisdomInternalWebUpdateCommunityRequestFieldSlug           = big.NewInt(1 << 9)
+	internalWisdomInternalWebUpdateCommunityRequestFieldStyle          = big.NewInt(1 << 10)
+	internalWisdomInternalWebUpdateCommunityRequestFieldVisibility     = big.NewInt(1 << 11)
+	internalWisdomInternalWebUpdateCommunityRequestFieldWantCapability = big.NewInt(1 << 12)
 )
 
 type InternalWisdomInternalWebUpdateCommunityRequest struct {
@@ -928,6 +1395,12 @@ type InternalWisdomInternalWebUpdateCommunityRequest struct {
 	Instructions *string `json:"instructions,omitempty" url:"instructions,omitempty"`
 	// 标签
 	Label *string `json:"label,omitempty" url:"label,omitempty"`
+	// 上架状态
+	ListingStatus *string `json:"listing_status,omitempty" url:"listing_status,omitempty"`
+	// 价格
+	Price *float64 `json:"price,omitempty" url:"price,omitempty"`
+	// 定价模型
+	PricingModel *string `json:"pricing_model,omitempty" url:"pricing_model,omitempty"`
 	// 承诺
 	Promise *string `json:"promise,omitempty" url:"promise,omitempty"`
 	// 扩展属性
@@ -974,6 +1447,27 @@ func (i *InternalWisdomInternalWebUpdateCommunityRequest) GetLabel() *string {
 		return nil
 	}
 	return i.Label
+}
+
+func (i *InternalWisdomInternalWebUpdateCommunityRequest) GetListingStatus() *string {
+	if i == nil {
+		return nil
+	}
+	return i.ListingStatus
+}
+
+func (i *InternalWisdomInternalWebUpdateCommunityRequest) GetPrice() *float64 {
+	if i == nil {
+		return nil
+	}
+	return i.Price
+}
+
+func (i *InternalWisdomInternalWebUpdateCommunityRequest) GetPricingModel() *string {
+	if i == nil {
+		return nil
+	}
+	return i.PricingModel
 }
 
 func (i *InternalWisdomInternalWebUpdateCommunityRequest) GetPromise() *string {
@@ -1060,6 +1554,27 @@ func (i *InternalWisdomInternalWebUpdateCommunityRequest) SetLabel(label *string
 	i.require(internalWisdomInternalWebUpdateCommunityRequestFieldLabel)
 }
 
+// SetListingStatus sets the ListingStatus field and marks it as non-optional;
+// this prevents an empty or null value for this field from being omitted during serialization.
+func (i *InternalWisdomInternalWebUpdateCommunityRequest) SetListingStatus(listingStatus *string) {
+	i.ListingStatus = listingStatus
+	i.require(internalWisdomInternalWebUpdateCommunityRequestFieldListingStatus)
+}
+
+// SetPrice sets the Price field and marks it as non-optional;
+// this prevents an empty or null value for this field from being omitted during serialization.
+func (i *InternalWisdomInternalWebUpdateCommunityRequest) SetPrice(price *float64) {
+	i.Price = price
+	i.require(internalWisdomInternalWebUpdateCommunityRequestFieldPrice)
+}
+
+// SetPricingModel sets the PricingModel field and marks it as non-optional;
+// this prevents an empty or null value for this field from being omitted during serialization.
+func (i *InternalWisdomInternalWebUpdateCommunityRequest) SetPricingModel(pricingModel *string) {
+	i.PricingModel = pricingModel
+	i.require(internalWisdomInternalWebUpdateCommunityRequestFieldPricingModel)
+}
+
 // SetPromise sets the Promise field and marks it as non-optional;
 // this prevents an empty or null value for this field from being omitted during serialization.
 func (i *InternalWisdomInternalWebUpdateCommunityRequest) SetPromise(promise *string) {
@@ -1143,6 +1658,8 @@ func (i *InternalWisdomInternalWebUpdateCommunityRequest) String() string {
 	}
 	return fmt.Sprintf("%#v", i)
 }
+
+type MapStringString = map[string]string
 
 type PatchWisdomCommunityIDRequestBody struct {
 	StringUnknownMap map[string]any
@@ -1266,6 +1783,69 @@ func (p *PostWisdomCommunityRequest) Accept(visitor PostWisdomCommunityRequestVi
 	}
 	if p.typ == "InternalWisdomInternalWebCreateCommunityRequest" || p.InternalWisdomInternalWebCreateCommunityRequest != nil {
 		return visitor.VisitInternalWisdomInternalWebCreateCommunityRequest(p.InternalWisdomInternalWebCreateCommunityRequest)
+	}
+	return fmt.Errorf("type %T does not include a non-empty union type", p)
+}
+
+type PutWisdomCommunityIDPricingRequestBody struct {
+	StringUnknownMap map[string]any
+	// Pricing settings
+	InternalWisdomInternalWebSetPricingRequest *InternalWisdomInternalWebSetPricingRequest
+
+	typ string
+}
+
+func (p *PutWisdomCommunityIDPricingRequestBody) GetStringUnknownMap() map[string]any {
+	if p == nil {
+		return nil
+	}
+	return p.StringUnknownMap
+}
+
+func (p *PutWisdomCommunityIDPricingRequestBody) GetInternalWisdomInternalWebSetPricingRequest() *InternalWisdomInternalWebSetPricingRequest {
+	if p == nil {
+		return nil
+	}
+	return p.InternalWisdomInternalWebSetPricingRequest
+}
+
+func (p *PutWisdomCommunityIDPricingRequestBody) UnmarshalJSON(data []byte) error {
+	var valueStringUnknownMap map[string]any
+	if err := json.Unmarshal(data, &valueStringUnknownMap); err == nil {
+		p.typ = "StringUnknownMap"
+		p.StringUnknownMap = valueStringUnknownMap
+		return nil
+	}
+	valueInternalWisdomInternalWebSetPricingRequest := new(InternalWisdomInternalWebSetPricingRequest)
+	if err := json.Unmarshal(data, &valueInternalWisdomInternalWebSetPricingRequest); err == nil {
+		p.typ = "InternalWisdomInternalWebSetPricingRequest"
+		p.InternalWisdomInternalWebSetPricingRequest = valueInternalWisdomInternalWebSetPricingRequest
+		return nil
+	}
+	return fmt.Errorf("%s cannot be deserialized as a %T", data, p)
+}
+
+func (p PutWisdomCommunityIDPricingRequestBody) MarshalJSON() ([]byte, error) {
+	if p.typ == "StringUnknownMap" || p.StringUnknownMap != nil {
+		return json.Marshal(p.StringUnknownMap)
+	}
+	if p.typ == "InternalWisdomInternalWebSetPricingRequest" || p.InternalWisdomInternalWebSetPricingRequest != nil {
+		return json.Marshal(p.InternalWisdomInternalWebSetPricingRequest)
+	}
+	return nil, fmt.Errorf("type %T does not include a non-empty union type", p)
+}
+
+type PutWisdomCommunityIDPricingRequestBodyVisitor interface {
+	VisitStringUnknownMap(map[string]any) error
+	VisitInternalWisdomInternalWebSetPricingRequest(*InternalWisdomInternalWebSetPricingRequest) error
+}
+
+func (p *PutWisdomCommunityIDPricingRequestBody) Accept(visitor PutWisdomCommunityIDPricingRequestBodyVisitor) error {
+	if p.typ == "StringUnknownMap" || p.StringUnknownMap != nil {
+		return visitor.VisitStringUnknownMap(p.StringUnknownMap)
+	}
+	if p.typ == "InternalWisdomInternalWebSetPricingRequest" || p.InternalWisdomInternalWebSetPricingRequest != nil {
+		return visitor.VisitInternalWisdomInternalWebSetPricingRequest(p.InternalWisdomInternalWebSetPricingRequest)
 	}
 	return fmt.Errorf("type %T does not include a non-empty union type", p)
 }

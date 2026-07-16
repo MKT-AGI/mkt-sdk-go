@@ -2380,7 +2380,7 @@
       },
       "response": {
         "status": 200,
-        "body": "{\n  \"code\": 1,\n  \"data\": [\n    {\n      \"createdAt\": 1,\n      \"createdBy\": 1,\n      \"expiresAt\": 1,\n      \"orderNo\": \"orderNo\",\n      \"source\": \"source\",\n      \"userID\": 1\n    }\n  ],\n  \"limit\": 1,\n  \"message\": \"message\",\n  \"page\": 1,\n  \"total\": 1,\n  \"user_message\": \"user_message\"\n}",
+        "body": "{\n  \"code\": 1,\n  \"data\": [\n    {\n      \"createdAt\": 1,\n      \"createdBy\": 1,\n      \"expiresAt\": 1,\n      \"orderNo\": \"orderNo\",\n      \"resourceID\": 1,\n      \"resourceType\": \"resourceType\",\n      \"source\": \"source\",\n      \"userID\": 1\n    }\n  ],\n  \"limit\": 1,\n  \"message\": \"message\",\n  \"page\": 1,\n  \"total\": 1,\n  \"user_message\": \"user_message\"\n}",
         "headers": {
           "Content-Type": "application/json"
         }
@@ -2859,7 +2859,7 @@
       },
       "response": {
         "status": 200,
-        "body": "{\n  \"code\": 1,\n  \"data\": [\n    {\n      \"createdAt\": 1,\n      \"createdBy\": 1,\n      \"expiresAt\": 1,\n      \"orderNo\": \"orderNo\",\n      \"source\": \"source\",\n      \"userID\": 1\n    }\n  ],\n  \"limit\": 1,\n  \"message\": \"message\",\n  \"page\": 1,\n  \"total\": 1,\n  \"user_message\": \"user_message\"\n}",
+        "body": "{\n  \"code\": 1,\n  \"data\": [\n    {\n      \"createdAt\": 1,\n      \"createdBy\": 1,\n      \"expiresAt\": 1,\n      \"orderNo\": \"orderNo\",\n      \"resourceID\": 1,\n      \"resourceType\": \"resourceType\",\n      \"source\": \"source\",\n      \"userID\": 1\n    }\n  ],\n  \"limit\": 1,\n  \"message\": \"message\",\n  \"page\": 1,\n  \"total\": 1,\n  \"user_message\": \"user_message\"\n}",
         "headers": {
           "Content-Type": "application/json"
         }
@@ -3372,7 +3372,7 @@
       },
       "response": {
         "status": 200,
-        "body": "{\n  \"code\": 1,\n  \"data\": [\n    {\n      \"createdAt\": 1,\n      \"createdBy\": 1,\n      \"expiresAt\": 1,\n      \"orderNo\": \"orderNo\",\n      \"source\": \"source\",\n      \"userID\": 1\n    }\n  ],\n  \"limit\": 1,\n  \"message\": \"message\",\n  \"page\": 1,\n  \"total\": 1,\n  \"user_message\": \"user_message\"\n}",
+        "body": "{\n  \"code\": 1,\n  \"data\": [\n    {\n      \"createdAt\": 1,\n      \"createdBy\": 1,\n      \"expiresAt\": 1,\n      \"orderNo\": \"orderNo\",\n      \"resourceID\": 1,\n      \"resourceType\": \"resourceType\",\n      \"source\": \"source\",\n      \"userID\": 1\n    }\n  ],\n  \"limit\": 1,\n  \"message\": \"message\",\n  \"page\": 1,\n  \"total\": 1,\n  \"user_message\": \"user_message\"\n}",
         "headers": {
           "Content-Type": "application/json"
         }
@@ -4534,6 +4534,38 @@
       }
     },
     {
+      "id": "763a650c-e954-4244-95c4-36ad43e6a027",
+      "name": "List purchased communities - default",
+      "request": {
+        "urlPathTemplate": "/wisdom/purchases",
+        "method": "GET",
+        "headers": {
+          "Authorization": {
+            "matches": ".+"
+          }
+        }
+      },
+      "response": {
+        "status": 200,
+        "body": "{\n  \"code\": 1,\n  \"data\": [\n    {\n      \"community_id\": 1,\n      \"created_at\": 1,\n      \"order_no\": \"order_no\",\n      \"source\": \"source\"\n    }\n  ],\n  \"limit\": 1,\n  \"message\": \"message\",\n  \"page\": 1,\n  \"total\": 1,\n  \"user_message\": \"user_message\"\n}",
+        "headers": {
+          "Content-Type": "application/json"
+        }
+      },
+      "uuid": "763a650c-e954-4244-95c4-36ad43e6a027",
+      "persistent": true,
+      "priority": 3,
+      "metadata": {
+        "mocklab": {
+          "created": {
+            "at": "2020-01-01T00:00:00.000Z",
+            "via": "SYSTEM"
+          }
+        }
+      },
+      "postServeActions": []
+    },
+    {
       "id": "5941a133-61b1-4c85-a87b-81cf921636bc",
       "name": "Get subgraph - default",
       "request": {
@@ -4616,7 +4648,7 @@
       },
       "response": {
         "status": 200,
-        "body": "{\n  \"code\": 1,\n  \"data\": {\n    \"confidence\": 1.1,\n    \"created_at\": 1,\n    \"defencer\": \"defencer\",\n    \"description\": \"description\",\n    \"id\": 1,\n    \"instructions\": \"instructions\",\n    \"label\": \"label\",\n    \"member_count\": 1,\n    \"modularity\": 1.1,\n    \"promise\": \"promise\",\n    \"props\": [\n      1\n    ],\n    \"reflector\": \"reflector\",\n    \"resolution\": 1.1,\n    \"slug\": \"slug\",\n    \"style\": \"style\",\n    \"updated_at\": 1,\n    \"user_id\": 1,\n    \"visibility\": \"visibility\",\n    \"want_capability\": \"want_capability\"\n  },\n  \"limit\": 1,\n  \"message\": \"message\",\n  \"page\": 1,\n  \"total\": 1,\n  \"user_message\": \"user_message\"\n}",
+        "body": "{\n  \"code\": 1,\n  \"data\": {\n    \"confidence\": 1.1,\n    \"created_at\": 1,\n    \"defencer\": \"defencer\",\n    \"description\": \"description\",\n    \"id\": 1,\n    \"instructions\": \"instructions\",\n    \"label\": \"label\",\n    \"listing_status\": \"listing_status\",\n    \"member_count\": 1,\n    \"modularity\": 1.1,\n    \"price\": 1.1,\n    \"pricing_model\": \"pricing_model\",\n    \"promise\": \"promise\",\n    \"props\": [\n      1\n    ],\n    \"reflector\": \"reflector\",\n    \"resolution\": 1.1,\n    \"slug\": \"slug\",\n    \"style\": \"style\",\n    \"updated_at\": 1,\n    \"user_id\": 1,\n    \"visibility\": \"visibility\",\n    \"want_capability\": \"want_capability\"\n  },\n  \"limit\": 1,\n  \"message\": \"message\",\n  \"page\": 1,\n  \"total\": 1,\n  \"user_message\": \"user_message\"\n}",
         "headers": {
           "Content-Type": "application/json"
         }
@@ -4652,7 +4684,7 @@
       },
       "response": {
         "status": 200,
-        "body": "{\n  \"code\": 1,\n  \"data\": {\n    \"confidence\": 1.1,\n    \"created_at\": 1,\n    \"defencer\": \"defencer\",\n    \"description\": \"description\",\n    \"id\": 1,\n    \"instructions\": \"instructions\",\n    \"label\": \"label\",\n    \"member_count\": 1,\n    \"modularity\": 1.1,\n    \"promise\": \"promise\",\n    \"props\": [\n      1\n    ],\n    \"reflector\": \"reflector\",\n    \"resolution\": 1.1,\n    \"slug\": \"slug\",\n    \"style\": \"style\",\n    \"updated_at\": 1,\n    \"user_id\": 1,\n    \"visibility\": \"visibility\",\n    \"want_capability\": \"want_capability\"\n  },\n  \"limit\": 1,\n  \"message\": \"message\",\n  \"page\": 1,\n  \"total\": 1,\n  \"user_message\": \"user_message\"\n}",
+        "body": "{\n  \"code\": 1,\n  \"data\": {\n    \"confidence\": 1.1,\n    \"created_at\": 1,\n    \"defencer\": \"defencer\",\n    \"description\": \"description\",\n    \"id\": 1,\n    \"instructions\": \"instructions\",\n    \"label\": \"label\",\n    \"listing_status\": \"listing_status\",\n    \"member_count\": 1,\n    \"modularity\": 1.1,\n    \"price\": 1.1,\n    \"pricing_model\": \"pricing_model\",\n    \"promise\": \"promise\",\n    \"props\": [\n      1\n    ],\n    \"reflector\": \"reflector\",\n    \"resolution\": 1.1,\n    \"slug\": \"slug\",\n    \"style\": \"style\",\n    \"updated_at\": 1,\n    \"user_id\": 1,\n    \"visibility\": \"visibility\",\n    \"want_capability\": \"want_capability\"\n  },\n  \"limit\": 1,\n  \"message\": \"message\",\n  \"page\": 1,\n  \"total\": 1,\n  \"user_message\": \"user_message\"\n}",
         "headers": {
           "Content-Type": "application/json"
         }
@@ -4724,7 +4756,7 @@
       },
       "response": {
         "status": 200,
-        "body": "{\n  \"code\": 1,\n  \"data\": {\n    \"confidence\": 1.1,\n    \"created_at\": 1,\n    \"defencer\": \"defencer\",\n    \"description\": \"description\",\n    \"id\": 1,\n    \"instructions\": \"instructions\",\n    \"label\": \"label\",\n    \"member_count\": 1,\n    \"modularity\": 1.1,\n    \"promise\": \"promise\",\n    \"props\": [\n      1\n    ],\n    \"reflector\": \"reflector\",\n    \"resolution\": 1.1,\n    \"slug\": \"slug\",\n    \"style\": \"style\",\n    \"updated_at\": 1,\n    \"user_id\": 1,\n    \"visibility\": \"visibility\",\n    \"want_capability\": \"want_capability\"\n  },\n  \"limit\": 1,\n  \"message\": \"message\",\n  \"page\": 1,\n  \"total\": 1,\n  \"user_message\": \"user_message\"\n}",
+        "body": "{\n  \"code\": 1,\n  \"data\": {\n    \"confidence\": 1.1,\n    \"created_at\": 1,\n    \"defencer\": \"defencer\",\n    \"description\": \"description\",\n    \"id\": 1,\n    \"instructions\": \"instructions\",\n    \"label\": \"label\",\n    \"listing_status\": \"listing_status\",\n    \"member_count\": 1,\n    \"modularity\": 1.1,\n    \"price\": 1.1,\n    \"pricing_model\": \"pricing_model\",\n    \"promise\": \"promise\",\n    \"props\": [\n      1\n    ],\n    \"reflector\": \"reflector\",\n    \"resolution\": 1.1,\n    \"slug\": \"slug\",\n    \"style\": \"style\",\n    \"updated_at\": 1,\n    \"user_id\": 1,\n    \"visibility\": \"visibility\",\n    \"want_capability\": \"want_capability\"\n  },\n  \"limit\": 1,\n  \"message\": \"message\",\n  \"page\": 1,\n  \"total\": 1,\n  \"user_message\": \"user_message\"\n}",
         "headers": {
           "Content-Type": "application/json"
         }
@@ -4740,6 +4772,105 @@
           }
         }
       }
+    },
+    {
+      "id": "035dcc8c-38ec-4f0d-9a1d-35261c746b6d",
+      "name": "Set community pricing - default",
+      "request": {
+        "urlPathTemplate": "/wisdom/community/{id}/pricing",
+        "method": "PUT",
+        "headers": {
+          "Authorization": {
+            "matches": ".+"
+          }
+        },
+        "pathParameters": {
+          "id": {
+            "equalTo": "1"
+          }
+        }
+      },
+      "response": {
+        "status": 200,
+        "body": "{\n  \"code\": 1,\n  \"data\": {\n    \"confidence\": 1.1,\n    \"created_at\": 1,\n    \"defencer\": \"defencer\",\n    \"description\": \"description\",\n    \"id\": 1,\n    \"instructions\": \"instructions\",\n    \"label\": \"label\",\n    \"listing_status\": \"listing_status\",\n    \"member_count\": 1,\n    \"modularity\": 1.1,\n    \"price\": 1.1,\n    \"pricing_model\": \"pricing_model\",\n    \"promise\": \"promise\",\n    \"props\": [\n      1\n    ],\n    \"reflector\": \"reflector\",\n    \"resolution\": 1.1,\n    \"slug\": \"slug\",\n    \"style\": \"style\",\n    \"updated_at\": 1,\n    \"user_id\": 1,\n    \"visibility\": \"visibility\",\n    \"want_capability\": \"want_capability\"\n  },\n  \"limit\": 1,\n  \"message\": \"message\",\n  \"page\": 1,\n  \"total\": 1,\n  \"user_message\": \"user_message\"\n}",
+        "headers": {
+          "Content-Type": "application/json"
+        }
+      },
+      "uuid": "035dcc8c-38ec-4f0d-9a1d-35261c746b6d",
+      "persistent": true,
+      "priority": 3,
+      "metadata": {
+        "mocklab": {
+          "created": {
+            "at": "2020-01-01T00:00:00.000Z",
+            "via": "SYSTEM"
+          }
+        }
+      }
+    },
+    {
+      "id": "2307b415-496c-4f9b-948f-b039a3c3ea95",
+      "name": "Purchase community - default",
+      "request": {
+        "urlPathTemplate": "/wisdom/community/{id}/purchase",
+        "method": "POST",
+        "headers": {
+          "Authorization": {
+            "matches": ".+"
+          }
+        },
+        "pathParameters": {
+          "id": {
+            "equalTo": "1"
+          }
+        }
+      },
+      "response": {
+        "status": 200,
+        "body": "{\n  \"code\": 1,\n  \"data\": {\n    \"key\": \"value\"\n  },\n  \"limit\": 1,\n  \"message\": \"message\",\n  \"page\": 1,\n  \"total\": 1,\n  \"user_message\": \"user_message\"\n}",
+        "headers": {
+          "Content-Type": "application/json"
+        }
+      },
+      "uuid": "2307b415-496c-4f9b-948f-b039a3c3ea95",
+      "persistent": true,
+      "priority": 3,
+      "metadata": {
+        "mocklab": {
+          "created": {
+            "at": "2020-01-01T00:00:00.000Z",
+            "via": "SYSTEM"
+          }
+        }
+      }
+    },
+    {
+      "id": "aba5512c-dc2b-478f-87b1-c3537849c729",
+      "name": "List marketplace communities - default",
+      "request": {
+        "urlPathTemplate": "/wisdom/marketplace",
+        "method": "GET"
+      },
+      "response": {
+        "status": 200,
+        "body": "{\n  \"code\": 1,\n  \"data\": {\n    \"data\": [\n      {}\n    ],\n    \"limit\": 1,\n    \"object\": \"object\",\n    \"page\": 1,\n    \"total\": 1\n  },\n  \"limit\": 1,\n  \"message\": \"message\",\n  \"page\": 1,\n  \"total\": 1,\n  \"user_message\": \"user_message\"\n}",
+        "headers": {
+          "Content-Type": "application/json"
+        }
+      },
+      "uuid": "aba5512c-dc2b-478f-87b1-c3537849c729",
+      "persistent": true,
+      "priority": 3,
+      "metadata": {
+        "mocklab": {
+          "created": {
+            "at": "2020-01-01T00:00:00.000Z",
+            "via": "SYSTEM"
+          }
+        }
+      },
+      "postServeActions": []
     },
     {
       "id": "05fbb993-5293-4f0c-adef-3969cbb5a143",
@@ -4796,6 +4927,6 @@
     }
   ],
   "meta": {
-    "total": 144
+    "total": 148
   }
 }

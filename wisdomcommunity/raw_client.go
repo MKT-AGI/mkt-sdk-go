@@ -258,3 +258,95 @@ func (r *RawClient) UpdateCommunity(
 		Body:       response,
 	}, nil
 }
+
+func (r *RawClient) SetCommunityPricing(
+	ctx context.Context,
+	request *mktsdkgo.PutWisdomCommunityIDPricingRequest,
+	opts ...option.RequestOption,
+) (*core.Response[*mktsdkgo.GithubComMktAgiAixInternalPkgGinxResultInternalWisdomInternalWebCommunityResponse], error) {
+	options := core.NewRequestOptions(opts...)
+	baseURL := internal.ResolveBaseURL(
+		options.BaseURL,
+		r.baseURL,
+		"http://localhost:8080/api/v1",
+	)
+	endpointURL := internal.EncodeURL(
+		baseURL+"/wisdom/community/%v/pricing",
+		request.ID,
+	)
+	headers := internal.MergeHeaders(
+		r.options.ToHeader(),
+		options.ToHeader(),
+	)
+	headers.Add("Content-Type", "application/json")
+	var response *mktsdkgo.GithubComMktAgiAixInternalPkgGinxResultInternalWisdomInternalWebCommunityResponse
+	raw, err := r.caller.Call(
+		ctx,
+		&internal.CallParams{
+			URL:             endpointURL,
+			Method:          http.MethodPut,
+			Headers:         headers,
+			MaxAttempts:     options.MaxAttempts,
+			DisableRetries:  options.DisableRetries,
+			BodyProperties:  options.BodyProperties,
+			QueryParameters: options.QueryParameters,
+			Client:          options.HTTPClient,
+			Request:         request,
+			Response:        &response,
+			ErrorDecoder:    internal.NewErrorDecoder(mktsdkgo.ErrorCodes),
+		},
+	)
+	if err != nil {
+		return nil, err
+	}
+	return &core.Response[*mktsdkgo.GithubComMktAgiAixInternalPkgGinxResultInternalWisdomInternalWebCommunityResponse]{
+		StatusCode: raw.StatusCode,
+		Header:     raw.Header,
+		Body:       response,
+	}, nil
+}
+
+func (r *RawClient) PurchaseCommunity(
+	ctx context.Context,
+	request *mktsdkgo.PostWisdomCommunityIDPurchaseRequest,
+	opts ...option.RequestOption,
+) (*core.Response[*mktsdkgo.GithubComMktAgiAixInternalPkgGinxResultMapStringString], error) {
+	options := core.NewRequestOptions(opts...)
+	baseURL := internal.ResolveBaseURL(
+		options.BaseURL,
+		r.baseURL,
+		"http://localhost:8080/api/v1",
+	)
+	endpointURL := internal.EncodeURL(
+		baseURL+"/wisdom/community/%v/purchase",
+		request.ID,
+	)
+	headers := internal.MergeHeaders(
+		r.options.ToHeader(),
+		options.ToHeader(),
+	)
+	var response *mktsdkgo.GithubComMktAgiAixInternalPkgGinxResultMapStringString
+	raw, err := r.caller.Call(
+		ctx,
+		&internal.CallParams{
+			URL:             endpointURL,
+			Method:          http.MethodPost,
+			Headers:         headers,
+			MaxAttempts:     options.MaxAttempts,
+			DisableRetries:  options.DisableRetries,
+			BodyProperties:  options.BodyProperties,
+			QueryParameters: options.QueryParameters,
+			Client:          options.HTTPClient,
+			Response:        &response,
+			ErrorDecoder:    internal.NewErrorDecoder(mktsdkgo.ErrorCodes),
+		},
+	)
+	if err != nil {
+		return nil, err
+	}
+	return &core.Response[*mktsdkgo.GithubComMktAgiAixInternalPkgGinxResultMapStringString]{
+		StatusCode: raw.StatusCode,
+		Header:     raw.Header,
+		Body:       response,
+	}, nil
+}
