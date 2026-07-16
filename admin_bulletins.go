@@ -210,19 +210,19 @@ func (p *PostAdminBulletinsIDPublishRequest) SetID(id int) {
 }
 
 var (
-	internalBulletinWebCreateBulletinReqFieldBody      = big.NewInt(1 << 0)
-	internalBulletinWebCreateBulletinReqFieldCategory  = big.NewInt(1 << 1)
-	internalBulletinWebCreateBulletinReqFieldExpiresAt = big.NewInt(1 << 2)
-	internalBulletinWebCreateBulletinReqFieldParentID  = big.NewInt(1 << 3)
-	internalBulletinWebCreateBulletinReqFieldSection   = big.NewInt(1 << 4)
-	internalBulletinWebCreateBulletinReqFieldSortOrder = big.NewInt(1 << 5)
-	internalBulletinWebCreateBulletinReqFieldSummary   = big.NewInt(1 << 6)
-	internalBulletinWebCreateBulletinReqFieldTitle     = big.NewInt(1 << 7)
-	internalBulletinWebCreateBulletinReqFieldType      = big.NewInt(1 << 8)
-	internalBulletinWebCreateBulletinReqFieldVersion   = big.NewInt(1 << 9)
+	internalBulletinInternalWebCreateBulletinReqFieldBody      = big.NewInt(1 << 0)
+	internalBulletinInternalWebCreateBulletinReqFieldCategory  = big.NewInt(1 << 1)
+	internalBulletinInternalWebCreateBulletinReqFieldExpiresAt = big.NewInt(1 << 2)
+	internalBulletinInternalWebCreateBulletinReqFieldParentID  = big.NewInt(1 << 3)
+	internalBulletinInternalWebCreateBulletinReqFieldSection   = big.NewInt(1 << 4)
+	internalBulletinInternalWebCreateBulletinReqFieldSortOrder = big.NewInt(1 << 5)
+	internalBulletinInternalWebCreateBulletinReqFieldSummary   = big.NewInt(1 << 6)
+	internalBulletinInternalWebCreateBulletinReqFieldTitle     = big.NewInt(1 << 7)
+	internalBulletinInternalWebCreateBulletinReqFieldType      = big.NewInt(1 << 8)
+	internalBulletinInternalWebCreateBulletinReqFieldVersion   = big.NewInt(1 << 9)
 )
 
-type InternalBulletinWebCreateBulletinReq struct {
+type InternalBulletinInternalWebCreateBulletinReq struct {
 	Body      *string `json:"body,omitempty" url:"body,omitempty"`
 	Category  *string `json:"category,omitempty" url:"category,omitempty"`
 	ExpiresAt *int    `json:"expires_at,omitempty" url:"expires_at,omitempty"`
@@ -241,84 +241,84 @@ type InternalBulletinWebCreateBulletinReq struct {
 	rawJSON         json.RawMessage
 }
 
-func (i *InternalBulletinWebCreateBulletinReq) GetBody() *string {
+func (i *InternalBulletinInternalWebCreateBulletinReq) GetBody() *string {
 	if i == nil {
 		return nil
 	}
 	return i.Body
 }
 
-func (i *InternalBulletinWebCreateBulletinReq) GetCategory() *string {
+func (i *InternalBulletinInternalWebCreateBulletinReq) GetCategory() *string {
 	if i == nil {
 		return nil
 	}
 	return i.Category
 }
 
-func (i *InternalBulletinWebCreateBulletinReq) GetExpiresAt() *int {
+func (i *InternalBulletinInternalWebCreateBulletinReq) GetExpiresAt() *int {
 	if i == nil {
 		return nil
 	}
 	return i.ExpiresAt
 }
 
-func (i *InternalBulletinWebCreateBulletinReq) GetParentID() *int {
+func (i *InternalBulletinInternalWebCreateBulletinReq) GetParentID() *int {
 	if i == nil {
 		return nil
 	}
 	return i.ParentID
 }
 
-func (i *InternalBulletinWebCreateBulletinReq) GetSection() *string {
+func (i *InternalBulletinInternalWebCreateBulletinReq) GetSection() *string {
 	if i == nil {
 		return nil
 	}
 	return i.Section
 }
 
-func (i *InternalBulletinWebCreateBulletinReq) GetSortOrder() *int {
+func (i *InternalBulletinInternalWebCreateBulletinReq) GetSortOrder() *int {
 	if i == nil {
 		return nil
 	}
 	return i.SortOrder
 }
 
-func (i *InternalBulletinWebCreateBulletinReq) GetSummary() *string {
+func (i *InternalBulletinInternalWebCreateBulletinReq) GetSummary() *string {
 	if i == nil {
 		return nil
 	}
 	return i.Summary
 }
 
-func (i *InternalBulletinWebCreateBulletinReq) GetTitle() *string {
+func (i *InternalBulletinInternalWebCreateBulletinReq) GetTitle() *string {
 	if i == nil {
 		return nil
 	}
 	return i.Title
 }
 
-func (i *InternalBulletinWebCreateBulletinReq) GetType() *string {
+func (i *InternalBulletinInternalWebCreateBulletinReq) GetType() *string {
 	if i == nil {
 		return nil
 	}
 	return i.Type
 }
 
-func (i *InternalBulletinWebCreateBulletinReq) GetVersion() *string {
+func (i *InternalBulletinInternalWebCreateBulletinReq) GetVersion() *string {
 	if i == nil {
 		return nil
 	}
 	return i.Version
 }
 
-func (i *InternalBulletinWebCreateBulletinReq) GetExtraProperties() map[string]interface{} {
+func (i *InternalBulletinInternalWebCreateBulletinReq) GetExtraProperties() map[string]interface{} {
 	if i == nil {
 		return nil
 	}
 	return i.extraProperties
 }
 
-func (i *InternalBulletinWebCreateBulletinReq) require(field *big.Int) {
+func (i *InternalBulletinInternalWebCreateBulletinReq) require(field *big.Int) {
 	if i.explicitFields == nil {
 		i.explicitFields = big.NewInt(0)
 	}
@@ -327,81 +327,81 @@ func (i *InternalBulletinWebCreateBulletinReq) require(field *big.Int) {
 
 // SetBody sets the Body field and marks it as non-optional;
 // this prevents an empty or null value for this field from being omitted during serialization.
-func (i *InternalBulletinWebCreateBulletinReq) SetBody(body *string) {
+func (i *InternalBulletinInternalWebCreateBulletinReq) SetBody(body *string) {
 	i.Body = body
-	i.require(internalBulletinWebCreateBulletinReqFieldBody)
+	i.require(internalBulletinInternalWebCreateBulletinReqFieldBody)
 }
 
 // SetCategory sets the Category field and marks it as non-optional;
 // this prevents an empty or null value for this field from being omitted during serialization.
-func (i *InternalBulletinWebCreateBulletinReq) SetCategory(category *string) {
+func (i *InternalBulletinInternalWebCreateBulletinReq) SetCategory(category *string) {
 	i.Category = category
-	i.require(internalBulletinWebCreateBulletinReqFieldCategory)
+	i.require(internalBulletinInternalWebCreateBulletinReqFieldCategory)
 }
 
 // SetExpiresAt sets the ExpiresAt field and marks it as non-optional;
 // this prevents an empty or null value for this field from being omitted during serialization.
-func (i *InternalBulletinWebCreateBulletinReq) SetExpiresAt(expiresAt *int) {
+func (i *InternalBulletinInternalWebCreateBulletinReq) SetExpiresAt(expiresAt *int) {
 	i.ExpiresAt = expiresAt
-	i.require(internalBulletinWebCreateBulletinReqFieldExpiresAt)
+	i.require(internalBulletinInternalWebCreateBulletinReqFieldExpiresAt)
 }
 
 // SetParentID sets the ParentID field and marks it as non-optional;
 // this prevents an empty or null value for this field from being omitted during serialization.
-func (i *InternalBulletinWebCreateBulletinReq) SetParentID(parentID *int) {
+func (i *InternalBulletinInternalWebCreateBulletinReq) SetParentID(parentID *int) {
 	i.ParentID = parentID
-	i.require(internalBulletinWebCreateBulletinReqFieldParentID)
+	i.require(internalBulletinInternalWebCreateBulletinReqFieldParentID)
 }
 
 // SetSection sets the Section field and marks it as non-optional;
 // this prevents an empty or null value for this field from being omitted during serialization.
-func (i *InternalBulletinWebCreateBulletinReq) SetSection(section *string) {
+func (i *InternalBulletinInternalWebCreateBulletinReq) SetSection(section *string) {
 	i.Section = section
-	i.require(internalBulletinWebCreateBulletinReqFieldSection)
+	i.require(internalBulletinInternalWebCreateBulletinReqFieldSection)
 }
 
 // SetSortOrder sets the SortOrder field and marks it as non-optional;
 // this prevents an empty or null value for this field from being omitted during serialization.
-func (i *InternalBulletinWebCreateBulletinReq) SetSortOrder(sortOrder *int) {
+func (i *InternalBulletinInternalWebCreateBulletinReq) SetSortOrder(sortOrder *int) {
 	i.SortOrder = sortOrder
-	i.require(internalBulletinWebCreateBulletinReqFieldSortOrder)
+	i.require(internalBulletinInternalWebCreateBulletinReqFieldSortOrder)
 }
 
 // SetSummary sets the Summary field and marks it as non-optional;
 // this prevents an empty or null value for this field from being omitted during serialization.
-func (i *InternalBulletinWebCreateBulletinReq) SetSummary(summary *string) {
+func (i *InternalBulletinInternalWebCreateBulletinReq) SetSummary(summary *string) {
 	i.Summary = summary
-	i.require(internalBulletinWebCreateBulletinReqFieldSummary)
+	i.require(internalBulletinInternalWebCreateBulletinReqFieldSummary)
 }
 
 // SetTitle sets the Title field and marks it as non-optional;
 // this prevents an empty or null value for this field from being omitted during serialization.
-func (i *InternalBulletinWebCreateBulletinReq) SetTitle(title *string) {
+func (i *InternalBulletinInternalWebCreateBulletinReq) SetTitle(title *string) {
 	i.Title = title
-	i.require(internalBulletinWebCreateBulletinReqFieldTitle)
+	i.require(internalBulletinInternalWebCreateBulletinReqFieldTitle)
 }
 
 // SetType sets the Type field and marks it as non-optional;
 // this prevents an empty or null value for this field from being omitted during serialization.
-func (i *InternalBulletinWebCreateBulletinReq) SetType(type_ *string) {
+func (i *InternalBulletinInternalWebCreateBulletinReq) SetType(type_ *string) {
 	i.Type = type_
-	i.require(internalBulletinWebCreateBulletinReqFieldType)
+	i.require(internalBulletinInternalWebCreateBulletinReqFieldType)
 }
 
 // SetVersion sets the Version field and marks it as non-optional;
 // this prevents an empty or null value for this field from being omitted during serialization.
-func (i *InternalBulletinWebCreateBulletinReq) SetVersion(version *string) {
+func (i *InternalBulletinInternalWebCreateBulletinReq) SetVersion(version *string) {
 	i.Version = version
-	i.require(internalBulletinWebCreateBulletinReqFieldVersion)
+	i.require(internalBulletinInternalWebCreateBulletinReqFieldVersion)
 }
 
-func (i *InternalBulletinWebCreateBulletinReq) UnmarshalJSON(data []byte) error {
-	type unmarshaler InternalBulletinWebCreateBulletinReq
+func (i *InternalBulletinInternalWebCreateBulletinReq) UnmarshalJSON(data []byte) error {
+	type unmarshaler InternalBulletinInternalWebCreateBulletinReq
 	var value unmarshaler
 	if err := json.Unmarshal(data, &value); err != nil {
 		return err
 	}
-	*i = InternalBulletinWebCreateBulletinReq(value)
+	*i = InternalBulletinInternalWebCreateBulletinReq(value)
 	extraProperties, err := internal.ExtractExtraProperties(data, *i)
 	if err != nil {
 		return err
@@ -411,8 +411,8 @@ func (i *InternalBulletinWebCreateBulletinReq) UnmarshalJSON(data []byte) error 
 	return nil
 }
 
-func (i *InternalBulletinWebCreateBulletinReq) MarshalJSON() ([]byte, error) {
-	type embed InternalBulletinWebCreateBulletinReq
+func (i *InternalBulletinInternalWebCreateBulletinReq) MarshalJSON() ([]byte, error) {
+	type embed InternalBulletinInternalWebCreateBulletinReq
 	var marshaler = struct {
 		embed
 	}{
@@ -422,7 +422,7 @@ func (i *InternalBulletinWebCreateBulletinReq) MarshalJSON() ([]byte, error) {
 	return json.Marshal(explicitMarshaler)
 }
 
-func (i *InternalBulletinWebCreateBulletinReq) String() string {
+func (i *InternalBulletinInternalWebCreateBulletinReq) String() string {
 	if i == nil {
 		return "<nil>"
 	}
@@ -438,18 +438,18 @@ func (i *InternalBulletinWebCreateBulletinReq) String() string {
 }
 
 var (
-	internalBulletinWebUpdateBulletinReqFieldBody      = big.NewInt(1 << 0)
-	internalBulletinWebUpdateBulletinReqFieldCategory  = big.NewInt(1 << 1)
-	internalBulletinWebUpdateBulletinReqFieldExpiresAt = big.NewInt(1 << 2)
-	internalBulletinWebUpdateBulletinReqFieldParentID  = big.NewInt(1 << 3)
-	internalBulletinWebUpdateBulletinReqFieldSection   = big.NewInt(1 << 4)
-	internalBulletinWebUpdateBulletinReqFieldSortOrder = big.NewInt(1 << 5)
-	internalBulletinWebUpdateBulletinReqFieldSummary   = big.NewInt(1 << 6)
-	internalBulletinWebUpdateBulletinReqFieldTitle     = big.NewInt(1 << 7)
-	internalBulletinWebUpdateBulletinReqFieldVersion   = big.NewInt(1 << 8)
+	internalBulletinInternalWebUpdateBulletinReqFieldBody      = big.NewInt(1 << 0)
+	internalBulletinInternalWebUpdateBulletinReqFieldCategory  = big.NewInt(1 << 1)
+	internalBulletinInternalWebUpdateBulletinReqFieldExpiresAt = big.NewInt(1 << 2)
+	internalBulletinInternalWebUpdateBulletinReqFieldParentID  = big.NewInt(1 << 3)
+	internalBulletinInternalWebUpdateBulletinReqFieldSection   = big.NewInt(1 << 4)
+	internalBulletinInternalWebUpdateBulletinReqFieldSortOrder = big.NewInt(1 << 5)
+	internalBulletinInternalWebUpdateBulletinReqFieldSummary   = big.NewInt(1 << 6)
+	internalBulletinInternalWebUpdateBulletinReqFieldTitle     = big.NewInt(1 << 7)
+	internalBulletinInternalWebUpdateBulletinReqFieldVersion   = big.NewInt(1 << 8)
 )
 
-type InternalBulletinWebUpdateBulletinReq struct {
+type InternalBulletinInternalWebUpdateBulletinReq struct {
 	Body      *string `json:"body,omitempty" url:"body,omitempty"`
 	Category  *string `json:"category,omitempty" url:"category,omitempty"`
 	ExpiresAt *int    `json:"expires_at,omitempty" url:"expires_at,omitempty"`
@@ -467,77 +467,77 @@ type InternalBulletinWebUpdateBulletinReq struct {
 	rawJSON         json.RawMessage
 }
 
-func (i *InternalBulletinWebUpdateBulletinReq) GetBody() *string {
+func (i *InternalBulletinInternalWebUpdateBulletinReq) GetBody() *string {
 	if i == nil {
 		return nil
 	}
 	return i.Body
 }
 
-func (i *InternalBulletinWebUpdateBulletinReq) GetCategory() *string {
+func (i *InternalBulletinInternalWebUpdateBulletinReq) GetCategory() *string {
 	if i == nil {
 		return nil
 	}
 	return i.Category
 }
 
-func (i *InternalBulletinWebUpdateBulletinReq) GetExpiresAt() *int {
+func (i *InternalBulletinInternalWebUpdateBulletinReq) GetExpiresAt() *int {
 	if i == nil {
 		return nil
 	}
 	return i.ExpiresAt
 }
 
-func (i *InternalBulletinWebUpdateBulletinReq) GetParentID() *int {
+func (i *InternalBulletinInternalWebUpdateBulletinReq) GetParentID() *int {
 	if i == nil {
 		return nil
 	}
 	return i.ParentID
 }
 
-func (i *InternalBulletinWebUpdateBulletinReq) GetSection() *string {
+func (i *InternalBulletinInternalWebUpdateBulletinReq) GetSection() *string {
 	if i == nil {
 		return nil
 	}
 	return i.Section
 }
 
-func (i *InternalBulletinWebUpdateBulletinReq) GetSortOrder() *int {
+func (i *InternalBulletinInternalWebUpdateBulletinReq) GetSortOrder() *int {
 	if i == nil {
 		return nil
 	}
 	return i.SortOrder
 }
 
-func (i *InternalBulletinWebUpdateBulletinReq) GetSummary() *string {
+func (i *InternalBulletinInternalWebUpdateBulletinReq) GetSummary() *string {
 	if i == nil {
 		return nil
 	}
 	return i.Summary
 }
 
-func (i *InternalBulletinWebUpdateBulletinReq) GetTitle() *string {
+func (i *InternalBulletinInternalWebUpdateBulletinReq) GetTitle() *string {
 	if i == nil {
 		return nil
 	}
 	return i.Title
 }
 
-func (i *InternalBulletinWebUpdateBulletinReq) GetVersion() *string {
+func (i *InternalBulletinInternalWebUpdateBulletinReq) GetVersion() *string {
 	if i == nil {
 		return nil
 	}
 	return i.Version
 }
 
-func (i *InternalBulletinWebUpdateBulletinReq) GetExtraProperties() map[string]interface{} {
+func (i *InternalBulletinInternalWebUpdateBulletinReq) GetExtraProperties() map[string]interface{} {
 	if i == nil {
 		return nil
 	}
 	return i.extraProperties
 }
 
-func (i *InternalBulletinWebUpdateBulletinReq) require(field *big.Int) {
+func (i *InternalBulletinInternalWebUpdateBulletinReq) require(field *big.Int) {
 	if i.explicitFields == nil {
 		i.explicitFields = big.NewInt(0)
 	}
@@ -546,74 +546,74 @@ func (i *InternalBulletinWebUpdateBulletinReq) require(field *big.Int) {
 
 // SetBody sets the Body field and marks it as non-optional;
 // this prevents an empty or null value for this field from being omitted during serialization.
-func (i *InternalBulletinWebUpdateBulletinReq) SetBody(body *string) {
+func (i *InternalBulletinInternalWebUpdateBulletinReq) SetBody(body *string) {
 	i.Body = body
-	i.require(internalBulletinWebUpdateBulletinReqFieldBody)
+	i.require(internalBulletinInternalWebUpdateBulletinReqFieldBody)
 }
 
 // SetCategory sets the Category field and marks it as non-optional;
 // this prevents an empty or null value for this field from being omitted during serialization.
-func (i *InternalBulletinWebUpdateBulletinReq) SetCategory(category *string) {
+func (i *InternalBulletinInternalWebUpdateBulletinReq) SetCategory(category *string) {
 	i.Category = category
-	i.require(internalBulletinWebUpdateBulletinReqFieldCategory)
+	i.require(internalBulletinInternalWebUpdateBulletinReqFieldCategory)
 }
 
 // SetExpiresAt sets the ExpiresAt field and marks it as non-optional;
 // this prevents an empty or null value for this field from being omitted during serialization.
-func (i *InternalBulletinWebUpdateBulletinReq) SetExpiresAt(expiresAt *int) {
+func (i *InternalBulletinInternalWebUpdateBulletinReq) SetExpiresAt(expiresAt *int) {
 	i.ExpiresAt = expiresAt
-	i.require(internalBulletinWebUpdateBulletinReqFieldExpiresAt)
+	i.require(internalBulletinInternalWebUpdateBulletinReqFieldExpiresAt)
 }
 
 // SetParentID sets the ParentID field and marks it as non-optional;
 // this prevents an empty or null value for this field from being omitted during serialization.
-func (i *InternalBulletinWebUpdateBulletinReq) SetParentID(parentID *int) {
+func (i *InternalBulletinInternalWebUpdateBulletinReq) SetParentID(parentID *int) {
 	i.ParentID = parentID
-	i.require(internalBulletinWebUpdateBulletinReqFieldParentID)
+	i.require(internalBulletinInternalWebUpdateBulletinReqFieldParentID)
 }
 
 // SetSection sets the Section field and marks it as non-optional;
 // this prevents an empty or null value for this field from being omitted during serialization.
-func (i *InternalBulletinWebUpdateBulletinReq) SetSection(section *string) {
+func (i *InternalBulletinInternalWebUpdateBulletinReq) SetSection(section *string) {
 	i.Section = section
-	i.require(internalBulletinWebUpdateBulletinReqFieldSection)
+	i.require(internalBulletinInternalWebUpdateBulletinReqFieldSection)
 }
 
 // SetSortOrder sets the SortOrder field and marks it as non-optional;
 // this prevents an empty or null value for this field from being omitted during serialization.
-func (i *InternalBulletinWebUpdateBulletinReq) SetSortOrder(sortOrder *int) {
+func (i *InternalBulletinInternalWebUpdateBulletinReq) SetSortOrder(sortOrder *int) {
 	i.SortOrder = sortOrder
-	i.require(internalBulletinWebUpdateBulletinReqFieldSortOrder)
+	i.require(internalBulletinInternalWebUpdateBulletinReqFieldSortOrder)
 }
 
 // SetSummary sets the Summary field and marks it as non-optional;
 // this prevents an empty or null value for this field from being omitted during serialization.
-func (i *InternalBulletinWebUpdateBulletinReq) SetSummary(summary *string) {
+func (i *InternalBulletinInternalWebUpdateBulletinReq) SetSummary(summary *string) {
 	i.Summary = summary
-	i.require(internalBulletinWebUpdateBulletinReqFieldSummary)
+	i.require(internalBulletinInternalWebUpdateBulletinReqFieldSummary)
 }
 
 // SetTitle sets the Title field and marks it as non-optional;
 // this prevents an empty or null value for this field from being omitted during serialization.
-func (i *InternalBulletinWebUpdateBulletinReq) SetTitle(title *string) {
+func (i *InternalBulletinInternalWebUpdateBulletinReq) SetTitle(title *string) {
 	i.Title = title
-	i.require(internalBulletinWebUpdateBulletinReqFieldTitle)
+	i.require(internalBulletinInternalWebUpdateBulletinReqFieldTitle)
 }
 
 // SetVersion sets the Version field and marks it as non-optional;
 // this prevents an empty or null value for this field from being omitted during serialization.
-func (i *InternalBulletinWebUpdateBulletinReq) SetVersion(version *string) {
+func (i *InternalBulletinInternalWebUpdateBulletinReq) SetVersion(version *string) {
 	i.Version = version
-	i.require(internalBulletinWebUpdateBulletinReqFieldVersion)
+	i.require(internalBulletinInternalWebUpdateBulletinReqFieldVersion)
 }
 
-func (i *InternalBulletinWebUpdateBulletinReq) UnmarshalJSON(data []byte) error {
-	type unmarshaler InternalBulletinWebUpdateBulletinReq
+func (i *InternalBulletinInternalWebUpdateBulletinReq) UnmarshalJSON(data []byte) error {
+	type unmarshaler InternalBulletinInternalWebUpdateBulletinReq
 	var value unmarshaler
 	if err := json.Unmarshal(data, &value); err != nil {
 		return err
 	}
-	*i = InternalBulletinWebUpdateBulletinReq(value)
+	*i = InternalBulletinInternalWebUpdateBulletinReq(value)
 	extraProperties, err := internal.ExtractExtraProperties(data, *i)
 	if err != nil {
 		return err
@@ -623,8 +623,8 @@ func (i *InternalBulletinWebUpdateBulletinReq) UnmarshalJSON(data []byte) error 
 	return nil
 }
 
-func (i *InternalBulletinWebUpdateBulletinReq) MarshalJSON() ([]byte, error) {
-	type embed InternalBulletinWebUpdateBulletinReq
+func (i *InternalBulletinInternalWebUpdateBulletinReq) MarshalJSON() ([]byte, error) {
+	type embed InternalBulletinInternalWebUpdateBulletinReq
 	var marshaler = struct {
 		embed
 	}{
@@ -634,7 +634,7 @@ func (i *InternalBulletinWebUpdateBulletinReq) MarshalJSON() ([]byte, error) {
 	return json.Marshal(explicitMarshaler)
 }
 
-func (i *InternalBulletinWebUpdateBulletinReq) String() string {
+func (i *InternalBulletinInternalWebUpdateBulletinReq) String() string {
 	if i == nil {
 		return "<nil>"
 	}
@@ -652,7 +652,7 @@ func (i *InternalBulletinWebUpdateBulletinReq) String() string {
 type PostAdminBulletinsRequest struct {
 	StringUnknownMap map[string]any
 	// Bulletin to create
-	InternalBulletinWebCreateBulletinReq *InternalBulletinWebCreateBulletinReq
+	InternalBulletinInternalWebCreateBulletinReq *InternalBulletinInternalWebCreateBulletinReq
 
 	typ string
 }
@@ -664,11 +664,11 @@ func (p *PostAdminBulletinsRequest) GetStringUnknownMap() map[string]any {
 	return p.StringUnknownMap
 }
 
-func (p *PostAdminBulletinsRequest) GetInternalBulletinWebCreateBulletinReq() *InternalBulletinWebCreateBulletinReq {
+func (p *PostAdminBulletinsRequest) GetInternalBulletinInternalWebCreateBulletinReq() *InternalBulletinInternalWebCreateBulletinReq {
 	if p == nil {
 		return nil
 	}
-	return p.InternalBulletinWebCreateBulletinReq
+	return p.InternalBulletinInternalWebCreateBulletinReq
 }
 
 func (p *PostAdminBulletinsRequest) UnmarshalJSON(data []byte) error {
@@ -678,10 +678,10 @@ func (p *PostAdminBulletinsRequest) UnmarshalJSON(data []byte) error {
 		p.StringUnknownMap = valueStringUnknownMap
 		return nil
 	}
-	valueInternalBulletinWebCreateBulletinReq := new(InternalBulletinWebCreateBulletinReq)
-	if err := json.Unmarshal(data, &valueInternalBulletinWebCreateBulletinReq); err == nil {
-		p.typ = "InternalBulletinWebCreateBulletinReq"
-		p.InternalBulletinWebCreateBulletinReq = valueInternalBulletinWebCreateBulletinReq
+	valueInternalBulletinInternalWebCreateBulletinReq := new(InternalBulletinInternalWebCreateBulletinReq)
+	if err := json.Unmarshal(data, &valueInternalBulletinInternalWebCreateBulletinReq); err == nil {
+		p.typ = "InternalBulletinInternalWebCreateBulletinReq"
+		p.InternalBulletinInternalWebCreateBulletinReq = valueInternalBulletinInternalWebCreateBulletinReq
 		return nil
 	}
 	return fmt.Errorf("%s cannot be deserialized as a %T", data, p)
@@ -691,23 +691,23 @@ func (p PostAdminBulletinsRequest) MarshalJSON() ([]byte, error) {
 	if p.typ == "StringUnknownMap" || p.StringUnknownMap != nil {
 		return json.Marshal(p.StringUnknownMap)
 	}
-	if p.typ == "InternalBulletinWebCreateBulletinReq" || p.InternalBulletinWebCreateBulletinReq != nil {
-		return json.Marshal(p.InternalBulletinWebCreateBulletinReq)
+	if p.typ == "InternalBulletinInternalWebCreateBulletinReq" || p.InternalBulletinInternalWebCreateBulletinReq != nil {
+		return json.Marshal(p.InternalBulletinInternalWebCreateBulletinReq)
 	}
 	return nil, fmt.Errorf("type %T does not include a non-empty union type", p)
 }
 
 type PostAdminBulletinsRequestVisitor interface {
 	VisitStringUnknownMap(map[string]any) error
-	VisitInternalBulletinWebCreateBulletinReq(*InternalBulletinWebCreateBulletinReq) error
+	VisitInternalBulletinInternalWebCreateBulletinReq(*InternalBulletinInternalWebCreateBulletinReq) error
 }
 
 func (p *PostAdminBulletinsRequest) Accept(visitor PostAdminBulletinsRequestVisitor) error {
 	if p.typ == "StringUnknownMap" || p.StringUnknownMap != nil {
 		return visitor.VisitStringUnknownMap(p.StringUnknownMap)
 	}
-	if p.typ == "InternalBulletinWebCreateBulletinReq" || p.InternalBulletinWebCreateBulletinReq != nil {
-		return visitor.VisitInternalBulletinWebCreateBulletinReq(p.InternalBulletinWebCreateBulletinReq)
+	if p.typ == "InternalBulletinInternalWebCreateBulletinReq" || p.InternalBulletinInternalWebCreateBulletinReq != nil {
+		return visitor.VisitInternalBulletinInternalWebCreateBulletinReq(p.InternalBulletinInternalWebCreateBulletinReq)
 	}
 	return fmt.Errorf("type %T does not include a non-empty union type", p)
 }
@@ -715,7 +715,7 @@ func (p *PostAdminBulletinsRequest) Accept(visitor PostAdminBulletinsRequestVisi
 type PutAdminBulletinsIDRequestBody struct {
 	StringUnknownMap map[string]any
 	// Updated bulletin fields
-	InternalBulletinWebUpdateBulletinReq *InternalBulletinWebUpdateBulletinReq
+	InternalBulletinInternalWebUpdateBulletinReq *InternalBulletinInternalWebUpdateBulletinReq
 
 	typ string
 }
@@ -727,11 +727,11 @@ func (p *PutAdminBulletinsIDRequestBody) GetStringUnknownMap() map[string]any {
 	return p.StringUnknownMap
 }
 
-func (p *PutAdminBulletinsIDRequestBody) GetInternalBulletinWebUpdateBulletinReq() *InternalBulletinWebUpdateBulletinReq {
+func (p *PutAdminBulletinsIDRequestBody) GetInternalBulletinInternalWebUpdateBulletinReq() *InternalBulletinInternalWebUpdateBulletinReq {
 	if p == nil {
 		return nil
 	}
-	return p.InternalBulletinWebUpdateBulletinReq
+	return p.InternalBulletinInternalWebUpdateBulletinReq
 }
 
 func (p *PutAdminBulletinsIDRequestBody) UnmarshalJSON(data []byte) error {
@@ -741,10 +741,10 @@ func (p *PutAdminBulletinsIDRequestBody) UnmarshalJSON(data []byte) error {
 		p.StringUnknownMap = valueStringUnknownMap
 		return nil
 	}
-	valueInternalBulletinWebUpdateBulletinReq := new(InternalBulletinWebUpdateBulletinReq)
-	if err := json.Unmarshal(data, &valueInternalBulletinWebUpdateBulletinReq); err == nil {
-		p.typ = "InternalBulletinWebUpdateBulletinReq"
-		p.InternalBulletinWebUpdateBulletinReq = valueInternalBulletinWebUpdateBulletinReq
+	valueInternalBulletinInternalWebUpdateBulletinReq := new(InternalBulletinInternalWebUpdateBulletinReq)
+	if err := json.Unmarshal(data, &valueInternalBulletinInternalWebUpdateBulletinReq); err == nil {
+		p.typ = "InternalBulletinInternalWebUpdateBulletinReq"
+		p.InternalBulletinInternalWebUpdateBulletinReq = valueInternalBulletinInternalWebUpdateBulletinReq
 		return nil
 	}
 	return fmt.Errorf("%s cannot be deserialized as a %T", data, p)
@@ -754,23 +754,23 @@ func (p PutAdminBulletinsIDRequestBody) MarshalJSON() ([]byte, error) {
 	if p.typ == "StringUnknownMap" || p.StringUnknownMap != nil {
 		return json.Marshal(p.StringUnknownMap)
 	}
-	if p.typ == "InternalBulletinWebUpdateBulletinReq" || p.InternalBulletinWebUpdateBulletinReq != nil {
-		return json.Marshal(p.InternalBulletinWebUpdateBulletinReq)
+	if p.typ == "InternalBulletinInternalWebUpdateBulletinReq" || p.InternalBulletinInternalWebUpdateBulletinReq != nil {
+		return json.Marshal(p.InternalBulletinInternalWebUpdateBulletinReq)
 	}
 	return nil, fmt.Errorf("type %T does not include a non-empty union type", p)
 }
 
 type PutAdminBulletinsIDRequestBodyVisitor interface {
 	VisitStringUnknownMap(map[string]any) error
-	VisitInternalBulletinWebUpdateBulletinReq(*InternalBulletinWebUpdateBulletinReq) error
+	VisitInternalBulletinInternalWebUpdateBulletinReq(*InternalBulletinInternalWebUpdateBulletinReq) error
 }
 
 func (p *PutAdminBulletinsIDRequestBody) Accept(visitor PutAdminBulletinsIDRequestBodyVisitor) error {
 	if p.typ == "StringUnknownMap" || p.StringUnknownMap != nil {
 		return visitor.VisitStringUnknownMap(p.StringUnknownMap)
 	}
-	if p.typ == "InternalBulletinWebUpdateBulletinReq" || p.InternalBulletinWebUpdateBulletinReq != nil {
-		return visitor.VisitInternalBulletinWebUpdateBulletinReq(p.InternalBulletinWebUpdateBulletinReq)
+	if p.typ == "InternalBulletinInternalWebUpdateBulletinReq" || p.InternalBulletinInternalWebUpdateBulletinReq != nil {
+		return visitor.VisitInternalBulletinInternalWebUpdateBulletinReq(p.InternalBulletinInternalWebUpdateBulletinReq)
 	}
 	return fmt.Errorf("type %T does not include a non-empty union type", p)
 }

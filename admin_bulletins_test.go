@@ -507,9 +507,9 @@ func TestSettersMarkExplicitPostAdminBulletinsIDPublishRequest(t *testing.T) {
 
 }
 
-func TestSettersInternalBulletinWebCreateBulletinReq(t *testing.T) {
+func TestSettersInternalBulletinInternalWebCreateBulletinReq(t *testing.T) {
 	t.Run("SetBody", func(t *testing.T) {
-		obj := &InternalBulletinWebCreateBulletinReq{}
+		obj := &InternalBulletinInternalWebCreateBulletinReq{}
 		var fernTestValueBody *string
 		obj.SetBody(fernTestValueBody)
 		assert.Equal(t, fernTestValueBody, obj.Body)
@@ -517,7 +517,7 @@ func TestSettersInternalBulletinWebCreateBulletinReq(t *testing.T) {
 	})
 
 	t.Run("SetCategory", func(t *testing.T) {
-		obj := &InternalBulletinWebCreateBulletinReq{}
+		obj := &InternalBulletinInternalWebCreateBulletinReq{}
 		var fernTestValueCategory *string
 		obj.SetCategory(fernTestValueCategory)
 		assert.Equal(t, fernTestValueCategory, obj.Category)
@@ -525,7 +525,7 @@ func TestSettersInternalBulletinWebCreateBulletinReq(t *testing.T) {
 	})
 
 	t.Run("SetExpiresAt", func(t *testing.T) {
-		obj := &InternalBulletinWebCreateBulletinReq{}
+		obj := &InternalBulletinInternalWebCreateBulletinReq{}
 		var fernTestValueExpiresAt *int
 		obj.SetExpiresAt(fernTestValueExpiresAt)
 		assert.Equal(t, fernTestValueExpiresAt, obj.ExpiresAt)
@@ -533,7 +533,7 @@ func TestSettersInternalBulletinWebCreateBulletinReq(t *testing.T) {
 	})
 
 	t.Run("SetParentID", func(t *testing.T) {
-		obj := &InternalBulletinWebCreateBulletinReq{}
+		obj := &InternalBulletinInternalWebCreateBulletinReq{}
 		var fernTestValueParentID *int
 		obj.SetParentID(fernTestValueParentID)
 		assert.Equal(t, fernTestValueParentID, obj.ParentID)
@@ -541,7 +541,7 @@ func TestSettersInternalBulletinWebCreateBulletinReq(t *testing.T) {
 	})
 
 	t.Run("SetSection", func(t *testing.T) {
-		obj := &InternalBulletinWebCreateBulletinReq{}
+		obj := &InternalBulletinInternalWebCreateBulletinReq{}
 		var fernTestValueSection *string
 		obj.SetSection(fernTestValueSection)
 		assert.Equal(t, fernTestValueSection, obj.Section)
@@ -549,7 +549,7 @@ func TestSettersInternalBulletinWebCreateBulletinReq(t *testing.T) {
 	})
 
 	t.Run("SetSortOrder", func(t *testing.T) {
-		obj := &InternalBulletinWebCreateBulletinReq{}
+		obj := &InternalBulletinInternalWebCreateBulletinReq{}
 		var fernTestValueSortOrder *int
 		obj.SetSortOrder(fernTestValueSortOrder)
 		assert.Equal(t, fernTestValueSortOrder, obj.SortOrder)
@@ -557,7 +557,7 @@ func TestSettersInternalBulletinWebCreateBulletinReq(t *testing.T) {
 	})
 
 	t.Run("SetSummary", func(t *testing.T) {
-		obj := &InternalBulletinWebCreateBulletinReq{}
+		obj := &InternalBulletinInternalWebCreateBulletinReq{}
 		var fernTestValueSummary *string
 		obj.SetSummary(fernTestValueSummary)
 		assert.Equal(t, fernTestValueSummary, obj.Summary)
@@ -565,7 +565,7 @@ func TestSettersInternalBulletinWebCreateBulletinReq(t *testing.T) {
 	})
 
 	t.Run("SetTitle", func(t *testing.T) {
-		obj := &InternalBulletinWebCreateBulletinReq{}
+		obj := &InternalBulletinInternalWebCreateBulletinReq{}
 		var fernTestValueTitle *string
 		obj.SetTitle(fernTestValueTitle)
 		assert.Equal(t, fernTestValueTitle, obj.Title)
@@ -573,7 +573,7 @@ func TestSettersInternalBulletinWebCreateBulletinReq(t *testing.T) {
 	})
 
 	t.Run("SetType", func(t *testing.T) {
-		obj := &InternalBulletinWebCreateBulletinReq{}
+		obj := &InternalBulletinInternalWebCreateBulletinReq{}
 		var fernTestValueType *string
 		obj.SetType(fernTestValueType)
 		assert.Equal(t, fernTestValueType, obj.Type)
@@ -581,7 +581,7 @@ func TestSettersInternalBulletinWebCreateBulletinReq(t *testing.T) {
 	})
 
 	t.Run("SetVersion", func(t *testing.T) {
-		obj := &InternalBulletinWebCreateBulletinReq{}
+		obj := &InternalBulletinInternalWebCreateBulletinReq{}
 		var fernTestValueVersion *string
 		obj.SetVersion(fernTestValueVersion)
 		assert.Equal(t, fernTestValueVersion, obj.Version)
@@ -590,11 +590,11 @@ func TestSettersInternalBulletinWebCreateBulletinReq(t *testing.T) {
 
 }
 
-func TestGettersInternalBulletinWebCreateBulletinReq(t *testing.T) {
+func TestGettersInternalBulletinInternalWebCreateBulletinReq(t *testing.T) {
 	t.Run("GetBody", func(t *testing.T) {
 		t.Parallel()
 		// Arrange
-		obj := &InternalBulletinWebCreateBulletinReq{}
+		obj := &InternalBulletinInternalWebCreateBulletinReq{}
 		var expected *string
 		obj.Body = expected
 
@@ -605,7 +605,7 @@ func TestGettersInternalBulletinWebCreateBulletinReq(t *testing.T) {
 	t.Run("GetBody_NilValue", func(t *testing.T) {
 		t.Parallel()
 		// Arrange
-		obj := &InternalBulletinWebCreateBulletinReq{}
+		obj := &InternalBulletinInternalWebCreateBulletinReq{}
 		obj.Body = nil
 
 		// Act & Assert
@@ -614,7 +614,7 @@ func TestGettersInternalBulletinWebCreateBulletinReq(t *testing.T) {
 
 	t.Run("GetBody_NilReceiver", func(t *testing.T) {
 		t.Parallel()
-		var obj *InternalBulletinWebCreateBulletinReq
+		var obj *InternalBulletinInternalWebCreateBulletinReq
 		// Should not panic - getters should handle nil receiver gracefully
 		defer func() {
 			if r := recover(); r != nil {
@@ -627,7 +627,7 @@ func TestGettersInternalBulletinWebCreateBulletinReq(t *testing.T) {
 	t.Run("GetCategory", func(t *testing.T) {
 		t.Parallel()
 		// Arrange
-		obj := &InternalBulletinWebCreateBulletinReq{}
+		obj := &InternalBulletinInternalWebCreateBulletinReq{}
 		var expected *string
 		obj.Category = expected
 
@@ -638,7 +638,7 @@ func TestGettersInternalBulletinWebCreateBulletinReq(t *testing.T) {
 	t.Run("GetCategory_NilValue", func(t *testing.T) {
 		t.Parallel()
 		// Arrange
-		obj := &InternalBulletinWebCreateBulletinReq{}
+		obj := &InternalBulletinInternalWebCreateBulletinReq{}
 		obj.Category = nil
 
 		// Act & Assert
@@ -647,7 +647,7 @@ func TestGettersInternalBulletinWebCreateBulletinReq(t *testing.T) {
 
 	t.Run("GetCategory_NilReceiver", func(t *testing.T) {
 		t.Parallel()
-		var obj *InternalBulletinWebCreateBulletinReq
+		var obj *InternalBulletinInternalWebCreateBulletinReq
 		// Should not panic - getters should handle nil receiver gracefully
 		defer func() {
 			if r := recover(); r != nil {
@@ -660,7 +660,7 @@ func TestGettersInternalBulletinWebCreateBulletinReq(t *testing.T) {
 	t.Run("GetExpiresAt", func(t *testing.T) {
 		t.Parallel()
 		// Arrange
-		obj := &InternalBulletinWebCreateBulletinReq{}
+		obj := &InternalBulletinInternalWebCreateBulletinReq{}
 		var expected *int
 		obj.ExpiresAt = expected
 
@@ -671,7 +671,7 @@ func TestGettersInternalBulletinWebCreateBulletinReq(t *testing.T) {
 	t.Run("GetExpiresAt_NilValue", func(t *testing.T) {
 		t.Parallel()
 		// Arrange
-		obj := &InternalBulletinWebCreateBulletinReq{}
+		obj := &InternalBulletinInternalWebCreateBulletinReq{}
 		obj.ExpiresAt = nil
 
 		// Act & Assert
@@ -680,7 +680,7 @@ func TestGettersInternalBulletinWebCreateBulletinReq(t *testing.T) {
 
 	t.Run("GetExpiresAt_NilReceiver", func(t *testing.T) {
 		t.Parallel()
-		var obj *InternalBulletinWebCreateBulletinReq
+		var obj *InternalBulletinInternalWebCreateBulletinReq
 		// Should not panic - getters should handle nil receiver gracefully
 		defer func() {
 			if r := recover(); r != nil {
@@ -693,7 +693,7 @@ func TestGettersInternalBulletinWebCreateBulletinReq(t *testing.T) {
 	t.Run("GetParentID", func(t *testing.T) {
 		t.Parallel()
 		// Arrange
-		obj := &InternalBulletinWebCreateBulletinReq{}
+		obj := &InternalBulletinInternalWebCreateBulletinReq{}
 		var expected *int
 		obj.ParentID = expected
 
@@ -704,7 +704,7 @@ func TestGettersInternalBulletinWebCreateBulletinReq(t *testing.T) {
 	t.Run("GetParentID_NilValue", func(t *testing.T) {
 		t.Parallel()
 		// Arrange
-		obj := &InternalBulletinWebCreateBulletinReq{}
+		obj := &InternalBulletinInternalWebCreateBulletinReq{}
 		obj.ParentID = nil
 
 		// Act & Assert
@@ -713,7 +713,7 @@ func TestGettersInternalBulletinWebCreateBulletinReq(t *testing.T) {
 
 	t.Run("GetParentID_NilReceiver", func(t *testing.T) {
 		t.Parallel()
-		var obj *InternalBulletinWebCreateBulletinReq
+		var obj *InternalBulletinInternalWebCreateBulletinReq
 		// Should not panic - getters should handle nil receiver gracefully
 		defer func() {
 			if r := recover(); r != nil {
@@ -726,7 +726,7 @@ func TestGettersInternalBulletinWebCreateBulletinReq(t *testing.T) {
 	t.Run("GetSection", func(t *testing.T) {
 		t.Parallel()
 		// Arrange
-		obj := &InternalBulletinWebCreateBulletinReq{}
+		obj := &InternalBulletinInternalWebCreateBulletinReq{}
 		var expected *string
 		obj.Section = expected
 
@@ -737,7 +737,7 @@ func TestGettersInternalBulletinWebCreateBulletinReq(t *testing.T) {
 	t.Run("GetSection_NilValue", func(t *testing.T) {
 		t.Parallel()
 		// Arrange
-		obj := &InternalBulletinWebCreateBulletinReq{}
+		obj := &InternalBulletinInternalWebCreateBulletinReq{}
 		obj.Section = nil
 
 		// Act & Assert
@@ -746,7 +746,7 @@ func TestGettersInternalBulletinWebCreateBulletinReq(t *testing.T) {
 
 	t.Run("GetSection_NilReceiver", func(t *testing.T) {
 		t.Parallel()
-		var obj *InternalBulletinWebCreateBulletinReq
+		var obj *InternalBulletinInternalWebCreateBulletinReq
 		// Should not panic - getters should handle nil receiver gracefully
 		defer func() {
 			if r := recover(); r != nil {
@@ -759,7 +759,7 @@ func TestGettersInternalBulletinWebCreateBulletinReq(t *testing.T) {
 	t.Run("GetSortOrder", func(t *testing.T) {
 		t.Parallel()
 		// Arrange
-		obj := &InternalBulletinWebCreateBulletinReq{}
+		obj := &InternalBulletinInternalWebCreateBulletinReq{}
 		var expected *int
 		obj.SortOrder = expected
 
@@ -770,7 +770,7 @@ func TestGettersInternalBulletinWebCreateBulletinReq(t *testing.T) {
 	t.Run("GetSortOrder_NilValue", func(t *testing.T) {
 		t.Parallel()
 		// Arrange
-		obj := &InternalBulletinWebCreateBulletinReq{}
+		obj := &InternalBulletinInternalWebCreateBulletinReq{}
 		obj.SortOrder = nil
 
 		// Act & Assert
@@ -779,7 +779,7 @@ func TestGettersInternalBulletinWebCreateBulletinReq(t *testing.T) {
 
 	t.Run("GetSortOrder_NilReceiver", func(t *testing.T) {
 		t.Parallel()
-		var obj *InternalBulletinWebCreateBulletinReq
+		var obj *InternalBulletinInternalWebCreateBulletinReq
 		// Should not panic - getters should handle nil receiver gracefully
 		defer func() {
 			if r := recover(); r != nil {
@@ -792,7 +792,7 @@ func TestGettersInternalBulletinWebCreateBulletinReq(t *testing.T) {
 	t.Run("GetSummary", func(t *testing.T) {
 		t.Parallel()
 		// Arrange
-		obj := &InternalBulletinWebCreateBulletinReq{}
+		obj := &InternalBulletinInternalWebCreateBulletinReq{}
 		var expected *string
 		obj.Summary = expected
 
@@ -803,7 +803,7 @@ func TestGettersInternalBulletinWebCreateBulletinReq(t *testing.T) {
 	t.Run("GetSummary_NilValue", func(t *testing.T) {
 		t.Parallel()
 		// Arrange
-		obj := &InternalBulletinWebCreateBulletinReq{}
+		obj := &InternalBulletinInternalWebCreateBulletinReq{}
 		obj.Summary = nil
 
 		// Act & Assert
@@ -812,7 +812,7 @@ func TestGettersInternalBulletinWebCreateBulletinReq(t *testing.T) {
 
 	t.Run("GetSummary_NilReceiver", func(t *testing.T) {
 		t.Parallel()
-		var obj *InternalBulletinWebCreateBulletinReq
+		var obj *InternalBulletinInternalWebCreateBulletinReq
 		// Should not panic - getters should handle nil receiver gracefully
 		defer func() {
 			if r := recover(); r != nil {
@@ -825,7 +825,7 @@ func TestGettersInternalBulletinWebCreateBulletinReq(t *testing.T) {
 	t.Run("GetTitle", func(t *testing.T) {
 		t.Parallel()
 		// Arrange
-		obj := &InternalBulletinWebCreateBulletinReq{}
+		obj := &InternalBulletinInternalWebCreateBulletinReq{}
 		var expected *string
 		obj.Title = expected
 
@@ -836,7 +836,7 @@ func TestGettersInternalBulletinWebCreateBulletinReq(t *testing.T) {
 	t.Run("GetTitle_NilValue", func(t *testing.T) {
 		t.Parallel()
 		// Arrange
-		obj := &InternalBulletinWebCreateBulletinReq{}
+		obj := &InternalBulletinInternalWebCreateBulletinReq{}
 		obj.Title = nil
 
 		// Act & Assert
@@ -845,7 +845,7 @@ func TestGettersInternalBulletinWebCreateBulletinReq(t *testing.T) {
 
 	t.Run("GetTitle_NilReceiver", func(t *testing.T) {
 		t.Parallel()
-		var obj *InternalBulletinWebCreateBulletinReq
+		var obj *InternalBulletinInternalWebCreateBulletinReq
 		// Should not panic - getters should handle nil receiver gracefully
 		defer func() {
 			if r := recover(); r != nil {
@@ -858,7 +858,7 @@ func TestGettersInternalBulletinWebCreateBulletinReq(t *testing.T) {
 	t.Run("GetType", func(t *testing.T) {
 		t.Parallel()
 		// Arrange
-		obj := &InternalBulletinWebCreateBulletinReq{}
+		obj := &InternalBulletinInternalWebCreateBulletinReq{}
 		var expected *string
 		obj.Type = expected
 
@@ -869,7 +869,7 @@ func TestGettersInternalBulletinWebCreateBulletinReq(t *testing.T) {
 	t.Run("GetType_NilValue", func(t *testing.T) {
 		t.Parallel()
 		// Arrange
-		obj := &InternalBulletinWebCreateBulletinReq{}
+		obj := &InternalBulletinInternalWebCreateBulletinReq{}
 		obj.Type = nil
 
 		// Act & Assert
@@ -878,7 +878,7 @@ func TestGettersInternalBulletinWebCreateBulletinReq(t *testing.T) {
 
 	t.Run("GetType_NilReceiver", func(t *testing.T) {
 		t.Parallel()
-		var obj *InternalBulletinWebCreateBulletinReq
+		var obj *InternalBulletinInternalWebCreateBulletinReq
 		// Should not panic - getters should handle nil receiver gracefully
 		defer func() {
 			if r := recover(); r != nil {
@@ -891,7 +891,7 @@ func TestGettersInternalBulletinWebCreateBulletinReq(t *testing.T) {
 	t.Run("GetVersion", func(t *testing.T) {
 		t.Parallel()
 		// Arrange
-		obj := &InternalBulletinWebCreateBulletinReq{}
+		obj := &InternalBulletinInternalWebCreateBulletinReq{}
 		var expected *string
 		obj.Version = expected
 
@@ -902,7 +902,7 @@ func TestGettersInternalBulletinWebCreateBulletinReq(t *testing.T) {
 	t.Run("GetVersion_NilValue", func(t *testing.T) {
 		t.Parallel()
 		// Arrange
-		obj := &InternalBulletinWebCreateBulletinReq{}
+		obj := &InternalBulletinInternalWebCreateBulletinReq{}
 		obj.Version = nil
 
 		// Act & Assert
@@ -911,7 +911,7 @@ func TestGettersInternalBulletinWebCreateBulletinReq(t *testing.T) {
 
 	t.Run("GetVersion_NilReceiver", func(t *testing.T) {
 		t.Parallel()
-		var obj *InternalBulletinWebCreateBulletinReq
+		var obj *InternalBulletinInternalWebCreateBulletinReq
 		// Should not panic - getters should handle nil receiver gracefully
 		defer func() {
 			if r := recover(); r != nil {
@@ -923,11 +923,11 @@ func TestGettersInternalBulletinWebCreateBulletinReq(t *testing.T) {
 
 }
 
-func TestSettersMarkExplicitInternalBulletinWebCreateBulletinReq(t *testing.T) {
+func TestSettersMarkExplicitInternalBulletinInternalWebCreateBulletinReq(t *testing.T) {
 	t.Run("SetBody_MarksExplicit", func(t *testing.T) {
 		t.Parallel()
 		// Arrange
-		obj := &InternalBulletinWebCreateBulletinReq{}
+		obj := &InternalBulletinInternalWebCreateBulletinReq{}
 		var fernTestValueBody *string
 
 		// Act
@@ -958,7 +958,7 @@ func TestSettersMarkExplicitInternalBulletinWebCreateBulletinReq(t *testing.T) {
 	t.Run("SetCategory_MarksExplicit", func(t *testing.T) {
 		t.Parallel()
 		// Arrange
-		obj := &InternalBulletinWebCreateBulletinReq{}
+		obj := &InternalBulletinInternalWebCreateBulletinReq{}
 		var fernTestValueCategory *string
 
 		// Act
@@ -989,7 +989,7 @@ func TestSettersMarkExplicitInternalBulletinWebCreateBulletinReq(t *testing.T) {
 	t.Run("SetExpiresAt_MarksExplicit", func(t *testing.T) {
 		t.Parallel()
 		// Arrange
-		obj := &InternalBulletinWebCreateBulletinReq{}
+		obj := &InternalBulletinInternalWebCreateBulletinReq{}
 		var fernTestValueExpiresAt *int
 
 		// Act
@@ -1020,7 +1020,7 @@ func TestSettersMarkExplicitInternalBulletinWebCreateBulletinReq(t *testing.T) {
 	t.Run("SetParentID_MarksExplicit", func(t *testing.T) {
 		t.Parallel()
 		// Arrange
-		obj := &InternalBulletinWebCreateBulletinReq{}
+		obj := &InternalBulletinInternalWebCreateBulletinReq{}
 		var fernTestValueParentID *int
 
 		// Act
@@ -1051,7 +1051,7 @@ func TestSettersMarkExplicitInternalBulletinWebCreateBulletinReq(t *testing.T) {
 	t.Run("SetSection_MarksExplicit", func(t *testing.T) {
 		t.Parallel()
 		// Arrange
-		obj := &InternalBulletinWebCreateBulletinReq{}
+		obj := &InternalBulletinInternalWebCreateBulletinReq{}
 		var fernTestValueSection *string
 
 		// Act
@@ -1082,7 +1082,7 @@ func TestSettersMarkExplicitInternalBulletinWebCreateBulletinReq(t *testing.T) {
 	t.Run("SetSortOrder_MarksExplicit", func(t *testing.T) {
 		t.Parallel()
 		// Arrange
-		obj := &InternalBulletinWebCreateBulletinReq{}
+		obj := &InternalBulletinInternalWebCreateBulletinReq{}
 		var fernTestValueSortOrder *int
 
 		// Act
@@ -1113,7 +1113,7 @@ func TestSettersMarkExplicitInternalBulletinWebCreateBulletinReq(t *testing.T) {
 	t.Run("SetSummary_MarksExplicit", func(t *testing.T) {
 		t.Parallel()
 		// Arrange
-		obj := &InternalBulletinWebCreateBulletinReq{}
+		obj := &InternalBulletinInternalWebCreateBulletinReq{}
 		var fernTestValueSummary *string
 
 		// Act
@@ -1144,7 +1144,7 @@ func TestSettersMarkExplicitInternalBulletinWebCreateBulletinReq(t *testing.T) {
 	t.Run("SetTitle_MarksExplicit", func(t *testing.T) {
 		t.Parallel()
 		// Arrange
-		obj := &InternalBulletinWebCreateBulletinReq{}
+		obj := &InternalBulletinInternalWebCreateBulletinReq{}
 		var fernTestValueTitle *string
 
 		// Act
@@ -1175,7 +1175,7 @@ func TestSettersMarkExplicitInternalBulletinWebCreateBulletinReq(t *testing.T) {
 	t.Run("SetType_MarksExplicit", func(t *testing.T) {
 		t.Parallel()
 		// Arrange
-		obj := &InternalBulletinWebCreateBulletinReq{}
+		obj := &InternalBulletinInternalWebCreateBulletinReq{}
 		var fernTestValueType *string
 
 		// Act
@@ -1206,7 +1206,7 @@ func TestSettersMarkExplicitInternalBulletinWebCreateBulletinReq(t *testing.T) {
 	t.Run("SetVersion_MarksExplicit", func(t *testing.T) {
 		t.Parallel()
 		// Arrange
-		obj := &InternalBulletinWebCreateBulletinReq{}
+		obj := &InternalBulletinInternalWebCreateBulletinReq{}
 		var fernTestValueVersion *string
 
 		// Act
@@ -1236,9 +1236,9 @@ func TestSettersMarkExplicitInternalBulletinWebCreateBulletinReq(t *testing.T) {
 
 }
 
-func TestSettersInternalBulletinWebUpdateBulletinReq(t *testing.T) {
+func TestSettersInternalBulletinInternalWebUpdateBulletinReq(t *testing.T) {
 	t.Run("SetBody", func(t *testing.T) {
-		obj := &InternalBulletinWebUpdateBulletinReq{}
+		obj := &InternalBulletinInternalWebUpdateBulletinReq{}
 		var fernTestValueBody *string
 		obj.SetBody(fernTestValueBody)
 		assert.Equal(t, fernTestValueBody, obj.Body)
@@ -1246,7 +1246,7 @@ func TestSettersInternalBulletinWebUpdateBulletinReq(t *testing.T) {
 	})
 
 	t.Run("SetCategory", func(t *testing.T) {
-		obj := &InternalBulletinWebUpdateBulletinReq{}
+		obj := &InternalBulletinInternalWebUpdateBulletinReq{}
 		var fernTestValueCategory *string
 		obj.SetCategory(fernTestValueCategory)
 		assert.Equal(t, fernTestValueCategory, obj.Category)
@@ -1254,7 +1254,7 @@ func TestSettersInternalBulletinWebUpdateBulletinReq(t *testing.T) {
 	})
 
 	t.Run("SetExpiresAt", func(t *testing.T) {
-		obj := &InternalBulletinWebUpdateBulletinReq{}
+		obj := &InternalBulletinInternalWebUpdateBulletinReq{}
 		var fernTestValueExpiresAt *int
 		obj.SetExpiresAt(fernTestValueExpiresAt)
 		assert.Equal(t, fernTestValueExpiresAt, obj.ExpiresAt)
@@ -1262,7 +1262,7 @@ func TestSettersInternalBulletinWebUpdateBulletinReq(t *testing.T) {
 	})
 
 	t.Run("SetParentID", func(t *testing.T) {
-		obj := &InternalBulletinWebUpdateBulletinReq{}
+		obj := &InternalBulletinInternalWebUpdateBulletinReq{}
 		var fernTestValueParentID *int
 		obj.SetParentID(fernTestValueParentID)
 		assert.Equal(t, fernTestValueParentID, obj.ParentID)
@@ -1270,7 +1270,7 @@ func TestSettersInternalBulletinWebUpdateBulletinReq(t *testing.T) {
 	})
 
 	t.Run("SetSection", func(t *testing.T) {
-		obj := &InternalBulletinWebUpdateBulletinReq{}
+		obj := &InternalBulletinInternalWebUpdateBulletinReq{}
 		var fernTestValueSection *string
 		obj.SetSection(fernTestValueSection)
 		assert.Equal(t, fernTestValueSection, obj.Section)
@@ -1278,7 +1278,7 @@ func TestSettersInternalBulletinWebUpdateBulletinReq(t *testing.T) {
 	})
 
 	t.Run("SetSortOrder", func(t *testing.T) {
-		obj := &InternalBulletinWebUpdateBulletinReq{}
+		obj := &InternalBulletinInternalWebUpdateBulletinReq{}
 		var fernTestValueSortOrder *int
 		obj.SetSortOrder(fernTestValueSortOrder)
 		assert.Equal(t, fernTestValueSortOrder, obj.SortOrder)
@@ -1286,7 +1286,7 @@ func TestSettersInternalBulletinWebUpdateBulletinReq(t *testing.T) {
 	})
 
 	t.Run("SetSummary", func(t *testing.T) {
-		obj := &InternalBulletinWebUpdateBulletinReq{}
+		obj := &InternalBulletinInternalWebUpdateBulletinReq{}
 		var fernTestValueSummary *string
 		obj.SetSummary(fernTestValueSummary)
 		assert.Equal(t, fernTestValueSummary, obj.Summary)
@@ -1294,7 +1294,7 @@ func TestSettersInternalBulletinWebUpdateBulletinReq(t *testing.T) {
 	})
 
 	t.Run("SetTitle", func(t *testing.T) {
-		obj := &InternalBulletinWebUpdateBulletinReq{}
+		obj := &InternalBulletinInternalWebUpdateBulletinReq{}
 		var fernTestValueTitle *string
 		obj.SetTitle(fernTestValueTitle)
 		assert.Equal(t, fernTestValueTitle, obj.Title)
@@ -1302,7 +1302,7 @@ func TestSettersInternalBulletinWebUpdateBulletinReq(t *testing.T) {
 	})
 
 	t.Run("SetVersion", func(t *testing.T) {
-		obj := &InternalBulletinWebUpdateBulletinReq{}
+		obj := &InternalBulletinInternalWebUpdateBulletinReq{}
 		var fernTestValueVersion *string
 		obj.SetVersion(fernTestValueVersion)
 		assert.Equal(t, fernTestValueVersion, obj.Version)
@@ -1311,11 +1311,11 @@ func TestSettersInternalBulletinWebUpdateBulletinReq(t *testing.T) {
 
 }
 
-func TestGettersInternalBulletinWebUpdateBulletinReq(t *testing.T) {
+func TestGettersInternalBulletinInternalWebUpdateBulletinReq(t *testing.T) {
 	t.Run("GetBody", func(t *testing.T) {
 		t.Parallel()
 		// Arrange
-		obj := &InternalBulletinWebUpdateBulletinReq{}
+		obj := &InternalBulletinInternalWebUpdateBulletinReq{}
 		var expected *string
 		obj.Body = expected
 
@@ -1326,7 +1326,7 @@ func TestGettersInternalBulletinWebUpdateBulletinReq(t *testing.T) {
 	t.Run("GetBody_NilValue", func(t *testing.T) {
 		t.Parallel()
 		// Arrange
-		obj := &InternalBulletinWebUpdateBulletinReq{}
+		obj := &InternalBulletinInternalWebUpdateBulletinReq{}
 		obj.Body = nil
 
 		// Act & Assert
@@ -1335,7 +1335,7 @@ func TestGettersInternalBulletinWebUpdateBulletinReq(t *testing.T) {
 
 	t.Run("GetBody_NilReceiver", func(t *testing.T) {
 		t.Parallel()
-		var obj *InternalBulletinWebUpdateBulletinReq
+		var obj *InternalBulletinInternalWebUpdateBulletinReq
 		// Should not panic - getters should handle nil receiver gracefully
 		defer func() {
 			if r := recover(); r != nil {
@@ -1348,7 +1348,7 @@ func TestGettersInternalBulletinWebUpdateBulletinReq(t *testing.T) {
 	t.Run("GetCategory", func(t *testing.T) {
 		t.Parallel()
 		// Arrange
-		obj := &InternalBulletinWebUpdateBulletinReq{}
+		obj := &InternalBulletinInternalWebUpdateBulletinReq{}
 		var expected *string
 		obj.Category = expected
 
@@ -1359,7 +1359,7 @@ func TestGettersInternalBulletinWebUpdateBulletinReq(t *testing.T) {
 	t.Run("GetCategory_NilValue", func(t *testing.T) {
 		t.Parallel()
 		// Arrange
-		obj := &InternalBulletinWebUpdateBulletinReq{}
+		obj := &InternalBulletinInternalWebUpdateBulletinReq{}
 		obj.Category = nil
 
 		// Act & Assert
@@ -1368,7 +1368,7 @@ func TestGettersInternalBulletinWebUpdateBulletinReq(t *testing.T) {
 
 	t.Run("GetCategory_NilReceiver", func(t *testing.T) {
 		t.Parallel()
-		var obj *InternalBulletinWebUpdateBulletinReq
+		var obj *InternalBulletinInternalWebUpdateBulletinReq
 		// Should not panic - getters should handle nil receiver gracefully
 		defer func() {
 			if r := recover(); r != nil {
@@ -1381,7 +1381,7 @@ func TestGettersInternalBulletinWebUpdateBulletinReq(t *testing.T) {
 	t.Run("GetExpiresAt", func(t *testing.T) {
 		t.Parallel()
 		// Arrange
-		obj := &InternalBulletinWebUpdateBulletinReq{}
+		obj := &InternalBulletinInternalWebUpdateBulletinReq{}
 		var expected *int
 		obj.ExpiresAt = expected
 
@@ -1392,7 +1392,7 @@ func TestGettersInternalBulletinWebUpdateBulletinReq(t *testing.T) {
 	t.Run("GetExpiresAt_NilValue", func(t *testing.T) {
 		t.Parallel()
 		// Arrange
-		obj := &InternalBulletinWebUpdateBulletinReq{}
+		obj := &InternalBulletinInternalWebUpdateBulletinReq{}
 		obj.ExpiresAt = nil
 
 		// Act & Assert
@@ -1401,7 +1401,7 @@ func TestGettersInternalBulletinWebUpdateBulletinReq(t *testing.T) {
 
 	t.Run("GetExpiresAt_NilReceiver", func(t *testing.T) {
 		t.Parallel()
-		var obj *InternalBulletinWebUpdateBulletinReq
+		var obj *InternalBulletinInternalWebUpdateBulletinReq
 		// Should not panic - getters should handle nil receiver gracefully
 		defer func() {
 			if r := recover(); r != nil {
@@ -1414,7 +1414,7 @@ func TestGettersInternalBulletinWebUpdateBulletinReq(t *testing.T) {
 	t.Run("GetParentID", func(t *testing.T) {
 		t.Parallel()
 		// Arrange
-		obj := &InternalBulletinWebUpdateBulletinReq{}
+		obj := &InternalBulletinInternalWebUpdateBulletinReq{}
 		var expected *int
 		obj.ParentID = expected
 
@@ -1425,7 +1425,7 @@ func TestGettersInternalBulletinWebUpdateBulletinReq(t *testing.T) {
 	t.Run("GetParentID_NilValue", func(t *testing.T) {
 		t.Parallel()
 		// Arrange
-		obj := &InternalBulletinWebUpdateBulletinReq{}
+		obj := &InternalBulletinInternalWebUpdateBulletinReq{}
 		obj.ParentID = nil
 
 		// Act & Assert
@@ -1434,7 +1434,7 @@ func TestGettersInternalBulletinWebUpdateBulletinReq(t *testing.T) {
 
 	t.Run("GetParentID_NilReceiver", func(t *testing.T) {
 		t.Parallel()
-		var obj *InternalBulletinWebUpdateBulletinReq
+		var obj *InternalBulletinInternalWebUpdateBulletinReq
 		// Should not panic - getters should handle nil receiver gracefully
 		defer func() {
 			if r := recover(); r != nil {
@@ -1447,7 +1447,7 @@ func TestGettersInternalBulletinWebUpdateBulletinReq(t *testing.T) {
 	t.Run("GetSection", func(t *testing.T) {
 		t.Parallel()
 		// Arrange
-		obj := &InternalBulletinWebUpdateBulletinReq{}
+		obj := &InternalBulletinInternalWebUpdateBulletinReq{}
 		var expected *string
 		obj.Section = expected
 
@@ -1458,7 +1458,7 @@ func TestGettersInternalBulletinWebUpdateBulletinReq(t *testing.T) {
 	t.Run("GetSection_NilValue", func(t *testing.T) {
 		t.Parallel()
 		// Arrange
-		obj := &InternalBulletinWebUpdateBulletinReq{}
+		obj := &InternalBulletinInternalWebUpdateBulletinReq{}
 		obj.Section = nil
 
 		// Act & Assert
@@ -1467,7 +1467,7 @@ func TestGettersInternalBulletinWebUpdateBulletinReq(t *testing.T) {
 
 	t.Run("GetSection_NilReceiver", func(t *testing.T) {
 		t.Parallel()
-		var obj *InternalBulletinWebUpdateBulletinReq
+		var obj *InternalBulletinInternalWebUpdateBulletinReq
 		// Should not panic - getters should handle nil receiver gracefully
 		defer func() {
 			if r := recover(); r != nil {
@@ -1480,7 +1480,7 @@ func TestGettersInternalBulletinWebUpdateBulletinReq(t *testing.T) {
 	t.Run("GetSortOrder", func(t *testing.T) {
 		t.Parallel()
 		// Arrange
-		obj := &InternalBulletinWebUpdateBulletinReq{}
+		obj := &InternalBulletinInternalWebUpdateBulletinReq{}
 		var expected *int
 		obj.SortOrder = expected
 
@@ -1491,7 +1491,7 @@ func TestGettersInternalBulletinWebUpdateBulletinReq(t *testing.T) {
 	t.Run("GetSortOrder_NilValue", func(t *testing.T) {
 		t.Parallel()
 		// Arrange
-		obj := &InternalBulletinWebUpdateBulletinReq{}
+		obj := &InternalBulletinInternalWebUpdateBulletinReq{}
 		obj.SortOrder = nil
 
 		// Act & Assert
@@ -1500,7 +1500,7 @@ func TestGettersInternalBulletinWebUpdateBulletinReq(t *testing.T) {
 
 	t.Run("GetSortOrder_NilReceiver", func(t *testing.T) {
 		t.Parallel()
-		var obj *InternalBulletinWebUpdateBulletinReq
+		var obj *InternalBulletinInternalWebUpdateBulletinReq
 		// Should not panic - getters should handle nil receiver gracefully
 		defer func() {
 			if r := recover(); r != nil {
@@ -1513,7 +1513,7 @@ func TestGettersInternalBulletinWebUpdateBulletinReq(t *testing.T) {
 	t.Run("GetSummary", func(t *testing.T) {
 		t.Parallel()
 		// Arrange
-		obj := &InternalBulletinWebUpdateBulletinReq{}
+		obj := &InternalBulletinInternalWebUpdateBulletinReq{}
 		var expected *string
 		obj.Summary = expected
 
@@ -1524,7 +1524,7 @@ func TestGettersInternalBulletinWebUpdateBulletinReq(t *testing.T) {
 	t.Run("GetSummary_NilValue", func(t *testing.T) {
 		t.Parallel()
 		// Arrange
-		obj := &InternalBulletinWebUpdateBulletinReq{}
+		obj := &InternalBulletinInternalWebUpdateBulletinReq{}
 		obj.Summary = nil
 
 		// Act & Assert
@@ -1533,7 +1533,7 @@ func TestGettersInternalBulletinWebUpdateBulletinReq(t *testing.T) {
 
 	t.Run("GetSummary_NilReceiver", func(t *testing.T) {
 		t.Parallel()
-		var obj *InternalBulletinWebUpdateBulletinReq
+		var obj *InternalBulletinInternalWebUpdateBulletinReq
 		// Should not panic - getters should handle nil receiver gracefully
 		defer func() {
 			if r := recover(); r != nil {
@@ -1546,7 +1546,7 @@ func TestGettersInternalBulletinWebUpdateBulletinReq(t *testing.T) {
 	t.Run("GetTitle", func(t *testing.T) {
 		t.Parallel()
 		// Arrange
-		obj := &InternalBulletinWebUpdateBulletinReq{}
+		obj := &InternalBulletinInternalWebUpdateBulletinReq{}
 		var expected *string
 		obj.Title = expected
 
@@ -1557,7 +1557,7 @@ func TestGettersInternalBulletinWebUpdateBulletinReq(t *testing.T) {
 	t.Run("GetTitle_NilValue", func(t *testing.T) {
 		t.Parallel()
 		// Arrange
-		obj := &InternalBulletinWebUpdateBulletinReq{}
+		obj := &InternalBulletinInternalWebUpdateBulletinReq{}
 		obj.Title = nil
 
 		// Act & Assert
@@ -1566,7 +1566,7 @@ func TestGettersInternalBulletinWebUpdateBulletinReq(t *testing.T) {
 
 	t.Run("GetTitle_NilReceiver", func(t *testing.T) {
 		t.Parallel()
-		var obj *InternalBulletinWebUpdateBulletinReq
+		var obj *InternalBulletinInternalWebUpdateBulletinReq
 		// Should not panic - getters should handle nil receiver gracefully
 		defer func() {
 			if r := recover(); r != nil {
@@ -1579,7 +1579,7 @@ func TestGettersInternalBulletinWebUpdateBulletinReq(t *testing.T) {
 	t.Run("GetVersion", func(t *testing.T) {
 		t.Parallel()
 		// Arrange
-		obj := &InternalBulletinWebUpdateBulletinReq{}
+		obj := &InternalBulletinInternalWebUpdateBulletinReq{}
 		var expected *string
 		obj.Version = expected
 
@@ -1590,7 +1590,7 @@ func TestGettersInternalBulletinWebUpdateBulletinReq(t *testing.T) {
 	t.Run("GetVersion_NilValue", func(t *testing.T) {
 		t.Parallel()
 		// Arrange
-		obj := &InternalBulletinWebUpdateBulletinReq{}
+		obj := &InternalBulletinInternalWebUpdateBulletinReq{}
 		obj.Version = nil
 
 		// Act & Assert
@@ -1599,7 +1599,7 @@ func TestGettersInternalBulletinWebUpdateBulletinReq(t *testing.T) {
 
 	t.Run("GetVersion_NilReceiver", func(t *testing.T) {
 		t.Parallel()
-		var obj *InternalBulletinWebUpdateBulletinReq
+		var obj *InternalBulletinInternalWebUpdateBulletinReq
 		// Should not panic - getters should handle nil receiver gracefully
 		defer func() {
 			if r := recover(); r != nil {
@@ -1611,11 +1611,11 @@ func TestGettersInternalBulletinWebUpdateBulletinReq(t *testing.T) {
 
 }
 
-func TestSettersMarkExplicitInternalBulletinWebUpdateBulletinReq(t *testing.T) {
+func TestSettersMarkExplicitInternalBulletinInternalWebUpdateBulletinReq(t *testing.T) {
 	t.Run("SetBody_MarksExplicit", func(t *testing.T) {
 		t.Parallel()
 		// Arrange
-		obj := &InternalBulletinWebUpdateBulletinReq{}
+		obj := &InternalBulletinInternalWebUpdateBulletinReq{}
 		var fernTestValueBody *string
 
 		// Act
@@ -1646,7 +1646,7 @@ func TestSettersMarkExplicitInternalBulletinWebUpdateBulletinReq(t *testing.T) {
 	t.Run("SetCategory_MarksExplicit", func(t *testing.T) {
 		t.Parallel()
 		// Arrange
-		obj := &InternalBulletinWebUpdateBulletinReq{}
+		obj := &InternalBulletinInternalWebUpdateBulletinReq{}
 		var fernTestValueCategory *string
 
 		// Act
@@ -1677,7 +1677,7 @@ func TestSettersMarkExplicitInternalBulletinWebUpdateBulletinReq(t *testing.T) {
 	t.Run("SetExpiresAt_MarksExplicit", func(t *testing.T) {
 		t.Parallel()
 		// Arrange
-		obj := &InternalBulletinWebUpdateBulletinReq{}
+		obj := &InternalBulletinInternalWebUpdateBulletinReq{}
 		var fernTestValueExpiresAt *int
 
 		// Act
@@ -1708,7 +1708,7 @@ func TestSettersMarkExplicitInternalBulletinWebUpdateBulletinReq(t *testing.T) {
 	t.Run("SetParentID_MarksExplicit", func(t *testing.T) {
 		t.Parallel()
 		// Arrange
-		obj := &InternalBulletinWebUpdateBulletinReq{}
+		obj := &InternalBulletinInternalWebUpdateBulletinReq{}
 		var fernTestValueParentID *int
 
 		// Act
@@ -1739,7 +1739,7 @@ func TestSettersMarkExplicitInternalBulletinWebUpdateBulletinReq(t *testing.T) {
 	t.Run("SetSection_MarksExplicit", func(t *testing.T) {
 		t.Parallel()
 		// Arrange
-		obj := &InternalBulletinWebUpdateBulletinReq{}
+		obj := &InternalBulletinInternalWebUpdateBulletinReq{}
 		var fernTestValueSection *string
 
 		// Act
@@ -1770,7 +1770,7 @@ func TestSettersMarkExplicitInternalBulletinWebUpdateBulletinReq(t *testing.T) {
 	t.Run("SetSortOrder_MarksExplicit", func(t *testing.T) {
 		t.Parallel()
 		// Arrange
-		obj := &InternalBulletinWebUpdateBulletinReq{}
+		obj := &InternalBulletinInternalWebUpdateBulletinReq{}
 		var fernTestValueSortOrder *int
 
 		// Act
@@ -1801,7 +1801,7 @@ func TestSettersMarkExplicitInternalBulletinWebUpdateBulletinReq(t *testing.T) {
 	t.Run("SetSummary_MarksExplicit", func(t *testing.T) {
 		t.Parallel()
 		// Arrange
-		obj := &InternalBulletinWebUpdateBulletinReq{}
+		obj := &InternalBulletinInternalWebUpdateBulletinReq{}
 		var fernTestValueSummary *string
 
 		// Act
@@ -1832,7 +1832,7 @@ func TestSettersMarkExplicitInternalBulletinWebUpdateBulletinReq(t *testing.T) {
 	t.Run("SetTitle_MarksExplicit", func(t *testing.T) {
 		t.Parallel()
 		// Arrange
-		obj := &InternalBulletinWebUpdateBulletinReq{}
+		obj := &InternalBulletinInternalWebUpdateBulletinReq{}
 		var fernTestValueTitle *string
 
 		// Act
@@ -1863,7 +1863,7 @@ func TestSettersMarkExplicitInternalBulletinWebUpdateBulletinReq(t *testing.T) {
 	t.Run("SetVersion_MarksExplicit", func(t *testing.T) {
 		t.Parallel()
 		// Arrange
-		obj := &InternalBulletinWebUpdateBulletinReq{}
+		obj := &InternalBulletinInternalWebUpdateBulletinReq{}
 		var fernTestValueVersion *string
 
 		// Act
@@ -1927,28 +1927,28 @@ func TestGettersPostAdminBulletinsRequest(t *testing.T) {
 		_ = obj.GetStringUnknownMap() // Should return zero value
 	})
 
-	t.Run("GetInternalBulletinWebCreateBulletinReq", func(t *testing.T) {
+	t.Run("GetInternalBulletinInternalWebCreateBulletinReq", func(t *testing.T) {
 		t.Parallel()
 		// Arrange
 		obj := &PostAdminBulletinsRequest{}
-		var expected *InternalBulletinWebCreateBulletinReq
-		obj.InternalBulletinWebCreateBulletinReq = expected
+		var expected *InternalBulletinInternalWebCreateBulletinReq
+		obj.InternalBulletinInternalWebCreateBulletinReq = expected
 
 		// Act & Assert
-		assert.Equal(t, expected, obj.GetInternalBulletinWebCreateBulletinReq(), "getter should return the property value")
+		assert.Equal(t, expected, obj.GetInternalBulletinInternalWebCreateBulletinReq(), "getter should return the property value")
 	})
 
-	t.Run("GetInternalBulletinWebCreateBulletinReq_NilValue", func(t *testing.T) {
+	t.Run("GetInternalBulletinInternalWebCreateBulletinReq_NilValue", func(t *testing.T) {
 		t.Parallel()
 		// Arrange
 		obj := &PostAdminBulletinsRequest{}
-		obj.InternalBulletinWebCreateBulletinReq = nil
+		obj.InternalBulletinInternalWebCreateBulletinReq = nil
 
 		// Act & Assert
-		assert.Nil(t, obj.GetInternalBulletinWebCreateBulletinReq(), "getter should return nil when property is nil")
+		assert.Nil(t, obj.GetInternalBulletinInternalWebCreateBulletinReq(), "getter should return nil when property is nil")
 	})
 
-	t.Run("GetInternalBulletinWebCreateBulletinReq_NilReceiver", func(t *testing.T) {
+	t.Run("GetInternalBulletinInternalWebCreateBulletinReq_NilReceiver", func(t *testing.T) {
 		t.Parallel()
 		var obj *PostAdminBulletinsRequest
 		// Should not panic - getters should handle nil receiver gracefully
@@ -1957,7 +1957,7 @@ func TestGettersPostAdminBulletinsRequest(t *testing.T) {
 				t.Errorf("Getter panicked on nil receiver: %v", r)
 			}
 		}()
-		_ = obj.GetInternalBulletinWebCreateBulletinReq() // Should return zero value
+		_ = obj.GetInternalBulletinInternalWebCreateBulletinReq() // Should return zero value
 	})
 
 }
@@ -1996,28 +1996,28 @@ func TestGettersPutAdminBulletinsIDRequestBody(t *testing.T) {
 		_ = obj.GetStringUnknownMap() // Should return zero value
 	})
 
-	t.Run("GetInternalBulletinWebUpdateBulletinReq", func(t *testing.T) {
+	t.Run("GetInternalBulletinInternalWebUpdateBulletinReq", func(t *testing.T) {
 		t.Parallel()
 		// Arrange
 		obj := &PutAdminBulletinsIDRequestBody{}
-		var expected *InternalBulletinWebUpdateBulletinReq
-		obj.InternalBulletinWebUpdateBulletinReq = expected
+		var expected *InternalBulletinInternalWebUpdateBulletinReq
+		obj.InternalBulletinInternalWebUpdateBulletinReq = expected
 
 		// Act & Assert
-		assert.Equal(t, expected, obj.GetInternalBulletinWebUpdateBulletinReq(), "getter should return the property value")
+		assert.Equal(t, expected, obj.GetInternalBulletinInternalWebUpdateBulletinReq(), "getter should return the property value")
 	})
 
-	t.Run("GetInternalBulletinWebUpdateBulletinReq_NilValue", func(t *testing.T) {
+	t.Run("GetInternalBulletinInternalWebUpdateBulletinReq_NilValue", func(t *testing.T) {
 		t.Parallel()
 		// Arrange
 		obj := &PutAdminBulletinsIDRequestBody{}
-		obj.InternalBulletinWebUpdateBulletinReq = nil
+		obj.InternalBulletinInternalWebUpdateBulletinReq = nil
 
 		// Act & Assert
-		assert.Nil(t, obj.GetInternalBulletinWebUpdateBulletinReq(), "getter should return nil when property is nil")
+		assert.Nil(t, obj.GetInternalBulletinInternalWebUpdateBulletinReq(), "getter should return nil when property is nil")
 	})
 
-	t.Run("GetInternalBulletinWebUpdateBulletinReq_NilReceiver", func(t *testing.T) {
+	t.Run("GetInternalBulletinInternalWebUpdateBulletinReq_NilReceiver", func(t *testing.T) {
 		t.Parallel()
 		var obj *PutAdminBulletinsIDRequestBody
 		// Should not panic - getters should handle nil receiver gracefully
@@ -2026,7 +2026,7 @@ func TestGettersPutAdminBulletinsIDRequestBody(t *testing.T) {
 				t.Errorf("Getter panicked on nil receiver: %v", r)
 			}
 		}()
-		_ = obj.GetInternalBulletinWebUpdateBulletinReq() // Should return zero value
+		_ = obj.GetInternalBulletinInternalWebUpdateBulletinReq() // Should return zero value
 	})
 
 }
@@ -2076,11 +2076,11 @@ func TestSettersMarkExplicitPutAdminBulletinsIDRequest(t *testing.T) {
 
 }
 
-func TestJSONMarshalingInternalBulletinWebCreateBulletinReq(t *testing.T) {
+func TestJSONMarshalingInternalBulletinInternalWebCreateBulletinReq(t *testing.T) {
 	t.Run("MarshalUnmarshal", func(t *testing.T) {
 		t.Parallel()
 		// Arrange
-		obj := &InternalBulletinWebCreateBulletinReq{}
+		obj := &InternalBulletinInternalWebCreateBulletinReq{}
 
 		// Act - Marshal to JSON
 		data, err := json.Marshal(obj)
@@ -2089,31 +2089,31 @@ func TestJSONMarshalingInternalBulletinWebCreateBulletinReq(t *testing.T) {
 		assert.NotEmpty(t, data, "marshaled data should not be empty")
 
 		// Unmarshal back and verify round-trip
-		var unmarshaled InternalBulletinWebCreateBulletinReq
+		var unmarshaled InternalBulletinInternalWebCreateBulletinReq
 		err = json.Unmarshal(data, &unmarshaled)
 		assert.NoError(t, err, "round-trip unmarshal should succeed")
 	})
 
 	t.Run("UnmarshalInvalidJSON", func(t *testing.T) {
 		t.Parallel()
-		var obj InternalBulletinWebCreateBulletinReq
+		var obj InternalBulletinInternalWebCreateBulletinReq
 		err := json.Unmarshal([]byte(`{invalid json}`), &obj)
 		assert.Error(t, err, "unmarshaling invalid JSON should return an error")
 	})
 
 	t.Run("UnmarshalEmptyObject", func(t *testing.T) {
 		t.Parallel()
-		var obj InternalBulletinWebCreateBulletinReq
+		var obj InternalBulletinInternalWebCreateBulletinReq
 		err := json.Unmarshal([]byte(`{}`), &obj)
 		assert.NoError(t, err, "unmarshaling empty object should succeed")
 	})
 }
 
-func TestJSONMarshalingInternalBulletinWebUpdateBulletinReq(t *testing.T) {
+func TestJSONMarshalingInternalBulletinInternalWebUpdateBulletinReq(t *testing.T) {
 	t.Run("MarshalUnmarshal", func(t *testing.T) {
 		t.Parallel()
 		// Arrange
-		obj := &InternalBulletinWebUpdateBulletinReq{}
+		obj := &InternalBulletinInternalWebUpdateBulletinReq{}
 
 		// Act - Marshal to JSON
 		data, err := json.Marshal(obj)
@@ -2122,62 +2122,62 @@ func TestJSONMarshalingInternalBulletinWebUpdateBulletinReq(t *testing.T) {
 		assert.NotEmpty(t, data, "marshaled data should not be empty")
 
 		// Unmarshal back and verify round-trip
-		var unmarshaled InternalBulletinWebUpdateBulletinReq
+		var unmarshaled InternalBulletinInternalWebUpdateBulletinReq
 		err = json.Unmarshal(data, &unmarshaled)
 		assert.NoError(t, err, "round-trip unmarshal should succeed")
 	})
 
 	t.Run("UnmarshalInvalidJSON", func(t *testing.T) {
 		t.Parallel()
-		var obj InternalBulletinWebUpdateBulletinReq
+		var obj InternalBulletinInternalWebUpdateBulletinReq
 		err := json.Unmarshal([]byte(`{invalid json}`), &obj)
 		assert.Error(t, err, "unmarshaling invalid JSON should return an error")
 	})
 
 	t.Run("UnmarshalEmptyObject", func(t *testing.T) {
 		t.Parallel()
-		var obj InternalBulletinWebUpdateBulletinReq
+		var obj InternalBulletinInternalWebUpdateBulletinReq
 		err := json.Unmarshal([]byte(`{}`), &obj)
 		assert.NoError(t, err, "unmarshaling empty object should succeed")
 	})
 }
 
-func TestStringInternalBulletinWebCreateBulletinReq(t *testing.T) {
+func TestStringInternalBulletinInternalWebCreateBulletinReq(t *testing.T) {
 	t.Run("StringMethod", func(t *testing.T) {
 		t.Parallel()
-		obj := &InternalBulletinWebCreateBulletinReq{}
+		obj := &InternalBulletinInternalWebCreateBulletinReq{}
 		result := obj.String()
 		assert.NotEmpty(t, result, "String() should return a non-empty representation")
 	})
 
 	t.Run("StringMethod_NilReceiver", func(t *testing.T) {
 		t.Parallel()
-		var obj *InternalBulletinWebCreateBulletinReq
+		var obj *InternalBulletinInternalWebCreateBulletinReq
 		result := obj.String()
 		assert.Equal(t, "<nil>", result, "String() should return <nil> for nil receiver")
 	})
 }
 
-func TestStringInternalBulletinWebUpdateBulletinReq(t *testing.T) {
+func TestStringInternalBulletinInternalWebUpdateBulletinReq(t *testing.T) {
 	t.Run("StringMethod", func(t *testing.T) {
 		t.Parallel()
-		obj := &InternalBulletinWebUpdateBulletinReq{}
+		obj := &InternalBulletinInternalWebUpdateBulletinReq{}
 		result := obj.String()
 		assert.NotEmpty(t, result, "String() should return a non-empty representation")
 	})
 
 	t.Run("StringMethod_NilReceiver", func(t *testing.T) {
 		t.Parallel()
-		var obj *InternalBulletinWebUpdateBulletinReq
+		var obj *InternalBulletinInternalWebUpdateBulletinReq
 		result := obj.String()
 		assert.Equal(t, "<nil>", result, "String() should return <nil> for nil receiver")
 	})
 }
 
-func TestExtraPropertiesInternalBulletinWebCreateBulletinReq(t *testing.T) {
+func TestExtraPropertiesInternalBulletinInternalWebCreateBulletinReq(t *testing.T) {
 	t.Run("GetExtraProperties", func(t *testing.T) {
 		t.Parallel()
-		obj := &InternalBulletinWebCreateBulletinReq{}
+		obj := &InternalBulletinInternalWebCreateBulletinReq{}
 		// Should not panic when calling GetExtraProperties()
 		defer func() {
 			if r := recover(); r != nil {
@@ -2191,16 +2191,16 @@ func TestExtraPropertiesInternalBulletinWebCreateBulletinReq(t *testing.T) {
 
 	t.Run("GetExtraProperties_NilReceiver", func(t *testing.T) {
 		t.Parallel()
-		var obj *InternalBulletinWebCreateBulletinReq
+		var obj *InternalBulletinInternalWebCreateBulletinReq
 		extraProps := obj.GetExtraProperties()
 		assert.Nil(t, extraProps, "nil receiver should return nil without panicking")
 	})
 }
 
-func TestExtraPropertiesInternalBulletinWebUpdateBulletinReq(t *testing.T) {
+func TestExtraPropertiesInternalBulletinInternalWebUpdateBulletinReq(t *testing.T) {
 	t.Run("GetExtraProperties", func(t *testing.T) {
 		t.Parallel()
-		obj := &InternalBulletinWebUpdateBulletinReq{}
+		obj := &InternalBulletinInternalWebUpdateBulletinReq{}
 		// Should not panic when calling GetExtraProperties()
 		defer func() {
 			if r := recover(); r != nil {
@@ -2214,7 +2214,7 @@ func TestExtraPropertiesInternalBulletinWebUpdateBulletinReq(t *testing.T) {
 
 	t.Run("GetExtraProperties_NilReceiver", func(t *testing.T) {
 		t.Parallel()
-		var obj *InternalBulletinWebUpdateBulletinReq
+		var obj *InternalBulletinInternalWebUpdateBulletinReq
 		extraProps := obj.GetExtraProperties()
 		assert.Nil(t, extraProps, "nil receiver should return nil without panicking")
 	})

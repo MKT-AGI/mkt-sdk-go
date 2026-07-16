@@ -32,11 +32,11 @@ func NewRawClient(options *core.RequestOptions) *RawClient {
 	}
 }
 
-func (r *RawClient) ListModelVisibilityFilters(
+func (r *RawClient) ListModelAccessGrants(
 	ctx context.Context,
-	request *mktsdkgo.GetGatewayUserIDModelsIDFiltersRequest,
+	request *mktsdkgo.GetGatewayUserIDModelsIDGrantsRequest,
 	opts ...option.RequestOption,
-) (*core.Response[*mktsdkgo.GithubComMktAgiAixInternalPkgGinxResultArrayUint], error) {
+) (*core.Response[*mktsdkgo.GithubComMktAgiAixInternalPkgGinxResultArrayGithubComMktAgiAixInternalIamAccessGrant], error) {
 	options := core.NewRequestOptions(opts...)
 	baseURL := internal.ResolveBaseURL(
 		options.BaseURL,
@@ -44,7 +44,7 @@ func (r *RawClient) ListModelVisibilityFilters(
 		"http://localhost:8080/api/v1",
 	)
 	endpointURL := internal.EncodeURL(
-		baseURL+"/gateway/%v/models/%v/filters",
+		baseURL+"/gateway/%v/models/%v/grants",
 		request.UserID,
 		request.ID,
 	)
@@ -52,7 +52,7 @@ func (r *RawClient) ListModelVisibilityFilters(
 		r.options.ToHeader(),
 		options.ToHeader(),
 	)
-	var response *mktsdkgo.GithubComMktAgiAixInternalPkgGinxResultArrayUint
+	var response *mktsdkgo.GithubComMktAgiAixInternalPkgGinxResultArrayGithubComMktAgiAixInternalIamAccessGrant
 	raw, err := r.caller.Call(
 		ctx,
 		&internal.CallParams{
@@ -71,16 +71,16 @@ func (r *RawClient) ListModelVisibilityFilters(
 	if err != nil {
 		return nil, err
 	}
-	return &core.Response[*mktsdkgo.GithubComMktAgiAixInternalPkgGinxResultArrayUint]{
+	return &core.Response[*mktsdkgo.GithubComMktAgiAixInternalPkgGinxResultArrayGithubComMktAgiAixInternalIamAccessGrant]{
 		StatusCode: raw.StatusCode,
 		Header:     raw.Header,
 		Body:       response,
 	}, nil
 }
 
-func (r *RawClient) AddModelVisibilityFilter(
+func (r *RawClient) GrantModelAccess(
 	ctx context.Context,
-	request *mktsdkgo.PostGatewayUserIDModelsIDFiltersRequest,
+	request *mktsdkgo.PostGatewayUserIDModelsIDGrantsRequest,
 	opts ...option.RequestOption,
 ) (*core.Response[*mktsdkgo.GithubComMktAgiAixInternalPkgGinxResultAny], error) {
 	options := core.NewRequestOptions(opts...)
@@ -90,7 +90,7 @@ func (r *RawClient) AddModelVisibilityFilter(
 		"http://localhost:8080/api/v1",
 	)
 	endpointURL := internal.EncodeURL(
-		baseURL+"/gateway/%v/models/%v/filters",
+		baseURL+"/gateway/%v/models/%v/grants",
 		request.UserID,
 		request.ID,
 	)
@@ -126,9 +126,9 @@ func (r *RawClient) AddModelVisibilityFilter(
 	}, nil
 }
 
-func (r *RawClient) RemoveModelVisibilityFilter(
+func (r *RawClient) RevokeModelAccess(
 	ctx context.Context,
-	request *mktsdkgo.DeleteGatewayUserIDModelsIDFiltersTargetUserIDRequest,
+	request *mktsdkgo.DeleteGatewayUserIDModelsIDGrantsTargetUserIDRequest,
 	opts ...option.RequestOption,
 ) (*core.Response[*mktsdkgo.GithubComMktAgiAixInternalPkgGinxResultAny], error) {
 	options := core.NewRequestOptions(opts...)
@@ -138,7 +138,7 @@ func (r *RawClient) RemoveModelVisibilityFilter(
 		"http://localhost:8080/api/v1",
 	)
 	endpointURL := internal.EncodeURL(
-		baseURL+"/gateway/%v/models/%v/filters/%v",
+		baseURL+"/gateway/%v/models/%v/grants/%v",
 		request.UserID,
 		request.ID,
 		request.TargetUserID,

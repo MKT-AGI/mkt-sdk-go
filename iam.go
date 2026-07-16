@@ -10,11 +10,11 @@ import (
 )
 
 var (
-	getIamVisibilityFiltersRequestFieldResourceType = big.NewInt(1 << 0)
-	getIamVisibilityFiltersRequestFieldResourceID   = big.NewInt(1 << 1)
+	getIamGrantsRequestFieldResourceType = big.NewInt(1 << 0)
+	getIamGrantsRequestFieldResourceID   = big.NewInt(1 << 1)
 )
 
-type GetIamVisibilityFiltersRequest struct {
+type GetIamGrantsRequest struct {
 	// Resource type
 	ResourceType string `json:"-" url:"resource_type"`
 	// Resource ID
@@ -24,7 +24,7 @@ type GetIamVisibilityFiltersRequest struct {
 	explicitFields *big.Int `json:"-" url:"-"`
 }
 
-func (g *GetIamVisibilityFiltersRequest) require(field *big.Int) {
+func (g *GetIamGrantsRequest) require(field *big.Int) {
 	if g.explicitFields == nil {
 		g.explicitFields = big.NewInt(0)
 	}
@@ -33,62 +33,16 @@ func (g *GetIamVisibilityFiltersRequest) require(field *big.Int) {
 
 // SetResourceType sets the ResourceType field and marks it as non-optional;
 // this prevents an empty or null value for this field from being omitted during serialization.
-func (g *GetIamVisibilityFiltersRequest) SetResourceType(resourceType string) {
+func (g *GetIamGrantsRequest) SetResourceType(resourceType string) {
 	g.ResourceType = resourceType
-	g.require(getIamVisibilityFiltersRequestFieldResourceType)
+	g.require(getIamGrantsRequestFieldResourceType)
 }
 
 // SetResourceID sets the ResourceID field and marks it as non-optional;
 // this prevents an empty or null value for this field from being omitted during serialization.
-func (g *GetIamVisibilityFiltersRequest) SetResourceID(resourceID int) {
+func (g *GetIamGrantsRequest) SetResourceID(resourceID int) {
 	g.ResourceID = resourceID
-	g.require(getIamVisibilityFiltersRequestFieldResourceID)
-}
-
-var (
-	deleteIamVisibilityFiltersResourceTypeResourceIDUserIDRequestFieldResourceType = big.NewInt(1 << 0)
-	deleteIamVisibilityFiltersResourceTypeResourceIDUserIDRequestFieldResourceID   = big.NewInt(1 << 1)
-	deleteIamVisibilityFiltersResourceTypeResourceIDUserIDRequestFieldUserID       = big.NewInt(1 << 2)
-)
-
-type DeleteIamVisibilityFiltersResourceTypeResourceIDUserIDRequest struct {
-	// Resource type
-	ResourceType string `json:"-" url:"-"`
-	// Resource ID
-	ResourceID int `json:"-" url:"-"`
-	// User ID
-	UserID int `json:"-" url:"-"`
-
-	// Private bitmask of fields set to an explicit value and therefore not to be omitted
-	explicitFields *big.Int `json:"-" url:"-"`
-}
-
-func (d *DeleteIamVisibilityFiltersResourceTypeResourceIDUserIDRequest) require(field *big.Int) {
-	if d.explicitFields == nil {
-		d.explicitFields = big.NewInt(0)
-	}
-	d.explicitFields.Or(d.explicitFields, field)
-}
-
-// SetResourceType sets the ResourceType field and marks it as non-optional;
-// this prevents an empty or null value for this field from being omitted during serialization.
-func (d *DeleteIamVisibilityFiltersResourceTypeResourceIDUserIDRequest) SetResourceType(resourceType string) {
-	d.ResourceType = resourceType
-	d.require(deleteIamVisibilityFiltersResourceTypeResourceIDUserIDRequestFieldResourceType)
-}
-
-// SetResourceID sets the ResourceID field and marks it as non-optional;
-// this prevents an empty or null value for this field from being omitted during serialization.
-func (d *DeleteIamVisibilityFiltersResourceTypeResourceIDUserIDRequest) SetResourceID(resourceID int) {
-	d.ResourceID = resourceID
-	d.require(deleteIamVisibilityFiltersResourceTypeResourceIDUserIDRequestFieldResourceID)
-}
-
-// SetUserID sets the UserID field and marks it as non-optional;
-// this prevents an empty or null value for this field from being omitted during serialization.
-func (d *DeleteIamVisibilityFiltersResourceTypeResourceIDUserIDRequest) SetUserID(userID int) {
-	d.UserID = userID
-	d.require(deleteIamVisibilityFiltersResourceTypeResourceIDUserIDRequestFieldUserID)
+	g.require(getIamGrantsRequestFieldResourceID)
 }
 
 var (
@@ -115,6 +69,397 @@ func (d *DeleteIamAPIKeysIDRequest) require(field *big.Int) {
 func (d *DeleteIamAPIKeysIDRequest) SetID(id int) {
 	d.ID = id
 	d.require(deleteIamAPIKeysIDRequestFieldID)
+}
+
+var (
+	deleteIamGrantsResourceTypeResourceIDUserIDRequestFieldResourceType = big.NewInt(1 << 0)
+	deleteIamGrantsResourceTypeResourceIDUserIDRequestFieldResourceID   = big.NewInt(1 << 1)
+	deleteIamGrantsResourceTypeResourceIDUserIDRequestFieldUserID       = big.NewInt(1 << 2)
+)
+
+type DeleteIamGrantsResourceTypeResourceIDUserIDRequest struct {
+	// Resource type
+	ResourceType string `json:"-" url:"-"`
+	// Resource ID
+	ResourceID int `json:"-" url:"-"`
+	// User ID
+	UserID int `json:"-" url:"-"`
+
+	// Private bitmask of fields set to an explicit value and therefore not to be omitted
+	explicitFields *big.Int `json:"-" url:"-"`
+}
+
+func (d *DeleteIamGrantsResourceTypeResourceIDUserIDRequest) require(field *big.Int) {
+	if d.explicitFields == nil {
+		d.explicitFields = big.NewInt(0)
+	}
+	d.explicitFields.Or(d.explicitFields, field)
+}
+
+// SetResourceType sets the ResourceType field and marks it as non-optional;
+// this prevents an empty or null value for this field from being omitted during serialization.
+func (d *DeleteIamGrantsResourceTypeResourceIDUserIDRequest) SetResourceType(resourceType string) {
+	d.ResourceType = resourceType
+	d.require(deleteIamGrantsResourceTypeResourceIDUserIDRequestFieldResourceType)
+}
+
+// SetResourceID sets the ResourceID field and marks it as non-optional;
+// this prevents an empty or null value for this field from being omitted during serialization.
+func (d *DeleteIamGrantsResourceTypeResourceIDUserIDRequest) SetResourceID(resourceID int) {
+	d.ResourceID = resourceID
+	d.require(deleteIamGrantsResourceTypeResourceIDUserIDRequestFieldResourceID)
+}
+
+// SetUserID sets the UserID field and marks it as non-optional;
+// this prevents an empty or null value for this field from being omitted during serialization.
+func (d *DeleteIamGrantsResourceTypeResourceIDUserIDRequest) SetUserID(userID int) {
+	d.UserID = userID
+	d.require(deleteIamGrantsResourceTypeResourceIDUserIDRequestFieldUserID)
+}
+
+var (
+	githubComMktAgiAixInternalIamInternalDomainAccessGrantFieldCreatedAt = big.NewInt(1 << 0)
+	githubComMktAgiAixInternalIamInternalDomainAccessGrantFieldCreatedBy = big.NewInt(1 << 1)
+	githubComMktAgiAixInternalIamInternalDomainAccessGrantFieldExpiresAt = big.NewInt(1 << 2)
+	githubComMktAgiAixInternalIamInternalDomainAccessGrantFieldOrderNo   = big.NewInt(1 << 3)
+	githubComMktAgiAixInternalIamInternalDomainAccessGrantFieldSource    = big.NewInt(1 << 4)
+	githubComMktAgiAixInternalIamInternalDomainAccessGrantFieldUserID    = big.NewInt(1 << 5)
+)
+
+type GithubComMktAgiAixInternalIamInternalDomainAccessGrant struct {
+	CreatedAt *int    `json:"createdAt,omitempty" url:"createdAt,omitempty"`
+	CreatedBy *int    `json:"createdBy,omitempty" url:"createdBy,omitempty"`
+	ExpiresAt *int    `json:"expiresAt,omitempty" url:"expiresAt,omitempty"`
+	OrderNo   *string `json:"orderNo,omitempty" url:"orderNo,omitempty"`
+	// "grant" | "purchase"
+	Source *string `json:"source,omitempty" url:"source,omitempty"`
+	UserID *int    `json:"userID,omitempty" url:"userID,omitempty"`
+
+	// Private bitmask of fields set to an explicit value and therefore not to be omitted
+	explicitFields *big.Int `json:"-" url:"-"`
+
+	extraProperties map[string]interface{}
+	rawJSON         json.RawMessage
+}
+
+func (g *GithubComMktAgiAixInternalIamInternalDomainAccessGrant) GetCreatedAt() *int {
+	if g == nil {
+		return nil
+	}
+	return g.CreatedAt
+}
+
+func (g *GithubComMktAgiAixInternalIamInternalDomainAccessGrant) GetCreatedBy() *int {
+	if g == nil {
+		return nil
+	}
+	return g.CreatedBy
+}
+
+func (g *GithubComMktAgiAixInternalIamInternalDomainAccessGrant) GetExpiresAt() *int {
+	if g == nil {
+		return nil
+	}
+	return g.ExpiresAt
+}
+
+func (g *GithubComMktAgiAixInternalIamInternalDomainAccessGrant) GetOrderNo() *string {
+	if g == nil {
+		return nil
+	}
+	return g.OrderNo
+}
+
+func (g *GithubComMktAgiAixInternalIamInternalDomainAccessGrant) GetSource() *string {
+	if g == nil {
+		return nil
+	}
+	return g.Source
+}
+
+func (g *GithubComMktAgiAixInternalIamInternalDomainAccessGrant) GetUserID() *int {
+	if g == nil {
+		return nil
+	}
+	return g.UserID
+}
+
+func (g *GithubComMktAgiAixInternalIamInternalDomainAccessGrant) GetExtraProperties() map[string]interface{} {
+	if g == nil {
+		return nil
+	}
+	return g.extraProperties
+}
+
+func (g *GithubComMktAgiAixInternalIamInternalDomainAccessGrant) require(field *big.Int) {
+	if g.explicitFields == nil {
+		g.explicitFields = big.NewInt(0)
+	}
+	g.explicitFields.Or(g.explicitFields, field)
+}
+
+// SetCreatedAt sets the CreatedAt field and marks it as non-optional;
+// this prevents an empty or null value for this field from being omitted during serialization.
+func (g *GithubComMktAgiAixInternalIamInternalDomainAccessGrant) SetCreatedAt(createdAt *int) {
+	g.CreatedAt = createdAt
+	g.require(githubComMktAgiAixInternalIamInternalDomainAccessGrantFieldCreatedAt)
+}
+
+// SetCreatedBy sets the CreatedBy field and marks it as non-optional;
+// this prevents an empty or null value for this field from being omitted during serialization.
+func (g *GithubComMktAgiAixInternalIamInternalDomainAccessGrant) SetCreatedBy(createdBy *int) {
+	g.CreatedBy = createdBy
+	g.require(githubComMktAgiAixInternalIamInternalDomainAccessGrantFieldCreatedBy)
+}
+
+// SetExpiresAt sets the ExpiresAt field and marks it as non-optional;
+// this prevents an empty or null value for this field from being omitted during serialization.
+func (g *GithubComMktAgiAixInternalIamInternalDomainAccessGrant) SetExpiresAt(expiresAt *int) {
+	g.ExpiresAt = expiresAt
+	g.require(githubComMktAgiAixInternalIamInternalDomainAccessGrantFieldExpiresAt)
+}
+
+// SetOrderNo sets the OrderNo field and marks it as non-optional;
+// this prevents an empty or null value for this field from being omitted during serialization.
+func (g *GithubComMktAgiAixInternalIamInternalDomainAccessGrant) SetOrderNo(orderNo *string) {
+	g.OrderNo = orderNo
+	g.require(githubComMktAgiAixInternalIamInternalDomainAccessGrantFieldOrderNo)
+}
+
+// SetSource sets the Source field and marks it as non-optional;
+// this prevents an empty or null value for this field from being omitted during serialization.
+func (g *GithubComMktAgiAixInternalIamInternalDomainAccessGrant) SetSource(source *string) {
+	g.Source = source
+	g.require(githubComMktAgiAixInternalIamInternalDomainAccessGrantFieldSource)
+}
+
+// SetUserID sets the UserID field and marks it as non-optional;
+// this prevents an empty or null value for this field from being omitted during serialization.
+func (g *GithubComMktAgiAixInternalIamInternalDomainAccessGrant) SetUserID(userID *int) {
+	g.UserID = userID
+	g.require(githubComMktAgiAixInternalIamInternalDomainAccessGrantFieldUserID)
+}
+
+func (g *GithubComMktAgiAixInternalIamInternalDomainAccessGrant) UnmarshalJSON(data []byte) error {
+	type unmarshaler GithubComMktAgiAixInternalIamInternalDomainAccessGrant
+	var value unmarshaler
+	if err := json.Unmarshal(data, &value); err != nil {
+		return err
+	}
+	*g = GithubComMktAgiAixInternalIamInternalDomainAccessGrant(value)
+	extraProperties, err := internal.ExtractExtraProperties(data, *g)
+	if err != nil {
+		return err
+	}
+	g.extraProperties = extraProperties
+	g.rawJSON = json.RawMessage(data)
+	return nil
+}
+
+func (g *GithubComMktAgiAixInternalIamInternalDomainAccessGrant) MarshalJSON() ([]byte, error) {
+	type embed GithubComMktAgiAixInternalIamInternalDomainAccessGrant
+	var marshaler = struct {
+		embed
+	}{
+		embed: embed(*g),
+	}
+	explicitMarshaler := internal.HandleExplicitFields(marshaler, g.explicitFields)
+	return json.Marshal(explicitMarshaler)
+}
+
+func (g *GithubComMktAgiAixInternalIamInternalDomainAccessGrant) String() string {
+	if g == nil {
+		return "<nil>"
+	}
+	if len(g.rawJSON) > 0 {
+		if value, err := internal.StringifyJSON(g.rawJSON); err == nil {
+			return value
+		}
+	}
+	if value, err := internal.StringifyJSON(g); err == nil {
+		return value
+	}
+	return fmt.Sprintf("%#v", g)
+}
+
+var (
+	githubComMktAgiAixInternalPkgGinxResultArrayGithubComMktAgiAixInternalIamInternalDomainAccessGrantFieldCode        = big.NewInt(1 << 0)
+	githubComMktAgiAixInternalPkgGinxResultArrayGithubComMktAgiAixInternalIamInternalDomainAccessGrantFieldData        = big.NewInt(1 << 1)
+	githubComMktAgiAixInternalPkgGinxResultArrayGithubComMktAgiAixInternalIamInternalDomainAccessGrantFieldLimit       = big.NewInt(1 << 2)
+	githubComMktAgiAixInternalPkgGinxResultArrayGithubComMktAgiAixInternalIamInternalDomainAccessGrantFieldMessage     = big.NewInt(1 << 3)
+	githubComMktAgiAixInternalPkgGinxResultArrayGithubComMktAgiAixInternalIamInternalDomainAccessGrantFieldPage        = big.NewInt(1 << 4)
+	githubComMktAgiAixInternalPkgGinxResultArrayGithubComMktAgiAixInternalIamInternalDomainAccessGrantFieldTotal       = big.NewInt(1 << 5)
+	githubComMktAgiAixInternalPkgGinxResultArrayGithubComMktAgiAixInternalIamInternalDomainAccessGrantFieldUserMessage = big.NewInt(1 << 6)
+)
+
+type GithubComMktAgiAixInternalPkgGinxResultArrayGithubComMktAgiAixInternalIamInternalDomainAccessGrant struct {
+	Code        *int                                                      `json:"code,omitempty" url:"code,omitempty"`
+	Data        []*GithubComMktAgiAixInternalIamInternalDomainAccessGrant `json:"data,omitempty" url:"data,omitempty"`
+	Limit       *int                                                      `json:"limit,omitempty" url:"limit,omitempty"`
+	Message     *string                                                   `json:"message,omitempty" url:"message,omitempty"`
+	Page        *int                                                      `json:"page,omitempty" url:"page,omitempty"`
+	Total       *int                                                      `json:"total,omitempty" url:"total,omitempty"`
+	UserMessage *string                                                   `json:"user_message,omitempty" url:"user_message,omitempty"`
+
+	// Private bitmask of fields set to an explicit value and therefore not to be omitted
+	explicitFields *big.Int `json:"-" url:"-"`
+
+	extraProperties map[string]interface{}
+	rawJSON         json.RawMessage
+}
+
+func (g *GithubComMktAgiAixInternalPkgGinxResultArrayGithubComMktAgiAixInternalIamInternalDomainAccessGrant) GetCode() *int {
+	if g == nil {
+		return nil
+	}
+	return g.Code
+}
+
+func (g *GithubComMktAgiAixInternalPkgGinxResultArrayGithubComMktAgiAixInternalIamInternalDomainAccessGrant) GetData() []*GithubComMktAgiAixInternalIamInternalDomainAccessGrant {
+	if g == nil {
+		return nil
+	}
+	return g.Data
+}
+
+func (g *GithubComMktAgiAixInternalPkgGinxResultArrayGithubComMktAgiAixInternalIamInternalDomainAccessGrant) GetLimit() *int {
+	if g == nil {
+		return nil
+	}
+	return g.Limit
+}
+
+func (g *GithubComMktAgiAixInternalPkgGinxResultArrayGithubComMktAgiAixInternalIamInternalDomainAccessGrant) GetMessage() *string {
+	if g == nil {
+		return nil
+	}
+	return g.Message
+}
+
+func (g *GithubComMktAgiAixInternalPkgGinxResultArrayGithubComMktAgiAixInternalIamInternalDomainAccessGrant) GetPage() *int {
+	if g == nil {
+		return nil
+	}
+	return g.Page
+}
+
+func (g *GithubComMktAgiAixInternalPkgGinxResultArrayGithubComMktAgiAixInternalIamInternalDomainAccessGrant) GetTotal() *int {
+	if g == nil {
+		return nil
+	}
+	return g.Total
+}
+
+func (g *GithubComMktAgiAixInternalPkgGinxResultArrayGithubComMktAgiAixInternalIamInternalDomainAccessGrant) GetUserMessage() *string {
+	if g == nil {
+		return nil
+	}
+	return g.UserMessage
+}
+
+func (g *GithubComMktAgiAixInternalPkgGinxResultArrayGithubComMktAgiAixInternalIamInternalDomainAccessGrant) GetExtraProperties() map[string]interface{} {
+	if g == nil {
+		return nil
+	}
+	return g.extraProperties
+}
+
+func (g *GithubComMktAgiAixInternalPkgGinxResultArrayGithubComMktAgiAixInternalIamInternalDomainAccessGrant) require(field *big.Int) {
+	if g.explicitFields == nil {
+		g.explicitFields = big.NewInt(0)
+	}
+	g.explicitFields.Or(g.explicitFields, field)
+}
+
+// SetCode sets the Code field and marks it as non-optional;
+// this prevents an empty or null value for this field from being omitted during serialization.
+func (g *GithubComMktAgiAixInternalPkgGinxResultArrayGithubComMktAgiAixInternalIamInternalDomainAccessGrant) SetCode(code *int) {
+	g.Code = code
+	g.require(githubComMktAgiAixInternalPkgGinxResultArrayGithubComMktAgiAixInternalIamInternalDomainAccessGrantFieldCode)
+}
+
+// SetData sets the Data field and marks it as non-optional;
+// this prevents an empty or null value for this field from being omitted during serialization.
+func (g *GithubComMktAgiAixInternalPkgGinxResultArrayGithubComMktAgiAixInternalIamInternalDomainAccessGrant) SetData(data []*GithubComMktAgiAixInternalIamInternalDomainAccessGrant) {
+	g.Data = data
+	g.require(githubComMktAgiAixInternalPkgGinxResultArrayGithubComMktAgiAixInternalIamInternalDomainAccessGrantFieldData)
+}
+
+// SetLimit sets the Limit field and marks it as non-optional;
+// this prevents an empty or null value for this field from being omitted during serialization.
+func (g *GithubComMktAgiAixInternalPkgGinxResultArrayGithubComMktAgiAixInternalIamInternalDomainAccessGrant) SetLimit(limit *int) {
+	g.Limit = limit
+	g.require(githubComMktAgiAixInternalPkgGinxResultArrayGithubComMktAgiAixInternalIamInternalDomainAccessGrantFieldLimit)
+}
+
+// SetMessage sets the Message field and marks it as non-optional;
+// this prevents an empty or null value for this field from being omitted during serialization.
+func (g *GithubComMktAgiAixInternalPkgGinxResultArrayGithubComMktAgiAixInternalIamInternalDomainAccessGrant) SetMessage(message *string) {
+	g.Message = message
+	g.require(githubComMktAgiAixInternalPkgGinxResultArrayGithubComMktAgiAixInternalIamInternalDomainAccessGrantFieldMessage)
+}
+
+// SetPage sets the Page field and marks it as non-optional;
+// this prevents an empty or null value for this field from being omitted during serialization.
+func (g *GithubComMktAgiAixInternalPkgGinxResultArrayGithubComMktAgiAixInternalIamInternalDomainAccessGrant) SetPage(page *int) {
+	g.Page = page
+	g.require(githubComMktAgiAixInternalPkgGinxResultArrayGithubComMktAgiAixInternalIamInternalDomainAccessGrantFieldPage)
+}
+
+// SetTotal sets the Total field and marks it as non-optional;
+// this prevents an empty or null value for this field from being omitted during serialization.
+func (g *GithubComMktAgiAixInternalPkgGinxResultArrayGithubComMktAgiAixInternalIamInternalDomainAccessGrant) SetTotal(total *int) {
+	g.Total = total
+	g.require(githubComMktAgiAixInternalPkgGinxResultArrayGithubComMktAgiAixInternalIamInternalDomainAccessGrantFieldTotal)
+}
+
+// SetUserMessage sets the UserMessage field and marks it as non-optional;
+// this prevents an empty or null value for this field from being omitted during serialization.
+func (g *GithubComMktAgiAixInternalPkgGinxResultArrayGithubComMktAgiAixInternalIamInternalDomainAccessGrant) SetUserMessage(userMessage *string) {
+	g.UserMessage = userMessage
+	g.require(githubComMktAgiAixInternalPkgGinxResultArrayGithubComMktAgiAixInternalIamInternalDomainAccessGrantFieldUserMessage)
+}
+
+func (g *GithubComMktAgiAixInternalPkgGinxResultArrayGithubComMktAgiAixInternalIamInternalDomainAccessGrant) UnmarshalJSON(data []byte) error {
+	type unmarshaler GithubComMktAgiAixInternalPkgGinxResultArrayGithubComMktAgiAixInternalIamInternalDomainAccessGrant
+	var value unmarshaler
+	if err := json.Unmarshal(data, &value); err != nil {
+		return err
+	}
+	*g = GithubComMktAgiAixInternalPkgGinxResultArrayGithubComMktAgiAixInternalIamInternalDomainAccessGrant(value)
+	extraProperties, err := internal.ExtractExtraProperties(data, *g)
+	if err != nil {
+		return err
+	}
+	g.extraProperties = extraProperties
+	g.rawJSON = json.RawMessage(data)
+	return nil
+}
+
+func (g *GithubComMktAgiAixInternalPkgGinxResultArrayGithubComMktAgiAixInternalIamInternalDomainAccessGrant) MarshalJSON() ([]byte, error) {
+	type embed GithubComMktAgiAixInternalPkgGinxResultArrayGithubComMktAgiAixInternalIamInternalDomainAccessGrant
+	var marshaler = struct {
+		embed
+	}{
+		embed: embed(*g),
+	}
+	explicitMarshaler := internal.HandleExplicitFields(marshaler, g.explicitFields)
+	return json.Marshal(explicitMarshaler)
+}
+
+func (g *GithubComMktAgiAixInternalPkgGinxResultArrayGithubComMktAgiAixInternalIamInternalDomainAccessGrant) String() string {
+	if g == nil {
+		return "<nil>"
+	}
+	if len(g.rawJSON) > 0 {
+		if value, err := internal.StringifyJSON(g.rawJSON); err == nil {
+			return value
+		}
+	}
+	if value, err := internal.StringifyJSON(g); err == nil {
+		return value
+	}
+	return fmt.Sprintf("%#v", g)
 }
 
 var (
@@ -477,126 +822,6 @@ func (g *GithubComMktAgiAixInternalPkgGinxResultInternalIamInternalWebCreateAPIK
 	return fmt.Sprintf("%#v", g)
 }
 
-// Request body for adding a visibility filter.
-var (
-	internalIamInternalWebAddFilterRequestFieldResourceID   = big.NewInt(1 << 0)
-	internalIamInternalWebAddFilterRequestFieldResourceType = big.NewInt(1 << 1)
-	internalIamInternalWebAddFilterRequestFieldUserID       = big.NewInt(1 << 2)
-)
-
-type InternalIamInternalWebAddFilterRequest struct {
-	// resource primary key
-	ResourceID int `json:"resource_id" url:"resource_id"`
-	// "aigateway_model" | "aigateway_route" | "files_file"
-	ResourceType string `json:"resource_type" url:"resource_type"`
-	// target user ID
-	UserID int `json:"user_id" url:"user_id"`
-
-	// Private bitmask of fields set to an explicit value and therefore not to be omitted
-	explicitFields *big.Int `json:"-" url:"-"`
-
-	extraProperties map[string]interface{}
-	rawJSON         json.RawMessage
-}
-
-func (i *InternalIamInternalWebAddFilterRequest) GetResourceID() int {
-	if i == nil {
-		return 0
-	}
-	return i.ResourceID
-}
-
-func (i *InternalIamInternalWebAddFilterRequest) GetResourceType() string {
-	if i == nil {
-		return ""
-	}
-	return i.ResourceType
-}
-
-func (i *InternalIamInternalWebAddFilterRequest) GetUserID() int {
-	if i == nil {
-		return 0
-	}
-	return i.UserID
-}
-
-func (i *InternalIamInternalWebAddFilterRequest) GetExtraProperties() map[string]interface{} {
-	if i == nil {
-		return nil
-	}
-	return i.extraProperties
-}
-
-func (i *InternalIamInternalWebAddFilterRequest) require(field *big.Int) {
-	if i.explicitFields == nil {
-		i.explicitFields = big.NewInt(0)
-	}
-	i.explicitFields.Or(i.explicitFields, field)
-}
-
-// SetResourceID sets the ResourceID field and marks it as non-optional;
-// this prevents an empty or null value for this field from being omitted during serialization.
-func (i *InternalIamInternalWebAddFilterRequest) SetResourceID(resourceID int) {
-	i.ResourceID = resourceID
-	i.require(internalIamInternalWebAddFilterRequestFieldResourceID)
-}
-
-// SetResourceType sets the ResourceType field and marks it as non-optional;
-// this prevents an empty or null value for this field from being omitted during serialization.
-func (i *InternalIamInternalWebAddFilterRequest) SetResourceType(resourceType string) {
-	i.ResourceType = resourceType
-	i.require(internalIamInternalWebAddFilterRequestFieldResourceType)
-}
-
-// SetUserID sets the UserID field and marks it as non-optional;
-// this prevents an empty or null value for this field from being omitted during serialization.
-func (i *InternalIamInternalWebAddFilterRequest) SetUserID(userID int) {
-	i.UserID = userID
-	i.require(internalIamInternalWebAddFilterRequestFieldUserID)
-}
-
-func (i *InternalIamInternalWebAddFilterRequest) UnmarshalJSON(data []byte) error {
-	type unmarshaler InternalIamInternalWebAddFilterRequest
-	var value unmarshaler
-	if err := json.Unmarshal(data, &value); err != nil {
-		return err
-	}
-	*i = InternalIamInternalWebAddFilterRequest(value)
-	extraProperties, err := internal.ExtractExtraProperties(data, *i)
-	if err != nil {
-		return err
-	}
-	i.extraProperties = extraProperties
-	i.rawJSON = json.RawMessage(data)
-	return nil
-}
-
-func (i *InternalIamInternalWebAddFilterRequest) MarshalJSON() ([]byte, error) {
-	type embed InternalIamInternalWebAddFilterRequest
-	var marshaler = struct {
-		embed
-	}{
-		embed: embed(*i),
-	}
-	explicitMarshaler := internal.HandleExplicitFields(marshaler, i.explicitFields)
-	return json.Marshal(explicitMarshaler)
-}
-
-func (i *InternalIamInternalWebAddFilterRequest) String() string {
-	if i == nil {
-		return "<nil>"
-	}
-	if len(i.rawJSON) > 0 {
-		if value, err := internal.StringifyJSON(i.rawJSON); err == nil {
-			return value
-		}
-	}
-	if value, err := internal.StringifyJSON(i); err == nil {
-		return value
-	}
-	return fmt.Sprintf("%#v", i)
-}
-
 // Summary of an API key, without the raw key or hash.
 var (
 	internalIamInternalWebAPIKeyResponseFieldEnabled   = big.NewInt(1 << 0)
@@ -957,6 +1182,126 @@ func (i *InternalIamInternalWebCreateAPIKeyResponse) String() string {
 	return fmt.Sprintf("%#v", i)
 }
 
+// Request body for granting resource access.
+var (
+	internalIamInternalWebGrantAccessRequestFieldResourceID   = big.NewInt(1 << 0)
+	internalIamInternalWebGrantAccessRequestFieldResourceType = big.NewInt(1 << 1)
+	internalIamInternalWebGrantAccessRequestFieldUserID       = big.NewInt(1 << 2)
+)
+
+type InternalIamInternalWebGrantAccessRequest struct {
+	// resource primary key
+	ResourceID int `json:"resource_id" url:"resource_id"`
+	// "aigateway_model" | "aigateway_route" | "files_file"
+	ResourceType string `json:"resource_type" url:"resource_type"`
+	// target user ID
+	UserID int `json:"user_id" url:"user_id"`
+
+	// Private bitmask of fields set to an explicit value and therefore not to be omitted
+	explicitFields *big.Int `json:"-" url:"-"`
+
+	extraProperties map[string]interface{}
+	rawJSON         json.RawMessage
+}
+
+func (i *InternalIamInternalWebGrantAccessRequest) GetResourceID() int {
+	if i == nil {
+		return 0
+	}
+	return i.ResourceID
+}
+
+func (i *InternalIamInternalWebGrantAccessRequest) GetResourceType() string {
+	if i == nil {
+		return ""
+	}
+	return i.ResourceType
+}
+
+func (i *InternalIamInternalWebGrantAccessRequest) GetUserID() int {
+	if i == nil {
+		return 0
+	}
+	return i.UserID
+}
+
+func (i *InternalIamInternalWebGrantAccessRequest) GetExtraProperties() map[string]interface{} {
+	if i == nil {
+		return nil
+	}
+	return i.extraProperties
+}
+
+func (i *InternalIamInternalWebGrantAccessRequest) require(field *big.Int) {
+	if i.explicitFields == nil {
+		i.explicitFields = big.NewInt(0)
+	}
+	i.explicitFields.Or(i.explicitFields, field)
+}
+
+// SetResourceID sets the ResourceID field and marks it as non-optional;
+// this prevents an empty or null value for this field from being omitted during serialization.
+func (i *InternalIamInternalWebGrantAccessRequest) SetResourceID(resourceID int) {
+	i.ResourceID = resourceID
+	i.require(internalIamInternalWebGrantAccessRequestFieldResourceID)
+}
+
+// SetResourceType sets the ResourceType field and marks it as non-optional;
+// this prevents an empty or null value for this field from being omitted during serialization.
+func (i *InternalIamInternalWebGrantAccessRequest) SetResourceType(resourceType string) {
+	i.ResourceType = resourceType
+	i.require(internalIamInternalWebGrantAccessRequestFieldResourceType)
+}
+
+// SetUserID sets the UserID field and marks it as non-optional;
+// this prevents an empty or null value for this field from being omitted during serialization.
+func (i *InternalIamInternalWebGrantAccessRequest) SetUserID(userID int) {
+	i.UserID = userID
+	i.require(internalIamInternalWebGrantAccessRequestFieldUserID)
+}
+
+func (i *InternalIamInternalWebGrantAccessRequest) UnmarshalJSON(data []byte) error {
+	type unmarshaler InternalIamInternalWebGrantAccessRequest
+	var value unmarshaler
+	if err := json.Unmarshal(data, &value); err != nil {
+		return err
+	}
+	*i = InternalIamInternalWebGrantAccessRequest(value)
+	extraProperties, err := internal.ExtractExtraProperties(data, *i)
+	if err != nil {
+		return err
+	}
+	i.extraProperties = extraProperties
+	i.rawJSON = json.RawMessage(data)
+	return nil
+}
+
+func (i *InternalIamInternalWebGrantAccessRequest) MarshalJSON() ([]byte, error) {
+	type embed InternalIamInternalWebGrantAccessRequest
+	var marshaler = struct {
+		embed
+	}{
+		embed: embed(*i),
+	}
+	explicitMarshaler := internal.HandleExplicitFields(marshaler, i.explicitFields)
+	return json.Marshal(explicitMarshaler)
+}
+
+func (i *InternalIamInternalWebGrantAccessRequest) String() string {
+	if i == nil {
+		return "<nil>"
+	}
+	if len(i.rawJSON) > 0 {
+		if value, err := internal.StringifyJSON(i.rawJSON); err == nil {
+			return value
+		}
+	}
+	if value, err := internal.StringifyJSON(i); err == nil {
+		return value
+	}
+	return fmt.Sprintf("%#v", i)
+}
+
 type PostIamAPIKeysRequest struct {
 	StringUnknownMap map[string]any
 	// Requested scopes
@@ -1020,65 +1365,65 @@ func (p *PostIamAPIKeysRequest) Accept(visitor PostIamAPIKeysRequestVisitor) err
 	return fmt.Errorf("type %T does not include a non-empty union type", p)
 }
 
-type PostIamVisibilityFiltersRequest struct {
+type PostIamGrantsRequest struct {
 	StringUnknownMap map[string]any
-	// Visibility filter request
-	InternalIamInternalWebAddFilterRequest *InternalIamInternalWebAddFilterRequest
+	// Resource access grant request
+	InternalIamInternalWebGrantAccessRequest *InternalIamInternalWebGrantAccessRequest
 
 	typ string
 }
 
-func (p *PostIamVisibilityFiltersRequest) GetStringUnknownMap() map[string]any {
+func (p *PostIamGrantsRequest) GetStringUnknownMap() map[string]any {
 	if p == nil {
 		return nil
 	}
 	return p.StringUnknownMap
 }
 
-func (p *PostIamVisibilityFiltersRequest) GetInternalIamInternalWebAddFilterRequest() *InternalIamInternalWebAddFilterRequest {
+func (p *PostIamGrantsRequest) GetInternalIamInternalWebGrantAccessRequest() *InternalIamInternalWebGrantAccessRequest {
 	if p == nil {
 		return nil
 	}
-	return p.InternalIamInternalWebAddFilterRequest
+	return p.InternalIamInternalWebGrantAccessRequest
 }
 
-func (p *PostIamVisibilityFiltersRequest) UnmarshalJSON(data []byte) error {
+func (p *PostIamGrantsRequest) UnmarshalJSON(data []byte) error {
 	var valueStringUnknownMap map[string]any
 	if err := json.Unmarshal(data, &valueStringUnknownMap); err == nil {
 		p.typ = "StringUnknownMap"
 		p.StringUnknownMap = valueStringUnknownMap
 		return nil
 	}
-	valueInternalIamInternalWebAddFilterRequest := new(InternalIamInternalWebAddFilterRequest)
-	if err := json.Unmarshal(data, &valueInternalIamInternalWebAddFilterRequest); err == nil {
-		p.typ = "InternalIamInternalWebAddFilterRequest"
-		p.InternalIamInternalWebAddFilterRequest = valueInternalIamInternalWebAddFilterRequest
+	valueInternalIamInternalWebGrantAccessRequest := new(InternalIamInternalWebGrantAccessRequest)
+	if err := json.Unmarshal(data, &valueInternalIamInternalWebGrantAccessRequest); err == nil {
+		p.typ = "InternalIamInternalWebGrantAccessRequest"
+		p.InternalIamInternalWebGrantAccessRequest = valueInternalIamInternalWebGrantAccessRequest
 		return nil
 	}
 	return fmt.Errorf("%s cannot be deserialized as a %T", data, p)
 }
 
-func (p PostIamVisibilityFiltersRequest) MarshalJSON() ([]byte, error) {
+func (p PostIamGrantsRequest) MarshalJSON() ([]byte, error) {
 	if p.typ == "StringUnknownMap" || p.StringUnknownMap != nil {
 		return json.Marshal(p.StringUnknownMap)
 	}
-	if p.typ == "InternalIamInternalWebAddFilterRequest" || p.InternalIamInternalWebAddFilterRequest != nil {
-		return json.Marshal(p.InternalIamInternalWebAddFilterRequest)
+	if p.typ == "InternalIamInternalWebGrantAccessRequest" || p.InternalIamInternalWebGrantAccessRequest != nil {
+		return json.Marshal(p.InternalIamInternalWebGrantAccessRequest)
 	}
 	return nil, fmt.Errorf("type %T does not include a non-empty union type", p)
 }
 
-type PostIamVisibilityFiltersRequestVisitor interface {
+type PostIamGrantsRequestVisitor interface {
 	VisitStringUnknownMap(map[string]any) error
-	VisitInternalIamInternalWebAddFilterRequest(*InternalIamInternalWebAddFilterRequest) error
+	VisitInternalIamInternalWebGrantAccessRequest(*InternalIamInternalWebGrantAccessRequest) error
 }
 
-func (p *PostIamVisibilityFiltersRequest) Accept(visitor PostIamVisibilityFiltersRequestVisitor) error {
+func (p *PostIamGrantsRequest) Accept(visitor PostIamGrantsRequestVisitor) error {
 	if p.typ == "StringUnknownMap" || p.StringUnknownMap != nil {
 		return visitor.VisitStringUnknownMap(p.StringUnknownMap)
 	}
-	if p.typ == "InternalIamInternalWebAddFilterRequest" || p.InternalIamInternalWebAddFilterRequest != nil {
-		return visitor.VisitInternalIamInternalWebAddFilterRequest(p.InternalIamInternalWebAddFilterRequest)
+	if p.typ == "InternalIamInternalWebGrantAccessRequest" || p.InternalIamInternalWebGrantAccessRequest != nil {
+		return visitor.VisitInternalIamInternalWebGrantAccessRequest(p.InternalIamInternalWebGrantAccessRequest)
 	}
 	return fmt.Errorf("type %T does not include a non-empty union type", p)
 }

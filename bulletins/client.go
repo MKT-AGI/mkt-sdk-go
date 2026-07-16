@@ -39,7 +39,7 @@ func (c *Client) ListPublishedBulletins(
 	ctx context.Context,
 	request *mktsdkgo.GetBulletinsRequest,
 	opts ...option.RequestOption,
-) (*mktsdkgo.GithubComMktAgiAixInternalPkgGinxResultArrayGithubComMktAgiAixInternalBulletinDomainBulletin, error) {
+) (*mktsdkgo.GithubComMktAgiAixInternalPkgGinxResultArrayGithubComMktAgiAixInternalBulletinInternalDomainBulletin, error) {
 	response, err := c.WithRawResponse.ListPublishedBulletins(
 		ctx,
 		request,
@@ -56,7 +56,7 @@ func (c *Client) GetBulletinByID(
 	ctx context.Context,
 	request *mktsdkgo.GetBulletinsIDRequest,
 	opts ...option.RequestOption,
-) (*mktsdkgo.GithubComMktAgiAixInternalPkgGinxResultGithubComMktAgiAixInternalBulletinDomainBulletin, error) {
+) (*mktsdkgo.GithubComMktAgiAixInternalPkgGinxResultGithubComMktAgiAixInternalBulletinInternalDomainBulletin, error) {
 	response, err := c.WithRawResponse.GetBulletinByID(
 		ctx,
 		request,

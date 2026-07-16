@@ -10,56 +10,6 @@ import (
 )
 
 var (
-	postGatewayUserIDRoutesIDFiltersRequestFieldUserID = big.NewInt(1 << 0)
-	postGatewayUserIDRoutesIDFiltersRequestFieldID     = big.NewInt(1 << 1)
-)
-
-type PostGatewayUserIDRoutesIDFiltersRequest struct {
-	// User ID
-	UserID int `json:"-" url:"-"`
-	// Route ID
-	ID   int                                          `json:"-" url:"-"`
-	Body *PostGatewayUserIDRoutesIDFiltersRequestBody `json:"-" url:"-"`
-
-	// Private bitmask of fields set to an explicit value and therefore not to be omitted
-	explicitFields *big.Int `json:"-" url:"-"`
-}
-
-func (p *PostGatewayUserIDRoutesIDFiltersRequest) require(field *big.Int) {
-	if p.explicitFields == nil {
-		p.explicitFields = big.NewInt(0)
-	}
-	p.explicitFields.Or(p.explicitFields, field)
-}
-
-// SetUserID sets the UserID field and marks it as non-optional;
-// this prevents an empty or null value for this field from being omitted during serialization.
-func (p *PostGatewayUserIDRoutesIDFiltersRequest) SetUserID(userID int) {
-	p.UserID = userID
-	p.require(postGatewayUserIDRoutesIDFiltersRequestFieldUserID)
-}
-
-// SetID sets the ID field and marks it as non-optional;
-// this prevents an empty or null value for this field from being omitted during serialization.
-func (p *PostGatewayUserIDRoutesIDFiltersRequest) SetID(id int) {
-	p.ID = id
-	p.require(postGatewayUserIDRoutesIDFiltersRequestFieldID)
-}
-
-func (p *PostGatewayUserIDRoutesIDFiltersRequest) UnmarshalJSON(data []byte) error {
-	body := new(PostGatewayUserIDRoutesIDFiltersRequestBody)
-	if err := json.Unmarshal(data, &body); err != nil {
-		return err
-	}
-	p.Body = body
-	return nil
-}
-
-func (p *PostGatewayUserIDRoutesIDFiltersRequest) MarshalJSON() ([]byte, error) {
-	return json.Marshal(p.Body)
-}
-
-var (
 	postGatewayUserIDRoutesRequestFieldUserID = big.NewInt(1 << 0)
 )
 
@@ -172,11 +122,61 @@ func (g *GetGatewayUserIDRoutesIDRequest) SetID(id int) {
 }
 
 var (
-	getGatewayUserIDRoutesIDFiltersRequestFieldUserID = big.NewInt(1 << 0)
-	getGatewayUserIDRoutesIDFiltersRequestFieldID     = big.NewInt(1 << 1)
+	postGatewayUserIDRoutesIDGrantsRequestFieldUserID = big.NewInt(1 << 0)
+	postGatewayUserIDRoutesIDGrantsRequestFieldID     = big.NewInt(1 << 1)
 )
 
-type GetGatewayUserIDRoutesIDFiltersRequest struct {
+type PostGatewayUserIDRoutesIDGrantsRequest struct {
+	// User ID
+	UserID int `json:"-" url:"-"`
+	// Route ID
+	ID   int                                         `json:"-" url:"-"`
+	Body *PostGatewayUserIDRoutesIDGrantsRequestBody `json:"-" url:"-"`
+
+	// Private bitmask of fields set to an explicit value and therefore not to be omitted
+	explicitFields *big.Int `json:"-" url:"-"`
+}
+
+func (p *PostGatewayUserIDRoutesIDGrantsRequest) require(field *big.Int) {
+	if p.explicitFields == nil {
+		p.explicitFields = big.NewInt(0)
+	}
+	p.explicitFields.Or(p.explicitFields, field)
+}
+
+// SetUserID sets the UserID field and marks it as non-optional;
+// this prevents an empty or null value for this field from being omitted during serialization.
+func (p *PostGatewayUserIDRoutesIDGrantsRequest) SetUserID(userID int) {
+	p.UserID = userID
+	p.require(postGatewayUserIDRoutesIDGrantsRequestFieldUserID)
+}
+
+// SetID sets the ID field and marks it as non-optional;
+// this prevents an empty or null value for this field from being omitted during serialization.
+func (p *PostGatewayUserIDRoutesIDGrantsRequest) SetID(id int) {
+	p.ID = id
+	p.require(postGatewayUserIDRoutesIDGrantsRequestFieldID)
+}
+
+func (p *PostGatewayUserIDRoutesIDGrantsRequest) UnmarshalJSON(data []byte) error {
+	body := new(PostGatewayUserIDRoutesIDGrantsRequestBody)
+	if err := json.Unmarshal(data, &body); err != nil {
+		return err
+	}
+	p.Body = body
+	return nil
+}
+
+func (p *PostGatewayUserIDRoutesIDGrantsRequest) MarshalJSON() ([]byte, error) {
+	return json.Marshal(p.Body)
+}
+
+var (
+	getGatewayUserIDRoutesIDGrantsRequestFieldUserID = big.NewInt(1 << 0)
+	getGatewayUserIDRoutesIDGrantsRequestFieldID     = big.NewInt(1 << 1)
+)
+
+type GetGatewayUserIDRoutesIDGrantsRequest struct {
 	// User ID
 	UserID int `json:"-" url:"-"`
 	// Route ID
@@ -186,7 +186,7 @@ type GetGatewayUserIDRoutesIDFiltersRequest struct {
 	explicitFields *big.Int `json:"-" url:"-"`
 }
 
-func (g *GetGatewayUserIDRoutesIDFiltersRequest) require(field *big.Int) {
+func (g *GetGatewayUserIDRoutesIDGrantsRequest) require(field *big.Int) {
 	if g.explicitFields == nil {
 		g.explicitFields = big.NewInt(0)
 	}
@@ -195,16 +195,16 @@ func (g *GetGatewayUserIDRoutesIDFiltersRequest) require(field *big.Int) {
 
 // SetUserID sets the UserID field and marks it as non-optional;
 // this prevents an empty or null value for this field from being omitted during serialization.
-func (g *GetGatewayUserIDRoutesIDFiltersRequest) SetUserID(userID int) {
+func (g *GetGatewayUserIDRoutesIDGrantsRequest) SetUserID(userID int) {
 	g.UserID = userID
-	g.require(getGatewayUserIDRoutesIDFiltersRequestFieldUserID)
+	g.require(getGatewayUserIDRoutesIDGrantsRequestFieldUserID)
 }
 
 // SetID sets the ID field and marks it as non-optional;
 // this prevents an empty or null value for this field from being omitted during serialization.
-func (g *GetGatewayUserIDRoutesIDFiltersRequest) SetID(id int) {
+func (g *GetGatewayUserIDRoutesIDGrantsRequest) SetID(id int) {
 	g.ID = id
-	g.require(getGatewayUserIDRoutesIDFiltersRequestFieldID)
+	g.require(getGatewayUserIDRoutesIDGrantsRequestFieldID)
 }
 
 var (
@@ -234,12 +234,12 @@ func (g *GetGatewayUserIDRoutesRequest) SetUserID(userID int) {
 }
 
 var (
-	deleteGatewayUserIDRoutesIDFiltersTargetUserIDRequestFieldUserID       = big.NewInt(1 << 0)
-	deleteGatewayUserIDRoutesIDFiltersTargetUserIDRequestFieldID           = big.NewInt(1 << 1)
-	deleteGatewayUserIDRoutesIDFiltersTargetUserIDRequestFieldTargetUserID = big.NewInt(1 << 2)
+	deleteGatewayUserIDRoutesIDGrantsTargetUserIDRequestFieldUserID       = big.NewInt(1 << 0)
+	deleteGatewayUserIDRoutesIDGrantsTargetUserIDRequestFieldID           = big.NewInt(1 << 1)
+	deleteGatewayUserIDRoutesIDGrantsTargetUserIDRequestFieldTargetUserID = big.NewInt(1 << 2)
 )
 
-type DeleteGatewayUserIDRoutesIDFiltersTargetUserIDRequest struct {
+type DeleteGatewayUserIDRoutesIDGrantsTargetUserIDRequest struct {
 	// User ID
 	UserID int `json:"-" url:"-"`
 	// Route ID
@@ -251,7 +251,7 @@ type DeleteGatewayUserIDRoutesIDFiltersTargetUserIDRequest struct {
 	explicitFields *big.Int `json:"-" url:"-"`
 }
 
-func (d *DeleteGatewayUserIDRoutesIDFiltersTargetUserIDRequest) require(field *big.Int) {
+func (d *DeleteGatewayUserIDRoutesIDGrantsTargetUserIDRequest) require(field *big.Int) {
 	if d.explicitFields == nil {
 		d.explicitFields = big.NewInt(0)
 	}
@@ -260,23 +260,23 @@ func (d *DeleteGatewayUserIDRoutesIDFiltersTargetUserIDRequest) require(field *b
 
 // SetUserID sets the UserID field and marks it as non-optional;
 // this prevents an empty or null value for this field from being omitted during serialization.
-func (d *DeleteGatewayUserIDRoutesIDFiltersTargetUserIDRequest) SetUserID(userID int) {
+func (d *DeleteGatewayUserIDRoutesIDGrantsTargetUserIDRequest) SetUserID(userID int) {
 	d.UserID = userID
-	d.require(deleteGatewayUserIDRoutesIDFiltersTargetUserIDRequestFieldUserID)
+	d.require(deleteGatewayUserIDRoutesIDGrantsTargetUserIDRequestFieldUserID)
 }
 
 // SetID sets the ID field and marks it as non-optional;
 // this prevents an empty or null value for this field from being omitted during serialization.
-func (d *DeleteGatewayUserIDRoutesIDFiltersTargetUserIDRequest) SetID(id int) {
+func (d *DeleteGatewayUserIDRoutesIDGrantsTargetUserIDRequest) SetID(id int) {
 	d.ID = id
-	d.require(deleteGatewayUserIDRoutesIDFiltersTargetUserIDRequestFieldID)
+	d.require(deleteGatewayUserIDRoutesIDGrantsTargetUserIDRequestFieldID)
 }
 
 // SetTargetUserID sets the TargetUserID field and marks it as non-optional;
 // this prevents an empty or null value for this field from being omitted during serialization.
-func (d *DeleteGatewayUserIDRoutesIDFiltersTargetUserIDRequest) SetTargetUserID(targetUserID int) {
+func (d *DeleteGatewayUserIDRoutesIDGrantsTargetUserIDRequest) SetTargetUserID(targetUserID int) {
 	d.TargetUserID = targetUserID
-	d.require(deleteGatewayUserIDRoutesIDFiltersTargetUserIDRequestFieldTargetUserID)
+	d.require(deleteGatewayUserIDRoutesIDGrantsTargetUserIDRequestFieldTargetUserID)
 }
 
 var (
@@ -640,10 +640,10 @@ func (g *GithubComMktAgiAixInternalPkgGinxResultInternalAigatewayInternalWebUser
 }
 
 var (
-	internalAigatewayInternalWebAddRouteFilterRequestFieldUserID = big.NewInt(1 << 0)
+	internalAigatewayInternalWebAddRouteGrantRequestFieldUserID = big.NewInt(1 << 0)
 )
 
-type InternalAigatewayInternalWebAddRouteFilterRequest struct {
+type InternalAigatewayInternalWebAddRouteGrantRequest struct {
 	// UserID is the target user ID to grant route access.
 	UserID *int `json:"user_id,omitempty" url:"user_id,omitempty"`
 
@@ -654,21 +654,21 @@ type InternalAigatewayInternalWebAddRouteFilterRequest struct {
 	rawJSON         json.RawMessage
 }
 
-func (i *InternalAigatewayInternalWebAddRouteFilterRequest) GetUserID() *int {
+func (i *InternalAigatewayInternalWebAddRouteGrantRequest) GetUserID() *int {
 	if i == nil {
 		return nil
 	}
 	return i.UserID
 }
 
-func (i *InternalAigatewayInternalWebAddRouteFilterRequest) GetExtraProperties() map[string]interface{} {
+func (i *InternalAigatewayInternalWebAddRouteGrantRequest) GetExtraProperties() map[string]interface{} {
 	if i == nil {
 		return nil
 	}
 	return i.extraProperties
 }
 
-func (i *InternalAigatewayInternalWebAddRouteFilterRequest) require(field *big.Int) {
+func (i *InternalAigatewayInternalWebAddRouteGrantRequest) require(field *big.Int) {
 	if i.explicitFields == nil {
 		i.explicitFields = big.NewInt(0)
 	}
@@ -677,18 +677,18 @@ func (i *InternalAigatewayInternalWebAddRouteFilterRequest) require(field *big.I
 
 // SetUserID sets the UserID field and marks it as non-optional;
 // this prevents an empty or null value for this field from being omitted during serialization.
-func (i *InternalAigatewayInternalWebAddRouteFilterRequest) SetUserID(userID *int) {
+func (i *InternalAigatewayInternalWebAddRouteGrantRequest) SetUserID(userID *int) {
 	i.UserID = userID
-	i.require(internalAigatewayInternalWebAddRouteFilterRequestFieldUserID)
+	i.require(internalAigatewayInternalWebAddRouteGrantRequestFieldUserID)
 }
 
-func (i *InternalAigatewayInternalWebAddRouteFilterRequest) UnmarshalJSON(data []byte) error {
-	type unmarshaler InternalAigatewayInternalWebAddRouteFilterRequest
+func (i *InternalAigatewayInternalWebAddRouteGrantRequest) UnmarshalJSON(data []byte) error {
+	type unmarshaler InternalAigatewayInternalWebAddRouteGrantRequest
 	var value unmarshaler
 	if err := json.Unmarshal(data, &value); err != nil {
 		return err
 	}
-	*i = InternalAigatewayInternalWebAddRouteFilterRequest(value)
+	*i = InternalAigatewayInternalWebAddRouteGrantRequest(value)
 	extraProperties, err := internal.ExtractExtraProperties(data, *i)
 	if err != nil {
 		return err
@@ -698,8 +698,8 @@ func (i *InternalAigatewayInternalWebAddRouteFilterRequest) UnmarshalJSON(data [
 	return nil
 }
 
-func (i *InternalAigatewayInternalWebAddRouteFilterRequest) MarshalJSON() ([]byte, error) {
-	type embed InternalAigatewayInternalWebAddRouteFilterRequest
+func (i *InternalAigatewayInternalWebAddRouteGrantRequest) MarshalJSON() ([]byte, error) {
+	type embed InternalAigatewayInternalWebAddRouteGrantRequest
 	var marshaler = struct {
 		embed
 	}{
@@ -709,7 +709,7 @@ func (i *InternalAigatewayInternalWebAddRouteFilterRequest) MarshalJSON() ([]byt
 	return json.Marshal(explicitMarshaler)
 }
 
-func (i *InternalAigatewayInternalWebAddRouteFilterRequest) String() string {
+func (i *InternalAigatewayInternalWebAddRouteGrantRequest) String() string {
 	if i == nil {
 		return "<nil>"
 	}
@@ -1048,65 +1048,65 @@ func (i *InternalAigatewayInternalWebUserRouteResponse) String() string {
 	return fmt.Sprintf("%#v", i)
 }
 
-type PostGatewayUserIDRoutesIDFiltersRequestBody struct {
+type PostGatewayUserIDRoutesIDGrantsRequestBody struct {
 	StringUnknownMap map[string]any
 	// Target user ID
-	InternalAigatewayInternalWebAddRouteFilterRequest *InternalAigatewayInternalWebAddRouteFilterRequest
+	InternalAigatewayInternalWebAddRouteGrantRequest *InternalAigatewayInternalWebAddRouteGrantRequest
 
 	typ string
 }
 
-func (p *PostGatewayUserIDRoutesIDFiltersRequestBody) GetStringUnknownMap() map[string]any {
+func (p *PostGatewayUserIDRoutesIDGrantsRequestBody) GetStringUnknownMap() map[string]any {
 	if p == nil {
 		return nil
 	}
 	return p.StringUnknownMap
 }
 
-func (p *PostGatewayUserIDRoutesIDFiltersRequestBody) GetInternalAigatewayInternalWebAddRouteFilterRequest() *InternalAigatewayInternalWebAddRouteFilterRequest {
+func (p *PostGatewayUserIDRoutesIDGrantsRequestBody) GetInternalAigatewayInternalWebAddRouteGrantRequest() *InternalAigatewayInternalWebAddRouteGrantRequest {
 	if p == nil {
 		return nil
 	}
-	return p.InternalAigatewayInternalWebAddRouteFilterRequest
+	return p.InternalAigatewayInternalWebAddRouteGrantRequest
 }
 
-func (p *PostGatewayUserIDRoutesIDFiltersRequestBody) UnmarshalJSON(data []byte) error {
+func (p *PostGatewayUserIDRoutesIDGrantsRequestBody) UnmarshalJSON(data []byte) error {
 	var valueStringUnknownMap map[string]any
 	if err := json.Unmarshal(data, &valueStringUnknownMap); err == nil {
 		p.typ = "StringUnknownMap"
 		p.StringUnknownMap = valueStringUnknownMap
 		return nil
 	}
-	valueInternalAigatewayInternalWebAddRouteFilterRequest := new(InternalAigatewayInternalWebAddRouteFilterRequest)
-	if err := json.Unmarshal(data, &valueInternalAigatewayInternalWebAddRouteFilterRequest); err == nil {
-		p.typ = "InternalAigatewayInternalWebAddRouteFilterRequest"
-		p.InternalAigatewayInternalWebAddRouteFilterRequest = valueInternalAigatewayInternalWebAddRouteFilterRequest
+	valueInternalAigatewayInternalWebAddRouteGrantRequest := new(InternalAigatewayInternalWebAddRouteGrantRequest)
+	if err := json.Unmarshal(data, &valueInternalAigatewayInternalWebAddRouteGrantRequest); err == nil {
+		p.typ = "InternalAigatewayInternalWebAddRouteGrantRequest"
+		p.InternalAigatewayInternalWebAddRouteGrantRequest = valueInternalAigatewayInternalWebAddRouteGrantRequest
 		return nil
 	}
 	return fmt.Errorf("%s cannot be deserialized as a %T", data, p)
 }
 
-func (p PostGatewayUserIDRoutesIDFiltersRequestBody) MarshalJSON() ([]byte, error) {
+func (p PostGatewayUserIDRoutesIDGrantsRequestBody) MarshalJSON() ([]byte, error) {
 	if p.typ == "StringUnknownMap" || p.StringUnknownMap != nil {
 		return json.Marshal(p.StringUnknownMap)
 	}
-	if p.typ == "InternalAigatewayInternalWebAddRouteFilterRequest" || p.InternalAigatewayInternalWebAddRouteFilterRequest != nil {
-		return json.Marshal(p.InternalAigatewayInternalWebAddRouteFilterRequest)
+	if p.typ == "InternalAigatewayInternalWebAddRouteGrantRequest" || p.InternalAigatewayInternalWebAddRouteGrantRequest != nil {
+		return json.Marshal(p.InternalAigatewayInternalWebAddRouteGrantRequest)
 	}
 	return nil, fmt.Errorf("type %T does not include a non-empty union type", p)
 }
 
-type PostGatewayUserIDRoutesIDFiltersRequestBodyVisitor interface {
+type PostGatewayUserIDRoutesIDGrantsRequestBodyVisitor interface {
 	VisitStringUnknownMap(map[string]any) error
-	VisitInternalAigatewayInternalWebAddRouteFilterRequest(*InternalAigatewayInternalWebAddRouteFilterRequest) error
+	VisitInternalAigatewayInternalWebAddRouteGrantRequest(*InternalAigatewayInternalWebAddRouteGrantRequest) error
 }
 
-func (p *PostGatewayUserIDRoutesIDFiltersRequestBody) Accept(visitor PostGatewayUserIDRoutesIDFiltersRequestBodyVisitor) error {
+func (p *PostGatewayUserIDRoutesIDGrantsRequestBody) Accept(visitor PostGatewayUserIDRoutesIDGrantsRequestBodyVisitor) error {
 	if p.typ == "StringUnknownMap" || p.StringUnknownMap != nil {
 		return visitor.VisitStringUnknownMap(p.StringUnknownMap)
 	}
-	if p.typ == "InternalAigatewayInternalWebAddRouteFilterRequest" || p.InternalAigatewayInternalWebAddRouteFilterRequest != nil {
-		return visitor.VisitInternalAigatewayInternalWebAddRouteFilterRequest(p.InternalAigatewayInternalWebAddRouteFilterRequest)
+	if p.typ == "InternalAigatewayInternalWebAddRouteGrantRequest" || p.InternalAigatewayInternalWebAddRouteGrantRequest != nil {
+		return visitor.VisitInternalAigatewayInternalWebAddRouteGrantRequest(p.InternalAigatewayInternalWebAddRouteGrantRequest)
 	}
 	return fmt.Errorf("type %T does not include a non-empty union type", p)
 }

@@ -155,43 +155,43 @@ func (p *PostAdminBugReportsIDPublishRequest) SetID(id int) {
 
 var (
 	githubComMktAgiAixInternalBugreportsInternalDomainBugReportFieldClientTimestamp   = big.NewInt(1 << 0)
-	githubComMktAgiAixInternalBugreportsInternalDomainBugReportFieldCreatedAt         = big.NewInt(1 << 1)
-	githubComMktAgiAixInternalBugreportsInternalDomainBugReportFieldDescription       = big.NewInt(1 << 2)
-	githubComMktAgiAixInternalBugreportsInternalDomainBugReportFieldDomainLabel       = big.NewInt(1 << 3)
-	githubComMktAgiAixInternalBugreportsInternalDomainBugReportFieldElement           = big.NewInt(1 << 4)
+	githubComMktAgiAixInternalBugreportsInternalDomainBugReportFieldContext           = big.NewInt(1 << 1)
+	githubComMktAgiAixInternalBugreportsInternalDomainBugReportFieldCreatedAt         = big.NewInt(1 << 2)
+	githubComMktAgiAixInternalBugreportsInternalDomainBugReportFieldDescription       = big.NewInt(1 << 3)
+	githubComMktAgiAixInternalBugreportsInternalDomainBugReportFieldDomainLabel       = big.NewInt(1 << 4)
 	githubComMktAgiAixInternalBugreportsInternalDomainBugReportFieldGithubIssueNumber = big.NewInt(1 << 5)
 	githubComMktAgiAixInternalBugreportsInternalDomainBugReportFieldGithubIssueURL    = big.NewInt(1 << 6)
 	githubComMktAgiAixInternalBugreportsInternalDomainBugReportFieldID                = big.NewInt(1 << 7)
-	githubComMktAgiAixInternalBugreportsInternalDomainBugReportFieldReporterID        = big.NewInt(1 << 8)
-	githubComMktAgiAixInternalBugreportsInternalDomainBugReportFieldReporterName      = big.NewInt(1 << 9)
-	githubComMktAgiAixInternalBugreportsInternalDomainBugReportFieldReviewNotes       = big.NewInt(1 << 10)
-	githubComMktAgiAixInternalBugreportsInternalDomainBugReportFieldReviewerID        = big.NewInt(1 << 11)
-	githubComMktAgiAixInternalBugreportsInternalDomainBugReportFieldStatus            = big.NewInt(1 << 12)
-	githubComMktAgiAixInternalBugreportsInternalDomainBugReportFieldTitle             = big.NewInt(1 << 13)
-	githubComMktAgiAixInternalBugreportsInternalDomainBugReportFieldUpdatedAt         = big.NewInt(1 << 14)
-	githubComMktAgiAixInternalBugreportsInternalDomainBugReportFieldURL               = big.NewInt(1 << 15)
-	githubComMktAgiAixInternalBugreportsInternalDomainBugReportFieldViewport          = big.NewInt(1 << 16)
+	githubComMktAgiAixInternalBugreportsInternalDomainBugReportFieldLabel             = big.NewInt(1 << 8)
+	githubComMktAgiAixInternalBugreportsInternalDomainBugReportFieldReporterID        = big.NewInt(1 << 9)
+	githubComMktAgiAixInternalBugreportsInternalDomainBugReportFieldReporterName      = big.NewInt(1 << 10)
+	githubComMktAgiAixInternalBugreportsInternalDomainBugReportFieldReviewNotes       = big.NewInt(1 << 11)
+	githubComMktAgiAixInternalBugreportsInternalDomainBugReportFieldReviewerID        = big.NewInt(1 << 12)
+	githubComMktAgiAixInternalBugreportsInternalDomainBugReportFieldStatus            = big.NewInt(1 << 13)
+	githubComMktAgiAixInternalBugreportsInternalDomainBugReportFieldTitle             = big.NewInt(1 << 14)
+	githubComMktAgiAixInternalBugreportsInternalDomainBugReportFieldUpdatedAt         = big.NewInt(1 << 15)
+	githubComMktAgiAixInternalBugreportsInternalDomainBugReportFieldURL               = big.NewInt(1 << 16)
 )
 
 type GithubComMktAgiAixInternalBugreportsInternalDomainBugReport struct {
-	ClientTimestamp   *int                                                           `json:"client_timestamp,omitempty" url:"client_timestamp,omitempty"`
-	CreatedAt         *int                                                           `json:"created_at,omitempty" url:"created_at,omitempty"`
-	Description       *string                                                        `json:"description,omitempty" url:"description,omitempty"`
-	DomainLabel       *string                                                        `json:"domain_label,omitempty" url:"domain_label,omitempty"`
-	Element           *GithubComMktAgiAixInternalBugreportsInternalDomainElementData `json:"element,omitempty" url:"element,omitempty"`
-	GithubIssueNumber *int                                                           `json:"github_issue_number,omitempty" url:"github_issue_number,omitempty"`
-	GithubIssueURL    *string                                                        `json:"github_issue_url,omitempty" url:"github_issue_url,omitempty"`
-	ID                *int                                                           `json:"id,omitempty" url:"id,omitempty"`
-	ReporterID        *int                                                           `json:"reporter_id,omitempty" url:"reporter_id,omitempty"`
+	ClientTimestamp   *int    `json:"client_timestamp,omitempty" url:"client_timestamp,omitempty"`
+	Context           []int   `json:"context,omitempty" url:"context,omitempty"`
+	CreatedAt         *int    `json:"created_at,omitempty" url:"created_at,omitempty"`
+	Description       *string `json:"description,omitempty" url:"description,omitempty"`
+	DomainLabel       *string `json:"domain_label,omitempty" url:"domain_label,omitempty"`
+	GithubIssueNumber *int    `json:"github_issue_number,omitempty" url:"github_issue_number,omitempty"`
+	GithubIssueURL    *string `json:"github_issue_url,omitempty" url:"github_issue_url,omitempty"`
+	ID                *int    `json:"id,omitempty" url:"id,omitempty"`
+	Label             *string `json:"label,omitempty" url:"label,omitempty"`
+	ReporterID        *int    `json:"reporter_id,omitempty" url:"reporter_id,omitempty"`
 	// populated via service-layer JOIN
-	ReporterName *string                                                         `json:"reporter_name,omitempty" url:"reporter_name,omitempty"`
-	ReviewNotes  *string                                                         `json:"review_notes,omitempty" url:"review_notes,omitempty"`
-	ReviewerID   *int                                                            `json:"reviewer_id,omitempty" url:"reviewer_id,omitempty"`
-	Status       *string                                                         `json:"status,omitempty" url:"status,omitempty"`
-	Title        *string                                                         `json:"title,omitempty" url:"title,omitempty"`
-	UpdatedAt    *int                                                            `json:"updated_at,omitempty" url:"updated_at,omitempty"`
-	URL          *string                                                         `json:"url,omitempty" url:"url,omitempty"`
-	Viewport     *GithubComMktAgiAixInternalBugreportsInternalDomainViewportData `json:"viewport,omitempty" url:"viewport,omitempty"`
+	ReporterName *string `json:"reporter_name,omitempty" url:"reporter_name,omitempty"`
+	ReviewNotes  *string `json:"review_notes,omitempty" url:"review_notes,omitempty"`
+	ReviewerID   *int    `json:"reviewer_id,omitempty" url:"reviewer_id,omitempty"`
+	Status       *string `json:"status,omitempty" url:"status,omitempty"`
+	Title        *string `json:"title,omitempty" url:"title,omitempty"`
+	UpdatedAt    *int    `json:"updated_at,omitempty" url:"updated_at,omitempty"`
+	URL          *string `json:"url,omitempty" url:"url,omitempty"`
 
 	// Private bitmask of fields set to an explicit value and therefore not to be omitted
 	explicitFields *big.Int `json:"-" url:"-"`
@@ -205,6 +205,13 @@ func (g *GithubComMktAgiAixInternalBugreportsInternalDomainBugReport) GetClientT
 		return nil
 	}
 	return g.ClientTimestamp
+}
+
+func (g *GithubComMktAgiAixInternalBugreportsInternalDomainBugReport) GetContext() []int {
+	if g == nil {
+		return nil
+	}
+	return g.Context
 }
 
 func (g *GithubComMktAgiAixInternalBugreportsInternalDomainBugReport) GetCreatedAt() *int {
@@ -228,13 +235,6 @@ func (g *GithubComMktAgiAixInternalBugreportsInternalDomainBugReport) GetDomainL
 	return g.DomainLabel
 }
 
-func (g *GithubComMktAgiAixInternalBugreportsInternalDomainBugReport) GetElement() *GithubComMktAgiAixInternalBugreportsInternalDomainElementData {
-	if g == nil {
-		return nil
-	}
-	return g.Element
-}
-
 func (g *GithubComMktAgiAixInternalBugreportsInternalDomainBugReport) GetGithubIssueNumber() *int {
 	if g == nil {
 		return nil
@@ -254,6 +254,13 @@ func (g *GithubComMktAgiAixInternalBugreportsInternalDomainBugReport) GetID() *i
 		return nil
 	}
 	return g.ID
+}
+
+func (g *GithubComMktAgiAixInternalBugreportsInternalDomainBugReport) GetLabel() *string {
+	if g == nil {
+		return nil
+	}
+	return g.Label
 }
 
 func (g *GithubComMktAgiAixInternalBugreportsInternalDomainBugReport) GetReporterID() *int {
@@ -312,13 +319,6 @@ func (g *GithubComMktAgiAixInternalBugreportsInternalDomainBugReport) GetURL() *
 	return g.URL
 }
 
-func (g *GithubComMktAgiAixInternalBugreportsInternalDomainBugReport) GetViewport() *GithubComMktAgiAixInternalBugreportsInternalDomainViewportData {
-	if g == nil {
-		return nil
-	}
-	return g.Viewport
-}
-
 func (g *GithubComMktAgiAixInternalBugreportsInternalDomainBugReport) GetExtraProperties() map[string]interface{} {
 	if g == nil {
 		return nil
@@ -338,6 +338,13 @@ func (g *GithubComMktAgiAixInternalBugreportsInternalDomainBugReport) require(fi
 func (g *GithubComMktAgiAixInternalBugreportsInternalDomainBugReport) SetClientTimestamp(clientTimestamp *int) {
 	g.ClientTimestamp = clientTimestamp
 	g.require(githubComMktAgiAixInternalBugreportsInternalDomainBugReportFieldClientTimestamp)
+}
+
+// SetContext sets the Context field and marks it as non-optional;
+// this prevents an empty or null value for this field from being omitted during serialization.
+func (g *GithubComMktAgiAixInternalBugreportsInternalDomainBugReport) SetContext(context []int) {
+	g.Context = context
+	g.require(githubComMktAgiAixInternalBugreportsInternalDomainBugReportFieldContext)
 }
 
 // SetCreatedAt sets the CreatedAt field and marks it as non-optional;
@@ -361,13 +368,6 @@ func (g *GithubComMktAgiAixInternalBugreportsInternalDomainBugReport) SetDomainL
 	g.require(githubComMktAgiAixInternalBugreportsInternalDomainBugReportFieldDomainLabel)
 }
 
-// SetElement sets the Element field and marks it as non-optional;
-// this prevents an empty or null value for this field from being omitted during serialization.
-func (g *GithubComMktAgiAixInternalBugreportsInternalDomainBugReport) SetElement(element *GithubComMktAgiAixInternalBugreportsInternalDomainElementData) {
-	g.Element = element
-	g.require(githubComMktAgiAixInternalBugreportsInternalDomainBugReportFieldElement)
-}
-
 // SetGithubIssueNumber sets the GithubIssueNumber field and marks it as non-optional;
 // this prevents an empty or null value for this field from being omitted during serialization.
 func (g *GithubComMktAgiAixInternalBugreportsInternalDomainBugReport) SetGithubIssueNumber(githubIssueNumber *int) {
@@ -387,6 +387,13 @@ func (g *GithubComMktAgiAixInternalBugreportsInternalDomainBugReport) SetGithubI
 func (g *GithubComMktAgiAixInternalBugreportsInternalDomainBugReport) SetID(id *int) {
 	g.ID = id
 	g.require(githubComMktAgiAixInternalBugreportsInternalDomainBugReportFieldID)
+}
+
+// SetLabel sets the Label field and marks it as non-optional;
+// this prevents an empty or null value for this field from being omitted during serialization.
+func (g *GithubComMktAgiAixInternalBugreportsInternalDomainBugReport) SetLabel(label *string) {
+	g.Label = label
+	g.require(githubComMktAgiAixInternalBugreportsInternalDomainBugReportFieldLabel)
 }
 
 // SetReporterID sets the ReporterID field and marks it as non-optional;
@@ -445,13 +452,6 @@ func (g *GithubComMktAgiAixInternalBugreportsInternalDomainBugReport) SetURL(url
 	g.require(githubComMktAgiAixInternalBugreportsInternalDomainBugReportFieldURL)
 }
 
-// SetViewport sets the Viewport field and marks it as non-optional;
-// this prevents an empty or null value for this field from being omitted during serialization.
-func (g *GithubComMktAgiAixInternalBugreportsInternalDomainBugReport) SetViewport(viewport *GithubComMktAgiAixInternalBugreportsInternalDomainViewportData) {
-	g.Viewport = viewport
-	g.require(githubComMktAgiAixInternalBugreportsInternalDomainBugReportFieldViewport)
-}
-
 func (g *GithubComMktAgiAixInternalBugreportsInternalDomainBugReport) UnmarshalJSON(data []byte) error {
 	type unmarshaler GithubComMktAgiAixInternalBugreportsInternalDomainBugReport
 	var value unmarshaler
@@ -480,286 +480,6 @@ func (g *GithubComMktAgiAixInternalBugreportsInternalDomainBugReport) MarshalJSO
 }
 
 func (g *GithubComMktAgiAixInternalBugreportsInternalDomainBugReport) String() string {
-	if g == nil {
-		return "<nil>"
-	}
-	if len(g.rawJSON) > 0 {
-		if value, err := internal.StringifyJSON(g.rawJSON); err == nil {
-			return value
-		}
-	}
-	if value, err := internal.StringifyJSON(g); err == nil {
-		return value
-	}
-	return fmt.Sprintf("%#v", g)
-}
-
-var (
-	githubComMktAgiAixInternalBugreportsInternalDomainElementDataFieldClasses        = big.NewInt(1 << 0)
-	githubComMktAgiAixInternalBugreportsInternalDomainElementDataFieldComputedStyles = big.NewInt(1 << 1)
-	githubComMktAgiAixInternalBugreportsInternalDomainElementDataFieldID             = big.NewInt(1 << 2)
-	githubComMktAgiAixInternalBugreportsInternalDomainElementDataFieldSelector       = big.NewInt(1 << 3)
-	githubComMktAgiAixInternalBugreportsInternalDomainElementDataFieldTagName        = big.NewInt(1 << 4)
-	githubComMktAgiAixInternalBugreportsInternalDomainElementDataFieldTextContent    = big.NewInt(1 << 5)
-)
-
-type GithubComMktAgiAixInternalBugreportsInternalDomainElementData struct {
-	Classes        []string          `json:"classes,omitempty" url:"classes,omitempty"`
-	ComputedStyles map[string]string `json:"computed_styles,omitempty" url:"computed_styles,omitempty"`
-	ID             *string           `json:"id,omitempty" url:"id,omitempty"`
-	Selector       *string           `json:"selector,omitempty" url:"selector,omitempty"`
-	TagName        *string           `json:"tag_name,omitempty" url:"tag_name,omitempty"`
-	TextContent    *string           `json:"text_content,omitempty" url:"text_content,omitempty"`
-
-	// Private bitmask of fields set to an explicit value and therefore not to be omitted
-	explicitFields *big.Int `json:"-" url:"-"`
-
-	extraProperties map[string]interface{}
-	rawJSON         json.RawMessage
-}
-
-func (g *GithubComMktAgiAixInternalBugreportsInternalDomainElementData) GetClasses() []string {
-	if g == nil {
-		return nil
-	}
-	return g.Classes
-}
-
-func (g *GithubComMktAgiAixInternalBugreportsInternalDomainElementData) GetComputedStyles() map[string]string {
-	if g == nil {
-		return nil
-	}
-	return g.ComputedStyles
-}
-
-func (g *GithubComMktAgiAixInternalBugreportsInternalDomainElementData) GetID() *string {
-	if g == nil {
-		return nil
-	}
-	return g.ID
-}
-
-func (g *GithubComMktAgiAixInternalBugreportsInternalDomainElementData) GetSelector() *string {
-	if g == nil {
-		return nil
-	}
-	return g.Selector
-}
-
-func (g *GithubComMktAgiAixInternalBugreportsInternalDomainElementData) GetTagName() *string {
-	if g == nil {
-		return nil
-	}
-	return g.TagName
-}
-
-func (g *GithubComMktAgiAixInternalBugreportsInternalDomainElementData) GetTextContent() *string {
-	if g == nil {
-		return nil
-	}
-	return g.TextContent
-}
-
-func (g *GithubComMktAgiAixInternalBugreportsInternalDomainElementData) GetExtraProperties() map[string]interface{} {
-	if g == nil {
-		return nil
-	}
-	return g.extraProperties
-}
-
-func (g *GithubComMktAgiAixInternalBugreportsInternalDomainElementData) require(field *big.Int) {
-	if g.explicitFields == nil {
-		g.explicitFields = big.NewInt(0)
-	}
-	g.explicitFields.Or(g.explicitFields, field)
-}
-
-// SetClasses sets the Classes field and marks it as non-optional;
-// this prevents an empty or null value for this field from being omitted during serialization.
-func (g *GithubComMktAgiAixInternalBugreportsInternalDomainElementData) SetClasses(classes []string) {
-	g.Classes = classes
-	g.require(githubComMktAgiAixInternalBugreportsInternalDomainElementDataFieldClasses)
-}
-
-// SetComputedStyles sets the ComputedStyles field and marks it as non-optional;
-// this prevents an empty or null value for this field from being omitted during serialization.
-func (g *GithubComMktAgiAixInternalBugreportsInternalDomainElementData) SetComputedStyles(computedStyles map[string]string) {
-	g.ComputedStyles = computedStyles
-	g.require(githubComMktAgiAixInternalBugreportsInternalDomainElementDataFieldComputedStyles)
-}
-
-// SetID sets the ID field and marks it as non-optional;
-// this prevents an empty or null value for this field from being omitted during serialization.
-func (g *GithubComMktAgiAixInternalBugreportsInternalDomainElementData) SetID(id *string) {
-	g.ID = id
-	g.require(githubComMktAgiAixInternalBugreportsInternalDomainElementDataFieldID)
-}
-
-// SetSelector sets the Selector field and marks it as non-optional;
-// this prevents an empty or null value for this field from being omitted during serialization.
-func (g *GithubComMktAgiAixInternalBugreportsInternalDomainElementData) SetSelector(selector *string) {
-	g.Selector = selector
-	g.require(githubComMktAgiAixInternalBugreportsInternalDomainElementDataFieldSelector)
-}
-
-// SetTagName sets the TagName field and marks it as non-optional;
-// this prevents an empty or null value for this field from being omitted during serialization.
-func (g *GithubComMktAgiAixInternalBugreportsInternalDomainElementData) SetTagName(tagName *string) {
-	g.TagName = tagName
-	g.require(githubComMktAgiAixInternalBugreportsInternalDomainElementDataFieldTagName)
-}
-
-// SetTextContent sets the TextContent field and marks it as non-optional;
-// this prevents an empty or null value for this field from being omitted during serialization.
-func (g *GithubComMktAgiAixInternalBugreportsInternalDomainElementData) SetTextContent(textContent *string) {
-	g.TextContent = textContent
-	g.require(githubComMktAgiAixInternalBugreportsInternalDomainElementDataFieldTextContent)
-}
-
-func (g *GithubComMktAgiAixInternalBugreportsInternalDomainElementData) UnmarshalJSON(data []byte) error {
-	type unmarshaler GithubComMktAgiAixInternalBugreportsInternalDomainElementData
-	var value unmarshaler
-	if err := json.Unmarshal(data, &value); err != nil {
-		return err
-	}
-	*g = GithubComMktAgiAixInternalBugreportsInternalDomainElementData(value)
-	extraProperties, err := internal.ExtractExtraProperties(data, *g)
-	if err != nil {
-		return err
-	}
-	g.extraProperties = extraProperties
-	g.rawJSON = json.RawMessage(data)
-	return nil
-}
-
-func (g *GithubComMktAgiAixInternalBugreportsInternalDomainElementData) MarshalJSON() ([]byte, error) {
-	type embed GithubComMktAgiAixInternalBugreportsInternalDomainElementData
-	var marshaler = struct {
-		embed
-	}{
-		embed: embed(*g),
-	}
-	explicitMarshaler := internal.HandleExplicitFields(marshaler, g.explicitFields)
-	return json.Marshal(explicitMarshaler)
-}
-
-func (g *GithubComMktAgiAixInternalBugreportsInternalDomainElementData) String() string {
-	if g == nil {
-		return "<nil>"
-	}
-	if len(g.rawJSON) > 0 {
-		if value, err := internal.StringifyJSON(g.rawJSON); err == nil {
-			return value
-		}
-	}
-	if value, err := internal.StringifyJSON(g); err == nil {
-		return value
-	}
-	return fmt.Sprintf("%#v", g)
-}
-
-var (
-	githubComMktAgiAixInternalBugreportsInternalDomainViewportDataFieldDpr    = big.NewInt(1 << 0)
-	githubComMktAgiAixInternalBugreportsInternalDomainViewportDataFieldHeight = big.NewInt(1 << 1)
-	githubComMktAgiAixInternalBugreportsInternalDomainViewportDataFieldWidth  = big.NewInt(1 << 2)
-)
-
-type GithubComMktAgiAixInternalBugreportsInternalDomainViewportData struct {
-	Dpr    *float64 `json:"dpr,omitempty" url:"dpr,omitempty"`
-	Height *int     `json:"height,omitempty" url:"height,omitempty"`
-	Width  *int     `json:"width,omitempty" url:"width,omitempty"`
-
-	// Private bitmask of fields set to an explicit value and therefore not to be omitted
-	explicitFields *big.Int `json:"-" url:"-"`
-
-	extraProperties map[string]interface{}
-	rawJSON         json.RawMessage
-}
-
-func (g *GithubComMktAgiAixInternalBugreportsInternalDomainViewportData) GetDpr() *float64 {
-	if g == nil {
-		return nil
-	}
-	return g.Dpr
-}
-
-func (g *GithubComMktAgiAixInternalBugreportsInternalDomainViewportData) GetHeight() *int {
-	if g == nil {
-		return nil
-	}
-	return g.Height
-}
-
-func (g *GithubComMktAgiAixInternalBugreportsInternalDomainViewportData) GetWidth() *int {
-	if g == nil {
-		return nil
-	}
-	return g.Width
-}
-
-func (g *GithubComMktAgiAixInternalBugreportsInternalDomainViewportData) GetExtraProperties() map[string]interface{} {
-	if g == nil {
-		return nil
-	}
-	return g.extraProperties
-}
-
-func (g *GithubComMktAgiAixInternalBugreportsInternalDomainViewportData) require(field *big.Int) {
-	if g.explicitFields == nil {
-		g.explicitFields = big.NewInt(0)
-	}
-	g.explicitFields.Or(g.explicitFields, field)
-}
-
-// SetDpr sets the Dpr field and marks it as non-optional;
-// this prevents an empty or null value for this field from being omitted during serialization.
-func (g *GithubComMktAgiAixInternalBugreportsInternalDomainViewportData) SetDpr(dpr *float64) {
-	g.Dpr = dpr
-	g.require(githubComMktAgiAixInternalBugreportsInternalDomainViewportDataFieldDpr)
-}
-
-// SetHeight sets the Height field and marks it as non-optional;
-// this prevents an empty or null value for this field from being omitted during serialization.
-func (g *GithubComMktAgiAixInternalBugreportsInternalDomainViewportData) SetHeight(height *int) {
-	g.Height = height
-	g.require(githubComMktAgiAixInternalBugreportsInternalDomainViewportDataFieldHeight)
-}
-
-// SetWidth sets the Width field and marks it as non-optional;
-// this prevents an empty or null value for this field from being omitted during serialization.
-func (g *GithubComMktAgiAixInternalBugreportsInternalDomainViewportData) SetWidth(width *int) {
-	g.Width = width
-	g.require(githubComMktAgiAixInternalBugreportsInternalDomainViewportDataFieldWidth)
-}
-
-func (g *GithubComMktAgiAixInternalBugreportsInternalDomainViewportData) UnmarshalJSON(data []byte) error {
-	type unmarshaler GithubComMktAgiAixInternalBugreportsInternalDomainViewportData
-	var value unmarshaler
-	if err := json.Unmarshal(data, &value); err != nil {
-		return err
-	}
-	*g = GithubComMktAgiAixInternalBugreportsInternalDomainViewportData(value)
-	extraProperties, err := internal.ExtractExtraProperties(data, *g)
-	if err != nil {
-		return err
-	}
-	g.extraProperties = extraProperties
-	g.rawJSON = json.RawMessage(data)
-	return nil
-}
-
-func (g *GithubComMktAgiAixInternalBugreportsInternalDomainViewportData) MarshalJSON() ([]byte, error) {
-	type embed GithubComMktAgiAixInternalBugreportsInternalDomainViewportData
-	var marshaler = struct {
-		embed
-	}{
-		embed: embed(*g),
-	}
-	explicitMarshaler := internal.HandleExplicitFields(marshaler, g.explicitFields)
-	return json.Marshal(explicitMarshaler)
-}
-
-func (g *GithubComMktAgiAixInternalBugreportsInternalDomainViewportData) String() string {
 	if g == nil {
 		return "<nil>"
 	}
@@ -1135,27 +855,34 @@ func (g *GithubComMktAgiAixInternalPkgGinxResultGithubComMktAgiAixInternalBugrep
 }
 
 var (
-	internalBugreportsInternalWebSubmitBugReportRequestFieldDescription = big.NewInt(1 << 0)
-	internalBugreportsInternalWebSubmitBugReportRequestFieldElement     = big.NewInt(1 << 1)
-	internalBugreportsInternalWebSubmitBugReportRequestFieldTimestamp   = big.NewInt(1 << 2)
-	internalBugreportsInternalWebSubmitBugReportRequestFieldTitle       = big.NewInt(1 << 3)
-	internalBugreportsInternalWebSubmitBugReportRequestFieldURL         = big.NewInt(1 << 4)
-	internalBugreportsInternalWebSubmitBugReportRequestFieldViewport    = big.NewInt(1 << 5)
+	internalBugreportsInternalWebSubmitBugReportRequestFieldContext     = big.NewInt(1 << 0)
+	internalBugreportsInternalWebSubmitBugReportRequestFieldDescription = big.NewInt(1 << 1)
+	internalBugreportsInternalWebSubmitBugReportRequestFieldLabel       = big.NewInt(1 << 2)
+	internalBugreportsInternalWebSubmitBugReportRequestFieldTimestamp   = big.NewInt(1 << 3)
+	internalBugreportsInternalWebSubmitBugReportRequestFieldTitle       = big.NewInt(1 << 4)
+	internalBugreportsInternalWebSubmitBugReportRequestFieldURL         = big.NewInt(1 << 5)
 )
 
 type InternalBugreportsInternalWebSubmitBugReportRequest struct {
-	Description *string                                                         `json:"description,omitempty" url:"description,omitempty"`
-	Element     *GithubComMktAgiAixInternalBugreportsInternalDomainElementData  `json:"element,omitempty" url:"element,omitempty"`
-	Timestamp   *int                                                            `json:"timestamp,omitempty" url:"timestamp,omitempty"`
-	Title       *string                                                         `json:"title,omitempty" url:"title,omitempty"`
-	URL         *string                                                         `json:"url,omitempty" url:"url,omitempty"`
-	Viewport    *GithubComMktAgiAixInternalBugreportsInternalDomainViewportData `json:"viewport,omitempty" url:"viewport,omitempty"`
+	Context     []int   `json:"context,omitempty" url:"context,omitempty"`
+	Description *string `json:"description,omitempty" url:"description,omitempty"`
+	Label       *string `json:"label,omitempty" url:"label,omitempty"`
+	Timestamp   *int    `json:"timestamp,omitempty" url:"timestamp,omitempty"`
+	Title       *string `json:"title,omitempty" url:"title,omitempty"`
+	URL         *string `json:"url,omitempty" url:"url,omitempty"`
 
 	// Private bitmask of fields set to an explicit value and therefore not to be omitted
 	explicitFields *big.Int `json:"-" url:"-"`
 
 	extraProperties map[string]interface{}
 	rawJSON         json.RawMessage
+}
+
+func (i *InternalBugreportsInternalWebSubmitBugReportRequest) GetContext() []int {
+	if i == nil {
+		return nil
+	}
+	return i.Context
 }
 
 func (i *InternalBugreportsInternalWebSubmitBugReportRequest) GetDescription() *string {
@@ -1165,11 +892,11 @@ func (i *InternalBugreportsInternalWebSubmitBugReportRequest) GetDescription() *
 	return i.Description
 }
 
-func (i *InternalBugreportsInternalWebSubmitBugReportRequest) GetElement() *GithubComMktAgiAixInternalBugreportsInternalDomainElementData {
+func (i *InternalBugreportsInternalWebSubmitBugReportRequest) GetLabel() *string {
 	if i == nil {
 		return nil
 	}
-	return i.Element
+	return i.Label
 }
 
 func (i *InternalBugreportsInternalWebSubmitBugReportRequest) GetTimestamp() *int {
@@ -1193,13 +920,6 @@ func (i *InternalBugreportsInternalWebSubmitBugReportRequest) GetURL() *string {
 	return i.URL
 }
 
-func (i *InternalBugreportsInternalWebSubmitBugReportRequest) GetViewport() *GithubComMktAgiAixInternalBugreportsInternalDomainViewportData {
-	if i == nil {
-		return nil
-	}
-	return i.Viewport
-}
-
 func (i *InternalBugreportsInternalWebSubmitBugReportRequest) GetExtraProperties() map[string]interface{} {
 	if i == nil {
 		return nil
@@ -1214,6 +934,13 @@ func (i *InternalBugreportsInternalWebSubmitBugReportRequest) require(field *big
 	i.explicitFields.Or(i.explicitFields, field)
 }
 
+// SetContext sets the Context field and marks it as non-optional;
+// this prevents an empty or null value for this field from being omitted during serialization.
+func (i *InternalBugreportsInternalWebSubmitBugReportRequest) SetContext(context []int) {
+	i.Context = context
+	i.require(internalBugreportsInternalWebSubmitBugReportRequestFieldContext)
+}
+
 // SetDescription sets the Description field and marks it as non-optional;
 // this prevents an empty or null value for this field from being omitted during serialization.
 func (i *InternalBugreportsInternalWebSubmitBugReportRequest) SetDescription(description *string) {
@@ -1221,11 +948,11 @@ func (i *InternalBugreportsInternalWebSubmitBugReportRequest) SetDescription(des
 	i.require(internalBugreportsInternalWebSubmitBugReportRequestFieldDescription)
 }
 
-// SetElement sets the Element field and marks it as non-optional;
+// SetLabel sets the Label field and marks it as non-optional;
 // this prevents an empty or null value for this field from being omitted during serialization.
-func (i *InternalBugreportsInternalWebSubmitBugReportRequest) SetElement(element *GithubComMktAgiAixInternalBugreportsInternalDomainElementData) {
-	i.Element = element
-	i.require(internalBugreportsInternalWebSubmitBugReportRequestFieldElement)
+func (i *InternalBugreportsInternalWebSubmitBugReportRequest) SetLabel(label *string) {
+	i.Label = label
+	i.require(internalBugreportsInternalWebSubmitBugReportRequestFieldLabel)
 }
 
 // SetTimestamp sets the Timestamp field and marks it as non-optional;
@@ -1247,13 +974,6 @@ func (i *InternalBugreportsInternalWebSubmitBugReportRequest) SetTitle(title *st
 func (i *InternalBugreportsInternalWebSubmitBugReportRequest) SetURL(url *string) {
 	i.URL = url
 	i.require(internalBugreportsInternalWebSubmitBugReportRequestFieldURL)
-}
-
-// SetViewport sets the Viewport field and marks it as non-optional;
-// this prevents an empty or null value for this field from being omitted during serialization.
-func (i *InternalBugreportsInternalWebSubmitBugReportRequest) SetViewport(viewport *GithubComMktAgiAixInternalBugreportsInternalDomainViewportData) {
-	i.Viewport = viewport
-	i.require(internalBugreportsInternalWebSubmitBugReportRequestFieldViewport)
 }
 
 func (i *InternalBugreportsInternalWebSubmitBugReportRequest) UnmarshalJSON(data []byte) error {

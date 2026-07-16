@@ -515,7 +515,7 @@ client.BugReports.ListMyBugReports(
 </details>
 
 ## AdminBulletins
-<details><summary><code>client.AdminBulletins.ListAllBulletinsAdmin() -> *mktsdkgo.GithubComMktAgiAixInternalPkgGinxResultArrayGithubComMktAgiAixInternalBulletinDomainBulletin</code></summary>
+<details><summary><code>client.AdminBulletins.ListAllBulletinsAdmin() -> *mktsdkgo.GithubComMktAgiAixInternalPkgGinxResultArrayGithubComMktAgiAixInternalBulletinInternalDomainBulletin</code></summary>
 <dl>
 <dd>
 
@@ -630,7 +630,7 @@ client.AdminBulletins.ListAllBulletinsAdmin(
 </dl>
 </details>
 
-<details><summary><code>client.AdminBulletins.CreateANewBulletin(request) -> *mktsdkgo.GithubComMktAgiAixInternalPkgGinxResultGithubComMktAgiAixInternalBulletinDomainBulletin</code></summary>
+<details><summary><code>client.AdminBulletins.CreateANewBulletin(request) -> *mktsdkgo.GithubComMktAgiAixInternalPkgGinxResultGithubComMktAgiAixInternalBulletinInternalDomainBulletin</code></summary>
 <dl>
 <dd>
 
@@ -693,7 +693,7 @@ client.AdminBulletins.CreateANewBulletin(
 </dl>
 </details>
 
-<details><summary><code>client.AdminBulletins.GetBulletinByIDAdmin(ID) -> *mktsdkgo.GithubComMktAgiAixInternalPkgGinxResultGithubComMktAgiAixInternalBulletinDomainBulletin</code></summary>
+<details><summary><code>client.AdminBulletins.GetBulletinByIDAdmin(ID) -> *mktsdkgo.GithubComMktAgiAixInternalPkgGinxResultGithubComMktAgiAixInternalBulletinInternalDomainBulletin</code></summary>
 <dl>
 <dd>
 
@@ -754,7 +754,7 @@ client.AdminBulletins.GetBulletinByIDAdmin(
 </dl>
 </details>
 
-<details><summary><code>client.AdminBulletins.UpdateABulletin(ID, request) -> *mktsdkgo.GithubComMktAgiAixInternalPkgGinxResultGithubComMktAgiAixInternalBulletinDomainBulletin</code></summary>
+<details><summary><code>client.AdminBulletins.UpdateABulletin(ID, request) -> *mktsdkgo.GithubComMktAgiAixInternalPkgGinxResultGithubComMktAgiAixInternalBulletinInternalDomainBulletin</code></summary>
 <dl>
 <dd>
 
@@ -3884,7 +3884,7 @@ client.Auth.VerifySmsCodeAndAuthenticate(
 </details>
 
 ## Bulletins
-<details><summary><code>client.Bulletins.ListPublishedBulletins() -> *mktsdkgo.GithubComMktAgiAixInternalPkgGinxResultArrayGithubComMktAgiAixInternalBulletinDomainBulletin</code></summary>
+<details><summary><code>client.Bulletins.ListPublishedBulletins() -> *mktsdkgo.GithubComMktAgiAixInternalPkgGinxResultArrayGithubComMktAgiAixInternalBulletinInternalDomainBulletin</code></summary>
 <dl>
 <dd>
 
@@ -3991,7 +3991,7 @@ client.Bulletins.ListPublishedBulletins(
 </dl>
 </details>
 
-<details><summary><code>client.Bulletins.GetBulletinByID(ID) -> *mktsdkgo.GithubComMktAgiAixInternalPkgGinxResultGithubComMktAgiAixInternalBulletinDomainBulletin</code></summary>
+<details><summary><code>client.Bulletins.GetBulletinByID(ID) -> *mktsdkgo.GithubComMktAgiAixInternalPkgGinxResultGithubComMktAgiAixInternalBulletinInternalDomainBulletin</code></summary>
 <dl>
 <dd>
 
@@ -4864,7 +4864,7 @@ client.UserGateway.UnlistAModelFromMarketplace(
 </details>
 
 ## UserModels
-<details><summary><code>client.UserModels.ListModelVisibilityFilters(UserID, ID) -> *mktsdkgo.GithubComMktAgiAixInternalPkgGinxResultArrayUint</code></summary>
+<details><summary><code>client.UserModels.ListModelAccessGrants(UserID, ID) -> *mktsdkgo.GithubComMktAgiAixInternalPkgGinxResultArrayGithubComMktAgiAixInternalIamAccessGrant</code></summary>
 <dl>
 <dd>
 
@@ -4876,7 +4876,7 @@ client.UserGateway.UnlistAModelFromMarketplace(
 <dl>
 <dd>
 
-Return all users who have filter access to a model
+Return all access grants for a model
 </dd>
 </dl>
 </dd>
@@ -4891,11 +4891,11 @@ Return all users who have filter access to a model
 <dd>
 
 ```go
-request := &mktsdkgo.GetGatewayUserIDModelsIDFiltersRequest{
+request := &mktsdkgo.GetGatewayUserIDModelsIDGrantsRequest{
         UserID: 1,
         ID: 1,
     }
-client.UserModels.ListModelVisibilityFilters(
+client.UserModels.ListModelAccessGrants(
         context.TODO(),
         request,
     )
@@ -4934,7 +4934,7 @@ client.UserModels.ListModelVisibilityFilters(
 </dl>
 </details>
 
-<details><summary><code>client.UserModels.AddModelVisibilityFilter(UserID, ID, request) -> *mktsdkgo.GithubComMktAgiAixInternalPkgGinxResultAny</code></summary>
+<details><summary><code>client.UserModels.GrantModelAccess(UserID, ID, request) -> *mktsdkgo.GithubComMktAgiAixInternalPkgGinxResultAny</code></summary>
 <dl>
 <dd>
 
@@ -4946,7 +4946,7 @@ client.UserModels.ListModelVisibilityFilters(
 <dl>
 <dd>
 
-Grant a user access to a private model via filter
+Grant a user access to a private model
 </dd>
 </dl>
 </dd>
@@ -4961,16 +4961,16 @@ Grant a user access to a private model via filter
 <dd>
 
 ```go
-request := &mktsdkgo.PostGatewayUserIDModelsIDFiltersRequest{
+request := &mktsdkgo.PostGatewayUserIDModelsIDGrantsRequest{
         UserID: 1,
         ID: 1,
-        Body: &mktsdkgo.PostGatewayUserIDModelsIDFiltersRequestBody{
+        Body: &mktsdkgo.PostGatewayUserIDModelsIDGrantsRequestBody{
             StringUnknownMap: map[string]any{
                 "key": "value",
             },
         },
     }
-client.UserModels.AddModelVisibilityFilter(
+client.UserModels.GrantModelAccess(
         context.TODO(),
         request,
     )
@@ -5005,7 +5005,7 @@ client.UserModels.AddModelVisibilityFilter(
 <dl>
 <dd>
 
-**request:** `*mktsdkgo.PostGatewayUserIDModelsIDFiltersRequestBody` 
+**request:** `*mktsdkgo.PostGatewayUserIDModelsIDGrantsRequestBody` 
     
 </dd>
 </dl>
@@ -5017,7 +5017,7 @@ client.UserModels.AddModelVisibilityFilter(
 </dl>
 </details>
 
-<details><summary><code>client.UserModels.RemoveModelVisibilityFilter(UserID, ID, TargetUserID) -> *mktsdkgo.GithubComMktAgiAixInternalPkgGinxResultAny</code></summary>
+<details><summary><code>client.UserModels.RevokeModelAccess(UserID, ID, TargetUserID) -> *mktsdkgo.GithubComMktAgiAixInternalPkgGinxResultAny</code></summary>
 <dl>
 <dd>
 
@@ -5029,7 +5029,7 @@ client.UserModels.AddModelVisibilityFilter(
 <dl>
 <dd>
 
-Revoke a user's access to a filtered model
+Revoke a user's access to a model
 </dd>
 </dl>
 </dd>
@@ -5044,12 +5044,12 @@ Revoke a user's access to a filtered model
 <dd>
 
 ```go
-request := &mktsdkgo.DeleteGatewayUserIDModelsIDFiltersTargetUserIDRequest{
+request := &mktsdkgo.DeleteGatewayUserIDModelsIDGrantsTargetUserIDRequest{
         UserID: 1,
         ID: 1,
         TargetUserID: 1,
     }
-client.UserModels.RemoveModelVisibilityFilter(
+client.UserModels.RevokeModelAccess(
         context.TODO(),
         request,
     )
@@ -5875,7 +5875,7 @@ client.UserRoutes.DeleteUserModelRoute(
 </dl>
 </details>
 
-<details><summary><code>client.UserRoutes.ListRouteVisibilityFilters(UserID, ID) -> *mktsdkgo.GithubComMktAgiAixInternalPkgGinxResultArrayUint</code></summary>
+<details><summary><code>client.UserRoutes.ListRouteAccessGrants(UserID, ID) -> *mktsdkgo.GithubComMktAgiAixInternalPkgGinxResultArrayGithubComMktAgiAixInternalIamAccessGrant</code></summary>
 <dl>
 <dd>
 
@@ -5887,7 +5887,7 @@ client.UserRoutes.DeleteUserModelRoute(
 <dl>
 <dd>
 
-Return all users who have filter access to a route
+Return all access grants for a route
 </dd>
 </dl>
 </dd>
@@ -5902,11 +5902,11 @@ Return all users who have filter access to a route
 <dd>
 
 ```go
-request := &mktsdkgo.GetGatewayUserIDRoutesIDFiltersRequest{
+request := &mktsdkgo.GetGatewayUserIDRoutesIDGrantsRequest{
         UserID: 1,
         ID: 1,
     }
-client.UserRoutes.ListRouteVisibilityFilters(
+client.UserRoutes.ListRouteAccessGrants(
         context.TODO(),
         request,
     )
@@ -5945,7 +5945,7 @@ client.UserRoutes.ListRouteVisibilityFilters(
 </dl>
 </details>
 
-<details><summary><code>client.UserRoutes.AddRouteVisibilityFilter(UserID, ID, request) -> *mktsdkgo.GithubComMktAgiAixInternalPkgGinxResultAny</code></summary>
+<details><summary><code>client.UserRoutes.GrantRouteAccess(UserID, ID, request) -> *mktsdkgo.GithubComMktAgiAixInternalPkgGinxResultAny</code></summary>
 <dl>
 <dd>
 
@@ -5957,7 +5957,7 @@ client.UserRoutes.ListRouteVisibilityFilters(
 <dl>
 <dd>
 
-Grant a user access to a route via filter
+Grant a user access to a private route
 </dd>
 </dl>
 </dd>
@@ -5972,16 +5972,16 @@ Grant a user access to a route via filter
 <dd>
 
 ```go
-request := &mktsdkgo.PostGatewayUserIDRoutesIDFiltersRequest{
+request := &mktsdkgo.PostGatewayUserIDRoutesIDGrantsRequest{
         UserID: 1,
         ID: 1,
-        Body: &mktsdkgo.PostGatewayUserIDRoutesIDFiltersRequestBody{
+        Body: &mktsdkgo.PostGatewayUserIDRoutesIDGrantsRequestBody{
             StringUnknownMap: map[string]any{
                 "key": "value",
             },
         },
     }
-client.UserRoutes.AddRouteVisibilityFilter(
+client.UserRoutes.GrantRouteAccess(
         context.TODO(),
         request,
     )
@@ -6016,7 +6016,7 @@ client.UserRoutes.AddRouteVisibilityFilter(
 <dl>
 <dd>
 
-**request:** `*mktsdkgo.PostGatewayUserIDRoutesIDFiltersRequestBody` 
+**request:** `*mktsdkgo.PostGatewayUserIDRoutesIDGrantsRequestBody` 
     
 </dd>
 </dl>
@@ -6028,7 +6028,7 @@ client.UserRoutes.AddRouteVisibilityFilter(
 </dl>
 </details>
 
-<details><summary><code>client.UserRoutes.RemoveRouteVisibilityFilter(UserID, ID, TargetUserID) -> *mktsdkgo.GithubComMktAgiAixInternalPkgGinxResultAny</code></summary>
+<details><summary><code>client.UserRoutes.RevokeRouteAccess(UserID, ID, TargetUserID) -> *mktsdkgo.GithubComMktAgiAixInternalPkgGinxResultAny</code></summary>
 <dl>
 <dd>
 
@@ -6040,7 +6040,7 @@ client.UserRoutes.AddRouteVisibilityFilter(
 <dl>
 <dd>
 
-Revoke a user's access to a filtered route
+Revoke a user's access to a route
 </dd>
 </dl>
 </dd>
@@ -6055,12 +6055,12 @@ Revoke a user's access to a filtered route
 <dd>
 
 ```go
-request := &mktsdkgo.DeleteGatewayUserIDRoutesIDFiltersTargetUserIDRequest{
+request := &mktsdkgo.DeleteGatewayUserIDRoutesIDGrantsTargetUserIDRequest{
         UserID: 1,
         ID: 1,
         TargetUserID: 1,
     }
-client.UserRoutes.RemoveRouteVisibilityFilter(
+client.UserRoutes.RevokeRouteAccess(
         context.TODO(),
         request,
     )
@@ -6962,7 +6962,7 @@ client.Iam.RevokeAPIKey(
 </dl>
 </details>
 
-<details><summary><code>client.Iam.ListVisibilityFilters() -> *mktsdkgo.GithubComMktAgiAixInternalPkgGinxResultArrayUint</code></summary>
+<details><summary><code>client.Iam.ListResourceAccessGrants() -> *mktsdkgo.GithubComMktAgiAixInternalPkgGinxResultArrayGithubComMktAgiAixInternalIamInternalDomainAccessGrant</code></summary>
 <dl>
 <dd>
 
@@ -6974,7 +6974,7 @@ client.Iam.RevokeAPIKey(
 <dl>
 <dd>
 
-列出资源的可见性过滤器用户列表。返回被添加到可见性白名单中的用户 ID。
+列出资源的所有访问授权记录。
 </dd>
 </dl>
 </dd>
@@ -6989,11 +6989,11 @@ client.Iam.RevokeAPIKey(
 <dd>
 
 ```go
-request := &mktsdkgo.GetIamVisibilityFiltersRequest{
+request := &mktsdkgo.GetIamGrantsRequest{
         ResourceType: "resource_type",
         ResourceID: 1,
     }
-client.Iam.ListVisibilityFilters(
+client.Iam.ListResourceAccessGrants(
         context.TODO(),
         request,
     )
@@ -7032,7 +7032,7 @@ client.Iam.ListVisibilityFilters(
 </dl>
 </details>
 
-<details><summary><code>client.Iam.AddVisibilityFilter(request) -> error</code></summary>
+<details><summary><code>client.Iam.GrantResourceAccess(request) -> error</code></summary>
 <dl>
 <dd>
 
@@ -7044,7 +7044,7 @@ client.Iam.ListVisibilityFilters(
 <dl>
 <dd>
 
-添加可见性过滤器，将指定用户添加到资源的可见性白名单中。
+授予用户资源访问权限。将指定用户加入资源的授权白名单。
 </dd>
 </dl>
 </dd>
@@ -7059,12 +7059,12 @@ client.Iam.ListVisibilityFilters(
 <dd>
 
 ```go
-request := &mktsdkgo.PostIamVisibilityFiltersRequest{
+request := &mktsdkgo.PostIamGrantsRequest{
         StringUnknownMap: map[string]any{
             "key": "value",
         },
     }
-client.Iam.AddVisibilityFilter(
+client.Iam.GrantResourceAccess(
         context.TODO(),
         request,
     )
@@ -7083,7 +7083,7 @@ client.Iam.AddVisibilityFilter(
 <dl>
 <dd>
 
-**request:** `*mktsdkgo.PostIamVisibilityFiltersRequest` 
+**request:** `*mktsdkgo.PostIamGrantsRequest` 
     
 </dd>
 </dl>
@@ -7095,7 +7095,7 @@ client.Iam.AddVisibilityFilter(
 </dl>
 </details>
 
-<details><summary><code>client.Iam.RemoveVisibilityFilter(ResourceType, ResourceID, UserID) -> error</code></summary>
+<details><summary><code>client.Iam.RevokeResourceAccess(ResourceType, ResourceID, UserID) -> error</code></summary>
 <dl>
 <dd>
 
@@ -7107,7 +7107,7 @@ client.Iam.AddVisibilityFilter(
 <dl>
 <dd>
 
-移除可见性过滤器，将指定用户从资源的可见性白名单中移除。
+撤销用户的资源访问权限，将指定用户从资源的授权白名单中移除。
 </dd>
 </dl>
 </dd>
@@ -7122,12 +7122,12 @@ client.Iam.AddVisibilityFilter(
 <dd>
 
 ```go
-request := &mktsdkgo.DeleteIamVisibilityFiltersResourceTypeResourceIDUserIDRequest{
+request := &mktsdkgo.DeleteIamGrantsResourceTypeResourceIDUserIDRequest{
         ResourceType: "resource_type",
         ResourceID: 1,
         UserID: 1,
     }
-client.Iam.RemoveVisibilityFilter(
+client.Iam.RevokeResourceAccess(
         context.TODO(),
         request,
     )

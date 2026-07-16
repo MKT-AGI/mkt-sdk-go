@@ -1046,7 +1046,7 @@ type InternalFilesInternalWebFileResponse struct {
 	UpdatedAt *int `json:"updated_at,omitempty" url:"updated_at,omitempty"`
 	// Owner user ID
 	UserID *int `json:"user_id,omitempty" url:"user_id,omitempty"`
-	// Visibility: private|public|filter
+	// Visibility constant (domain.VisibilityPrivate|Public)
 	Visibility *string `json:"visibility,omitempty" url:"visibility,omitempty"`
 
 	// Private bitmask of fields set to an explicit value and therefore not to be omitted
@@ -1283,7 +1283,7 @@ type InternalFilesInternalWebIngestURLRequest struct {
 	Filename string `json:"filename" url:"filename"`
 	// source URL to download
 	URL string `json:"url" url:"url"`
-	// "private" | "public" | "filter"
+	// Visibility constant (domain.VisibilityPrivate|Public)
 	Visibility *string `json:"visibility,omitempty" url:"visibility,omitempty"`
 
 	// Private bitmask of fields set to an explicit value and therefore not to be omitted
@@ -1427,7 +1427,7 @@ var (
 type InternalFilesInternalWebUpdateFileRequest struct {
 	// New file name
 	Name *string `json:"name,omitempty" url:"name,omitempty"`
-	// New visibility: private|public|filter
+	// New visibility (domain.VisibilityPrivate|Public)
 	Visibility *string `json:"visibility,omitempty" url:"visibility,omitempty"`
 
 	// Private bitmask of fields set to an explicit value and therefore not to be omitted

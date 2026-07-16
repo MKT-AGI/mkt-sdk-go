@@ -39,7 +39,7 @@ func (c *Client) ListAllBulletinsAdmin(
 	ctx context.Context,
 	request *mktsdkgo.GetAdminBulletinsRequest,
 	opts ...option.RequestOption,
-) (*mktsdkgo.GithubComMktAgiAixInternalPkgGinxResultArrayGithubComMktAgiAixInternalBulletinDomainBulletin, error) {
+) (*mktsdkgo.GithubComMktAgiAixInternalPkgGinxResultArrayGithubComMktAgiAixInternalBulletinInternalDomainBulletin, error) {
 	response, err := c.WithRawResponse.ListAllBulletinsAdmin(
 		ctx,
 		request,
@@ -56,7 +56,7 @@ func (c *Client) CreateANewBulletin(
 	ctx context.Context,
 	request *mktsdkgo.PostAdminBulletinsRequest,
 	opts ...option.RequestOption,
-) (*mktsdkgo.GithubComMktAgiAixInternalPkgGinxResultGithubComMktAgiAixInternalBulletinDomainBulletin, error) {
+) (*mktsdkgo.GithubComMktAgiAixInternalPkgGinxResultGithubComMktAgiAixInternalBulletinInternalDomainBulletin, error) {
 	response, err := c.WithRawResponse.CreateANewBulletin(
 		ctx,
 		request,
@@ -73,7 +73,7 @@ func (c *Client) GetBulletinByIDAdmin(
 	ctx context.Context,
 	request *mktsdkgo.GetAdminBulletinsIDRequest,
 	opts ...option.RequestOption,
-) (*mktsdkgo.GithubComMktAgiAixInternalPkgGinxResultGithubComMktAgiAixInternalBulletinDomainBulletin, error) {
+) (*mktsdkgo.GithubComMktAgiAixInternalPkgGinxResultGithubComMktAgiAixInternalBulletinInternalDomainBulletin, error) {
 	response, err := c.WithRawResponse.GetBulletinByIDAdmin(
 		ctx,
 		request,
@@ -90,7 +90,7 @@ func (c *Client) UpdateABulletin(
 	ctx context.Context,
 	request *mktsdkgo.PutAdminBulletinsIDRequest,
 	opts ...option.RequestOption,
-) (*mktsdkgo.GithubComMktAgiAixInternalPkgGinxResultGithubComMktAgiAixInternalBulletinDomainBulletin, error) {
+) (*mktsdkgo.GithubComMktAgiAixInternalPkgGinxResultGithubComMktAgiAixInternalBulletinInternalDomainBulletin, error) {
 	response, err := c.WithRawResponse.UpdateABulletin(
 		ctx,
 		request,

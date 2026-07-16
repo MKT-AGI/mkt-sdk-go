@@ -9,9 +9,9 @@ import (
 	testing "testing"
 )
 
-func TestSettersPostGatewayUserIDModelsIDFiltersRequest(t *testing.T) {
+func TestSettersPostGatewayUserIDModelsIDGrantsRequest(t *testing.T) {
 	t.Run("SetUserID", func(t *testing.T) {
-		obj := &PostGatewayUserIDModelsIDFiltersRequest{}
+		obj := &PostGatewayUserIDModelsIDGrantsRequest{}
 		var fernTestValueUserID int
 		obj.SetUserID(fernTestValueUserID)
 		assert.Equal(t, fernTestValueUserID, obj.UserID)
@@ -19,7 +19,7 @@ func TestSettersPostGatewayUserIDModelsIDFiltersRequest(t *testing.T) {
 	})
 
 	t.Run("SetID", func(t *testing.T) {
-		obj := &PostGatewayUserIDModelsIDFiltersRequest{}
+		obj := &PostGatewayUserIDModelsIDGrantsRequest{}
 		var fernTestValueID int
 		obj.SetID(fernTestValueID)
 		assert.Equal(t, fernTestValueID, obj.ID)
@@ -28,11 +28,11 @@ func TestSettersPostGatewayUserIDModelsIDFiltersRequest(t *testing.T) {
 
 }
 
-func TestSettersMarkExplicitPostGatewayUserIDModelsIDFiltersRequest(t *testing.T) {
+func TestSettersMarkExplicitPostGatewayUserIDModelsIDGrantsRequest(t *testing.T) {
 	t.Run("SetUserID_MarksExplicit", func(t *testing.T) {
 		t.Parallel()
 		// Arrange
-		obj := &PostGatewayUserIDModelsIDFiltersRequest{}
+		obj := &PostGatewayUserIDModelsIDGrantsRequest{}
 		var fernTestValueUserID int
 
 		// Act
@@ -63,7 +63,7 @@ func TestSettersMarkExplicitPostGatewayUserIDModelsIDFiltersRequest(t *testing.T
 	t.Run("SetID_MarksExplicit", func(t *testing.T) {
 		t.Parallel()
 		// Arrange
-		obj := &PostGatewayUserIDModelsIDFiltersRequest{}
+		obj := &PostGatewayUserIDModelsIDGrantsRequest{}
 		var fernTestValueID int
 
 		// Act
@@ -93,9 +93,9 @@ func TestSettersMarkExplicitPostGatewayUserIDModelsIDFiltersRequest(t *testing.T
 
 }
 
-func TestSettersGetGatewayUserIDModelsIDFiltersRequest(t *testing.T) {
+func TestSettersGetGatewayUserIDModelsIDGrantsRequest(t *testing.T) {
 	t.Run("SetUserID", func(t *testing.T) {
-		obj := &GetGatewayUserIDModelsIDFiltersRequest{}
+		obj := &GetGatewayUserIDModelsIDGrantsRequest{}
 		var fernTestValueUserID int
 		obj.SetUserID(fernTestValueUserID)
 		assert.Equal(t, fernTestValueUserID, obj.UserID)
@@ -103,7 +103,7 @@ func TestSettersGetGatewayUserIDModelsIDFiltersRequest(t *testing.T) {
 	})
 
 	t.Run("SetID", func(t *testing.T) {
-		obj := &GetGatewayUserIDModelsIDFiltersRequest{}
+		obj := &GetGatewayUserIDModelsIDGrantsRequest{}
 		var fernTestValueID int
 		obj.SetID(fernTestValueID)
 		assert.Equal(t, fernTestValueID, obj.ID)
@@ -112,11 +112,11 @@ func TestSettersGetGatewayUserIDModelsIDFiltersRequest(t *testing.T) {
 
 }
 
-func TestSettersMarkExplicitGetGatewayUserIDModelsIDFiltersRequest(t *testing.T) {
+func TestSettersMarkExplicitGetGatewayUserIDModelsIDGrantsRequest(t *testing.T) {
 	t.Run("SetUserID_MarksExplicit", func(t *testing.T) {
 		t.Parallel()
 		// Arrange
-		obj := &GetGatewayUserIDModelsIDFiltersRequest{}
+		obj := &GetGatewayUserIDModelsIDGrantsRequest{}
 		var fernTestValueUserID int
 
 		// Act
@@ -147,7 +147,7 @@ func TestSettersMarkExplicitGetGatewayUserIDModelsIDFiltersRequest(t *testing.T)
 	t.Run("SetID_MarksExplicit", func(t *testing.T) {
 		t.Parallel()
 		// Arrange
-		obj := &GetGatewayUserIDModelsIDFiltersRequest{}
+		obj := &GetGatewayUserIDModelsIDGrantsRequest{}
 		var fernTestValueID int
 
 		// Act
@@ -177,9 +177,9 @@ func TestSettersMarkExplicitGetGatewayUserIDModelsIDFiltersRequest(t *testing.T)
 
 }
 
-func TestSettersDeleteGatewayUserIDModelsIDFiltersTargetUserIDRequest(t *testing.T) {
+func TestSettersDeleteGatewayUserIDModelsIDGrantsTargetUserIDRequest(t *testing.T) {
 	t.Run("SetUserID", func(t *testing.T) {
-		obj := &DeleteGatewayUserIDModelsIDFiltersTargetUserIDRequest{}
+		obj := &DeleteGatewayUserIDModelsIDGrantsTargetUserIDRequest{}
 		var fernTestValueUserID int
 		obj.SetUserID(fernTestValueUserID)
 		assert.Equal(t, fernTestValueUserID, obj.UserID)
@@ -187,7 +187,7 @@ func TestSettersDeleteGatewayUserIDModelsIDFiltersTargetUserIDRequest(t *testing
 	})
 
 	t.Run("SetID", func(t *testing.T) {
-		obj := &DeleteGatewayUserIDModelsIDFiltersTargetUserIDRequest{}
+		obj := &DeleteGatewayUserIDModelsIDGrantsTargetUserIDRequest{}
 		var fernTestValueID int
 		obj.SetID(fernTestValueID)
 		assert.Equal(t, fernTestValueID, obj.ID)
@@ -195,7 +195,7 @@ func TestSettersDeleteGatewayUserIDModelsIDFiltersTargetUserIDRequest(t *testing
 	})
 
 	t.Run("SetTargetUserID", func(t *testing.T) {
-		obj := &DeleteGatewayUserIDModelsIDFiltersTargetUserIDRequest{}
+		obj := &DeleteGatewayUserIDModelsIDGrantsTargetUserIDRequest{}
 		var fernTestValueTargetUserID int
 		obj.SetTargetUserID(fernTestValueTargetUserID)
 		assert.Equal(t, fernTestValueTargetUserID, obj.TargetUserID)
@@ -204,11 +204,11 @@ func TestSettersDeleteGatewayUserIDModelsIDFiltersTargetUserIDRequest(t *testing
 
 }
 
-func TestSettersMarkExplicitDeleteGatewayUserIDModelsIDFiltersTargetUserIDRequest(t *testing.T) {
+func TestSettersMarkExplicitDeleteGatewayUserIDModelsIDGrantsTargetUserIDRequest(t *testing.T) {
 	t.Run("SetUserID_MarksExplicit", func(t *testing.T) {
 		t.Parallel()
 		// Arrange
-		obj := &DeleteGatewayUserIDModelsIDFiltersTargetUserIDRequest{}
+		obj := &DeleteGatewayUserIDModelsIDGrantsTargetUserIDRequest{}
 		var fernTestValueUserID int
 
 		// Act
@@ -239,7 +239,7 @@ func TestSettersMarkExplicitDeleteGatewayUserIDModelsIDFiltersTargetUserIDReques
 	t.Run("SetID_MarksExplicit", func(t *testing.T) {
 		t.Parallel()
 		// Arrange
-		obj := &DeleteGatewayUserIDModelsIDFiltersTargetUserIDRequest{}
+		obj := &DeleteGatewayUserIDModelsIDGrantsTargetUserIDRequest{}
 		var fernTestValueID int
 
 		// Act
@@ -270,7 +270,7 @@ func TestSettersMarkExplicitDeleteGatewayUserIDModelsIDFiltersTargetUserIDReques
 	t.Run("SetTargetUserID_MarksExplicit", func(t *testing.T) {
 		t.Parallel()
 		// Arrange
-		obj := &DeleteGatewayUserIDModelsIDFiltersTargetUserIDRequest{}
+		obj := &DeleteGatewayUserIDModelsIDGrantsTargetUserIDRequest{}
 		var fernTestValueTargetUserID int
 
 		// Act
@@ -300,9 +300,9 @@ func TestSettersMarkExplicitDeleteGatewayUserIDModelsIDFiltersTargetUserIDReques
 
 }
 
-func TestSettersInternalAigatewayInternalWebAddModelFilterRequest(t *testing.T) {
+func TestSettersInternalAigatewayInternalWebAddModelGrantRequest(t *testing.T) {
 	t.Run("SetUserID", func(t *testing.T) {
-		obj := &InternalAigatewayInternalWebAddModelFilterRequest{}
+		obj := &InternalAigatewayInternalWebAddModelGrantRequest{}
 		var fernTestValueUserID *int
 		obj.SetUserID(fernTestValueUserID)
 		assert.Equal(t, fernTestValueUserID, obj.UserID)
@@ -311,11 +311,11 @@ func TestSettersInternalAigatewayInternalWebAddModelFilterRequest(t *testing.T) 
 
 }
 
-func TestGettersInternalAigatewayInternalWebAddModelFilterRequest(t *testing.T) {
+func TestGettersInternalAigatewayInternalWebAddModelGrantRequest(t *testing.T) {
 	t.Run("GetUserID", func(t *testing.T) {
 		t.Parallel()
 		// Arrange
-		obj := &InternalAigatewayInternalWebAddModelFilterRequest{}
+		obj := &InternalAigatewayInternalWebAddModelGrantRequest{}
 		var expected *int
 		obj.UserID = expected
 
@@ -326,7 +326,7 @@ func TestGettersInternalAigatewayInternalWebAddModelFilterRequest(t *testing.T) 
 	t.Run("GetUserID_NilValue", func(t *testing.T) {
 		t.Parallel()
 		// Arrange
-		obj := &InternalAigatewayInternalWebAddModelFilterRequest{}
+		obj := &InternalAigatewayInternalWebAddModelGrantRequest{}
 		obj.UserID = nil
 
 		// Act & Assert
@@ -335,7 +335,7 @@ func TestGettersInternalAigatewayInternalWebAddModelFilterRequest(t *testing.T) 
 
 	t.Run("GetUserID_NilReceiver", func(t *testing.T) {
 		t.Parallel()
-		var obj *InternalAigatewayInternalWebAddModelFilterRequest
+		var obj *InternalAigatewayInternalWebAddModelGrantRequest
 		// Should not panic - getters should handle nil receiver gracefully
 		defer func() {
 			if r := recover(); r != nil {
@@ -347,11 +347,11 @@ func TestGettersInternalAigatewayInternalWebAddModelFilterRequest(t *testing.T) 
 
 }
 
-func TestSettersMarkExplicitInternalAigatewayInternalWebAddModelFilterRequest(t *testing.T) {
+func TestSettersMarkExplicitInternalAigatewayInternalWebAddModelGrantRequest(t *testing.T) {
 	t.Run("SetUserID_MarksExplicit", func(t *testing.T) {
 		t.Parallel()
 		// Arrange
-		obj := &InternalAigatewayInternalWebAddModelFilterRequest{}
+		obj := &InternalAigatewayInternalWebAddModelGrantRequest{}
 		var fernTestValueUserID *int
 
 		// Act
@@ -381,11 +381,11 @@ func TestSettersMarkExplicitInternalAigatewayInternalWebAddModelFilterRequest(t 
 
 }
 
-func TestGettersPostGatewayUserIDModelsIDFiltersRequestBody(t *testing.T) {
+func TestGettersPostGatewayUserIDModelsIDGrantsRequestBody(t *testing.T) {
 	t.Run("GetStringUnknownMap", func(t *testing.T) {
 		t.Parallel()
 		// Arrange
-		obj := &PostGatewayUserIDModelsIDFiltersRequestBody{}
+		obj := &PostGatewayUserIDModelsIDGrantsRequestBody{}
 		var expected map[string]any
 		obj.StringUnknownMap = expected
 
@@ -396,7 +396,7 @@ func TestGettersPostGatewayUserIDModelsIDFiltersRequestBody(t *testing.T) {
 	t.Run("GetStringUnknownMap_NilValue", func(t *testing.T) {
 		t.Parallel()
 		// Arrange
-		obj := &PostGatewayUserIDModelsIDFiltersRequestBody{}
+		obj := &PostGatewayUserIDModelsIDGrantsRequestBody{}
 		obj.StringUnknownMap = nil
 
 		// Act & Assert
@@ -405,7 +405,7 @@ func TestGettersPostGatewayUserIDModelsIDFiltersRequestBody(t *testing.T) {
 
 	t.Run("GetStringUnknownMap_NilReceiver", func(t *testing.T) {
 		t.Parallel()
-		var obj *PostGatewayUserIDModelsIDFiltersRequestBody
+		var obj *PostGatewayUserIDModelsIDGrantsRequestBody
 		// Should not panic - getters should handle nil receiver gracefully
 		defer func() {
 			if r := recover(); r != nil {
@@ -415,46 +415,46 @@ func TestGettersPostGatewayUserIDModelsIDFiltersRequestBody(t *testing.T) {
 		_ = obj.GetStringUnknownMap() // Should return zero value
 	})
 
-	t.Run("GetInternalAigatewayInternalWebAddModelFilterRequest", func(t *testing.T) {
+	t.Run("GetInternalAigatewayInternalWebAddModelGrantRequest", func(t *testing.T) {
 		t.Parallel()
 		// Arrange
-		obj := &PostGatewayUserIDModelsIDFiltersRequestBody{}
-		var expected *InternalAigatewayInternalWebAddModelFilterRequest
-		obj.InternalAigatewayInternalWebAddModelFilterRequest = expected
+		obj := &PostGatewayUserIDModelsIDGrantsRequestBody{}
+		var expected *InternalAigatewayInternalWebAddModelGrantRequest
+		obj.InternalAigatewayInternalWebAddModelGrantRequest = expected
 
 		// Act & Assert
-		assert.Equal(t, expected, obj.GetInternalAigatewayInternalWebAddModelFilterRequest(), "getter should return the property value")
+		assert.Equal(t, expected, obj.GetInternalAigatewayInternalWebAddModelGrantRequest(), "getter should return the property value")
 	})
 
-	t.Run("GetInternalAigatewayInternalWebAddModelFilterRequest_NilValue", func(t *testing.T) {
+	t.Run("GetInternalAigatewayInternalWebAddModelGrantRequest_NilValue", func(t *testing.T) {
 		t.Parallel()
 		// Arrange
-		obj := &PostGatewayUserIDModelsIDFiltersRequestBody{}
-		obj.InternalAigatewayInternalWebAddModelFilterRequest = nil
+		obj := &PostGatewayUserIDModelsIDGrantsRequestBody{}
+		obj.InternalAigatewayInternalWebAddModelGrantRequest = nil
 
 		// Act & Assert
-		assert.Nil(t, obj.GetInternalAigatewayInternalWebAddModelFilterRequest(), "getter should return nil when property is nil")
+		assert.Nil(t, obj.GetInternalAigatewayInternalWebAddModelGrantRequest(), "getter should return nil when property is nil")
 	})
 
-	t.Run("GetInternalAigatewayInternalWebAddModelFilterRequest_NilReceiver", func(t *testing.T) {
+	t.Run("GetInternalAigatewayInternalWebAddModelGrantRequest_NilReceiver", func(t *testing.T) {
 		t.Parallel()
-		var obj *PostGatewayUserIDModelsIDFiltersRequestBody
+		var obj *PostGatewayUserIDModelsIDGrantsRequestBody
 		// Should not panic - getters should handle nil receiver gracefully
 		defer func() {
 			if r := recover(); r != nil {
 				t.Errorf("Getter panicked on nil receiver: %v", r)
 			}
 		}()
-		_ = obj.GetInternalAigatewayInternalWebAddModelFilterRequest() // Should return zero value
+		_ = obj.GetInternalAigatewayInternalWebAddModelGrantRequest() // Should return zero value
 	})
 
 }
 
-func TestJSONMarshalingInternalAigatewayInternalWebAddModelFilterRequest(t *testing.T) {
+func TestJSONMarshalingInternalAigatewayInternalWebAddModelGrantRequest(t *testing.T) {
 	t.Run("MarshalUnmarshal", func(t *testing.T) {
 		t.Parallel()
 		// Arrange
-		obj := &InternalAigatewayInternalWebAddModelFilterRequest{}
+		obj := &InternalAigatewayInternalWebAddModelGrantRequest{}
 
 		// Act - Marshal to JSON
 		data, err := json.Marshal(obj)
@@ -463,46 +463,46 @@ func TestJSONMarshalingInternalAigatewayInternalWebAddModelFilterRequest(t *test
 		assert.NotEmpty(t, data, "marshaled data should not be empty")
 
 		// Unmarshal back and verify round-trip
-		var unmarshaled InternalAigatewayInternalWebAddModelFilterRequest
+		var unmarshaled InternalAigatewayInternalWebAddModelGrantRequest
 		err = json.Unmarshal(data, &unmarshaled)
 		assert.NoError(t, err, "round-trip unmarshal should succeed")
 	})
 
 	t.Run("UnmarshalInvalidJSON", func(t *testing.T) {
 		t.Parallel()
-		var obj InternalAigatewayInternalWebAddModelFilterRequest
+		var obj InternalAigatewayInternalWebAddModelGrantRequest
 		err := json.Unmarshal([]byte(`{invalid json}`), &obj)
 		assert.Error(t, err, "unmarshaling invalid JSON should return an error")
 	})
 
 	t.Run("UnmarshalEmptyObject", func(t *testing.T) {
 		t.Parallel()
-		var obj InternalAigatewayInternalWebAddModelFilterRequest
+		var obj InternalAigatewayInternalWebAddModelGrantRequest
 		err := json.Unmarshal([]byte(`{}`), &obj)
 		assert.NoError(t, err, "unmarshaling empty object should succeed")
 	})
 }
 
-func TestStringInternalAigatewayInternalWebAddModelFilterRequest(t *testing.T) {
+func TestStringInternalAigatewayInternalWebAddModelGrantRequest(t *testing.T) {
 	t.Run("StringMethod", func(t *testing.T) {
 		t.Parallel()
-		obj := &InternalAigatewayInternalWebAddModelFilterRequest{}
+		obj := &InternalAigatewayInternalWebAddModelGrantRequest{}
 		result := obj.String()
 		assert.NotEmpty(t, result, "String() should return a non-empty representation")
 	})
 
 	t.Run("StringMethod_NilReceiver", func(t *testing.T) {
 		t.Parallel()
-		var obj *InternalAigatewayInternalWebAddModelFilterRequest
+		var obj *InternalAigatewayInternalWebAddModelGrantRequest
 		result := obj.String()
 		assert.Equal(t, "<nil>", result, "String() should return <nil> for nil receiver")
 	})
 }
 
-func TestExtraPropertiesInternalAigatewayInternalWebAddModelFilterRequest(t *testing.T) {
+func TestExtraPropertiesInternalAigatewayInternalWebAddModelGrantRequest(t *testing.T) {
 	t.Run("GetExtraProperties", func(t *testing.T) {
 		t.Parallel()
-		obj := &InternalAigatewayInternalWebAddModelFilterRequest{}
+		obj := &InternalAigatewayInternalWebAddModelGrantRequest{}
 		// Should not panic when calling GetExtraProperties()
 		defer func() {
 			if r := recover(); r != nil {
@@ -516,7 +516,7 @@ func TestExtraPropertiesInternalAigatewayInternalWebAddModelFilterRequest(t *tes
 
 	t.Run("GetExtraProperties_NilReceiver", func(t *testing.T) {
 		t.Parallel()
-		var obj *InternalAigatewayInternalWebAddModelFilterRequest
+		var obj *InternalAigatewayInternalWebAddModelGrantRequest
 		extraProps := obj.GetExtraProperties()
 		assert.Nil(t, extraProps, "nil receiver should return nil without panicking")
 	})

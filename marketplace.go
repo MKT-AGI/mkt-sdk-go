@@ -424,22 +424,26 @@ func (i *InternalAigatewayInternalWebMarketplaceListResponse) String() string {
 }
 
 var (
-	internalAigatewayInternalWebMarketplaceModelItemFieldCurrency    = big.NewInt(1 << 0)
-	internalAigatewayInternalWebMarketplaceModelItemFieldDescription = big.NewInt(1 << 1)
-	internalAigatewayInternalWebMarketplaceModelItemFieldID          = big.NewInt(1 << 2)
-	internalAigatewayInternalWebMarketplaceModelItemFieldInputPrice  = big.NewInt(1 << 3)
-	internalAigatewayInternalWebMarketplaceModelItemFieldListedAt    = big.NewInt(1 << 4)
-	internalAigatewayInternalWebMarketplaceModelItemFieldName        = big.NewInt(1 << 5)
-	internalAigatewayInternalWebMarketplaceModelItemFieldOutputPrice = big.NewInt(1 << 6)
-	internalAigatewayInternalWebMarketplaceModelItemFieldOwnerName   = big.NewInt(1 << 7)
-	internalAigatewayInternalWebMarketplaceModelItemFieldTotalCalls  = big.NewInt(1 << 8)
+	internalAigatewayInternalWebMarketplaceModelItemFieldBuyoutPrice = big.NewInt(1 << 0)
+	internalAigatewayInternalWebMarketplaceModelItemFieldCurrency    = big.NewInt(1 << 1)
+	internalAigatewayInternalWebMarketplaceModelItemFieldDescription = big.NewInt(1 << 2)
+	internalAigatewayInternalWebMarketplaceModelItemFieldID          = big.NewInt(1 << 3)
+	internalAigatewayInternalWebMarketplaceModelItemFieldInputPrice  = big.NewInt(1 << 4)
+	internalAigatewayInternalWebMarketplaceModelItemFieldIsPurchased = big.NewInt(1 << 5)
+	internalAigatewayInternalWebMarketplaceModelItemFieldListedAt    = big.NewInt(1 << 6)
+	internalAigatewayInternalWebMarketplaceModelItemFieldName        = big.NewInt(1 << 7)
+	internalAigatewayInternalWebMarketplaceModelItemFieldOutputPrice = big.NewInt(1 << 8)
+	internalAigatewayInternalWebMarketplaceModelItemFieldOwnerName   = big.NewInt(1 << 9)
+	internalAigatewayInternalWebMarketplaceModelItemFieldTotalCalls  = big.NewInt(1 << 10)
 )
 
 type InternalAigatewayInternalWebMarketplaceModelItem struct {
+	BuyoutPrice *float64 `json:"buyout_price,omitempty" url:"buyout_price,omitempty"`
 	Currency    *string  `json:"currency,omitempty" url:"currency,omitempty"`
 	Description *string  `json:"description,omitempty" url:"description,omitempty"`
 	ID          *int     `json:"id,omitempty" url:"id,omitempty"`
 	InputPrice  *float64 `json:"input_price,omitempty" url:"input_price,omitempty"`
+	IsPurchased *bool    `json:"is_purchased,omitempty" url:"is_purchased,omitempty"`
 	ListedAt    *int     `json:"listed_at,omitempty" url:"listed_at,omitempty"`
 	Name        *string  `json:"name,omitempty" url:"name,omitempty"`
 	OutputPrice *float64 `json:"output_price,omitempty" url:"output_price,omitempty"`
@@ -451,6 +455,13 @@ type InternalAigatewayInternalWebMarketplaceModelItem struct {
 
 	extraProperties map[string]interface{}
 	rawJSON         json.RawMessage
+}
+
+func (i *InternalAigatewayInternalWebMarketplaceModelItem) GetBuyoutPrice() *float64 {
+	if i == nil {
+		return nil
+	}
+	return i.BuyoutPrice
 }
 
 func (i *InternalAigatewayInternalWebMarketplaceModelItem) GetCurrency() *string {
@@ -479,6 +490,13 @@ func (i *InternalAigatewayInternalWebMarketplaceModelItem) GetInputPrice() *floa
 		return nil
 	}
 	return i.InputPrice
+}
+
+func (i *InternalAigatewayInternalWebMarketplaceModelItem) GetIsPurchased() *bool {
+	if i == nil {
+		return nil
+	}
+	return i.IsPurchased
 }
 
 func (i *InternalAigatewayInternalWebMarketplaceModelItem) GetListedAt() *int {
@@ -530,6 +548,13 @@ func (i *InternalAigatewayInternalWebMarketplaceModelItem) require(field *big.In
 	i.explicitFields.Or(i.explicitFields, field)
 }
 
+// SetBuyoutPrice sets the BuyoutPrice field and marks it as non-optional;
+// this prevents an empty or null value for this field from being omitted during serialization.
+func (i *InternalAigatewayInternalWebMarketplaceModelItem) SetBuyoutPrice(buyoutPrice *float64) {
+	i.BuyoutPrice = buyoutPrice
+	i.require(internalAigatewayInternalWebMarketplaceModelItemFieldBuyoutPrice)
+}
+
 // SetCurrency sets the Currency field and marks it as non-optional;
 // this prevents an empty or null value for this field from being omitted during serialization.
 func (i *InternalAigatewayInternalWebMarketplaceModelItem) SetCurrency(currency *string) {
@@ -556,6 +581,13 @@ func (i *InternalAigatewayInternalWebMarketplaceModelItem) SetID(id *int) {
 func (i *InternalAigatewayInternalWebMarketplaceModelItem) SetInputPrice(inputPrice *float64) {
 	i.InputPrice = inputPrice
 	i.require(internalAigatewayInternalWebMarketplaceModelItemFieldInputPrice)
+}
+
+// SetIsPurchased sets the IsPurchased field and marks it as non-optional;
+// this prevents an empty or null value for this field from being omitted during serialization.
+func (i *InternalAigatewayInternalWebMarketplaceModelItem) SetIsPurchased(isPurchased *bool) {
+	i.IsPurchased = isPurchased
+	i.require(internalAigatewayInternalWebMarketplaceModelItemFieldIsPurchased)
 }
 
 // SetListedAt sets the ListedAt field and marks it as non-optional;

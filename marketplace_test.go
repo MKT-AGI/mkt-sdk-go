@@ -1171,6 +1171,14 @@ func TestSettersMarkExplicitInternalAigatewayInternalWebMarketplaceListResponse(
 }
 
 func TestSettersInternalAigatewayInternalWebMarketplaceModelItem(t *testing.T) {
+	t.Run("SetBuyoutPrice", func(t *testing.T) {
+		obj := &InternalAigatewayInternalWebMarketplaceModelItem{}
+		var fernTestValueBuyoutPrice *float64
+		obj.SetBuyoutPrice(fernTestValueBuyoutPrice)
+		assert.Equal(t, fernTestValueBuyoutPrice, obj.BuyoutPrice)
+		assert.NotNil(t, obj.explicitFields)
+	})
+
 	t.Run("SetCurrency", func(t *testing.T) {
 		obj := &InternalAigatewayInternalWebMarketplaceModelItem{}
 		var fernTestValueCurrency *string
@@ -1200,6 +1208,14 @@ func TestSettersInternalAigatewayInternalWebMarketplaceModelItem(t *testing.T) {
 		var fernTestValueInputPrice *float64
 		obj.SetInputPrice(fernTestValueInputPrice)
 		assert.Equal(t, fernTestValueInputPrice, obj.InputPrice)
+		assert.NotNil(t, obj.explicitFields)
+	})
+
+	t.Run("SetIsPurchased", func(t *testing.T) {
+		obj := &InternalAigatewayInternalWebMarketplaceModelItem{}
+		var fernTestValueIsPurchased *bool
+		obj.SetIsPurchased(fernTestValueIsPurchased)
+		assert.Equal(t, fernTestValueIsPurchased, obj.IsPurchased)
 		assert.NotNil(t, obj.explicitFields)
 	})
 
@@ -1246,6 +1262,39 @@ func TestSettersInternalAigatewayInternalWebMarketplaceModelItem(t *testing.T) {
 }
 
 func TestGettersInternalAigatewayInternalWebMarketplaceModelItem(t *testing.T) {
+	t.Run("GetBuyoutPrice", func(t *testing.T) {
+		t.Parallel()
+		// Arrange
+		obj := &InternalAigatewayInternalWebMarketplaceModelItem{}
+		var expected *float64
+		obj.BuyoutPrice = expected
+
+		// Act & Assert
+		assert.Equal(t, expected, obj.GetBuyoutPrice(), "getter should return the property value")
+	})
+
+	t.Run("GetBuyoutPrice_NilValue", func(t *testing.T) {
+		t.Parallel()
+		// Arrange
+		obj := &InternalAigatewayInternalWebMarketplaceModelItem{}
+		obj.BuyoutPrice = nil
+
+		// Act & Assert
+		assert.Nil(t, obj.GetBuyoutPrice(), "getter should return nil when property is nil")
+	})
+
+	t.Run("GetBuyoutPrice_NilReceiver", func(t *testing.T) {
+		t.Parallel()
+		var obj *InternalAigatewayInternalWebMarketplaceModelItem
+		// Should not panic - getters should handle nil receiver gracefully
+		defer func() {
+			if r := recover(); r != nil {
+				t.Errorf("Getter panicked on nil receiver: %v", r)
+			}
+		}()
+		_ = obj.GetBuyoutPrice() // Should return zero value
+	})
+
 	t.Run("GetCurrency", func(t *testing.T) {
 		t.Parallel()
 		// Arrange
@@ -1376,6 +1425,39 @@ func TestGettersInternalAigatewayInternalWebMarketplaceModelItem(t *testing.T) {
 			}
 		}()
 		_ = obj.GetInputPrice() // Should return zero value
+	})
+
+	t.Run("GetIsPurchased", func(t *testing.T) {
+		t.Parallel()
+		// Arrange
+		obj := &InternalAigatewayInternalWebMarketplaceModelItem{}
+		var expected *bool
+		obj.IsPurchased = expected
+
+		// Act & Assert
+		assert.Equal(t, expected, obj.GetIsPurchased(), "getter should return the property value")
+	})
+
+	t.Run("GetIsPurchased_NilValue", func(t *testing.T) {
+		t.Parallel()
+		// Arrange
+		obj := &InternalAigatewayInternalWebMarketplaceModelItem{}
+		obj.IsPurchased = nil
+
+		// Act & Assert
+		assert.Nil(t, obj.GetIsPurchased(), "getter should return nil when property is nil")
+	})
+
+	t.Run("GetIsPurchased_NilReceiver", func(t *testing.T) {
+		t.Parallel()
+		var obj *InternalAigatewayInternalWebMarketplaceModelItem
+		// Should not panic - getters should handle nil receiver gracefully
+		defer func() {
+			if r := recover(); r != nil {
+				t.Errorf("Getter panicked on nil receiver: %v", r)
+			}
+		}()
+		_ = obj.GetIsPurchased() // Should return zero value
 	})
 
 	t.Run("GetListedAt", func(t *testing.T) {
@@ -1546,6 +1628,37 @@ func TestGettersInternalAigatewayInternalWebMarketplaceModelItem(t *testing.T) {
 }
 
 func TestSettersMarkExplicitInternalAigatewayInternalWebMarketplaceModelItem(t *testing.T) {
+	t.Run("SetBuyoutPrice_MarksExplicit", func(t *testing.T) {
+		t.Parallel()
+		// Arrange
+		obj := &InternalAigatewayInternalWebMarketplaceModelItem{}
+		var fernTestValueBuyoutPrice *float64
+
+		// Act
+		obj.SetBuyoutPrice(fernTestValueBuyoutPrice)
+
+		// Assert - object with explicitly set field can be marshaled/unmarshaled
+		bytes, err := json.Marshal(obj)
+		require.NoError(t, err, "marshaling should succeed for test setup")
+
+		// This test ensures JSON marshaling and unmarshaling succeed when the field has a zero/nil value
+		// Detect if marshaled JSON is an object or primitive to use correct unmarshal target
+		if len(bytes) > 0 && bytes[0] == '{' {
+			// JSON object - unmarshal into map
+			var unmarshaled map[string]interface{}
+			err = json.Unmarshal(bytes, &unmarshaled)
+			require.NoError(t, err, "unmarshaling should succeed for test verification")
+		} else {
+			// JSON primitive (string, number, boolean, null) - unmarshal into interface{}
+			var unmarshaled interface{}
+			err = json.Unmarshal(bytes, &unmarshaled)
+			require.NoError(t, err, "unmarshaling should succeed for test verification")
+		}
+
+		// Note: This does not explicitly assert the presence of a specific JSON field
+		// It verifies that setting a field via setter allows successful JSON round-trip
+	})
+
 	t.Run("SetCurrency_MarksExplicit", func(t *testing.T) {
 		t.Parallel()
 		// Arrange
@@ -1647,6 +1760,37 @@ func TestSettersMarkExplicitInternalAigatewayInternalWebMarketplaceModelItem(t *
 
 		// Act
 		obj.SetInputPrice(fernTestValueInputPrice)
+
+		// Assert - object with explicitly set field can be marshaled/unmarshaled
+		bytes, err := json.Marshal(obj)
+		require.NoError(t, err, "marshaling should succeed for test setup")
+
+		// This test ensures JSON marshaling and unmarshaling succeed when the field has a zero/nil value
+		// Detect if marshaled JSON is an object or primitive to use correct unmarshal target
+		if len(bytes) > 0 && bytes[0] == '{' {
+			// JSON object - unmarshal into map
+			var unmarshaled map[string]interface{}
+			err = json.Unmarshal(bytes, &unmarshaled)
+			require.NoError(t, err, "unmarshaling should succeed for test verification")
+		} else {
+			// JSON primitive (string, number, boolean, null) - unmarshal into interface{}
+			var unmarshaled interface{}
+			err = json.Unmarshal(bytes, &unmarshaled)
+			require.NoError(t, err, "unmarshaling should succeed for test verification")
+		}
+
+		// Note: This does not explicitly assert the presence of a specific JSON field
+		// It verifies that setting a field via setter allows successful JSON round-trip
+	})
+
+	t.Run("SetIsPurchased_MarksExplicit", func(t *testing.T) {
+		t.Parallel()
+		// Arrange
+		obj := &InternalAigatewayInternalWebMarketplaceModelItem{}
+		var fernTestValueIsPurchased *bool
+
+		// Act
+		obj.SetIsPurchased(fernTestValueIsPurchased)
 
 		// Assert - object with explicitly set field can be marshaled/unmarshaled
 		bytes, err := json.Marshal(obj)
