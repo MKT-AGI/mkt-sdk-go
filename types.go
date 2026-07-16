@@ -313,346 +313,6 @@ func (g *GithubComMktAgiAixInternalAccountsInternalDomainUserPreferences) String
 }
 
 var (
-	githubComMktAgiAixInternalBulletinDomainBulletinFieldBody        = big.NewInt(1 << 0)
-	githubComMktAgiAixInternalBulletinDomainBulletinFieldCategory    = big.NewInt(1 << 1)
-	githubComMktAgiAixInternalBulletinDomainBulletinFieldCreatedAt   = big.NewInt(1 << 2)
-	githubComMktAgiAixInternalBulletinDomainBulletinFieldCreatedBy   = big.NewInt(1 << 3)
-	githubComMktAgiAixInternalBulletinDomainBulletinFieldExpiresAt   = big.NewInt(1 << 4)
-	githubComMktAgiAixInternalBulletinDomainBulletinFieldID          = big.NewInt(1 << 5)
-	githubComMktAgiAixInternalBulletinDomainBulletinFieldParentID    = big.NewInt(1 << 6)
-	githubComMktAgiAixInternalBulletinDomainBulletinFieldPublishedAt = big.NewInt(1 << 7)
-	githubComMktAgiAixInternalBulletinDomainBulletinFieldSection     = big.NewInt(1 << 8)
-	githubComMktAgiAixInternalBulletinDomainBulletinFieldSortOrder   = big.NewInt(1 << 9)
-	githubComMktAgiAixInternalBulletinDomainBulletinFieldStatus      = big.NewInt(1 << 10)
-	githubComMktAgiAixInternalBulletinDomainBulletinFieldSummary     = big.NewInt(1 << 11)
-	githubComMktAgiAixInternalBulletinDomainBulletinFieldTitle       = big.NewInt(1 << 12)
-	githubComMktAgiAixInternalBulletinDomainBulletinFieldType        = big.NewInt(1 << 13)
-	githubComMktAgiAixInternalBulletinDomainBulletinFieldUpdatedAt   = big.NewInt(1 << 14)
-	githubComMktAgiAixInternalBulletinDomainBulletinFieldUpdatedBy   = big.NewInt(1 << 15)
-	githubComMktAgiAixInternalBulletinDomainBulletinFieldVersion     = big.NewInt(1 << 16)
-)
-
-type GithubComMktAgiAixInternalBulletinDomainBulletin struct {
-	Body        *string `json:"body,omitempty" url:"body,omitempty"`
-	Category    *string `json:"category,omitempty" url:"category,omitempty"`
-	CreatedAt   *int    `json:"created_at,omitempty" url:"created_at,omitempty"`
-	CreatedBy   *int    `json:"created_by,omitempty" url:"created_by,omitempty"`
-	ExpiresAt   *int    `json:"expires_at,omitempty" url:"expires_at,omitempty"`
-	ID          *int    `json:"id,omitempty" url:"id,omitempty"`
-	ParentID    *int    `json:"parent_id,omitempty" url:"parent_id,omitempty"`
-	PublishedAt *int    `json:"published_at,omitempty" url:"published_at,omitempty"`
-	Section     *string `json:"section,omitempty" url:"section,omitempty"`
-	SortOrder   *int    `json:"sort_order,omitempty" url:"sort_order,omitempty"`
-	Status      *string `json:"status,omitempty" url:"status,omitempty"`
-	Summary     *string `json:"summary,omitempty" url:"summary,omitempty"`
-	Title       *string `json:"title,omitempty" url:"title,omitempty"`
-	Type        *string `json:"type,omitempty" url:"type,omitempty"`
-	UpdatedAt   *int    `json:"updated_at,omitempty" url:"updated_at,omitempty"`
-	UpdatedBy   *int    `json:"updated_by,omitempty" url:"updated_by,omitempty"`
-	Version     *string `json:"version,omitempty" url:"version,omitempty"`
-
-	// Private bitmask of fields set to an explicit value and therefore not to be omitted
-	explicitFields *big.Int `json:"-" url:"-"`
-
-	extraProperties map[string]interface{}
-	rawJSON         json.RawMessage
-}
-
-func (g *GithubComMktAgiAixInternalBulletinDomainBulletin) GetBody() *string {
-	if g == nil {
-		return nil
-	}
-	return g.Body
-}
-
-func (g *GithubComMktAgiAixInternalBulletinDomainBulletin) GetCategory() *string {
-	if g == nil {
-		return nil
-	}
-	return g.Category
-}
-
-func (g *GithubComMktAgiAixInternalBulletinDomainBulletin) GetCreatedAt() *int {
-	if g == nil {
-		return nil
-	}
-	return g.CreatedAt
-}
-
-func (g *GithubComMktAgiAixInternalBulletinDomainBulletin) GetCreatedBy() *int {
-	if g == nil {
-		return nil
-	}
-	return g.CreatedBy
-}
-
-func (g *GithubComMktAgiAixInternalBulletinDomainBulletin) GetExpiresAt() *int {
-	if g == nil {
-		return nil
-	}
-	return g.ExpiresAt
-}
-
-func (g *GithubComMktAgiAixInternalBulletinDomainBulletin) GetID() *int {
-	if g == nil {
-		return nil
-	}
-	return g.ID
-}
-
-func (g *GithubComMktAgiAixInternalBulletinDomainBulletin) GetParentID() *int {
-	if g == nil {
-		return nil
-	}
-	return g.ParentID
-}
-
-func (g *GithubComMktAgiAixInternalBulletinDomainBulletin) GetPublishedAt() *int {
-	if g == nil {
-		return nil
-	}
-	return g.PublishedAt
-}
-
-func (g *GithubComMktAgiAixInternalBulletinDomainBulletin) GetSection() *string {
-	if g == nil {
-		return nil
-	}
-	return g.Section
-}
-
-func (g *GithubComMktAgiAixInternalBulletinDomainBulletin) GetSortOrder() *int {
-	if g == nil {
-		return nil
-	}
-	return g.SortOrder
-}
-
-func (g *GithubComMktAgiAixInternalBulletinDomainBulletin) GetStatus() *string {
-	if g == nil {
-		return nil
-	}
-	return g.Status
-}
-
-func (g *GithubComMktAgiAixInternalBulletinDomainBulletin) GetSummary() *string {
-	if g == nil {
-		return nil
-	}
-	return g.Summary
-}
-
-func (g *GithubComMktAgiAixInternalBulletinDomainBulletin) GetTitle() *string {
-	if g == nil {
-		return nil
-	}
-	return g.Title
-}
-
-func (g *GithubComMktAgiAixInternalBulletinDomainBulletin) GetType() *string {
-	if g == nil {
-		return nil
-	}
-	return g.Type
-}
-
-func (g *GithubComMktAgiAixInternalBulletinDomainBulletin) GetUpdatedAt() *int {
-	if g == nil {
-		return nil
-	}
-	return g.UpdatedAt
-}
-
-func (g *GithubComMktAgiAixInternalBulletinDomainBulletin) GetUpdatedBy() *int {
-	if g == nil {
-		return nil
-	}
-	return g.UpdatedBy
-}
-
-func (g *GithubComMktAgiAixInternalBulletinDomainBulletin) GetVersion() *string {
-	if g == nil {
-		return nil
-	}
-	return g.Version
-}
-
-func (g *GithubComMktAgiAixInternalBulletinDomainBulletin) GetExtraProperties() map[string]interface{} {
-	if g == nil {
-		return nil
-	}
-	return g.extraProperties
-}
-
-func (g *GithubComMktAgiAixInternalBulletinDomainBulletin) require(field *big.Int) {
-	if g.explicitFields == nil {
-		g.explicitFields = big.NewInt(0)
-	}
-	g.explicitFields.Or(g.explicitFields, field)
-}
-
-// SetBody sets the Body field and marks it as non-optional;
-// this prevents an empty or null value for this field from being omitted during serialization.
-func (g *GithubComMktAgiAixInternalBulletinDomainBulletin) SetBody(body *string) {
-	g.Body = body
-	g.require(githubComMktAgiAixInternalBulletinDomainBulletinFieldBody)
-}
-
-// SetCategory sets the Category field and marks it as non-optional;
-// this prevents an empty or null value for this field from being omitted during serialization.
-func (g *GithubComMktAgiAixInternalBulletinDomainBulletin) SetCategory(category *string) {
-	g.Category = category
-	g.require(githubComMktAgiAixInternalBulletinDomainBulletinFieldCategory)
-}
-
-// SetCreatedAt sets the CreatedAt field and marks it as non-optional;
-// this prevents an empty or null value for this field from being omitted during serialization.
-func (g *GithubComMktAgiAixInternalBulletinDomainBulletin) SetCreatedAt(createdAt *int) {
-	g.CreatedAt = createdAt
-	g.require(githubComMktAgiAixInternalBulletinDomainBulletinFieldCreatedAt)
-}
-
-// SetCreatedBy sets the CreatedBy field and marks it as non-optional;
-// this prevents an empty or null value for this field from being omitted during serialization.
-func (g *GithubComMktAgiAixInternalBulletinDomainBulletin) SetCreatedBy(createdBy *int) {
-	g.CreatedBy = createdBy
-	g.require(githubComMktAgiAixInternalBulletinDomainBulletinFieldCreatedBy)
-}
-
-// SetExpiresAt sets the ExpiresAt field and marks it as non-optional;
-// this prevents an empty or null value for this field from being omitted during serialization.
-func (g *GithubComMktAgiAixInternalBulletinDomainBulletin) SetExpiresAt(expiresAt *int) {
-	g.ExpiresAt = expiresAt
-	g.require(githubComMktAgiAixInternalBulletinDomainBulletinFieldExpiresAt)
-}
-
-// SetID sets the ID field and marks it as non-optional;
-// this prevents an empty or null value for this field from being omitted during serialization.
-func (g *GithubComMktAgiAixInternalBulletinDomainBulletin) SetID(id *int) {
-	g.ID = id
-	g.require(githubComMktAgiAixInternalBulletinDomainBulletinFieldID)
-}
-
-// SetParentID sets the ParentID field and marks it as non-optional;
-// this prevents an empty or null value for this field from being omitted during serialization.
-func (g *GithubComMktAgiAixInternalBulletinDomainBulletin) SetParentID(parentID *int) {
-	g.ParentID = parentID
-	g.require(githubComMktAgiAixInternalBulletinDomainBulletinFieldParentID)
-}
-
-// SetPublishedAt sets the PublishedAt field and marks it as non-optional;
-// this prevents an empty or null value for this field from being omitted during serialization.
-func (g *GithubComMktAgiAixInternalBulletinDomainBulletin) SetPublishedAt(publishedAt *int) {
-	g.PublishedAt = publishedAt
-	g.require(githubComMktAgiAixInternalBulletinDomainBulletinFieldPublishedAt)
-}
-
-// SetSection sets the Section field and marks it as non-optional;
-// this prevents an empty or null value for this field from being omitted during serialization.
-func (g *GithubComMktAgiAixInternalBulletinDomainBulletin) SetSection(section *string) {
-	g.Section = section
-	g.require(githubComMktAgiAixInternalBulletinDomainBulletinFieldSection)
-}
-
-// SetSortOrder sets the SortOrder field and marks it as non-optional;
-// this prevents an empty or null value for this field from being omitted during serialization.
-func (g *GithubComMktAgiAixInternalBulletinDomainBulletin) SetSortOrder(sortOrder *int) {
-	g.SortOrder = sortOrder
-	g.require(githubComMktAgiAixInternalBulletinDomainBulletinFieldSortOrder)
-}
-
-// SetStatus sets the Status field and marks it as non-optional;
-// this prevents an empty or null value for this field from being omitted during serialization.
-func (g *GithubComMktAgiAixInternalBulletinDomainBulletin) SetStatus(status *string) {
-	g.Status = status
-	g.require(githubComMktAgiAixInternalBulletinDomainBulletinFieldStatus)
-}
-
-// SetSummary sets the Summary field and marks it as non-optional;
-// this prevents an empty or null value for this field from being omitted during serialization.
-func (g *GithubComMktAgiAixInternalBulletinDomainBulletin) SetSummary(summary *string) {
-	g.Summary = summary
-	g.require(githubComMktAgiAixInternalBulletinDomainBulletinFieldSummary)
-}
-
-// SetTitle sets the Title field and marks it as non-optional;
-// this prevents an empty or null value for this field from being omitted during serialization.
-func (g *GithubComMktAgiAixInternalBulletinDomainBulletin) SetTitle(title *string) {
-	g.Title = title
-	g.require(githubComMktAgiAixInternalBulletinDomainBulletinFieldTitle)
-}
-
-// SetType sets the Type field and marks it as non-optional;
-// this prevents an empty or null value for this field from being omitted during serialization.
-func (g *GithubComMktAgiAixInternalBulletinDomainBulletin) SetType(type_ *string) {
-	g.Type = type_
-	g.require(githubComMktAgiAixInternalBulletinDomainBulletinFieldType)
-}
-
-// SetUpdatedAt sets the UpdatedAt field and marks it as non-optional;
-// this prevents an empty or null value for this field from being omitted during serialization.
-func (g *GithubComMktAgiAixInternalBulletinDomainBulletin) SetUpdatedAt(updatedAt *int) {
-	g.UpdatedAt = updatedAt
-	g.require(githubComMktAgiAixInternalBulletinDomainBulletinFieldUpdatedAt)
-}
-
-// SetUpdatedBy sets the UpdatedBy field and marks it as non-optional;
-// this prevents an empty or null value for this field from being omitted during serialization.
-func (g *GithubComMktAgiAixInternalBulletinDomainBulletin) SetUpdatedBy(updatedBy *int) {
-	g.UpdatedBy = updatedBy
-	g.require(githubComMktAgiAixInternalBulletinDomainBulletinFieldUpdatedBy)
-}
-
-// SetVersion sets the Version field and marks it as non-optional;
-// this prevents an empty or null value for this field from being omitted during serialization.
-func (g *GithubComMktAgiAixInternalBulletinDomainBulletin) SetVersion(version *string) {
-	g.Version = version
-	g.require(githubComMktAgiAixInternalBulletinDomainBulletinFieldVersion)
-}
-
-func (g *GithubComMktAgiAixInternalBulletinDomainBulletin) UnmarshalJSON(data []byte) error {
-	type unmarshaler GithubComMktAgiAixInternalBulletinDomainBulletin
-	var value unmarshaler
-	if err := json.Unmarshal(data, &value); err != nil {
-		return err
-	}
-	*g = GithubComMktAgiAixInternalBulletinDomainBulletin(value)
-	extraProperties, err := internal.ExtractExtraProperties(data, *g)
-	if err != nil {
-		return err
-	}
-	g.extraProperties = extraProperties
-	g.rawJSON = json.RawMessage(data)
-	return nil
-}
-
-func (g *GithubComMktAgiAixInternalBulletinDomainBulletin) MarshalJSON() ([]byte, error) {
-	type embed GithubComMktAgiAixInternalBulletinDomainBulletin
-	var marshaler = struct {
-		embed
-	}{
-		embed: embed(*g),
-	}
-	explicitMarshaler := internal.HandleExplicitFields(marshaler, g.explicitFields)
-	return json.Marshal(explicitMarshaler)
-}
-
-func (g *GithubComMktAgiAixInternalBulletinDomainBulletin) String() string {
-	if g == nil {
-		return "<nil>"
-	}
-	if len(g.rawJSON) > 0 {
-		if value, err := internal.StringifyJSON(g.rawJSON); err == nil {
-			return value
-		}
-	}
-	if value, err := internal.StringifyJSON(g); err == nil {
-		return value
-	}
-	return fmt.Sprintf("%#v", g)
-}
-
-var (
 	githubComMktAgiAixInternalBulletinInternalDomainBulletinFieldBody        = big.NewInt(1 << 0)
 	githubComMktAgiAixInternalBulletinInternalDomainBulletinFieldCategory    = big.NewInt(1 << 1)
 	githubComMktAgiAixInternalBulletinInternalDomainBulletinFieldCreatedAt   = big.NewInt(1 << 2)
@@ -978,6 +638,171 @@ func (g *GithubComMktAgiAixInternalBulletinInternalDomainBulletin) MarshalJSON()
 }
 
 func (g *GithubComMktAgiAixInternalBulletinInternalDomainBulletin) String() string {
+	if g == nil {
+		return "<nil>"
+	}
+	if len(g.rawJSON) > 0 {
+		if value, err := internal.StringifyJSON(g.rawJSON); err == nil {
+			return value
+		}
+	}
+	if value, err := internal.StringifyJSON(g); err == nil {
+		return value
+	}
+	return fmt.Sprintf("%#v", g)
+}
+
+var (
+	githubComMktAgiAixInternalIamAccessGrantFieldCreatedAt = big.NewInt(1 << 0)
+	githubComMktAgiAixInternalIamAccessGrantFieldCreatedBy = big.NewInt(1 << 1)
+	githubComMktAgiAixInternalIamAccessGrantFieldExpiresAt = big.NewInt(1 << 2)
+	githubComMktAgiAixInternalIamAccessGrantFieldOrderNo   = big.NewInt(1 << 3)
+	githubComMktAgiAixInternalIamAccessGrantFieldSource    = big.NewInt(1 << 4)
+	githubComMktAgiAixInternalIamAccessGrantFieldUserID    = big.NewInt(1 << 5)
+)
+
+type GithubComMktAgiAixInternalIamAccessGrant struct {
+	CreatedAt *int    `json:"createdAt,omitempty" url:"createdAt,omitempty"`
+	CreatedBy *int    `json:"createdBy,omitempty" url:"createdBy,omitempty"`
+	ExpiresAt *int    `json:"expiresAt,omitempty" url:"expiresAt,omitempty"`
+	OrderNo   *string `json:"orderNo,omitempty" url:"orderNo,omitempty"`
+	// "grant" | "purchase"
+	Source *string `json:"source,omitempty" url:"source,omitempty"`
+	UserID *int    `json:"userID,omitempty" url:"userID,omitempty"`
+
+	// Private bitmask of fields set to an explicit value and therefore not to be omitted
+	explicitFields *big.Int `json:"-" url:"-"`
+
+	extraProperties map[string]interface{}
+	rawJSON         json.RawMessage
+}
+
+func (g *GithubComMktAgiAixInternalIamAccessGrant) GetCreatedAt() *int {
+	if g == nil {
+		return nil
+	}
+	return g.CreatedAt
+}
+
+func (g *GithubComMktAgiAixInternalIamAccessGrant) GetCreatedBy() *int {
+	if g == nil {
+		return nil
+	}
+	return g.CreatedBy
+}
+
+func (g *GithubComMktAgiAixInternalIamAccessGrant) GetExpiresAt() *int {
+	if g == nil {
+		return nil
+	}
+	return g.ExpiresAt
+}
+
+func (g *GithubComMktAgiAixInternalIamAccessGrant) GetOrderNo() *string {
+	if g == nil {
+		return nil
+	}
+	return g.OrderNo
+}
+
+func (g *GithubComMktAgiAixInternalIamAccessGrant) GetSource() *string {
+	if g == nil {
+		return nil
+	}
+	return g.Source
+}
+
+func (g *GithubComMktAgiAixInternalIamAccessGrant) GetUserID() *int {
+	if g == nil {
+		return nil
+	}
+	return g.UserID
+}
+
+func (g *GithubComMktAgiAixInternalIamAccessGrant) GetExtraProperties() map[string]interface{} {
+	if g == nil {
+		return nil
+	}
+	return g.extraProperties
+}
+
+func (g *GithubComMktAgiAixInternalIamAccessGrant) require(field *big.Int) {
+	if g.explicitFields == nil {
+		g.explicitFields = big.NewInt(0)
+	}
+	g.explicitFields.Or(g.explicitFields, field)
+}
+
+// SetCreatedAt sets the CreatedAt field and marks it as non-optional;
+// this prevents an empty or null value for this field from being omitted during serialization.
+func (g *GithubComMktAgiAixInternalIamAccessGrant) SetCreatedAt(createdAt *int) {
+	g.CreatedAt = createdAt
+	g.require(githubComMktAgiAixInternalIamAccessGrantFieldCreatedAt)
+}
+
+// SetCreatedBy sets the CreatedBy field and marks it as non-optional;
+// this prevents an empty or null value for this field from being omitted during serialization.
+func (g *GithubComMktAgiAixInternalIamAccessGrant) SetCreatedBy(createdBy *int) {
+	g.CreatedBy = createdBy
+	g.require(githubComMktAgiAixInternalIamAccessGrantFieldCreatedBy)
+}
+
+// SetExpiresAt sets the ExpiresAt field and marks it as non-optional;
+// this prevents an empty or null value for this field from being omitted during serialization.
+func (g *GithubComMktAgiAixInternalIamAccessGrant) SetExpiresAt(expiresAt *int) {
+	g.ExpiresAt = expiresAt
+	g.require(githubComMktAgiAixInternalIamAccessGrantFieldExpiresAt)
+}
+
+// SetOrderNo sets the OrderNo field and marks it as non-optional;
+// this prevents an empty or null value for this field from being omitted during serialization.
+func (g *GithubComMktAgiAixInternalIamAccessGrant) SetOrderNo(orderNo *string) {
+	g.OrderNo = orderNo
+	g.require(githubComMktAgiAixInternalIamAccessGrantFieldOrderNo)
+}
+
+// SetSource sets the Source field and marks it as non-optional;
+// this prevents an empty or null value for this field from being omitted during serialization.
+func (g *GithubComMktAgiAixInternalIamAccessGrant) SetSource(source *string) {
+	g.Source = source
+	g.require(githubComMktAgiAixInternalIamAccessGrantFieldSource)
+}
+
+// SetUserID sets the UserID field and marks it as non-optional;
+// this prevents an empty or null value for this field from being omitted during serialization.
+func (g *GithubComMktAgiAixInternalIamAccessGrant) SetUserID(userID *int) {
+	g.UserID = userID
+	g.require(githubComMktAgiAixInternalIamAccessGrantFieldUserID)
+}
+
+func (g *GithubComMktAgiAixInternalIamAccessGrant) UnmarshalJSON(data []byte) error {
+	type unmarshaler GithubComMktAgiAixInternalIamAccessGrant
+	var value unmarshaler
+	if err := json.Unmarshal(data, &value); err != nil {
+		return err
+	}
+	*g = GithubComMktAgiAixInternalIamAccessGrant(value)
+	extraProperties, err := internal.ExtractExtraProperties(data, *g)
+	if err != nil {
+		return err
+	}
+	g.extraProperties = extraProperties
+	g.rawJSON = json.RawMessage(data)
+	return nil
+}
+
+func (g *GithubComMktAgiAixInternalIamAccessGrant) MarshalJSON() ([]byte, error) {
+	type embed GithubComMktAgiAixInternalIamAccessGrant
+	var marshaler = struct {
+		embed
+	}{
+		embed: embed(*g),
+	}
+	explicitMarshaler := internal.HandleExplicitFields(marshaler, g.explicitFields)
+	return json.Marshal(explicitMarshaler)
+}
+
+func (g *GithubComMktAgiAixInternalIamAccessGrant) String() string {
 	if g == nil {
 		return "<nil>"
 	}
@@ -1353,186 +1178,6 @@ func (g *GithubComMktAgiAixInternalPkgGinxResultAny) String() string {
 }
 
 var (
-	githubComMktAgiAixInternalPkgGinxResultArrayGithubComMktAgiAixInternalBulletinDomainBulletinFieldCode        = big.NewInt(1 << 0)
-	githubComMktAgiAixInternalPkgGinxResultArrayGithubComMktAgiAixInternalBulletinDomainBulletinFieldData        = big.NewInt(1 << 1)
-	githubComMktAgiAixInternalPkgGinxResultArrayGithubComMktAgiAixInternalBulletinDomainBulletinFieldLimit       = big.NewInt(1 << 2)
-	githubComMktAgiAixInternalPkgGinxResultArrayGithubComMktAgiAixInternalBulletinDomainBulletinFieldMessage     = big.NewInt(1 << 3)
-	githubComMktAgiAixInternalPkgGinxResultArrayGithubComMktAgiAixInternalBulletinDomainBulletinFieldPage        = big.NewInt(1 << 4)
-	githubComMktAgiAixInternalPkgGinxResultArrayGithubComMktAgiAixInternalBulletinDomainBulletinFieldTotal       = big.NewInt(1 << 5)
-	githubComMktAgiAixInternalPkgGinxResultArrayGithubComMktAgiAixInternalBulletinDomainBulletinFieldUserMessage = big.NewInt(1 << 6)
-)
-
-type GithubComMktAgiAixInternalPkgGinxResultArrayGithubComMktAgiAixInternalBulletinDomainBulletin struct {
-	Code        *int                                                `json:"code,omitempty" url:"code,omitempty"`
-	Data        []*GithubComMktAgiAixInternalBulletinDomainBulletin `json:"data,omitempty" url:"data,omitempty"`
-	Limit       *int                                                `json:"limit,omitempty" url:"limit,omitempty"`
-	Message     *string                                             `json:"message,omitempty" url:"message,omitempty"`
-	Page        *int                                                `json:"page,omitempty" url:"page,omitempty"`
-	Total       *int                                                `json:"total,omitempty" url:"total,omitempty"`
-	UserMessage *string                                             `json:"user_message,omitempty" url:"user_message,omitempty"`
-
-	// Private bitmask of fields set to an explicit value and therefore not to be omitted
-	explicitFields *big.Int `json:"-" url:"-"`
-
-	extraProperties map[string]interface{}
-	rawJSON         json.RawMessage
-}
-
-func (g *GithubComMktAgiAixInternalPkgGinxResultArrayGithubComMktAgiAixInternalBulletinDomainBulletin) GetCode() *int {
-	if g == nil {
-		return nil
-	}
-	return g.Code
-}
-
-func (g *GithubComMktAgiAixInternalPkgGinxResultArrayGithubComMktAgiAixInternalBulletinDomainBulletin) GetData() []*GithubComMktAgiAixInternalBulletinDomainBulletin {
-	if g == nil {
-		return nil
-	}
-	return g.Data
-}
-
-func (g *GithubComMktAgiAixInternalPkgGinxResultArrayGithubComMktAgiAixInternalBulletinDomainBulletin) GetLimit() *int {
-	if g == nil {
-		return nil
-	}
-	return g.Limit
-}
-
-func (g *GithubComMktAgiAixInternalPkgGinxResultArrayGithubComMktAgiAixInternalBulletinDomainBulletin) GetMessage() *string {
-	if g == nil {
-		return nil
-	}
-	return g.Message
-}
-
-func (g *GithubComMktAgiAixInternalPkgGinxResultArrayGithubComMktAgiAixInternalBulletinDomainBulletin) GetPage() *int {
-	if g == nil {
-		return nil
-	}
-	return g.Page
-}
-
-func (g *GithubComMktAgiAixInternalPkgGinxResultArrayGithubComMktAgiAixInternalBulletinDomainBulletin) GetTotal() *int {
-	if g == nil {
-		return nil
-	}
-	return g.Total
-}
-
-func (g *GithubComMktAgiAixInternalPkgGinxResultArrayGithubComMktAgiAixInternalBulletinDomainBulletin) GetUserMessage() *string {
-	if g == nil {
-		return nil
-	}
-	return g.UserMessage
-}
-
-func (g *GithubComMktAgiAixInternalPkgGinxResultArrayGithubComMktAgiAixInternalBulletinDomainBulletin) GetExtraProperties() map[string]interface{} {
-	if g == nil {
-		return nil
-	}
-	return g.extraProperties
-}
-
-func (g *GithubComMktAgiAixInternalPkgGinxResultArrayGithubComMktAgiAixInternalBulletinDomainBulletin) require(field *big.Int) {
-	if g.explicitFields == nil {
-		g.explicitFields = big.NewInt(0)
-	}
-	g.explicitFields.Or(g.explicitFields, field)
-}
-
-// SetCode sets the Code field and marks it as non-optional;
-// this prevents an empty or null value for this field from being omitted during serialization.
-func (g *GithubComMktAgiAixInternalPkgGinxResultArrayGithubComMktAgiAixInternalBulletinDomainBulletin) SetCode(code *int) {
-	g.Code = code
-	g.require(githubComMktAgiAixInternalPkgGinxResultArrayGithubComMktAgiAixInternalBulletinDomainBulletinFieldCode)
-}
-
-// SetData sets the Data field and marks it as non-optional;
-// this prevents an empty or null value for this field from being omitted during serialization.
-func (g *GithubComMktAgiAixInternalPkgGinxResultArrayGithubComMktAgiAixInternalBulletinDomainBulletin) SetData(data []*GithubComMktAgiAixInternalBulletinDomainBulletin) {
-	g.Data = data
-	g.require(githubComMktAgiAixInternalPkgGinxResultArrayGithubComMktAgiAixInternalBulletinDomainBulletinFieldData)
-}
-
-// SetLimit sets the Limit field and marks it as non-optional;
-// this prevents an empty or null value for this field from being omitted during serialization.
-func (g *GithubComMktAgiAixInternalPkgGinxResultArrayGithubComMktAgiAixInternalBulletinDomainBulletin) SetLimit(limit *int) {
-	g.Limit = limit
-	g.require(githubComMktAgiAixInternalPkgGinxResultArrayGithubComMktAgiAixInternalBulletinDomainBulletinFieldLimit)
-}
-
-// SetMessage sets the Message field and marks it as non-optional;
-// this prevents an empty or null value for this field from being omitted during serialization.
-func (g *GithubComMktAgiAixInternalPkgGinxResultArrayGithubComMktAgiAixInternalBulletinDomainBulletin) SetMessage(message *string) {
-	g.Message = message
-	g.require(githubComMktAgiAixInternalPkgGinxResultArrayGithubComMktAgiAixInternalBulletinDomainBulletinFieldMessage)
-}
-
-// SetPage sets the Page field and marks it as non-optional;
-// this prevents an empty or null value for this field from being omitted during serialization.
-func (g *GithubComMktAgiAixInternalPkgGinxResultArrayGithubComMktAgiAixInternalBulletinDomainBulletin) SetPage(page *int) {
-	g.Page = page
-	g.require(githubComMktAgiAixInternalPkgGinxResultArrayGithubComMktAgiAixInternalBulletinDomainBulletinFieldPage)
-}
-
-// SetTotal sets the Total field and marks it as non-optional;
-// this prevents an empty or null value for this field from being omitted during serialization.
-func (g *GithubComMktAgiAixInternalPkgGinxResultArrayGithubComMktAgiAixInternalBulletinDomainBulletin) SetTotal(total *int) {
-	g.Total = total
-	g.require(githubComMktAgiAixInternalPkgGinxResultArrayGithubComMktAgiAixInternalBulletinDomainBulletinFieldTotal)
-}
-
-// SetUserMessage sets the UserMessage field and marks it as non-optional;
-// this prevents an empty or null value for this field from being omitted during serialization.
-func (g *GithubComMktAgiAixInternalPkgGinxResultArrayGithubComMktAgiAixInternalBulletinDomainBulletin) SetUserMessage(userMessage *string) {
-	g.UserMessage = userMessage
-	g.require(githubComMktAgiAixInternalPkgGinxResultArrayGithubComMktAgiAixInternalBulletinDomainBulletinFieldUserMessage)
-}
-
-func (g *GithubComMktAgiAixInternalPkgGinxResultArrayGithubComMktAgiAixInternalBulletinDomainBulletin) UnmarshalJSON(data []byte) error {
-	type unmarshaler GithubComMktAgiAixInternalPkgGinxResultArrayGithubComMktAgiAixInternalBulletinDomainBulletin
-	var value unmarshaler
-	if err := json.Unmarshal(data, &value); err != nil {
-		return err
-	}
-	*g = GithubComMktAgiAixInternalPkgGinxResultArrayGithubComMktAgiAixInternalBulletinDomainBulletin(value)
-	extraProperties, err := internal.ExtractExtraProperties(data, *g)
-	if err != nil {
-		return err
-	}
-	g.extraProperties = extraProperties
-	g.rawJSON = json.RawMessage(data)
-	return nil
-}
-
-func (g *GithubComMktAgiAixInternalPkgGinxResultArrayGithubComMktAgiAixInternalBulletinDomainBulletin) MarshalJSON() ([]byte, error) {
-	type embed GithubComMktAgiAixInternalPkgGinxResultArrayGithubComMktAgiAixInternalBulletinDomainBulletin
-	var marshaler = struct {
-		embed
-	}{
-		embed: embed(*g),
-	}
-	explicitMarshaler := internal.HandleExplicitFields(marshaler, g.explicitFields)
-	return json.Marshal(explicitMarshaler)
-}
-
-func (g *GithubComMktAgiAixInternalPkgGinxResultArrayGithubComMktAgiAixInternalBulletinDomainBulletin) String() string {
-	if g == nil {
-		return "<nil>"
-	}
-	if len(g.rawJSON) > 0 {
-		if value, err := internal.StringifyJSON(g.rawJSON); err == nil {
-			return value
-		}
-	}
-	if value, err := internal.StringifyJSON(g); err == nil {
-		return value
-	}
-	return fmt.Sprintf("%#v", g)
-}
-
-var (
 	githubComMktAgiAixInternalPkgGinxResultArrayGithubComMktAgiAixInternalBulletinInternalDomainBulletinFieldCode        = big.NewInt(1 << 0)
 	githubComMktAgiAixInternalPkgGinxResultArrayGithubComMktAgiAixInternalBulletinInternalDomainBulletinFieldData        = big.NewInt(1 << 1)
 	githubComMktAgiAixInternalPkgGinxResultArrayGithubComMktAgiAixInternalBulletinInternalDomainBulletinFieldLimit       = big.NewInt(1 << 2)
@@ -1713,23 +1358,23 @@ func (g *GithubComMktAgiAixInternalPkgGinxResultArrayGithubComMktAgiAixInternalB
 }
 
 var (
-	githubComMktAgiAixInternalPkgGinxResultArrayUintFieldCode        = big.NewInt(1 << 0)
-	githubComMktAgiAixInternalPkgGinxResultArrayUintFieldData        = big.NewInt(1 << 1)
-	githubComMktAgiAixInternalPkgGinxResultArrayUintFieldLimit       = big.NewInt(1 << 2)
-	githubComMktAgiAixInternalPkgGinxResultArrayUintFieldMessage     = big.NewInt(1 << 3)
-	githubComMktAgiAixInternalPkgGinxResultArrayUintFieldPage        = big.NewInt(1 << 4)
-	githubComMktAgiAixInternalPkgGinxResultArrayUintFieldTotal       = big.NewInt(1 << 5)
-	githubComMktAgiAixInternalPkgGinxResultArrayUintFieldUserMessage = big.NewInt(1 << 6)
+	githubComMktAgiAixInternalPkgGinxResultArrayGithubComMktAgiAixInternalIamAccessGrantFieldCode        = big.NewInt(1 << 0)
+	githubComMktAgiAixInternalPkgGinxResultArrayGithubComMktAgiAixInternalIamAccessGrantFieldData        = big.NewInt(1 << 1)
+	githubComMktAgiAixInternalPkgGinxResultArrayGithubComMktAgiAixInternalIamAccessGrantFieldLimit       = big.NewInt(1 << 2)
+	githubComMktAgiAixInternalPkgGinxResultArrayGithubComMktAgiAixInternalIamAccessGrantFieldMessage     = big.NewInt(1 << 3)
+	githubComMktAgiAixInternalPkgGinxResultArrayGithubComMktAgiAixInternalIamAccessGrantFieldPage        = big.NewInt(1 << 4)
+	githubComMktAgiAixInternalPkgGinxResultArrayGithubComMktAgiAixInternalIamAccessGrantFieldTotal       = big.NewInt(1 << 5)
+	githubComMktAgiAixInternalPkgGinxResultArrayGithubComMktAgiAixInternalIamAccessGrantFieldUserMessage = big.NewInt(1 << 6)
 )
 
-type GithubComMktAgiAixInternalPkgGinxResultArrayUint struct {
-	Code        *int    `json:"code,omitempty" url:"code,omitempty"`
-	Data        []int   `json:"data,omitempty" url:"data,omitempty"`
-	Limit       *int    `json:"limit,omitempty" url:"limit,omitempty"`
-	Message     *string `json:"message,omitempty" url:"message,omitempty"`
-	Page        *int    `json:"page,omitempty" url:"page,omitempty"`
-	Total       *int    `json:"total,omitempty" url:"total,omitempty"`
-	UserMessage *string `json:"user_message,omitempty" url:"user_message,omitempty"`
+type GithubComMktAgiAixInternalPkgGinxResultArrayGithubComMktAgiAixInternalIamAccessGrant struct {
+	Code        *int                                        `json:"code,omitempty" url:"code,omitempty"`
+	Data        []*GithubComMktAgiAixInternalIamAccessGrant `json:"data,omitempty" url:"data,omitempty"`
+	Limit       *int                                        `json:"limit,omitempty" url:"limit,omitempty"`
+	Message     *string                                     `json:"message,omitempty" url:"message,omitempty"`
+	Page        *int                                        `json:"page,omitempty" url:"page,omitempty"`
+	Total       *int                                        `json:"total,omitempty" url:"total,omitempty"`
+	UserMessage *string                                     `json:"user_message,omitempty" url:"user_message,omitempty"`
 
 	// Private bitmask of fields set to an explicit value and therefore not to be omitted
 	explicitFields *big.Int `json:"-" url:"-"`
@@ -1738,63 +1383,63 @@ type GithubComMktAgiAixInternalPkgGinxResultArrayUint struct {
 	rawJSON         json.RawMessage
 }
 
-func (g *GithubComMktAgiAixInternalPkgGinxResultArrayUint) GetCode() *int {
+func (g *GithubComMktAgiAixInternalPkgGinxResultArrayGithubComMktAgiAixInternalIamAccessGrant) GetCode() *int {
 	if g == nil {
 		return nil
 	}
 	return g.Code
 }
 
-func (g *GithubComMktAgiAixInternalPkgGinxResultArrayUint) GetData() []int {
+func (g *GithubComMktAgiAixInternalPkgGinxResultArrayGithubComMktAgiAixInternalIamAccessGrant) GetData() []*GithubComMktAgiAixInternalIamAccessGrant {
 	if g == nil {
 		return nil
 	}
 	return g.Data
 }
 
-func (g *GithubComMktAgiAixInternalPkgGinxResultArrayUint) GetLimit() *int {
+func (g *GithubComMktAgiAixInternalPkgGinxResultArrayGithubComMktAgiAixInternalIamAccessGrant) GetLimit() *int {
 	if g == nil {
 		return nil
 	}
 	return g.Limit
 }
 
-func (g *GithubComMktAgiAixInternalPkgGinxResultArrayUint) GetMessage() *string {
+func (g *GithubComMktAgiAixInternalPkgGinxResultArrayGithubComMktAgiAixInternalIamAccessGrant) GetMessage() *string {
 	if g == nil {
 		return nil
 	}
 	return g.Message
 }
 
-func (g *GithubComMktAgiAixInternalPkgGinxResultArrayUint) GetPage() *int {
+func (g *GithubComMktAgiAixInternalPkgGinxResultArrayGithubComMktAgiAixInternalIamAccessGrant) GetPage() *int {
 	if g == nil {
 		return nil
 	}
 	return g.Page
 }
 
-func (g *GithubComMktAgiAixInternalPkgGinxResultArrayUint) GetTotal() *int {
+func (g *GithubComMktAgiAixInternalPkgGinxResultArrayGithubComMktAgiAixInternalIamAccessGrant) GetTotal() *int {
 	if g == nil {
 		return nil
 	}
 	return g.Total
 }
 
-func (g *GithubComMktAgiAixInternalPkgGinxResultArrayUint) GetUserMessage() *string {
+func (g *GithubComMktAgiAixInternalPkgGinxResultArrayGithubComMktAgiAixInternalIamAccessGrant) GetUserMessage() *string {
 	if g == nil {
 		return nil
 	}
 	return g.UserMessage
 }
 
-func (g *GithubComMktAgiAixInternalPkgGinxResultArrayUint) GetExtraProperties() map[string]interface{} {
+func (g *GithubComMktAgiAixInternalPkgGinxResultArrayGithubComMktAgiAixInternalIamAccessGrant) GetExtraProperties() map[string]interface{} {
 	if g == nil {
 		return nil
 	}
 	return g.extraProperties
 }
 
-func (g *GithubComMktAgiAixInternalPkgGinxResultArrayUint) require(field *big.Int) {
+func (g *GithubComMktAgiAixInternalPkgGinxResultArrayGithubComMktAgiAixInternalIamAccessGrant) require(field *big.Int) {
 	if g.explicitFields == nil {
 		g.explicitFields = big.NewInt(0)
 	}
@@ -1803,60 +1448,60 @@ func (g *GithubComMktAgiAixInternalPkgGinxResultArrayUint) require(field *big.In
 
 // SetCode sets the Code field and marks it as non-optional;
 // this prevents an empty or null value for this field from being omitted during serialization.
-func (g *GithubComMktAgiAixInternalPkgGinxResultArrayUint) SetCode(code *int) {
+func (g *GithubComMktAgiAixInternalPkgGinxResultArrayGithubComMktAgiAixInternalIamAccessGrant) SetCode(code *int) {
 	g.Code = code
-	g.require(githubComMktAgiAixInternalPkgGinxResultArrayUintFieldCode)
+	g.require(githubComMktAgiAixInternalPkgGinxResultArrayGithubComMktAgiAixInternalIamAccessGrantFieldCode)
 }
 
 // SetData sets the Data field and marks it as non-optional;
 // this prevents an empty or null value for this field from being omitted during serialization.
-func (g *GithubComMktAgiAixInternalPkgGinxResultArrayUint) SetData(data []int) {
+func (g *GithubComMktAgiAixInternalPkgGinxResultArrayGithubComMktAgiAixInternalIamAccessGrant) SetData(data []*GithubComMktAgiAixInternalIamAccessGrant) {
 	g.Data = data
-	g.require(githubComMktAgiAixInternalPkgGinxResultArrayUintFieldData)
+	g.require(githubComMktAgiAixInternalPkgGinxResultArrayGithubComMktAgiAixInternalIamAccessGrantFieldData)
 }
 
 // SetLimit sets the Limit field and marks it as non-optional;
 // this prevents an empty or null value for this field from being omitted during serialization.
-func (g *GithubComMktAgiAixInternalPkgGinxResultArrayUint) SetLimit(limit *int) {
+func (g *GithubComMktAgiAixInternalPkgGinxResultArrayGithubComMktAgiAixInternalIamAccessGrant) SetLimit(limit *int) {
 	g.Limit = limit
-	g.require(githubComMktAgiAixInternalPkgGinxResultArrayUintFieldLimit)
+	g.require(githubComMktAgiAixInternalPkgGinxResultArrayGithubComMktAgiAixInternalIamAccessGrantFieldLimit)
 }
 
 // SetMessage sets the Message field and marks it as non-optional;
 // this prevents an empty or null value for this field from being omitted during serialization.
-func (g *GithubComMktAgiAixInternalPkgGinxResultArrayUint) SetMessage(message *string) {
+func (g *GithubComMktAgiAixInternalPkgGinxResultArrayGithubComMktAgiAixInternalIamAccessGrant) SetMessage(message *string) {
 	g.Message = message
-	g.require(githubComMktAgiAixInternalPkgGinxResultArrayUintFieldMessage)
+	g.require(githubComMktAgiAixInternalPkgGinxResultArrayGithubComMktAgiAixInternalIamAccessGrantFieldMessage)
 }
 
 // SetPage sets the Page field and marks it as non-optional;
 // this prevents an empty or null value for this field from being omitted during serialization.
-func (g *GithubComMktAgiAixInternalPkgGinxResultArrayUint) SetPage(page *int) {
+func (g *GithubComMktAgiAixInternalPkgGinxResultArrayGithubComMktAgiAixInternalIamAccessGrant) SetPage(page *int) {
 	g.Page = page
-	g.require(githubComMktAgiAixInternalPkgGinxResultArrayUintFieldPage)
+	g.require(githubComMktAgiAixInternalPkgGinxResultArrayGithubComMktAgiAixInternalIamAccessGrantFieldPage)
 }
 
 // SetTotal sets the Total field and marks it as non-optional;
 // this prevents an empty or null value for this field from being omitted during serialization.
-func (g *GithubComMktAgiAixInternalPkgGinxResultArrayUint) SetTotal(total *int) {
+func (g *GithubComMktAgiAixInternalPkgGinxResultArrayGithubComMktAgiAixInternalIamAccessGrant) SetTotal(total *int) {
 	g.Total = total
-	g.require(githubComMktAgiAixInternalPkgGinxResultArrayUintFieldTotal)
+	g.require(githubComMktAgiAixInternalPkgGinxResultArrayGithubComMktAgiAixInternalIamAccessGrantFieldTotal)
 }
 
 // SetUserMessage sets the UserMessage field and marks it as non-optional;
 // this prevents an empty or null value for this field from being omitted during serialization.
-func (g *GithubComMktAgiAixInternalPkgGinxResultArrayUint) SetUserMessage(userMessage *string) {
+func (g *GithubComMktAgiAixInternalPkgGinxResultArrayGithubComMktAgiAixInternalIamAccessGrant) SetUserMessage(userMessage *string) {
 	g.UserMessage = userMessage
-	g.require(githubComMktAgiAixInternalPkgGinxResultArrayUintFieldUserMessage)
+	g.require(githubComMktAgiAixInternalPkgGinxResultArrayGithubComMktAgiAixInternalIamAccessGrantFieldUserMessage)
 }
 
-func (g *GithubComMktAgiAixInternalPkgGinxResultArrayUint) UnmarshalJSON(data []byte) error {
-	type unmarshaler GithubComMktAgiAixInternalPkgGinxResultArrayUint
+func (g *GithubComMktAgiAixInternalPkgGinxResultArrayGithubComMktAgiAixInternalIamAccessGrant) UnmarshalJSON(data []byte) error {
+	type unmarshaler GithubComMktAgiAixInternalPkgGinxResultArrayGithubComMktAgiAixInternalIamAccessGrant
 	var value unmarshaler
 	if err := json.Unmarshal(data, &value); err != nil {
 		return err
 	}
-	*g = GithubComMktAgiAixInternalPkgGinxResultArrayUint(value)
+	*g = GithubComMktAgiAixInternalPkgGinxResultArrayGithubComMktAgiAixInternalIamAccessGrant(value)
 	extraProperties, err := internal.ExtractExtraProperties(data, *g)
 	if err != nil {
 		return err
@@ -1866,8 +1511,8 @@ func (g *GithubComMktAgiAixInternalPkgGinxResultArrayUint) UnmarshalJSON(data []
 	return nil
 }
 
-func (g *GithubComMktAgiAixInternalPkgGinxResultArrayUint) MarshalJSON() ([]byte, error) {
-	type embed GithubComMktAgiAixInternalPkgGinxResultArrayUint
+func (g *GithubComMktAgiAixInternalPkgGinxResultArrayGithubComMktAgiAixInternalIamAccessGrant) MarshalJSON() ([]byte, error) {
+	type embed GithubComMktAgiAixInternalPkgGinxResultArrayGithubComMktAgiAixInternalIamAccessGrant
 	var marshaler = struct {
 		embed
 	}{
@@ -1877,187 +1522,7 @@ func (g *GithubComMktAgiAixInternalPkgGinxResultArrayUint) MarshalJSON() ([]byte
 	return json.Marshal(explicitMarshaler)
 }
 
-func (g *GithubComMktAgiAixInternalPkgGinxResultArrayUint) String() string {
-	if g == nil {
-		return "<nil>"
-	}
-	if len(g.rawJSON) > 0 {
-		if value, err := internal.StringifyJSON(g.rawJSON); err == nil {
-			return value
-		}
-	}
-	if value, err := internal.StringifyJSON(g); err == nil {
-		return value
-	}
-	return fmt.Sprintf("%#v", g)
-}
-
-var (
-	githubComMktAgiAixInternalPkgGinxResultGithubComMktAgiAixInternalBulletinDomainBulletinFieldCode        = big.NewInt(1 << 0)
-	githubComMktAgiAixInternalPkgGinxResultGithubComMktAgiAixInternalBulletinDomainBulletinFieldData        = big.NewInt(1 << 1)
-	githubComMktAgiAixInternalPkgGinxResultGithubComMktAgiAixInternalBulletinDomainBulletinFieldLimit       = big.NewInt(1 << 2)
-	githubComMktAgiAixInternalPkgGinxResultGithubComMktAgiAixInternalBulletinDomainBulletinFieldMessage     = big.NewInt(1 << 3)
-	githubComMktAgiAixInternalPkgGinxResultGithubComMktAgiAixInternalBulletinDomainBulletinFieldPage        = big.NewInt(1 << 4)
-	githubComMktAgiAixInternalPkgGinxResultGithubComMktAgiAixInternalBulletinDomainBulletinFieldTotal       = big.NewInt(1 << 5)
-	githubComMktAgiAixInternalPkgGinxResultGithubComMktAgiAixInternalBulletinDomainBulletinFieldUserMessage = big.NewInt(1 << 6)
-)
-
-type GithubComMktAgiAixInternalPkgGinxResultGithubComMktAgiAixInternalBulletinDomainBulletin struct {
-	Code        *int                                              `json:"code,omitempty" url:"code,omitempty"`
-	Data        *GithubComMktAgiAixInternalBulletinDomainBulletin `json:"data,omitempty" url:"data,omitempty"`
-	Limit       *int                                              `json:"limit,omitempty" url:"limit,omitempty"`
-	Message     *string                                           `json:"message,omitempty" url:"message,omitempty"`
-	Page        *int                                              `json:"page,omitempty" url:"page,omitempty"`
-	Total       *int                                              `json:"total,omitempty" url:"total,omitempty"`
-	UserMessage *string                                           `json:"user_message,omitempty" url:"user_message,omitempty"`
-
-	// Private bitmask of fields set to an explicit value and therefore not to be omitted
-	explicitFields *big.Int `json:"-" url:"-"`
-
-	extraProperties map[string]interface{}
-	rawJSON         json.RawMessage
-}
-
-func (g *GithubComMktAgiAixInternalPkgGinxResultGithubComMktAgiAixInternalBulletinDomainBulletin) GetCode() *int {
-	if g == nil {
-		return nil
-	}
-	return g.Code
-}
-
-func (g *GithubComMktAgiAixInternalPkgGinxResultGithubComMktAgiAixInternalBulletinDomainBulletin) GetData() *GithubComMktAgiAixInternalBulletinDomainBulletin {
-	if g == nil {
-		return nil
-	}
-	return g.Data
-}
-
-func (g *GithubComMktAgiAixInternalPkgGinxResultGithubComMktAgiAixInternalBulletinDomainBulletin) GetLimit() *int {
-	if g == nil {
-		return nil
-	}
-	return g.Limit
-}
-
-func (g *GithubComMktAgiAixInternalPkgGinxResultGithubComMktAgiAixInternalBulletinDomainBulletin) GetMessage() *string {
-	if g == nil {
-		return nil
-	}
-	return g.Message
-}
-
-func (g *GithubComMktAgiAixInternalPkgGinxResultGithubComMktAgiAixInternalBulletinDomainBulletin) GetPage() *int {
-	if g == nil {
-		return nil
-	}
-	return g.Page
-}
-
-func (g *GithubComMktAgiAixInternalPkgGinxResultGithubComMktAgiAixInternalBulletinDomainBulletin) GetTotal() *int {
-	if g == nil {
-		return nil
-	}
-	return g.Total
-}
-
-func (g *GithubComMktAgiAixInternalPkgGinxResultGithubComMktAgiAixInternalBulletinDomainBulletin) GetUserMessage() *string {
-	if g == nil {
-		return nil
-	}
-	return g.UserMessage
-}
-
-func (g *GithubComMktAgiAixInternalPkgGinxResultGithubComMktAgiAixInternalBulletinDomainBulletin) GetExtraProperties() map[string]interface{} {
-	if g == nil {
-		return nil
-	}
-	return g.extraProperties
-}
-
-func (g *GithubComMktAgiAixInternalPkgGinxResultGithubComMktAgiAixInternalBulletinDomainBulletin) require(field *big.Int) {
-	if g.explicitFields == nil {
-		g.explicitFields = big.NewInt(0)
-	}
-	g.explicitFields.Or(g.explicitFields, field)
-}
-
-// SetCode sets the Code field and marks it as non-optional;
-// this prevents an empty or null value for this field from being omitted during serialization.
-func (g *GithubComMktAgiAixInternalPkgGinxResultGithubComMktAgiAixInternalBulletinDomainBulletin) SetCode(code *int) {
-	g.Code = code
-	g.require(githubComMktAgiAixInternalPkgGinxResultGithubComMktAgiAixInternalBulletinDomainBulletinFieldCode)
-}
-
-// SetData sets the Data field and marks it as non-optional;
-// this prevents an empty or null value for this field from being omitted during serialization.
-func (g *GithubComMktAgiAixInternalPkgGinxResultGithubComMktAgiAixInternalBulletinDomainBulletin) SetData(data *GithubComMktAgiAixInternalBulletinDomainBulletin) {
-	g.Data = data
-	g.require(githubComMktAgiAixInternalPkgGinxResultGithubComMktAgiAixInternalBulletinDomainBulletinFieldData)
-}
-
-// SetLimit sets the Limit field and marks it as non-optional;
-// this prevents an empty or null value for this field from being omitted during serialization.
-func (g *GithubComMktAgiAixInternalPkgGinxResultGithubComMktAgiAixInternalBulletinDomainBulletin) SetLimit(limit *int) {
-	g.Limit = limit
-	g.require(githubComMktAgiAixInternalPkgGinxResultGithubComMktAgiAixInternalBulletinDomainBulletinFieldLimit)
-}
-
-// SetMessage sets the Message field and marks it as non-optional;
-// this prevents an empty or null value for this field from being omitted during serialization.
-func (g *GithubComMktAgiAixInternalPkgGinxResultGithubComMktAgiAixInternalBulletinDomainBulletin) SetMessage(message *string) {
-	g.Message = message
-	g.require(githubComMktAgiAixInternalPkgGinxResultGithubComMktAgiAixInternalBulletinDomainBulletinFieldMessage)
-}
-
-// SetPage sets the Page field and marks it as non-optional;
-// this prevents an empty or null value for this field from being omitted during serialization.
-func (g *GithubComMktAgiAixInternalPkgGinxResultGithubComMktAgiAixInternalBulletinDomainBulletin) SetPage(page *int) {
-	g.Page = page
-	g.require(githubComMktAgiAixInternalPkgGinxResultGithubComMktAgiAixInternalBulletinDomainBulletinFieldPage)
-}
-
-// SetTotal sets the Total field and marks it as non-optional;
-// this prevents an empty or null value for this field from being omitted during serialization.
-func (g *GithubComMktAgiAixInternalPkgGinxResultGithubComMktAgiAixInternalBulletinDomainBulletin) SetTotal(total *int) {
-	g.Total = total
-	g.require(githubComMktAgiAixInternalPkgGinxResultGithubComMktAgiAixInternalBulletinDomainBulletinFieldTotal)
-}
-
-// SetUserMessage sets the UserMessage field and marks it as non-optional;
-// this prevents an empty or null value for this field from being omitted during serialization.
-func (g *GithubComMktAgiAixInternalPkgGinxResultGithubComMktAgiAixInternalBulletinDomainBulletin) SetUserMessage(userMessage *string) {
-	g.UserMessage = userMessage
-	g.require(githubComMktAgiAixInternalPkgGinxResultGithubComMktAgiAixInternalBulletinDomainBulletinFieldUserMessage)
-}
-
-func (g *GithubComMktAgiAixInternalPkgGinxResultGithubComMktAgiAixInternalBulletinDomainBulletin) UnmarshalJSON(data []byte) error {
-	type unmarshaler GithubComMktAgiAixInternalPkgGinxResultGithubComMktAgiAixInternalBulletinDomainBulletin
-	var value unmarshaler
-	if err := json.Unmarshal(data, &value); err != nil {
-		return err
-	}
-	*g = GithubComMktAgiAixInternalPkgGinxResultGithubComMktAgiAixInternalBulletinDomainBulletin(value)
-	extraProperties, err := internal.ExtractExtraProperties(data, *g)
-	if err != nil {
-		return err
-	}
-	g.extraProperties = extraProperties
-	g.rawJSON = json.RawMessage(data)
-	return nil
-}
-
-func (g *GithubComMktAgiAixInternalPkgGinxResultGithubComMktAgiAixInternalBulletinDomainBulletin) MarshalJSON() ([]byte, error) {
-	type embed GithubComMktAgiAixInternalPkgGinxResultGithubComMktAgiAixInternalBulletinDomainBulletin
-	var marshaler = struct {
-		embed
-	}{
-		embed: embed(*g),
-	}
-	explicitMarshaler := internal.HandleExplicitFields(marshaler, g.explicitFields)
-	return json.Marshal(explicitMarshaler)
-}
-
-func (g *GithubComMktAgiAixInternalPkgGinxResultGithubComMktAgiAixInternalBulletinDomainBulletin) String() string {
+func (g *GithubComMktAgiAixInternalPkgGinxResultArrayGithubComMktAgiAixInternalIamAccessGrant) String() string {
 	if g == nil {
 		return "<nil>"
 	}
@@ -2836,446 +2301,6 @@ func (i *InternalAccountsInternalWebSetupRequest) MarshalJSON() ([]byte, error) 
 }
 
 func (i *InternalAccountsInternalWebSetupRequest) String() string {
-	if i == nil {
-		return "<nil>"
-	}
-	if len(i.rawJSON) > 0 {
-		if value, err := internal.StringifyJSON(i.rawJSON); err == nil {
-			return value
-		}
-	}
-	if value, err := internal.StringifyJSON(i); err == nil {
-		return value
-	}
-	return fmt.Sprintf("%#v", i)
-}
-
-var (
-	internalBulletinInternalWebCreateBulletinReqFieldBody      = big.NewInt(1 << 0)
-	internalBulletinInternalWebCreateBulletinReqFieldCategory  = big.NewInt(1 << 1)
-	internalBulletinInternalWebCreateBulletinReqFieldExpiresAt = big.NewInt(1 << 2)
-	internalBulletinInternalWebCreateBulletinReqFieldParentID  = big.NewInt(1 << 3)
-	internalBulletinInternalWebCreateBulletinReqFieldSection   = big.NewInt(1 << 4)
-	internalBulletinInternalWebCreateBulletinReqFieldSortOrder = big.NewInt(1 << 5)
-	internalBulletinInternalWebCreateBulletinReqFieldSummary   = big.NewInt(1 << 6)
-	internalBulletinInternalWebCreateBulletinReqFieldTitle     = big.NewInt(1 << 7)
-	internalBulletinInternalWebCreateBulletinReqFieldType      = big.NewInt(1 << 8)
-	internalBulletinInternalWebCreateBulletinReqFieldVersion   = big.NewInt(1 << 9)
-)
-
-type InternalBulletinInternalWebCreateBulletinReq struct {
-	Body      *string `json:"body,omitempty" url:"body,omitempty"`
-	Category  *string `json:"category,omitempty" url:"category,omitempty"`
-	ExpiresAt *int    `json:"expires_at,omitempty" url:"expires_at,omitempty"`
-	ParentID  *int    `json:"parent_id,omitempty" url:"parent_id,omitempty"`
-	Section   *string `json:"section,omitempty" url:"section,omitempty"`
-	SortOrder *int    `json:"sort_order,omitempty" url:"sort_order,omitempty"`
-	Summary   *string `json:"summary,omitempty" url:"summary,omitempty"`
-	Title     *string `json:"title,omitempty" url:"title,omitempty"`
-	Type      *string `json:"type,omitempty" url:"type,omitempty"`
-	Version   *string `json:"version,omitempty" url:"version,omitempty"`
-
-	// Private bitmask of fields set to an explicit value and therefore not to be omitted
-	explicitFields *big.Int `json:"-" url:"-"`
-
-	extraProperties map[string]interface{}
-	rawJSON         json.RawMessage
-}
-
-func (i *InternalBulletinInternalWebCreateBulletinReq) GetBody() *string {
-	if i == nil {
-		return nil
-	}
-	return i.Body
-}
-
-func (i *InternalBulletinInternalWebCreateBulletinReq) GetCategory() *string {
-	if i == nil {
-		return nil
-	}
-	return i.Category
-}
-
-func (i *InternalBulletinInternalWebCreateBulletinReq) GetExpiresAt() *int {
-	if i == nil {
-		return nil
-	}
-	return i.ExpiresAt
-}
-
-func (i *InternalBulletinInternalWebCreateBulletinReq) GetParentID() *int {
-	if i == nil {
-		return nil
-	}
-	return i.ParentID
-}
-
-func (i *InternalBulletinInternalWebCreateBulletinReq) GetSection() *string {
-	if i == nil {
-		return nil
-	}
-	return i.Section
-}
-
-func (i *InternalBulletinInternalWebCreateBulletinReq) GetSortOrder() *int {
-	if i == nil {
-		return nil
-	}
-	return i.SortOrder
-}
-
-func (i *InternalBulletinInternalWebCreateBulletinReq) GetSummary() *string {
-	if i == nil {
-		return nil
-	}
-	return i.Summary
-}
-
-func (i *InternalBulletinInternalWebCreateBulletinReq) GetTitle() *string {
-	if i == nil {
-		return nil
-	}
-	return i.Title
-}
-
-func (i *InternalBulletinInternalWebCreateBulletinReq) GetType() *string {
-	if i == nil {
-		return nil
-	}
-	return i.Type
-}
-
-func (i *InternalBulletinInternalWebCreateBulletinReq) GetVersion() *string {
-	if i == nil {
-		return nil
-	}
-	return i.Version
-}
-
-func (i *InternalBulletinInternalWebCreateBulletinReq) GetExtraProperties() map[string]interface{} {
-	if i == nil {
-		return nil
-	}
-	return i.extraProperties
-}
-
-func (i *InternalBulletinInternalWebCreateBulletinReq) require(field *big.Int) {
-	if i.explicitFields == nil {
-		i.explicitFields = big.NewInt(0)
-	}
-	i.explicitFields.Or(i.explicitFields, field)
-}
-
-// SetBody sets the Body field and marks it as non-optional;
-// this prevents an empty or null value for this field from being omitted during serialization.
-func (i *InternalBulletinInternalWebCreateBulletinReq) SetBody(body *string) {
-	i.Body = body
-	i.require(internalBulletinInternalWebCreateBulletinReqFieldBody)
-}
-
-// SetCategory sets the Category field and marks it as non-optional;
-// this prevents an empty or null value for this field from being omitted during serialization.
-func (i *InternalBulletinInternalWebCreateBulletinReq) SetCategory(category *string) {
-	i.Category = category
-	i.require(internalBulletinInternalWebCreateBulletinReqFieldCategory)
-}
-
-// SetExpiresAt sets the ExpiresAt field and marks it as non-optional;
-// this prevents an empty or null value for this field from being omitted during serialization.
-func (i *InternalBulletinInternalWebCreateBulletinReq) SetExpiresAt(expiresAt *int) {
-	i.ExpiresAt = expiresAt
-	i.require(internalBulletinInternalWebCreateBulletinReqFieldExpiresAt)
-}
-
-// SetParentID sets the ParentID field and marks it as non-optional;
-// this prevents an empty or null value for this field from being omitted during serialization.
-func (i *InternalBulletinInternalWebCreateBulletinReq) SetParentID(parentID *int) {
-	i.ParentID = parentID
-	i.require(internalBulletinInternalWebCreateBulletinReqFieldParentID)
-}
-
-// SetSection sets the Section field and marks it as non-optional;
-// this prevents an empty or null value for this field from being omitted during serialization.
-func (i *InternalBulletinInternalWebCreateBulletinReq) SetSection(section *string) {
-	i.Section = section
-	i.require(internalBulletinInternalWebCreateBulletinReqFieldSection)
-}
-
-// SetSortOrder sets the SortOrder field and marks it as non-optional;
-// this prevents an empty or null value for this field from being omitted during serialization.
-func (i *InternalBulletinInternalWebCreateBulletinReq) SetSortOrder(sortOrder *int) {
-	i.SortOrder = sortOrder
-	i.require(internalBulletinInternalWebCreateBulletinReqFieldSortOrder)
-}
-
-// SetSummary sets the Summary field and marks it as non-optional;
-// this prevents an empty or null value for this field from being omitted during serialization.
-func (i *InternalBulletinInternalWebCreateBulletinReq) SetSummary(summary *string) {
-	i.Summary = summary
-	i.require(internalBulletinInternalWebCreateBulletinReqFieldSummary)
-}
-
-// SetTitle sets the Title field and marks it as non-optional;
-// this prevents an empty or null value for this field from being omitted during serialization.
-func (i *InternalBulletinInternalWebCreateBulletinReq) SetTitle(title *string) {
-	i.Title = title
-	i.require(internalBulletinInternalWebCreateBulletinReqFieldTitle)
-}
-
-// SetType sets the Type field and marks it as non-optional;
-// this prevents an empty or null value for this field from being omitted during serialization.
-func (i *InternalBulletinInternalWebCreateBulletinReq) SetType(type_ *string) {
-	i.Type = type_
-	i.require(internalBulletinInternalWebCreateBulletinReqFieldType)
-}
-
-// SetVersion sets the Version field and marks it as non-optional;
-// this prevents an empty or null value for this field from being omitted during serialization.
-func (i *InternalBulletinInternalWebCreateBulletinReq) SetVersion(version *string) {
-	i.Version = version
-	i.require(internalBulletinInternalWebCreateBulletinReqFieldVersion)
-}
-
-func (i *InternalBulletinInternalWebCreateBulletinReq) UnmarshalJSON(data []byte) error {
-	type unmarshaler InternalBulletinInternalWebCreateBulletinReq
-	var value unmarshaler
-	if err := json.Unmarshal(data, &value); err != nil {
-		return err
-	}
-	*i = InternalBulletinInternalWebCreateBulletinReq(value)
-	extraProperties, err := internal.ExtractExtraProperties(data, *i)
-	if err != nil {
-		return err
-	}
-	i.extraProperties = extraProperties
-	i.rawJSON = json.RawMessage(data)
-	return nil
-}
-
-func (i *InternalBulletinInternalWebCreateBulletinReq) MarshalJSON() ([]byte, error) {
-	type embed InternalBulletinInternalWebCreateBulletinReq
-	var marshaler = struct {
-		embed
-	}{
-		embed: embed(*i),
-	}
-	explicitMarshaler := internal.HandleExplicitFields(marshaler, i.explicitFields)
-	return json.Marshal(explicitMarshaler)
-}
-
-func (i *InternalBulletinInternalWebCreateBulletinReq) String() string {
-	if i == nil {
-		return "<nil>"
-	}
-	if len(i.rawJSON) > 0 {
-		if value, err := internal.StringifyJSON(i.rawJSON); err == nil {
-			return value
-		}
-	}
-	if value, err := internal.StringifyJSON(i); err == nil {
-		return value
-	}
-	return fmt.Sprintf("%#v", i)
-}
-
-var (
-	internalBulletinInternalWebUpdateBulletinReqFieldBody      = big.NewInt(1 << 0)
-	internalBulletinInternalWebUpdateBulletinReqFieldCategory  = big.NewInt(1 << 1)
-	internalBulletinInternalWebUpdateBulletinReqFieldExpiresAt = big.NewInt(1 << 2)
-	internalBulletinInternalWebUpdateBulletinReqFieldParentID  = big.NewInt(1 << 3)
-	internalBulletinInternalWebUpdateBulletinReqFieldSection   = big.NewInt(1 << 4)
-	internalBulletinInternalWebUpdateBulletinReqFieldSortOrder = big.NewInt(1 << 5)
-	internalBulletinInternalWebUpdateBulletinReqFieldSummary   = big.NewInt(1 << 6)
-	internalBulletinInternalWebUpdateBulletinReqFieldTitle     = big.NewInt(1 << 7)
-	internalBulletinInternalWebUpdateBulletinReqFieldVersion   = big.NewInt(1 << 8)
-)
-
-type InternalBulletinInternalWebUpdateBulletinReq struct {
-	Body      *string `json:"body,omitempty" url:"body,omitempty"`
-	Category  *string `json:"category,omitempty" url:"category,omitempty"`
-	ExpiresAt *int    `json:"expires_at,omitempty" url:"expires_at,omitempty"`
-	ParentID  *int    `json:"parent_id,omitempty" url:"parent_id,omitempty"`
-	Section   *string `json:"section,omitempty" url:"section,omitempty"`
-	SortOrder *int    `json:"sort_order,omitempty" url:"sort_order,omitempty"`
-	Summary   *string `json:"summary,omitempty" url:"summary,omitempty"`
-	Title     *string `json:"title,omitempty" url:"title,omitempty"`
-	Version   *string `json:"version,omitempty" url:"version,omitempty"`
-
-	// Private bitmask of fields set to an explicit value and therefore not to be omitted
-	explicitFields *big.Int `json:"-" url:"-"`
-
-	extraProperties map[string]interface{}
-	rawJSON         json.RawMessage
-}
-
-func (i *InternalBulletinInternalWebUpdateBulletinReq) GetBody() *string {
-	if i == nil {
-		return nil
-	}
-	return i.Body
-}
-
-func (i *InternalBulletinInternalWebUpdateBulletinReq) GetCategory() *string {
-	if i == nil {
-		return nil
-	}
-	return i.Category
-}
-
-func (i *InternalBulletinInternalWebUpdateBulletinReq) GetExpiresAt() *int {
-	if i == nil {
-		return nil
-	}
-	return i.ExpiresAt
-}
-
-func (i *InternalBulletinInternalWebUpdateBulletinReq) GetParentID() *int {
-	if i == nil {
-		return nil
-	}
-	return i.ParentID
-}
-
-func (i *InternalBulletinInternalWebUpdateBulletinReq) GetSection() *string {
-	if i == nil {
-		return nil
-	}
-	return i.Section
-}
-
-func (i *InternalBulletinInternalWebUpdateBulletinReq) GetSortOrder() *int {
-	if i == nil {
-		return nil
-	}
-	return i.SortOrder
-}
-
-func (i *InternalBulletinInternalWebUpdateBulletinReq) GetSummary() *string {
-	if i == nil {
-		return nil
-	}
-	return i.Summary
-}
-
-func (i *InternalBulletinInternalWebUpdateBulletinReq) GetTitle() *string {
-	if i == nil {
-		return nil
-	}
-	return i.Title
-}
-
-func (i *InternalBulletinInternalWebUpdateBulletinReq) GetVersion() *string {
-	if i == nil {
-		return nil
-	}
-	return i.Version
-}
-
-func (i *InternalBulletinInternalWebUpdateBulletinReq) GetExtraProperties() map[string]interface{} {
-	if i == nil {
-		return nil
-	}
-	return i.extraProperties
-}
-
-func (i *InternalBulletinInternalWebUpdateBulletinReq) require(field *big.Int) {
-	if i.explicitFields == nil {
-		i.explicitFields = big.NewInt(0)
-	}
-	i.explicitFields.Or(i.explicitFields, field)
-}
-
-// SetBody sets the Body field and marks it as non-optional;
-// this prevents an empty or null value for this field from being omitted during serialization.
-func (i *InternalBulletinInternalWebUpdateBulletinReq) SetBody(body *string) {
-	i.Body = body
-	i.require(internalBulletinInternalWebUpdateBulletinReqFieldBody)
-}
-
-// SetCategory sets the Category field and marks it as non-optional;
-// this prevents an empty or null value for this field from being omitted during serialization.
-func (i *InternalBulletinInternalWebUpdateBulletinReq) SetCategory(category *string) {
-	i.Category = category
-	i.require(internalBulletinInternalWebUpdateBulletinReqFieldCategory)
-}
-
-// SetExpiresAt sets the ExpiresAt field and marks it as non-optional;
-// this prevents an empty or null value for this field from being omitted during serialization.
-func (i *InternalBulletinInternalWebUpdateBulletinReq) SetExpiresAt(expiresAt *int) {
-	i.ExpiresAt = expiresAt
-	i.require(internalBulletinInternalWebUpdateBulletinReqFieldExpiresAt)
-}
-
-// SetParentID sets the ParentID field and marks it as non-optional;
-// this prevents an empty or null value for this field from being omitted during serialization.
-func (i *InternalBulletinInternalWebUpdateBulletinReq) SetParentID(parentID *int) {
-	i.ParentID = parentID
-	i.require(internalBulletinInternalWebUpdateBulletinReqFieldParentID)
-}
-
-// SetSection sets the Section field and marks it as non-optional;
-// this prevents an empty or null value for this field from being omitted during serialization.
-func (i *InternalBulletinInternalWebUpdateBulletinReq) SetSection(section *string) {
-	i.Section = section
-	i.require(internalBulletinInternalWebUpdateBulletinReqFieldSection)
-}
-
-// SetSortOrder sets the SortOrder field and marks it as non-optional;
-// this prevents an empty or null value for this field from being omitted during serialization.
-func (i *InternalBulletinInternalWebUpdateBulletinReq) SetSortOrder(sortOrder *int) {
-	i.SortOrder = sortOrder
-	i.require(internalBulletinInternalWebUpdateBulletinReqFieldSortOrder)
-}
-
-// SetSummary sets the Summary field and marks it as non-optional;
-// this prevents an empty or null value for this field from being omitted during serialization.
-func (i *InternalBulletinInternalWebUpdateBulletinReq) SetSummary(summary *string) {
-	i.Summary = summary
-	i.require(internalBulletinInternalWebUpdateBulletinReqFieldSummary)
-}
-
-// SetTitle sets the Title field and marks it as non-optional;
-// this prevents an empty or null value for this field from being omitted during serialization.
-func (i *InternalBulletinInternalWebUpdateBulletinReq) SetTitle(title *string) {
-	i.Title = title
-	i.require(internalBulletinInternalWebUpdateBulletinReqFieldTitle)
-}
-
-// SetVersion sets the Version field and marks it as non-optional;
-// this prevents an empty or null value for this field from being omitted during serialization.
-func (i *InternalBulletinInternalWebUpdateBulletinReq) SetVersion(version *string) {
-	i.Version = version
-	i.require(internalBulletinInternalWebUpdateBulletinReqFieldVersion)
-}
-
-func (i *InternalBulletinInternalWebUpdateBulletinReq) UnmarshalJSON(data []byte) error {
-	type unmarshaler InternalBulletinInternalWebUpdateBulletinReq
-	var value unmarshaler
-	if err := json.Unmarshal(data, &value); err != nil {
-		return err
-	}
-	*i = InternalBulletinInternalWebUpdateBulletinReq(value)
-	extraProperties, err := internal.ExtractExtraProperties(data, *i)
-	if err != nil {
-		return err
-	}
-	i.extraProperties = extraProperties
-	i.rawJSON = json.RawMessage(data)
-	return nil
-}
-
-func (i *InternalBulletinInternalWebUpdateBulletinReq) MarshalJSON() ([]byte, error) {
-	type embed InternalBulletinInternalWebUpdateBulletinReq
-	var marshaler = struct {
-		embed
-	}{
-		embed: embed(*i),
-	}
-	explicitMarshaler := internal.HandleExplicitFields(marshaler, i.explicitFields)
-	return json.Marshal(explicitMarshaler)
-}
-
-func (i *InternalBulletinInternalWebUpdateBulletinReq) String() string {
 	if i == nil {
 		return "<nil>"
 	}

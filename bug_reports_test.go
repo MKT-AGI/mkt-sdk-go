@@ -354,6 +354,14 @@ func TestSettersGithubComMktAgiAixInternalBugreportsInternalDomainBugReport(t *t
 		assert.NotNil(t, obj.explicitFields)
 	})
 
+	t.Run("SetContext", func(t *testing.T) {
+		obj := &GithubComMktAgiAixInternalBugreportsInternalDomainBugReport{}
+		var fernTestValueContext []int
+		obj.SetContext(fernTestValueContext)
+		assert.Equal(t, fernTestValueContext, obj.Context)
+		assert.NotNil(t, obj.explicitFields)
+	})
+
 	t.Run("SetCreatedAt", func(t *testing.T) {
 		obj := &GithubComMktAgiAixInternalBugreportsInternalDomainBugReport{}
 		var fernTestValueCreatedAt *int
@@ -378,14 +386,6 @@ func TestSettersGithubComMktAgiAixInternalBugreportsInternalDomainBugReport(t *t
 		assert.NotNil(t, obj.explicitFields)
 	})
 
-	t.Run("SetElement", func(t *testing.T) {
-		obj := &GithubComMktAgiAixInternalBugreportsInternalDomainBugReport{}
-		var fernTestValueElement *GithubComMktAgiAixInternalBugreportsInternalDomainElementData
-		obj.SetElement(fernTestValueElement)
-		assert.Equal(t, fernTestValueElement, obj.Element)
-		assert.NotNil(t, obj.explicitFields)
-	})
-
 	t.Run("SetGithubIssueNumber", func(t *testing.T) {
 		obj := &GithubComMktAgiAixInternalBugreportsInternalDomainBugReport{}
 		var fernTestValueGithubIssueNumber *int
@@ -407,6 +407,14 @@ func TestSettersGithubComMktAgiAixInternalBugreportsInternalDomainBugReport(t *t
 		var fernTestValueID *int
 		obj.SetID(fernTestValueID)
 		assert.Equal(t, fernTestValueID, obj.ID)
+		assert.NotNil(t, obj.explicitFields)
+	})
+
+	t.Run("SetLabel", func(t *testing.T) {
+		obj := &GithubComMktAgiAixInternalBugreportsInternalDomainBugReport{}
+		var fernTestValueLabel *string
+		obj.SetLabel(fernTestValueLabel)
+		assert.Equal(t, fernTestValueLabel, obj.Label)
 		assert.NotNil(t, obj.explicitFields)
 	})
 
@@ -474,14 +482,6 @@ func TestSettersGithubComMktAgiAixInternalBugreportsInternalDomainBugReport(t *t
 		assert.NotNil(t, obj.explicitFields)
 	})
 
-	t.Run("SetViewport", func(t *testing.T) {
-		obj := &GithubComMktAgiAixInternalBugreportsInternalDomainBugReport{}
-		var fernTestValueViewport *GithubComMktAgiAixInternalBugreportsInternalDomainViewportData
-		obj.SetViewport(fernTestValueViewport)
-		assert.Equal(t, fernTestValueViewport, obj.Viewport)
-		assert.NotNil(t, obj.explicitFields)
-	})
-
 }
 
 func TestGettersGithubComMktAgiAixInternalBugreportsInternalDomainBugReport(t *testing.T) {
@@ -516,6 +516,39 @@ func TestGettersGithubComMktAgiAixInternalBugreportsInternalDomainBugReport(t *t
 			}
 		}()
 		_ = obj.GetClientTimestamp() // Should return zero value
+	})
+
+	t.Run("GetContext", func(t *testing.T) {
+		t.Parallel()
+		// Arrange
+		obj := &GithubComMktAgiAixInternalBugreportsInternalDomainBugReport{}
+		var expected []int
+		obj.Context = expected
+
+		// Act & Assert
+		assert.Equal(t, expected, obj.GetContext(), "getter should return the property value")
+	})
+
+	t.Run("GetContext_NilValue", func(t *testing.T) {
+		t.Parallel()
+		// Arrange
+		obj := &GithubComMktAgiAixInternalBugreportsInternalDomainBugReport{}
+		obj.Context = nil
+
+		// Act & Assert
+		assert.Nil(t, obj.GetContext(), "getter should return nil when property is nil")
+	})
+
+	t.Run("GetContext_NilReceiver", func(t *testing.T) {
+		t.Parallel()
+		var obj *GithubComMktAgiAixInternalBugreportsInternalDomainBugReport
+		// Should not panic - getters should handle nil receiver gracefully
+		defer func() {
+			if r := recover(); r != nil {
+				t.Errorf("Getter panicked on nil receiver: %v", r)
+			}
+		}()
+		_ = obj.GetContext() // Should return zero value
 	})
 
 	t.Run("GetCreatedAt", func(t *testing.T) {
@@ -617,39 +650,6 @@ func TestGettersGithubComMktAgiAixInternalBugreportsInternalDomainBugReport(t *t
 		_ = obj.GetDomainLabel() // Should return zero value
 	})
 
-	t.Run("GetElement", func(t *testing.T) {
-		t.Parallel()
-		// Arrange
-		obj := &GithubComMktAgiAixInternalBugreportsInternalDomainBugReport{}
-		var expected *GithubComMktAgiAixInternalBugreportsInternalDomainElementData
-		obj.Element = expected
-
-		// Act & Assert
-		assert.Equal(t, expected, obj.GetElement(), "getter should return the property value")
-	})
-
-	t.Run("GetElement_NilValue", func(t *testing.T) {
-		t.Parallel()
-		// Arrange
-		obj := &GithubComMktAgiAixInternalBugreportsInternalDomainBugReport{}
-		obj.Element = nil
-
-		// Act & Assert
-		assert.Nil(t, obj.GetElement(), "getter should return nil when property is nil")
-	})
-
-	t.Run("GetElement_NilReceiver", func(t *testing.T) {
-		t.Parallel()
-		var obj *GithubComMktAgiAixInternalBugreportsInternalDomainBugReport
-		// Should not panic - getters should handle nil receiver gracefully
-		defer func() {
-			if r := recover(); r != nil {
-				t.Errorf("Getter panicked on nil receiver: %v", r)
-			}
-		}()
-		_ = obj.GetElement() // Should return zero value
-	})
-
 	t.Run("GetGithubIssueNumber", func(t *testing.T) {
 		t.Parallel()
 		// Arrange
@@ -747,6 +747,39 @@ func TestGettersGithubComMktAgiAixInternalBugreportsInternalDomainBugReport(t *t
 			}
 		}()
 		_ = obj.GetID() // Should return zero value
+	})
+
+	t.Run("GetLabel", func(t *testing.T) {
+		t.Parallel()
+		// Arrange
+		obj := &GithubComMktAgiAixInternalBugreportsInternalDomainBugReport{}
+		var expected *string
+		obj.Label = expected
+
+		// Act & Assert
+		assert.Equal(t, expected, obj.GetLabel(), "getter should return the property value")
+	})
+
+	t.Run("GetLabel_NilValue", func(t *testing.T) {
+		t.Parallel()
+		// Arrange
+		obj := &GithubComMktAgiAixInternalBugreportsInternalDomainBugReport{}
+		obj.Label = nil
+
+		// Act & Assert
+		assert.Nil(t, obj.GetLabel(), "getter should return nil when property is nil")
+	})
+
+	t.Run("GetLabel_NilReceiver", func(t *testing.T) {
+		t.Parallel()
+		var obj *GithubComMktAgiAixInternalBugreportsInternalDomainBugReport
+		// Should not panic - getters should handle nil receiver gracefully
+		defer func() {
+			if r := recover(); r != nil {
+				t.Errorf("Getter panicked on nil receiver: %v", r)
+			}
+		}()
+		_ = obj.GetLabel() // Should return zero value
 	})
 
 	t.Run("GetReporterID", func(t *testing.T) {
@@ -1013,39 +1046,6 @@ func TestGettersGithubComMktAgiAixInternalBugreportsInternalDomainBugReport(t *t
 		_ = obj.GetURL() // Should return zero value
 	})
 
-	t.Run("GetViewport", func(t *testing.T) {
-		t.Parallel()
-		// Arrange
-		obj := &GithubComMktAgiAixInternalBugreportsInternalDomainBugReport{}
-		var expected *GithubComMktAgiAixInternalBugreportsInternalDomainViewportData
-		obj.Viewport = expected
-
-		// Act & Assert
-		assert.Equal(t, expected, obj.GetViewport(), "getter should return the property value")
-	})
-
-	t.Run("GetViewport_NilValue", func(t *testing.T) {
-		t.Parallel()
-		// Arrange
-		obj := &GithubComMktAgiAixInternalBugreportsInternalDomainBugReport{}
-		obj.Viewport = nil
-
-		// Act & Assert
-		assert.Nil(t, obj.GetViewport(), "getter should return nil when property is nil")
-	})
-
-	t.Run("GetViewport_NilReceiver", func(t *testing.T) {
-		t.Parallel()
-		var obj *GithubComMktAgiAixInternalBugreportsInternalDomainBugReport
-		// Should not panic - getters should handle nil receiver gracefully
-		defer func() {
-			if r := recover(); r != nil {
-				t.Errorf("Getter panicked on nil receiver: %v", r)
-			}
-		}()
-		_ = obj.GetViewport() // Should return zero value
-	})
-
 }
 
 func TestSettersMarkExplicitGithubComMktAgiAixInternalBugreportsInternalDomainBugReport(t *testing.T) {
@@ -1057,6 +1057,37 @@ func TestSettersMarkExplicitGithubComMktAgiAixInternalBugreportsInternalDomainBu
 
 		// Act
 		obj.SetClientTimestamp(fernTestValueClientTimestamp)
+
+		// Assert - object with explicitly set field can be marshaled/unmarshaled
+		bytes, err := json.Marshal(obj)
+		require.NoError(t, err, "marshaling should succeed for test setup")
+
+		// This test ensures JSON marshaling and unmarshaling succeed when the field has a zero/nil value
+		// Detect if marshaled JSON is an object or primitive to use correct unmarshal target
+		if len(bytes) > 0 && bytes[0] == '{' {
+			// JSON object - unmarshal into map
+			var unmarshaled map[string]interface{}
+			err = json.Unmarshal(bytes, &unmarshaled)
+			require.NoError(t, err, "unmarshaling should succeed for test verification")
+		} else {
+			// JSON primitive (string, number, boolean, null) - unmarshal into interface{}
+			var unmarshaled interface{}
+			err = json.Unmarshal(bytes, &unmarshaled)
+			require.NoError(t, err, "unmarshaling should succeed for test verification")
+		}
+
+		// Note: This does not explicitly assert the presence of a specific JSON field
+		// It verifies that setting a field via setter allows successful JSON round-trip
+	})
+
+	t.Run("SetContext_MarksExplicit", func(t *testing.T) {
+		t.Parallel()
+		// Arrange
+		obj := &GithubComMktAgiAixInternalBugreportsInternalDomainBugReport{}
+		var fernTestValueContext []int
+
+		// Act
+		obj.SetContext(fernTestValueContext)
 
 		// Assert - object with explicitly set field can be marshaled/unmarshaled
 		bytes, err := json.Marshal(obj)
@@ -1173,37 +1204,6 @@ func TestSettersMarkExplicitGithubComMktAgiAixInternalBugreportsInternalDomainBu
 		// It verifies that setting a field via setter allows successful JSON round-trip
 	})
 
-	t.Run("SetElement_MarksExplicit", func(t *testing.T) {
-		t.Parallel()
-		// Arrange
-		obj := &GithubComMktAgiAixInternalBugreportsInternalDomainBugReport{}
-		var fernTestValueElement *GithubComMktAgiAixInternalBugreportsInternalDomainElementData
-
-		// Act
-		obj.SetElement(fernTestValueElement)
-
-		// Assert - object with explicitly set field can be marshaled/unmarshaled
-		bytes, err := json.Marshal(obj)
-		require.NoError(t, err, "marshaling should succeed for test setup")
-
-		// This test ensures JSON marshaling and unmarshaling succeed when the field has a zero/nil value
-		// Detect if marshaled JSON is an object or primitive to use correct unmarshal target
-		if len(bytes) > 0 && bytes[0] == '{' {
-			// JSON object - unmarshal into map
-			var unmarshaled map[string]interface{}
-			err = json.Unmarshal(bytes, &unmarshaled)
-			require.NoError(t, err, "unmarshaling should succeed for test verification")
-		} else {
-			// JSON primitive (string, number, boolean, null) - unmarshal into interface{}
-			var unmarshaled interface{}
-			err = json.Unmarshal(bytes, &unmarshaled)
-			require.NoError(t, err, "unmarshaling should succeed for test verification")
-		}
-
-		// Note: This does not explicitly assert the presence of a specific JSON field
-		// It verifies that setting a field via setter allows successful JSON round-trip
-	})
-
 	t.Run("SetGithubIssueNumber_MarksExplicit", func(t *testing.T) {
 		t.Parallel()
 		// Arrange
@@ -1274,6 +1274,37 @@ func TestSettersMarkExplicitGithubComMktAgiAixInternalBugreportsInternalDomainBu
 
 		// Act
 		obj.SetID(fernTestValueID)
+
+		// Assert - object with explicitly set field can be marshaled/unmarshaled
+		bytes, err := json.Marshal(obj)
+		require.NoError(t, err, "marshaling should succeed for test setup")
+
+		// This test ensures JSON marshaling and unmarshaling succeed when the field has a zero/nil value
+		// Detect if marshaled JSON is an object or primitive to use correct unmarshal target
+		if len(bytes) > 0 && bytes[0] == '{' {
+			// JSON object - unmarshal into map
+			var unmarshaled map[string]interface{}
+			err = json.Unmarshal(bytes, &unmarshaled)
+			require.NoError(t, err, "unmarshaling should succeed for test verification")
+		} else {
+			// JSON primitive (string, number, boolean, null) - unmarshal into interface{}
+			var unmarshaled interface{}
+			err = json.Unmarshal(bytes, &unmarshaled)
+			require.NoError(t, err, "unmarshaling should succeed for test verification")
+		}
+
+		// Note: This does not explicitly assert the presence of a specific JSON field
+		// It verifies that setting a field via setter allows successful JSON round-trip
+	})
+
+	t.Run("SetLabel_MarksExplicit", func(t *testing.T) {
+		t.Parallel()
+		// Arrange
+		obj := &GithubComMktAgiAixInternalBugreportsInternalDomainBugReport{}
+		var fernTestValueLabel *string
+
+		// Act
+		obj.SetLabel(fernTestValueLabel)
 
 		// Assert - object with explicitly set field can be marshaled/unmarshaled
 		bytes, err := json.Marshal(obj)
@@ -1522,703 +1553,6 @@ func TestSettersMarkExplicitGithubComMktAgiAixInternalBugreportsInternalDomainBu
 
 		// Act
 		obj.SetURL(fernTestValueURL)
-
-		// Assert - object with explicitly set field can be marshaled/unmarshaled
-		bytes, err := json.Marshal(obj)
-		require.NoError(t, err, "marshaling should succeed for test setup")
-
-		// This test ensures JSON marshaling and unmarshaling succeed when the field has a zero/nil value
-		// Detect if marshaled JSON is an object or primitive to use correct unmarshal target
-		if len(bytes) > 0 && bytes[0] == '{' {
-			// JSON object - unmarshal into map
-			var unmarshaled map[string]interface{}
-			err = json.Unmarshal(bytes, &unmarshaled)
-			require.NoError(t, err, "unmarshaling should succeed for test verification")
-		} else {
-			// JSON primitive (string, number, boolean, null) - unmarshal into interface{}
-			var unmarshaled interface{}
-			err = json.Unmarshal(bytes, &unmarshaled)
-			require.NoError(t, err, "unmarshaling should succeed for test verification")
-		}
-
-		// Note: This does not explicitly assert the presence of a specific JSON field
-		// It verifies that setting a field via setter allows successful JSON round-trip
-	})
-
-	t.Run("SetViewport_MarksExplicit", func(t *testing.T) {
-		t.Parallel()
-		// Arrange
-		obj := &GithubComMktAgiAixInternalBugreportsInternalDomainBugReport{}
-		var fernTestValueViewport *GithubComMktAgiAixInternalBugreportsInternalDomainViewportData
-
-		// Act
-		obj.SetViewport(fernTestValueViewport)
-
-		// Assert - object with explicitly set field can be marshaled/unmarshaled
-		bytes, err := json.Marshal(obj)
-		require.NoError(t, err, "marshaling should succeed for test setup")
-
-		// This test ensures JSON marshaling and unmarshaling succeed when the field has a zero/nil value
-		// Detect if marshaled JSON is an object or primitive to use correct unmarshal target
-		if len(bytes) > 0 && bytes[0] == '{' {
-			// JSON object - unmarshal into map
-			var unmarshaled map[string]interface{}
-			err = json.Unmarshal(bytes, &unmarshaled)
-			require.NoError(t, err, "unmarshaling should succeed for test verification")
-		} else {
-			// JSON primitive (string, number, boolean, null) - unmarshal into interface{}
-			var unmarshaled interface{}
-			err = json.Unmarshal(bytes, &unmarshaled)
-			require.NoError(t, err, "unmarshaling should succeed for test verification")
-		}
-
-		// Note: This does not explicitly assert the presence of a specific JSON field
-		// It verifies that setting a field via setter allows successful JSON round-trip
-	})
-
-}
-
-func TestSettersGithubComMktAgiAixInternalBugreportsInternalDomainElementData(t *testing.T) {
-	t.Run("SetClasses", func(t *testing.T) {
-		obj := &GithubComMktAgiAixInternalBugreportsInternalDomainElementData{}
-		var fernTestValueClasses []string
-		obj.SetClasses(fernTestValueClasses)
-		assert.Equal(t, fernTestValueClasses, obj.Classes)
-		assert.NotNil(t, obj.explicitFields)
-	})
-
-	t.Run("SetComputedStyles", func(t *testing.T) {
-		obj := &GithubComMktAgiAixInternalBugreportsInternalDomainElementData{}
-		var fernTestValueComputedStyles map[string]string
-		obj.SetComputedStyles(fernTestValueComputedStyles)
-		assert.Equal(t, fernTestValueComputedStyles, obj.ComputedStyles)
-		assert.NotNil(t, obj.explicitFields)
-	})
-
-	t.Run("SetID", func(t *testing.T) {
-		obj := &GithubComMktAgiAixInternalBugreportsInternalDomainElementData{}
-		var fernTestValueID *string
-		obj.SetID(fernTestValueID)
-		assert.Equal(t, fernTestValueID, obj.ID)
-		assert.NotNil(t, obj.explicitFields)
-	})
-
-	t.Run("SetSelector", func(t *testing.T) {
-		obj := &GithubComMktAgiAixInternalBugreportsInternalDomainElementData{}
-		var fernTestValueSelector *string
-		obj.SetSelector(fernTestValueSelector)
-		assert.Equal(t, fernTestValueSelector, obj.Selector)
-		assert.NotNil(t, obj.explicitFields)
-	})
-
-	t.Run("SetTagName", func(t *testing.T) {
-		obj := &GithubComMktAgiAixInternalBugreportsInternalDomainElementData{}
-		var fernTestValueTagName *string
-		obj.SetTagName(fernTestValueTagName)
-		assert.Equal(t, fernTestValueTagName, obj.TagName)
-		assert.NotNil(t, obj.explicitFields)
-	})
-
-	t.Run("SetTextContent", func(t *testing.T) {
-		obj := &GithubComMktAgiAixInternalBugreportsInternalDomainElementData{}
-		var fernTestValueTextContent *string
-		obj.SetTextContent(fernTestValueTextContent)
-		assert.Equal(t, fernTestValueTextContent, obj.TextContent)
-		assert.NotNil(t, obj.explicitFields)
-	})
-
-}
-
-func TestGettersGithubComMktAgiAixInternalBugreportsInternalDomainElementData(t *testing.T) {
-	t.Run("GetClasses", func(t *testing.T) {
-		t.Parallel()
-		// Arrange
-		obj := &GithubComMktAgiAixInternalBugreportsInternalDomainElementData{}
-		var expected []string
-		obj.Classes = expected
-
-		// Act & Assert
-		assert.Equal(t, expected, obj.GetClasses(), "getter should return the property value")
-	})
-
-	t.Run("GetClasses_NilValue", func(t *testing.T) {
-		t.Parallel()
-		// Arrange
-		obj := &GithubComMktAgiAixInternalBugreportsInternalDomainElementData{}
-		obj.Classes = nil
-
-		// Act & Assert
-		assert.Nil(t, obj.GetClasses(), "getter should return nil when property is nil")
-	})
-
-	t.Run("GetClasses_NilReceiver", func(t *testing.T) {
-		t.Parallel()
-		var obj *GithubComMktAgiAixInternalBugreportsInternalDomainElementData
-		// Should not panic - getters should handle nil receiver gracefully
-		defer func() {
-			if r := recover(); r != nil {
-				t.Errorf("Getter panicked on nil receiver: %v", r)
-			}
-		}()
-		_ = obj.GetClasses() // Should return zero value
-	})
-
-	t.Run("GetComputedStyles", func(t *testing.T) {
-		t.Parallel()
-		// Arrange
-		obj := &GithubComMktAgiAixInternalBugreportsInternalDomainElementData{}
-		var expected map[string]string
-		obj.ComputedStyles = expected
-
-		// Act & Assert
-		assert.Equal(t, expected, obj.GetComputedStyles(), "getter should return the property value")
-	})
-
-	t.Run("GetComputedStyles_NilValue", func(t *testing.T) {
-		t.Parallel()
-		// Arrange
-		obj := &GithubComMktAgiAixInternalBugreportsInternalDomainElementData{}
-		obj.ComputedStyles = nil
-
-		// Act & Assert
-		assert.Nil(t, obj.GetComputedStyles(), "getter should return nil when property is nil")
-	})
-
-	t.Run("GetComputedStyles_NilReceiver", func(t *testing.T) {
-		t.Parallel()
-		var obj *GithubComMktAgiAixInternalBugreportsInternalDomainElementData
-		// Should not panic - getters should handle nil receiver gracefully
-		defer func() {
-			if r := recover(); r != nil {
-				t.Errorf("Getter panicked on nil receiver: %v", r)
-			}
-		}()
-		_ = obj.GetComputedStyles() // Should return zero value
-	})
-
-	t.Run("GetID", func(t *testing.T) {
-		t.Parallel()
-		// Arrange
-		obj := &GithubComMktAgiAixInternalBugreportsInternalDomainElementData{}
-		var expected *string
-		obj.ID = expected
-
-		// Act & Assert
-		assert.Equal(t, expected, obj.GetID(), "getter should return the property value")
-	})
-
-	t.Run("GetID_NilValue", func(t *testing.T) {
-		t.Parallel()
-		// Arrange
-		obj := &GithubComMktAgiAixInternalBugreportsInternalDomainElementData{}
-		obj.ID = nil
-
-		// Act & Assert
-		assert.Nil(t, obj.GetID(), "getter should return nil when property is nil")
-	})
-
-	t.Run("GetID_NilReceiver", func(t *testing.T) {
-		t.Parallel()
-		var obj *GithubComMktAgiAixInternalBugreportsInternalDomainElementData
-		// Should not panic - getters should handle nil receiver gracefully
-		defer func() {
-			if r := recover(); r != nil {
-				t.Errorf("Getter panicked on nil receiver: %v", r)
-			}
-		}()
-		_ = obj.GetID() // Should return zero value
-	})
-
-	t.Run("GetSelector", func(t *testing.T) {
-		t.Parallel()
-		// Arrange
-		obj := &GithubComMktAgiAixInternalBugreportsInternalDomainElementData{}
-		var expected *string
-		obj.Selector = expected
-
-		// Act & Assert
-		assert.Equal(t, expected, obj.GetSelector(), "getter should return the property value")
-	})
-
-	t.Run("GetSelector_NilValue", func(t *testing.T) {
-		t.Parallel()
-		// Arrange
-		obj := &GithubComMktAgiAixInternalBugreportsInternalDomainElementData{}
-		obj.Selector = nil
-
-		// Act & Assert
-		assert.Nil(t, obj.GetSelector(), "getter should return nil when property is nil")
-	})
-
-	t.Run("GetSelector_NilReceiver", func(t *testing.T) {
-		t.Parallel()
-		var obj *GithubComMktAgiAixInternalBugreportsInternalDomainElementData
-		// Should not panic - getters should handle nil receiver gracefully
-		defer func() {
-			if r := recover(); r != nil {
-				t.Errorf("Getter panicked on nil receiver: %v", r)
-			}
-		}()
-		_ = obj.GetSelector() // Should return zero value
-	})
-
-	t.Run("GetTagName", func(t *testing.T) {
-		t.Parallel()
-		// Arrange
-		obj := &GithubComMktAgiAixInternalBugreportsInternalDomainElementData{}
-		var expected *string
-		obj.TagName = expected
-
-		// Act & Assert
-		assert.Equal(t, expected, obj.GetTagName(), "getter should return the property value")
-	})
-
-	t.Run("GetTagName_NilValue", func(t *testing.T) {
-		t.Parallel()
-		// Arrange
-		obj := &GithubComMktAgiAixInternalBugreportsInternalDomainElementData{}
-		obj.TagName = nil
-
-		// Act & Assert
-		assert.Nil(t, obj.GetTagName(), "getter should return nil when property is nil")
-	})
-
-	t.Run("GetTagName_NilReceiver", func(t *testing.T) {
-		t.Parallel()
-		var obj *GithubComMktAgiAixInternalBugreportsInternalDomainElementData
-		// Should not panic - getters should handle nil receiver gracefully
-		defer func() {
-			if r := recover(); r != nil {
-				t.Errorf("Getter panicked on nil receiver: %v", r)
-			}
-		}()
-		_ = obj.GetTagName() // Should return zero value
-	})
-
-	t.Run("GetTextContent", func(t *testing.T) {
-		t.Parallel()
-		// Arrange
-		obj := &GithubComMktAgiAixInternalBugreportsInternalDomainElementData{}
-		var expected *string
-		obj.TextContent = expected
-
-		// Act & Assert
-		assert.Equal(t, expected, obj.GetTextContent(), "getter should return the property value")
-	})
-
-	t.Run("GetTextContent_NilValue", func(t *testing.T) {
-		t.Parallel()
-		// Arrange
-		obj := &GithubComMktAgiAixInternalBugreportsInternalDomainElementData{}
-		obj.TextContent = nil
-
-		// Act & Assert
-		assert.Nil(t, obj.GetTextContent(), "getter should return nil when property is nil")
-	})
-
-	t.Run("GetTextContent_NilReceiver", func(t *testing.T) {
-		t.Parallel()
-		var obj *GithubComMktAgiAixInternalBugreportsInternalDomainElementData
-		// Should not panic - getters should handle nil receiver gracefully
-		defer func() {
-			if r := recover(); r != nil {
-				t.Errorf("Getter panicked on nil receiver: %v", r)
-			}
-		}()
-		_ = obj.GetTextContent() // Should return zero value
-	})
-
-}
-
-func TestSettersMarkExplicitGithubComMktAgiAixInternalBugreportsInternalDomainElementData(t *testing.T) {
-	t.Run("SetClasses_MarksExplicit", func(t *testing.T) {
-		t.Parallel()
-		// Arrange
-		obj := &GithubComMktAgiAixInternalBugreportsInternalDomainElementData{}
-		var fernTestValueClasses []string
-
-		// Act
-		obj.SetClasses(fernTestValueClasses)
-
-		// Assert - object with explicitly set field can be marshaled/unmarshaled
-		bytes, err := json.Marshal(obj)
-		require.NoError(t, err, "marshaling should succeed for test setup")
-
-		// This test ensures JSON marshaling and unmarshaling succeed when the field has a zero/nil value
-		// Detect if marshaled JSON is an object or primitive to use correct unmarshal target
-		if len(bytes) > 0 && bytes[0] == '{' {
-			// JSON object - unmarshal into map
-			var unmarshaled map[string]interface{}
-			err = json.Unmarshal(bytes, &unmarshaled)
-			require.NoError(t, err, "unmarshaling should succeed for test verification")
-		} else {
-			// JSON primitive (string, number, boolean, null) - unmarshal into interface{}
-			var unmarshaled interface{}
-			err = json.Unmarshal(bytes, &unmarshaled)
-			require.NoError(t, err, "unmarshaling should succeed for test verification")
-		}
-
-		// Note: This does not explicitly assert the presence of a specific JSON field
-		// It verifies that setting a field via setter allows successful JSON round-trip
-	})
-
-	t.Run("SetComputedStyles_MarksExplicit", func(t *testing.T) {
-		t.Parallel()
-		// Arrange
-		obj := &GithubComMktAgiAixInternalBugreportsInternalDomainElementData{}
-		var fernTestValueComputedStyles map[string]string
-
-		// Act
-		obj.SetComputedStyles(fernTestValueComputedStyles)
-
-		// Assert - object with explicitly set field can be marshaled/unmarshaled
-		bytes, err := json.Marshal(obj)
-		require.NoError(t, err, "marshaling should succeed for test setup")
-
-		// This test ensures JSON marshaling and unmarshaling succeed when the field has a zero/nil value
-		// Detect if marshaled JSON is an object or primitive to use correct unmarshal target
-		if len(bytes) > 0 && bytes[0] == '{' {
-			// JSON object - unmarshal into map
-			var unmarshaled map[string]interface{}
-			err = json.Unmarshal(bytes, &unmarshaled)
-			require.NoError(t, err, "unmarshaling should succeed for test verification")
-		} else {
-			// JSON primitive (string, number, boolean, null) - unmarshal into interface{}
-			var unmarshaled interface{}
-			err = json.Unmarshal(bytes, &unmarshaled)
-			require.NoError(t, err, "unmarshaling should succeed for test verification")
-		}
-
-		// Note: This does not explicitly assert the presence of a specific JSON field
-		// It verifies that setting a field via setter allows successful JSON round-trip
-	})
-
-	t.Run("SetID_MarksExplicit", func(t *testing.T) {
-		t.Parallel()
-		// Arrange
-		obj := &GithubComMktAgiAixInternalBugreportsInternalDomainElementData{}
-		var fernTestValueID *string
-
-		// Act
-		obj.SetID(fernTestValueID)
-
-		// Assert - object with explicitly set field can be marshaled/unmarshaled
-		bytes, err := json.Marshal(obj)
-		require.NoError(t, err, "marshaling should succeed for test setup")
-
-		// This test ensures JSON marshaling and unmarshaling succeed when the field has a zero/nil value
-		// Detect if marshaled JSON is an object or primitive to use correct unmarshal target
-		if len(bytes) > 0 && bytes[0] == '{' {
-			// JSON object - unmarshal into map
-			var unmarshaled map[string]interface{}
-			err = json.Unmarshal(bytes, &unmarshaled)
-			require.NoError(t, err, "unmarshaling should succeed for test verification")
-		} else {
-			// JSON primitive (string, number, boolean, null) - unmarshal into interface{}
-			var unmarshaled interface{}
-			err = json.Unmarshal(bytes, &unmarshaled)
-			require.NoError(t, err, "unmarshaling should succeed for test verification")
-		}
-
-		// Note: This does not explicitly assert the presence of a specific JSON field
-		// It verifies that setting a field via setter allows successful JSON round-trip
-	})
-
-	t.Run("SetSelector_MarksExplicit", func(t *testing.T) {
-		t.Parallel()
-		// Arrange
-		obj := &GithubComMktAgiAixInternalBugreportsInternalDomainElementData{}
-		var fernTestValueSelector *string
-
-		// Act
-		obj.SetSelector(fernTestValueSelector)
-
-		// Assert - object with explicitly set field can be marshaled/unmarshaled
-		bytes, err := json.Marshal(obj)
-		require.NoError(t, err, "marshaling should succeed for test setup")
-
-		// This test ensures JSON marshaling and unmarshaling succeed when the field has a zero/nil value
-		// Detect if marshaled JSON is an object or primitive to use correct unmarshal target
-		if len(bytes) > 0 && bytes[0] == '{' {
-			// JSON object - unmarshal into map
-			var unmarshaled map[string]interface{}
-			err = json.Unmarshal(bytes, &unmarshaled)
-			require.NoError(t, err, "unmarshaling should succeed for test verification")
-		} else {
-			// JSON primitive (string, number, boolean, null) - unmarshal into interface{}
-			var unmarshaled interface{}
-			err = json.Unmarshal(bytes, &unmarshaled)
-			require.NoError(t, err, "unmarshaling should succeed for test verification")
-		}
-
-		// Note: This does not explicitly assert the presence of a specific JSON field
-		// It verifies that setting a field via setter allows successful JSON round-trip
-	})
-
-	t.Run("SetTagName_MarksExplicit", func(t *testing.T) {
-		t.Parallel()
-		// Arrange
-		obj := &GithubComMktAgiAixInternalBugreportsInternalDomainElementData{}
-		var fernTestValueTagName *string
-
-		// Act
-		obj.SetTagName(fernTestValueTagName)
-
-		// Assert - object with explicitly set field can be marshaled/unmarshaled
-		bytes, err := json.Marshal(obj)
-		require.NoError(t, err, "marshaling should succeed for test setup")
-
-		// This test ensures JSON marshaling and unmarshaling succeed when the field has a zero/nil value
-		// Detect if marshaled JSON is an object or primitive to use correct unmarshal target
-		if len(bytes) > 0 && bytes[0] == '{' {
-			// JSON object - unmarshal into map
-			var unmarshaled map[string]interface{}
-			err = json.Unmarshal(bytes, &unmarshaled)
-			require.NoError(t, err, "unmarshaling should succeed for test verification")
-		} else {
-			// JSON primitive (string, number, boolean, null) - unmarshal into interface{}
-			var unmarshaled interface{}
-			err = json.Unmarshal(bytes, &unmarshaled)
-			require.NoError(t, err, "unmarshaling should succeed for test verification")
-		}
-
-		// Note: This does not explicitly assert the presence of a specific JSON field
-		// It verifies that setting a field via setter allows successful JSON round-trip
-	})
-
-	t.Run("SetTextContent_MarksExplicit", func(t *testing.T) {
-		t.Parallel()
-		// Arrange
-		obj := &GithubComMktAgiAixInternalBugreportsInternalDomainElementData{}
-		var fernTestValueTextContent *string
-
-		// Act
-		obj.SetTextContent(fernTestValueTextContent)
-
-		// Assert - object with explicitly set field can be marshaled/unmarshaled
-		bytes, err := json.Marshal(obj)
-		require.NoError(t, err, "marshaling should succeed for test setup")
-
-		// This test ensures JSON marshaling and unmarshaling succeed when the field has a zero/nil value
-		// Detect if marshaled JSON is an object or primitive to use correct unmarshal target
-		if len(bytes) > 0 && bytes[0] == '{' {
-			// JSON object - unmarshal into map
-			var unmarshaled map[string]interface{}
-			err = json.Unmarshal(bytes, &unmarshaled)
-			require.NoError(t, err, "unmarshaling should succeed for test verification")
-		} else {
-			// JSON primitive (string, number, boolean, null) - unmarshal into interface{}
-			var unmarshaled interface{}
-			err = json.Unmarshal(bytes, &unmarshaled)
-			require.NoError(t, err, "unmarshaling should succeed for test verification")
-		}
-
-		// Note: This does not explicitly assert the presence of a specific JSON field
-		// It verifies that setting a field via setter allows successful JSON round-trip
-	})
-
-}
-
-func TestSettersGithubComMktAgiAixInternalBugreportsInternalDomainViewportData(t *testing.T) {
-	t.Run("SetDpr", func(t *testing.T) {
-		obj := &GithubComMktAgiAixInternalBugreportsInternalDomainViewportData{}
-		var fernTestValueDpr *float64
-		obj.SetDpr(fernTestValueDpr)
-		assert.Equal(t, fernTestValueDpr, obj.Dpr)
-		assert.NotNil(t, obj.explicitFields)
-	})
-
-	t.Run("SetHeight", func(t *testing.T) {
-		obj := &GithubComMktAgiAixInternalBugreportsInternalDomainViewportData{}
-		var fernTestValueHeight *int
-		obj.SetHeight(fernTestValueHeight)
-		assert.Equal(t, fernTestValueHeight, obj.Height)
-		assert.NotNil(t, obj.explicitFields)
-	})
-
-	t.Run("SetWidth", func(t *testing.T) {
-		obj := &GithubComMktAgiAixInternalBugreportsInternalDomainViewportData{}
-		var fernTestValueWidth *int
-		obj.SetWidth(fernTestValueWidth)
-		assert.Equal(t, fernTestValueWidth, obj.Width)
-		assert.NotNil(t, obj.explicitFields)
-	})
-
-}
-
-func TestGettersGithubComMktAgiAixInternalBugreportsInternalDomainViewportData(t *testing.T) {
-	t.Run("GetDpr", func(t *testing.T) {
-		t.Parallel()
-		// Arrange
-		obj := &GithubComMktAgiAixInternalBugreportsInternalDomainViewportData{}
-		var expected *float64
-		obj.Dpr = expected
-
-		// Act & Assert
-		assert.Equal(t, expected, obj.GetDpr(), "getter should return the property value")
-	})
-
-	t.Run("GetDpr_NilValue", func(t *testing.T) {
-		t.Parallel()
-		// Arrange
-		obj := &GithubComMktAgiAixInternalBugreportsInternalDomainViewportData{}
-		obj.Dpr = nil
-
-		// Act & Assert
-		assert.Nil(t, obj.GetDpr(), "getter should return nil when property is nil")
-	})
-
-	t.Run("GetDpr_NilReceiver", func(t *testing.T) {
-		t.Parallel()
-		var obj *GithubComMktAgiAixInternalBugreportsInternalDomainViewportData
-		// Should not panic - getters should handle nil receiver gracefully
-		defer func() {
-			if r := recover(); r != nil {
-				t.Errorf("Getter panicked on nil receiver: %v", r)
-			}
-		}()
-		_ = obj.GetDpr() // Should return zero value
-	})
-
-	t.Run("GetHeight", func(t *testing.T) {
-		t.Parallel()
-		// Arrange
-		obj := &GithubComMktAgiAixInternalBugreportsInternalDomainViewportData{}
-		var expected *int
-		obj.Height = expected
-
-		// Act & Assert
-		assert.Equal(t, expected, obj.GetHeight(), "getter should return the property value")
-	})
-
-	t.Run("GetHeight_NilValue", func(t *testing.T) {
-		t.Parallel()
-		// Arrange
-		obj := &GithubComMktAgiAixInternalBugreportsInternalDomainViewportData{}
-		obj.Height = nil
-
-		// Act & Assert
-		assert.Nil(t, obj.GetHeight(), "getter should return nil when property is nil")
-	})
-
-	t.Run("GetHeight_NilReceiver", func(t *testing.T) {
-		t.Parallel()
-		var obj *GithubComMktAgiAixInternalBugreportsInternalDomainViewportData
-		// Should not panic - getters should handle nil receiver gracefully
-		defer func() {
-			if r := recover(); r != nil {
-				t.Errorf("Getter panicked on nil receiver: %v", r)
-			}
-		}()
-		_ = obj.GetHeight() // Should return zero value
-	})
-
-	t.Run("GetWidth", func(t *testing.T) {
-		t.Parallel()
-		// Arrange
-		obj := &GithubComMktAgiAixInternalBugreportsInternalDomainViewportData{}
-		var expected *int
-		obj.Width = expected
-
-		// Act & Assert
-		assert.Equal(t, expected, obj.GetWidth(), "getter should return the property value")
-	})
-
-	t.Run("GetWidth_NilValue", func(t *testing.T) {
-		t.Parallel()
-		// Arrange
-		obj := &GithubComMktAgiAixInternalBugreportsInternalDomainViewportData{}
-		obj.Width = nil
-
-		// Act & Assert
-		assert.Nil(t, obj.GetWidth(), "getter should return nil when property is nil")
-	})
-
-	t.Run("GetWidth_NilReceiver", func(t *testing.T) {
-		t.Parallel()
-		var obj *GithubComMktAgiAixInternalBugreportsInternalDomainViewportData
-		// Should not panic - getters should handle nil receiver gracefully
-		defer func() {
-			if r := recover(); r != nil {
-				t.Errorf("Getter panicked on nil receiver: %v", r)
-			}
-		}()
-		_ = obj.GetWidth() // Should return zero value
-	})
-
-}
-
-func TestSettersMarkExplicitGithubComMktAgiAixInternalBugreportsInternalDomainViewportData(t *testing.T) {
-	t.Run("SetDpr_MarksExplicit", func(t *testing.T) {
-		t.Parallel()
-		// Arrange
-		obj := &GithubComMktAgiAixInternalBugreportsInternalDomainViewportData{}
-		var fernTestValueDpr *float64
-
-		// Act
-		obj.SetDpr(fernTestValueDpr)
-
-		// Assert - object with explicitly set field can be marshaled/unmarshaled
-		bytes, err := json.Marshal(obj)
-		require.NoError(t, err, "marshaling should succeed for test setup")
-
-		// This test ensures JSON marshaling and unmarshaling succeed when the field has a zero/nil value
-		// Detect if marshaled JSON is an object or primitive to use correct unmarshal target
-		if len(bytes) > 0 && bytes[0] == '{' {
-			// JSON object - unmarshal into map
-			var unmarshaled map[string]interface{}
-			err = json.Unmarshal(bytes, &unmarshaled)
-			require.NoError(t, err, "unmarshaling should succeed for test verification")
-		} else {
-			// JSON primitive (string, number, boolean, null) - unmarshal into interface{}
-			var unmarshaled interface{}
-			err = json.Unmarshal(bytes, &unmarshaled)
-			require.NoError(t, err, "unmarshaling should succeed for test verification")
-		}
-
-		// Note: This does not explicitly assert the presence of a specific JSON field
-		// It verifies that setting a field via setter allows successful JSON round-trip
-	})
-
-	t.Run("SetHeight_MarksExplicit", func(t *testing.T) {
-		t.Parallel()
-		// Arrange
-		obj := &GithubComMktAgiAixInternalBugreportsInternalDomainViewportData{}
-		var fernTestValueHeight *int
-
-		// Act
-		obj.SetHeight(fernTestValueHeight)
-
-		// Assert - object with explicitly set field can be marshaled/unmarshaled
-		bytes, err := json.Marshal(obj)
-		require.NoError(t, err, "marshaling should succeed for test setup")
-
-		// This test ensures JSON marshaling and unmarshaling succeed when the field has a zero/nil value
-		// Detect if marshaled JSON is an object or primitive to use correct unmarshal target
-		if len(bytes) > 0 && bytes[0] == '{' {
-			// JSON object - unmarshal into map
-			var unmarshaled map[string]interface{}
-			err = json.Unmarshal(bytes, &unmarshaled)
-			require.NoError(t, err, "unmarshaling should succeed for test verification")
-		} else {
-			// JSON primitive (string, number, boolean, null) - unmarshal into interface{}
-			var unmarshaled interface{}
-			err = json.Unmarshal(bytes, &unmarshaled)
-			require.NoError(t, err, "unmarshaling should succeed for test verification")
-		}
-
-		// Note: This does not explicitly assert the presence of a specific JSON field
-		// It verifies that setting a field via setter allows successful JSON round-trip
-	})
-
-	t.Run("SetWidth_MarksExplicit", func(t *testing.T) {
-		t.Parallel()
-		// Arrange
-		obj := &GithubComMktAgiAixInternalBugreportsInternalDomainViewportData{}
-		var fernTestValueWidth *int
-
-		// Act
-		obj.SetWidth(fernTestValueWidth)
 
 		// Assert - object with explicitly set field can be marshaled/unmarshaled
 		bytes, err := json.Marshal(obj)
@@ -3271,6 +2605,14 @@ func TestSettersMarkExplicitGithubComMktAgiAixInternalPkgGinxResultGithubComMktA
 }
 
 func TestSettersInternalBugreportsInternalWebSubmitBugReportRequest(t *testing.T) {
+	t.Run("SetContext", func(t *testing.T) {
+		obj := &InternalBugreportsInternalWebSubmitBugReportRequest{}
+		var fernTestValueContext []int
+		obj.SetContext(fernTestValueContext)
+		assert.Equal(t, fernTestValueContext, obj.Context)
+		assert.NotNil(t, obj.explicitFields)
+	})
+
 	t.Run("SetDescription", func(t *testing.T) {
 		obj := &InternalBugreportsInternalWebSubmitBugReportRequest{}
 		var fernTestValueDescription *string
@@ -3279,11 +2621,11 @@ func TestSettersInternalBugreportsInternalWebSubmitBugReportRequest(t *testing.T
 		assert.NotNil(t, obj.explicitFields)
 	})
 
-	t.Run("SetElement", func(t *testing.T) {
+	t.Run("SetLabel", func(t *testing.T) {
 		obj := &InternalBugreportsInternalWebSubmitBugReportRequest{}
-		var fernTestValueElement *GithubComMktAgiAixInternalBugreportsInternalDomainElementData
-		obj.SetElement(fernTestValueElement)
-		assert.Equal(t, fernTestValueElement, obj.Element)
+		var fernTestValueLabel *string
+		obj.SetLabel(fernTestValueLabel)
+		assert.Equal(t, fernTestValueLabel, obj.Label)
 		assert.NotNil(t, obj.explicitFields)
 	})
 
@@ -3311,17 +2653,42 @@ func TestSettersInternalBugreportsInternalWebSubmitBugReportRequest(t *testing.T
 		assert.NotNil(t, obj.explicitFields)
 	})
 
-	t.Run("SetViewport", func(t *testing.T) {
-		obj := &InternalBugreportsInternalWebSubmitBugReportRequest{}
-		var fernTestValueViewport *GithubComMktAgiAixInternalBugreportsInternalDomainViewportData
-		obj.SetViewport(fernTestValueViewport)
-		assert.Equal(t, fernTestValueViewport, obj.Viewport)
-		assert.NotNil(t, obj.explicitFields)
-	})
-
 }
 
 func TestGettersInternalBugreportsInternalWebSubmitBugReportRequest(t *testing.T) {
+	t.Run("GetContext", func(t *testing.T) {
+		t.Parallel()
+		// Arrange
+		obj := &InternalBugreportsInternalWebSubmitBugReportRequest{}
+		var expected []int
+		obj.Context = expected
+
+		// Act & Assert
+		assert.Equal(t, expected, obj.GetContext(), "getter should return the property value")
+	})
+
+	t.Run("GetContext_NilValue", func(t *testing.T) {
+		t.Parallel()
+		// Arrange
+		obj := &InternalBugreportsInternalWebSubmitBugReportRequest{}
+		obj.Context = nil
+
+		// Act & Assert
+		assert.Nil(t, obj.GetContext(), "getter should return nil when property is nil")
+	})
+
+	t.Run("GetContext_NilReceiver", func(t *testing.T) {
+		t.Parallel()
+		var obj *InternalBugreportsInternalWebSubmitBugReportRequest
+		// Should not panic - getters should handle nil receiver gracefully
+		defer func() {
+			if r := recover(); r != nil {
+				t.Errorf("Getter panicked on nil receiver: %v", r)
+			}
+		}()
+		_ = obj.GetContext() // Should return zero value
+	})
+
 	t.Run("GetDescription", func(t *testing.T) {
 		t.Parallel()
 		// Arrange
@@ -3355,28 +2722,28 @@ func TestGettersInternalBugreportsInternalWebSubmitBugReportRequest(t *testing.T
 		_ = obj.GetDescription() // Should return zero value
 	})
 
-	t.Run("GetElement", func(t *testing.T) {
+	t.Run("GetLabel", func(t *testing.T) {
 		t.Parallel()
 		// Arrange
 		obj := &InternalBugreportsInternalWebSubmitBugReportRequest{}
-		var expected *GithubComMktAgiAixInternalBugreportsInternalDomainElementData
-		obj.Element = expected
+		var expected *string
+		obj.Label = expected
 
 		// Act & Assert
-		assert.Equal(t, expected, obj.GetElement(), "getter should return the property value")
+		assert.Equal(t, expected, obj.GetLabel(), "getter should return the property value")
 	})
 
-	t.Run("GetElement_NilValue", func(t *testing.T) {
+	t.Run("GetLabel_NilValue", func(t *testing.T) {
 		t.Parallel()
 		// Arrange
 		obj := &InternalBugreportsInternalWebSubmitBugReportRequest{}
-		obj.Element = nil
+		obj.Label = nil
 
 		// Act & Assert
-		assert.Nil(t, obj.GetElement(), "getter should return nil when property is nil")
+		assert.Nil(t, obj.GetLabel(), "getter should return nil when property is nil")
 	})
 
-	t.Run("GetElement_NilReceiver", func(t *testing.T) {
+	t.Run("GetLabel_NilReceiver", func(t *testing.T) {
 		t.Parallel()
 		var obj *InternalBugreportsInternalWebSubmitBugReportRequest
 		// Should not panic - getters should handle nil receiver gracefully
@@ -3385,7 +2752,7 @@ func TestGettersInternalBugreportsInternalWebSubmitBugReportRequest(t *testing.T
 				t.Errorf("Getter panicked on nil receiver: %v", r)
 			}
 		}()
-		_ = obj.GetElement() // Should return zero value
+		_ = obj.GetLabel() // Should return zero value
 	})
 
 	t.Run("GetTimestamp", func(t *testing.T) {
@@ -3487,42 +2854,40 @@ func TestGettersInternalBugreportsInternalWebSubmitBugReportRequest(t *testing.T
 		_ = obj.GetURL() // Should return zero value
 	})
 
-	t.Run("GetViewport", func(t *testing.T) {
-		t.Parallel()
-		// Arrange
-		obj := &InternalBugreportsInternalWebSubmitBugReportRequest{}
-		var expected *GithubComMktAgiAixInternalBugreportsInternalDomainViewportData
-		obj.Viewport = expected
-
-		// Act & Assert
-		assert.Equal(t, expected, obj.GetViewport(), "getter should return the property value")
-	})
-
-	t.Run("GetViewport_NilValue", func(t *testing.T) {
-		t.Parallel()
-		// Arrange
-		obj := &InternalBugreportsInternalWebSubmitBugReportRequest{}
-		obj.Viewport = nil
-
-		// Act & Assert
-		assert.Nil(t, obj.GetViewport(), "getter should return nil when property is nil")
-	})
-
-	t.Run("GetViewport_NilReceiver", func(t *testing.T) {
-		t.Parallel()
-		var obj *InternalBugreportsInternalWebSubmitBugReportRequest
-		// Should not panic - getters should handle nil receiver gracefully
-		defer func() {
-			if r := recover(); r != nil {
-				t.Errorf("Getter panicked on nil receiver: %v", r)
-			}
-		}()
-		_ = obj.GetViewport() // Should return zero value
-	})
-
 }
 
 func TestSettersMarkExplicitInternalBugreportsInternalWebSubmitBugReportRequest(t *testing.T) {
+	t.Run("SetContext_MarksExplicit", func(t *testing.T) {
+		t.Parallel()
+		// Arrange
+		obj := &InternalBugreportsInternalWebSubmitBugReportRequest{}
+		var fernTestValueContext []int
+
+		// Act
+		obj.SetContext(fernTestValueContext)
+
+		// Assert - object with explicitly set field can be marshaled/unmarshaled
+		bytes, err := json.Marshal(obj)
+		require.NoError(t, err, "marshaling should succeed for test setup")
+
+		// This test ensures JSON marshaling and unmarshaling succeed when the field has a zero/nil value
+		// Detect if marshaled JSON is an object or primitive to use correct unmarshal target
+		if len(bytes) > 0 && bytes[0] == '{' {
+			// JSON object - unmarshal into map
+			var unmarshaled map[string]interface{}
+			err = json.Unmarshal(bytes, &unmarshaled)
+			require.NoError(t, err, "unmarshaling should succeed for test verification")
+		} else {
+			// JSON primitive (string, number, boolean, null) - unmarshal into interface{}
+			var unmarshaled interface{}
+			err = json.Unmarshal(bytes, &unmarshaled)
+			require.NoError(t, err, "unmarshaling should succeed for test verification")
+		}
+
+		// Note: This does not explicitly assert the presence of a specific JSON field
+		// It verifies that setting a field via setter allows successful JSON round-trip
+	})
+
 	t.Run("SetDescription_MarksExplicit", func(t *testing.T) {
 		t.Parallel()
 		// Arrange
@@ -3554,14 +2919,14 @@ func TestSettersMarkExplicitInternalBugreportsInternalWebSubmitBugReportRequest(
 		// It verifies that setting a field via setter allows successful JSON round-trip
 	})
 
-	t.Run("SetElement_MarksExplicit", func(t *testing.T) {
+	t.Run("SetLabel_MarksExplicit", func(t *testing.T) {
 		t.Parallel()
 		// Arrange
 		obj := &InternalBugreportsInternalWebSubmitBugReportRequest{}
-		var fernTestValueElement *GithubComMktAgiAixInternalBugreportsInternalDomainElementData
+		var fernTestValueLabel *string
 
 		// Act
-		obj.SetElement(fernTestValueElement)
+		obj.SetLabel(fernTestValueLabel)
 
 		// Assert - object with explicitly set field can be marshaled/unmarshaled
 		bytes, err := json.Marshal(obj)
@@ -3655,37 +3020,6 @@ func TestSettersMarkExplicitInternalBugreportsInternalWebSubmitBugReportRequest(
 
 		// Act
 		obj.SetURL(fernTestValueURL)
-
-		// Assert - object with explicitly set field can be marshaled/unmarshaled
-		bytes, err := json.Marshal(obj)
-		require.NoError(t, err, "marshaling should succeed for test setup")
-
-		// This test ensures JSON marshaling and unmarshaling succeed when the field has a zero/nil value
-		// Detect if marshaled JSON is an object or primitive to use correct unmarshal target
-		if len(bytes) > 0 && bytes[0] == '{' {
-			// JSON object - unmarshal into map
-			var unmarshaled map[string]interface{}
-			err = json.Unmarshal(bytes, &unmarshaled)
-			require.NoError(t, err, "unmarshaling should succeed for test verification")
-		} else {
-			// JSON primitive (string, number, boolean, null) - unmarshal into interface{}
-			var unmarshaled interface{}
-			err = json.Unmarshal(bytes, &unmarshaled)
-			require.NoError(t, err, "unmarshaling should succeed for test verification")
-		}
-
-		// Note: This does not explicitly assert the presence of a specific JSON field
-		// It verifies that setting a field via setter allows successful JSON round-trip
-	})
-
-	t.Run("SetViewport_MarksExplicit", func(t *testing.T) {
-		t.Parallel()
-		// Arrange
-		obj := &InternalBugreportsInternalWebSubmitBugReportRequest{}
-		var fernTestValueViewport *GithubComMktAgiAixInternalBugreportsInternalDomainViewportData
-
-		// Act
-		obj.SetViewport(fernTestValueViewport)
 
 		// Assert - object with explicitly set field can be marshaled/unmarshaled
 		bytes, err := json.Marshal(obj)
@@ -4080,72 +3414,6 @@ func TestJSONMarshalingGithubComMktAgiAixInternalBugreportsInternalDomainBugRepo
 	})
 }
 
-func TestJSONMarshalingGithubComMktAgiAixInternalBugreportsInternalDomainElementData(t *testing.T) {
-	t.Run("MarshalUnmarshal", func(t *testing.T) {
-		t.Parallel()
-		// Arrange
-		obj := &GithubComMktAgiAixInternalBugreportsInternalDomainElementData{}
-
-		// Act - Marshal to JSON
-		data, err := json.Marshal(obj)
-		require.NoError(t, err, "marshaling should succeed")
-		assert.NotNil(t, data, "marshaled data should not be nil")
-		assert.NotEmpty(t, data, "marshaled data should not be empty")
-
-		// Unmarshal back and verify round-trip
-		var unmarshaled GithubComMktAgiAixInternalBugreportsInternalDomainElementData
-		err = json.Unmarshal(data, &unmarshaled)
-		assert.NoError(t, err, "round-trip unmarshal should succeed")
-	})
-
-	t.Run("UnmarshalInvalidJSON", func(t *testing.T) {
-		t.Parallel()
-		var obj GithubComMktAgiAixInternalBugreportsInternalDomainElementData
-		err := json.Unmarshal([]byte(`{invalid json}`), &obj)
-		assert.Error(t, err, "unmarshaling invalid JSON should return an error")
-	})
-
-	t.Run("UnmarshalEmptyObject", func(t *testing.T) {
-		t.Parallel()
-		var obj GithubComMktAgiAixInternalBugreportsInternalDomainElementData
-		err := json.Unmarshal([]byte(`{}`), &obj)
-		assert.NoError(t, err, "unmarshaling empty object should succeed")
-	})
-}
-
-func TestJSONMarshalingGithubComMktAgiAixInternalBugreportsInternalDomainViewportData(t *testing.T) {
-	t.Run("MarshalUnmarshal", func(t *testing.T) {
-		t.Parallel()
-		// Arrange
-		obj := &GithubComMktAgiAixInternalBugreportsInternalDomainViewportData{}
-
-		// Act - Marshal to JSON
-		data, err := json.Marshal(obj)
-		require.NoError(t, err, "marshaling should succeed")
-		assert.NotNil(t, data, "marshaled data should not be nil")
-		assert.NotEmpty(t, data, "marshaled data should not be empty")
-
-		// Unmarshal back and verify round-trip
-		var unmarshaled GithubComMktAgiAixInternalBugreportsInternalDomainViewportData
-		err = json.Unmarshal(data, &unmarshaled)
-		assert.NoError(t, err, "round-trip unmarshal should succeed")
-	})
-
-	t.Run("UnmarshalInvalidJSON", func(t *testing.T) {
-		t.Parallel()
-		var obj GithubComMktAgiAixInternalBugreportsInternalDomainViewportData
-		err := json.Unmarshal([]byte(`{invalid json}`), &obj)
-		assert.Error(t, err, "unmarshaling invalid JSON should return an error")
-	})
-
-	t.Run("UnmarshalEmptyObject", func(t *testing.T) {
-		t.Parallel()
-		var obj GithubComMktAgiAixInternalBugreportsInternalDomainViewportData
-		err := json.Unmarshal([]byte(`{}`), &obj)
-		assert.NoError(t, err, "unmarshaling empty object should succeed")
-	})
-}
-
 func TestJSONMarshalingGithubComMktAgiAixInternalPkgGinxResultArrayGithubComMktAgiAixInternalBugreportsInternalDomainBugReport(t *testing.T) {
 	t.Run("MarshalUnmarshal", func(t *testing.T) {
 		t.Parallel()
@@ -4294,38 +3562,6 @@ func TestStringGithubComMktAgiAixInternalBugreportsInternalDomainBugReport(t *te
 	})
 }
 
-func TestStringGithubComMktAgiAixInternalBugreportsInternalDomainElementData(t *testing.T) {
-	t.Run("StringMethod", func(t *testing.T) {
-		t.Parallel()
-		obj := &GithubComMktAgiAixInternalBugreportsInternalDomainElementData{}
-		result := obj.String()
-		assert.NotEmpty(t, result, "String() should return a non-empty representation")
-	})
-
-	t.Run("StringMethod_NilReceiver", func(t *testing.T) {
-		t.Parallel()
-		var obj *GithubComMktAgiAixInternalBugreportsInternalDomainElementData
-		result := obj.String()
-		assert.Equal(t, "<nil>", result, "String() should return <nil> for nil receiver")
-	})
-}
-
-func TestStringGithubComMktAgiAixInternalBugreportsInternalDomainViewportData(t *testing.T) {
-	t.Run("StringMethod", func(t *testing.T) {
-		t.Parallel()
-		obj := &GithubComMktAgiAixInternalBugreportsInternalDomainViewportData{}
-		result := obj.String()
-		assert.NotEmpty(t, result, "String() should return a non-empty representation")
-	})
-
-	t.Run("StringMethod_NilReceiver", func(t *testing.T) {
-		t.Parallel()
-		var obj *GithubComMktAgiAixInternalBugreportsInternalDomainViewportData
-		result := obj.String()
-		assert.Equal(t, "<nil>", result, "String() should return <nil> for nil receiver")
-	})
-}
-
 func TestStringGithubComMktAgiAixInternalPkgGinxResultArrayGithubComMktAgiAixInternalBugreportsInternalDomainBugReport(t *testing.T) {
 	t.Run("StringMethod", func(t *testing.T) {
 		t.Parallel()
@@ -4408,52 +3644,6 @@ func TestExtraPropertiesGithubComMktAgiAixInternalBugreportsInternalDomainBugRep
 	t.Run("GetExtraProperties_NilReceiver", func(t *testing.T) {
 		t.Parallel()
 		var obj *GithubComMktAgiAixInternalBugreportsInternalDomainBugReport
-		extraProps := obj.GetExtraProperties()
-		assert.Nil(t, extraProps, "nil receiver should return nil without panicking")
-	})
-}
-
-func TestExtraPropertiesGithubComMktAgiAixInternalBugreportsInternalDomainElementData(t *testing.T) {
-	t.Run("GetExtraProperties", func(t *testing.T) {
-		t.Parallel()
-		obj := &GithubComMktAgiAixInternalBugreportsInternalDomainElementData{}
-		// Should not panic when calling GetExtraProperties()
-		defer func() {
-			if r := recover(); r != nil {
-				t.Errorf("GetExtraProperties() panicked: %v", r)
-			}
-		}()
-		extraProps := obj.GetExtraProperties()
-		// Result can be nil or an empty/non-empty map
-		_ = extraProps
-	})
-
-	t.Run("GetExtraProperties_NilReceiver", func(t *testing.T) {
-		t.Parallel()
-		var obj *GithubComMktAgiAixInternalBugreportsInternalDomainElementData
-		extraProps := obj.GetExtraProperties()
-		assert.Nil(t, extraProps, "nil receiver should return nil without panicking")
-	})
-}
-
-func TestExtraPropertiesGithubComMktAgiAixInternalBugreportsInternalDomainViewportData(t *testing.T) {
-	t.Run("GetExtraProperties", func(t *testing.T) {
-		t.Parallel()
-		obj := &GithubComMktAgiAixInternalBugreportsInternalDomainViewportData{}
-		// Should not panic when calling GetExtraProperties()
-		defer func() {
-			if r := recover(); r != nil {
-				t.Errorf("GetExtraProperties() panicked: %v", r)
-			}
-		}()
-		extraProps := obj.GetExtraProperties()
-		// Result can be nil or an empty/non-empty map
-		_ = extraProps
-	})
-
-	t.Run("GetExtraProperties_NilReceiver", func(t *testing.T) {
-		t.Parallel()
-		var obj *GithubComMktAgiAixInternalBugreportsInternalDomainViewportData
 		extraProps := obj.GetExtraProperties()
 		assert.Nil(t, extraProps, "nil receiver should return nil without panicking")
 	})

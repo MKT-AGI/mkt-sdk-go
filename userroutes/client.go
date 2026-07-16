@@ -102,13 +102,13 @@ func (c *Client) DeleteUserModelRoute(
 	return response.Body, nil
 }
 
-// Return all users who have filter access to a route
-func (c *Client) ListRouteVisibilityFilters(
+// Return all access grants for a route
+func (c *Client) ListRouteAccessGrants(
 	ctx context.Context,
-	request *mktsdkgo.GetGatewayUserIDRoutesIDFiltersRequest,
+	request *mktsdkgo.GetGatewayUserIDRoutesIDGrantsRequest,
 	opts ...option.RequestOption,
-) (*mktsdkgo.GithubComMktAgiAixInternalPkgGinxResultArrayUint, error) {
-	response, err := c.WithRawResponse.ListRouteVisibilityFilters(
+) (*mktsdkgo.GithubComMktAgiAixInternalPkgGinxResultArrayGithubComMktAgiAixInternalIamAccessGrant, error) {
+	response, err := c.WithRawResponse.ListRouteAccessGrants(
 		ctx,
 		request,
 		opts...,
@@ -119,13 +119,13 @@ func (c *Client) ListRouteVisibilityFilters(
 	return response.Body, nil
 }
 
-// Grant a user access to a route via filter
-func (c *Client) AddRouteVisibilityFilter(
+// Grant a user access to a private route
+func (c *Client) GrantRouteAccess(
 	ctx context.Context,
-	request *mktsdkgo.PostGatewayUserIDRoutesIDFiltersRequest,
+	request *mktsdkgo.PostGatewayUserIDRoutesIDGrantsRequest,
 	opts ...option.RequestOption,
 ) (*mktsdkgo.GithubComMktAgiAixInternalPkgGinxResultAny, error) {
-	response, err := c.WithRawResponse.AddRouteVisibilityFilter(
+	response, err := c.WithRawResponse.GrantRouteAccess(
 		ctx,
 		request,
 		opts...,
@@ -136,13 +136,13 @@ func (c *Client) AddRouteVisibilityFilter(
 	return response.Body, nil
 }
 
-// Revoke a user's access to a filtered route
-func (c *Client) RemoveRouteVisibilityFilter(
+// Revoke a user's access to a route
+func (c *Client) RevokeRouteAccess(
 	ctx context.Context,
-	request *mktsdkgo.DeleteGatewayUserIDRoutesIDFiltersTargetUserIDRequest,
+	request *mktsdkgo.DeleteGatewayUserIDRoutesIDGrantsTargetUserIDRequest,
 	opts ...option.RequestOption,
 ) (*mktsdkgo.GithubComMktAgiAixInternalPkgGinxResultAny, error) {
-	response, err := c.WithRawResponse.RemoveRouteVisibilityFilter(
+	response, err := c.WithRawResponse.RevokeRouteAccess(
 		ctx,
 		request,
 		opts...,

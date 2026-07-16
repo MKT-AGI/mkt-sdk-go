@@ -9,90 +9,6 @@ import (
 	testing "testing"
 )
 
-func TestSettersPostGatewayUserIDRoutesIDFiltersRequest(t *testing.T) {
-	t.Run("SetUserID", func(t *testing.T) {
-		obj := &PostGatewayUserIDRoutesIDFiltersRequest{}
-		var fernTestValueUserID int
-		obj.SetUserID(fernTestValueUserID)
-		assert.Equal(t, fernTestValueUserID, obj.UserID)
-		assert.NotNil(t, obj.explicitFields)
-	})
-
-	t.Run("SetID", func(t *testing.T) {
-		obj := &PostGatewayUserIDRoutesIDFiltersRequest{}
-		var fernTestValueID int
-		obj.SetID(fernTestValueID)
-		assert.Equal(t, fernTestValueID, obj.ID)
-		assert.NotNil(t, obj.explicitFields)
-	})
-
-}
-
-func TestSettersMarkExplicitPostGatewayUserIDRoutesIDFiltersRequest(t *testing.T) {
-	t.Run("SetUserID_MarksExplicit", func(t *testing.T) {
-		t.Parallel()
-		// Arrange
-		obj := &PostGatewayUserIDRoutesIDFiltersRequest{}
-		var fernTestValueUserID int
-
-		// Act
-		obj.SetUserID(fernTestValueUserID)
-
-		// Assert - object with explicitly set field can be marshaled/unmarshaled
-		bytes, err := json.Marshal(obj)
-		require.NoError(t, err, "marshaling should succeed for test setup")
-
-		// This test ensures JSON marshaling and unmarshaling succeed when the field has a zero/nil value
-		// Detect if marshaled JSON is an object or primitive to use correct unmarshal target
-		if len(bytes) > 0 && bytes[0] == '{' {
-			// JSON object - unmarshal into map
-			var unmarshaled map[string]interface{}
-			err = json.Unmarshal(bytes, &unmarshaled)
-			require.NoError(t, err, "unmarshaling should succeed for test verification")
-		} else {
-			// JSON primitive (string, number, boolean, null) - unmarshal into interface{}
-			var unmarshaled interface{}
-			err = json.Unmarshal(bytes, &unmarshaled)
-			require.NoError(t, err, "unmarshaling should succeed for test verification")
-		}
-
-		// Note: This does not explicitly assert the presence of a specific JSON field
-		// It verifies that setting a field via setter allows successful JSON round-trip
-	})
-
-	t.Run("SetID_MarksExplicit", func(t *testing.T) {
-		t.Parallel()
-		// Arrange
-		obj := &PostGatewayUserIDRoutesIDFiltersRequest{}
-		var fernTestValueID int
-
-		// Act
-		obj.SetID(fernTestValueID)
-
-		// Assert - object with explicitly set field can be marshaled/unmarshaled
-		bytes, err := json.Marshal(obj)
-		require.NoError(t, err, "marshaling should succeed for test setup")
-
-		// This test ensures JSON marshaling and unmarshaling succeed when the field has a zero/nil value
-		// Detect if marshaled JSON is an object or primitive to use correct unmarshal target
-		if len(bytes) > 0 && bytes[0] == '{' {
-			// JSON object - unmarshal into map
-			var unmarshaled map[string]interface{}
-			err = json.Unmarshal(bytes, &unmarshaled)
-			require.NoError(t, err, "unmarshaling should succeed for test verification")
-		} else {
-			// JSON primitive (string, number, boolean, null) - unmarshal into interface{}
-			var unmarshaled interface{}
-			err = json.Unmarshal(bytes, &unmarshaled)
-			require.NoError(t, err, "unmarshaling should succeed for test verification")
-		}
-
-		// Note: This does not explicitly assert the presence of a specific JSON field
-		// It verifies that setting a field via setter allows successful JSON round-trip
-	})
-
-}
-
 func TestSettersPostGatewayUserIDRoutesRequest(t *testing.T) {
 	t.Run("SetUserID", func(t *testing.T) {
 		obj := &PostGatewayUserIDRoutesRequest{}
@@ -306,9 +222,9 @@ func TestSettersMarkExplicitGetGatewayUserIDRoutesIDRequest(t *testing.T) {
 
 }
 
-func TestSettersGetGatewayUserIDRoutesIDFiltersRequest(t *testing.T) {
+func TestSettersPostGatewayUserIDRoutesIDGrantsRequest(t *testing.T) {
 	t.Run("SetUserID", func(t *testing.T) {
-		obj := &GetGatewayUserIDRoutesIDFiltersRequest{}
+		obj := &PostGatewayUserIDRoutesIDGrantsRequest{}
 		var fernTestValueUserID int
 		obj.SetUserID(fernTestValueUserID)
 		assert.Equal(t, fernTestValueUserID, obj.UserID)
@@ -316,7 +232,7 @@ func TestSettersGetGatewayUserIDRoutesIDFiltersRequest(t *testing.T) {
 	})
 
 	t.Run("SetID", func(t *testing.T) {
-		obj := &GetGatewayUserIDRoutesIDFiltersRequest{}
+		obj := &PostGatewayUserIDRoutesIDGrantsRequest{}
 		var fernTestValueID int
 		obj.SetID(fernTestValueID)
 		assert.Equal(t, fernTestValueID, obj.ID)
@@ -325,11 +241,11 @@ func TestSettersGetGatewayUserIDRoutesIDFiltersRequest(t *testing.T) {
 
 }
 
-func TestSettersMarkExplicitGetGatewayUserIDRoutesIDFiltersRequest(t *testing.T) {
+func TestSettersMarkExplicitPostGatewayUserIDRoutesIDGrantsRequest(t *testing.T) {
 	t.Run("SetUserID_MarksExplicit", func(t *testing.T) {
 		t.Parallel()
 		// Arrange
-		obj := &GetGatewayUserIDRoutesIDFiltersRequest{}
+		obj := &PostGatewayUserIDRoutesIDGrantsRequest{}
 		var fernTestValueUserID int
 
 		// Act
@@ -360,7 +276,91 @@ func TestSettersMarkExplicitGetGatewayUserIDRoutesIDFiltersRequest(t *testing.T)
 	t.Run("SetID_MarksExplicit", func(t *testing.T) {
 		t.Parallel()
 		// Arrange
-		obj := &GetGatewayUserIDRoutesIDFiltersRequest{}
+		obj := &PostGatewayUserIDRoutesIDGrantsRequest{}
+		var fernTestValueID int
+
+		// Act
+		obj.SetID(fernTestValueID)
+
+		// Assert - object with explicitly set field can be marshaled/unmarshaled
+		bytes, err := json.Marshal(obj)
+		require.NoError(t, err, "marshaling should succeed for test setup")
+
+		// This test ensures JSON marshaling and unmarshaling succeed when the field has a zero/nil value
+		// Detect if marshaled JSON is an object or primitive to use correct unmarshal target
+		if len(bytes) > 0 && bytes[0] == '{' {
+			// JSON object - unmarshal into map
+			var unmarshaled map[string]interface{}
+			err = json.Unmarshal(bytes, &unmarshaled)
+			require.NoError(t, err, "unmarshaling should succeed for test verification")
+		} else {
+			// JSON primitive (string, number, boolean, null) - unmarshal into interface{}
+			var unmarshaled interface{}
+			err = json.Unmarshal(bytes, &unmarshaled)
+			require.NoError(t, err, "unmarshaling should succeed for test verification")
+		}
+
+		// Note: This does not explicitly assert the presence of a specific JSON field
+		// It verifies that setting a field via setter allows successful JSON round-trip
+	})
+
+}
+
+func TestSettersGetGatewayUserIDRoutesIDGrantsRequest(t *testing.T) {
+	t.Run("SetUserID", func(t *testing.T) {
+		obj := &GetGatewayUserIDRoutesIDGrantsRequest{}
+		var fernTestValueUserID int
+		obj.SetUserID(fernTestValueUserID)
+		assert.Equal(t, fernTestValueUserID, obj.UserID)
+		assert.NotNil(t, obj.explicitFields)
+	})
+
+	t.Run("SetID", func(t *testing.T) {
+		obj := &GetGatewayUserIDRoutesIDGrantsRequest{}
+		var fernTestValueID int
+		obj.SetID(fernTestValueID)
+		assert.Equal(t, fernTestValueID, obj.ID)
+		assert.NotNil(t, obj.explicitFields)
+	})
+
+}
+
+func TestSettersMarkExplicitGetGatewayUserIDRoutesIDGrantsRequest(t *testing.T) {
+	t.Run("SetUserID_MarksExplicit", func(t *testing.T) {
+		t.Parallel()
+		// Arrange
+		obj := &GetGatewayUserIDRoutesIDGrantsRequest{}
+		var fernTestValueUserID int
+
+		// Act
+		obj.SetUserID(fernTestValueUserID)
+
+		// Assert - object with explicitly set field can be marshaled/unmarshaled
+		bytes, err := json.Marshal(obj)
+		require.NoError(t, err, "marshaling should succeed for test setup")
+
+		// This test ensures JSON marshaling and unmarshaling succeed when the field has a zero/nil value
+		// Detect if marshaled JSON is an object or primitive to use correct unmarshal target
+		if len(bytes) > 0 && bytes[0] == '{' {
+			// JSON object - unmarshal into map
+			var unmarshaled map[string]interface{}
+			err = json.Unmarshal(bytes, &unmarshaled)
+			require.NoError(t, err, "unmarshaling should succeed for test verification")
+		} else {
+			// JSON primitive (string, number, boolean, null) - unmarshal into interface{}
+			var unmarshaled interface{}
+			err = json.Unmarshal(bytes, &unmarshaled)
+			require.NoError(t, err, "unmarshaling should succeed for test verification")
+		}
+
+		// Note: This does not explicitly assert the presence of a specific JSON field
+		// It verifies that setting a field via setter allows successful JSON round-trip
+	})
+
+	t.Run("SetID_MarksExplicit", func(t *testing.T) {
+		t.Parallel()
+		// Arrange
+		obj := &GetGatewayUserIDRoutesIDGrantsRequest{}
 		var fernTestValueID int
 
 		// Act
@@ -435,9 +435,9 @@ func TestSettersMarkExplicitGetGatewayUserIDRoutesRequest(t *testing.T) {
 
 }
 
-func TestSettersDeleteGatewayUserIDRoutesIDFiltersTargetUserIDRequest(t *testing.T) {
+func TestSettersDeleteGatewayUserIDRoutesIDGrantsTargetUserIDRequest(t *testing.T) {
 	t.Run("SetUserID", func(t *testing.T) {
-		obj := &DeleteGatewayUserIDRoutesIDFiltersTargetUserIDRequest{}
+		obj := &DeleteGatewayUserIDRoutesIDGrantsTargetUserIDRequest{}
 		var fernTestValueUserID int
 		obj.SetUserID(fernTestValueUserID)
 		assert.Equal(t, fernTestValueUserID, obj.UserID)
@@ -445,7 +445,7 @@ func TestSettersDeleteGatewayUserIDRoutesIDFiltersTargetUserIDRequest(t *testing
 	})
 
 	t.Run("SetID", func(t *testing.T) {
-		obj := &DeleteGatewayUserIDRoutesIDFiltersTargetUserIDRequest{}
+		obj := &DeleteGatewayUserIDRoutesIDGrantsTargetUserIDRequest{}
 		var fernTestValueID int
 		obj.SetID(fernTestValueID)
 		assert.Equal(t, fernTestValueID, obj.ID)
@@ -453,7 +453,7 @@ func TestSettersDeleteGatewayUserIDRoutesIDFiltersTargetUserIDRequest(t *testing
 	})
 
 	t.Run("SetTargetUserID", func(t *testing.T) {
-		obj := &DeleteGatewayUserIDRoutesIDFiltersTargetUserIDRequest{}
+		obj := &DeleteGatewayUserIDRoutesIDGrantsTargetUserIDRequest{}
 		var fernTestValueTargetUserID int
 		obj.SetTargetUserID(fernTestValueTargetUserID)
 		assert.Equal(t, fernTestValueTargetUserID, obj.TargetUserID)
@@ -462,11 +462,11 @@ func TestSettersDeleteGatewayUserIDRoutesIDFiltersTargetUserIDRequest(t *testing
 
 }
 
-func TestSettersMarkExplicitDeleteGatewayUserIDRoutesIDFiltersTargetUserIDRequest(t *testing.T) {
+func TestSettersMarkExplicitDeleteGatewayUserIDRoutesIDGrantsTargetUserIDRequest(t *testing.T) {
 	t.Run("SetUserID_MarksExplicit", func(t *testing.T) {
 		t.Parallel()
 		// Arrange
-		obj := &DeleteGatewayUserIDRoutesIDFiltersTargetUserIDRequest{}
+		obj := &DeleteGatewayUserIDRoutesIDGrantsTargetUserIDRequest{}
 		var fernTestValueUserID int
 
 		// Act
@@ -497,7 +497,7 @@ func TestSettersMarkExplicitDeleteGatewayUserIDRoutesIDFiltersTargetUserIDReques
 	t.Run("SetID_MarksExplicit", func(t *testing.T) {
 		t.Parallel()
 		// Arrange
-		obj := &DeleteGatewayUserIDRoutesIDFiltersTargetUserIDRequest{}
+		obj := &DeleteGatewayUserIDRoutesIDGrantsTargetUserIDRequest{}
 		var fernTestValueID int
 
 		// Act
@@ -528,7 +528,7 @@ func TestSettersMarkExplicitDeleteGatewayUserIDRoutesIDFiltersTargetUserIDReques
 	t.Run("SetTargetUserID_MarksExplicit", func(t *testing.T) {
 		t.Parallel()
 		// Arrange
-		obj := &DeleteGatewayUserIDRoutesIDFiltersTargetUserIDRequest{}
+		obj := &DeleteGatewayUserIDRoutesIDGrantsTargetUserIDRequest{}
 		var fernTestValueTargetUserID int
 
 		// Act
@@ -1584,9 +1584,9 @@ func TestSettersMarkExplicitGithubComMktAgiAixInternalPkgGinxResultInternalAigat
 
 }
 
-func TestSettersInternalAigatewayInternalWebAddRouteFilterRequest(t *testing.T) {
+func TestSettersInternalAigatewayInternalWebAddRouteGrantRequest(t *testing.T) {
 	t.Run("SetUserID", func(t *testing.T) {
-		obj := &InternalAigatewayInternalWebAddRouteFilterRequest{}
+		obj := &InternalAigatewayInternalWebAddRouteGrantRequest{}
 		var fernTestValueUserID *int
 		obj.SetUserID(fernTestValueUserID)
 		assert.Equal(t, fernTestValueUserID, obj.UserID)
@@ -1595,11 +1595,11 @@ func TestSettersInternalAigatewayInternalWebAddRouteFilterRequest(t *testing.T) 
 
 }
 
-func TestGettersInternalAigatewayInternalWebAddRouteFilterRequest(t *testing.T) {
+func TestGettersInternalAigatewayInternalWebAddRouteGrantRequest(t *testing.T) {
 	t.Run("GetUserID", func(t *testing.T) {
 		t.Parallel()
 		// Arrange
-		obj := &InternalAigatewayInternalWebAddRouteFilterRequest{}
+		obj := &InternalAigatewayInternalWebAddRouteGrantRequest{}
 		var expected *int
 		obj.UserID = expected
 
@@ -1610,7 +1610,7 @@ func TestGettersInternalAigatewayInternalWebAddRouteFilterRequest(t *testing.T) 
 	t.Run("GetUserID_NilValue", func(t *testing.T) {
 		t.Parallel()
 		// Arrange
-		obj := &InternalAigatewayInternalWebAddRouteFilterRequest{}
+		obj := &InternalAigatewayInternalWebAddRouteGrantRequest{}
 		obj.UserID = nil
 
 		// Act & Assert
@@ -1619,7 +1619,7 @@ func TestGettersInternalAigatewayInternalWebAddRouteFilterRequest(t *testing.T) 
 
 	t.Run("GetUserID_NilReceiver", func(t *testing.T) {
 		t.Parallel()
-		var obj *InternalAigatewayInternalWebAddRouteFilterRequest
+		var obj *InternalAigatewayInternalWebAddRouteGrantRequest
 		// Should not panic - getters should handle nil receiver gracefully
 		defer func() {
 			if r := recover(); r != nil {
@@ -1631,11 +1631,11 @@ func TestGettersInternalAigatewayInternalWebAddRouteFilterRequest(t *testing.T) 
 
 }
 
-func TestSettersMarkExplicitInternalAigatewayInternalWebAddRouteFilterRequest(t *testing.T) {
+func TestSettersMarkExplicitInternalAigatewayInternalWebAddRouteGrantRequest(t *testing.T) {
 	t.Run("SetUserID_MarksExplicit", func(t *testing.T) {
 		t.Parallel()
 		// Arrange
-		obj := &InternalAigatewayInternalWebAddRouteFilterRequest{}
+		obj := &InternalAigatewayInternalWebAddRouteGrantRequest{}
 		var fernTestValueUserID *int
 
 		// Act
@@ -2465,11 +2465,11 @@ func TestSettersMarkExplicitInternalAigatewayInternalWebUserRouteResponse(t *tes
 
 }
 
-func TestGettersPostGatewayUserIDRoutesIDFiltersRequestBody(t *testing.T) {
+func TestGettersPostGatewayUserIDRoutesIDGrantsRequestBody(t *testing.T) {
 	t.Run("GetStringUnknownMap", func(t *testing.T) {
 		t.Parallel()
 		// Arrange
-		obj := &PostGatewayUserIDRoutesIDFiltersRequestBody{}
+		obj := &PostGatewayUserIDRoutesIDGrantsRequestBody{}
 		var expected map[string]any
 		obj.StringUnknownMap = expected
 
@@ -2480,7 +2480,7 @@ func TestGettersPostGatewayUserIDRoutesIDFiltersRequestBody(t *testing.T) {
 	t.Run("GetStringUnknownMap_NilValue", func(t *testing.T) {
 		t.Parallel()
 		// Arrange
-		obj := &PostGatewayUserIDRoutesIDFiltersRequestBody{}
+		obj := &PostGatewayUserIDRoutesIDGrantsRequestBody{}
 		obj.StringUnknownMap = nil
 
 		// Act & Assert
@@ -2489,7 +2489,7 @@ func TestGettersPostGatewayUserIDRoutesIDFiltersRequestBody(t *testing.T) {
 
 	t.Run("GetStringUnknownMap_NilReceiver", func(t *testing.T) {
 		t.Parallel()
-		var obj *PostGatewayUserIDRoutesIDFiltersRequestBody
+		var obj *PostGatewayUserIDRoutesIDGrantsRequestBody
 		// Should not panic - getters should handle nil receiver gracefully
 		defer func() {
 			if r := recover(); r != nil {
@@ -2499,37 +2499,37 @@ func TestGettersPostGatewayUserIDRoutesIDFiltersRequestBody(t *testing.T) {
 		_ = obj.GetStringUnknownMap() // Should return zero value
 	})
 
-	t.Run("GetInternalAigatewayInternalWebAddRouteFilterRequest", func(t *testing.T) {
+	t.Run("GetInternalAigatewayInternalWebAddRouteGrantRequest", func(t *testing.T) {
 		t.Parallel()
 		// Arrange
-		obj := &PostGatewayUserIDRoutesIDFiltersRequestBody{}
-		var expected *InternalAigatewayInternalWebAddRouteFilterRequest
-		obj.InternalAigatewayInternalWebAddRouteFilterRequest = expected
+		obj := &PostGatewayUserIDRoutesIDGrantsRequestBody{}
+		var expected *InternalAigatewayInternalWebAddRouteGrantRequest
+		obj.InternalAigatewayInternalWebAddRouteGrantRequest = expected
 
 		// Act & Assert
-		assert.Equal(t, expected, obj.GetInternalAigatewayInternalWebAddRouteFilterRequest(), "getter should return the property value")
+		assert.Equal(t, expected, obj.GetInternalAigatewayInternalWebAddRouteGrantRequest(), "getter should return the property value")
 	})
 
-	t.Run("GetInternalAigatewayInternalWebAddRouteFilterRequest_NilValue", func(t *testing.T) {
+	t.Run("GetInternalAigatewayInternalWebAddRouteGrantRequest_NilValue", func(t *testing.T) {
 		t.Parallel()
 		// Arrange
-		obj := &PostGatewayUserIDRoutesIDFiltersRequestBody{}
-		obj.InternalAigatewayInternalWebAddRouteFilterRequest = nil
+		obj := &PostGatewayUserIDRoutesIDGrantsRequestBody{}
+		obj.InternalAigatewayInternalWebAddRouteGrantRequest = nil
 
 		// Act & Assert
-		assert.Nil(t, obj.GetInternalAigatewayInternalWebAddRouteFilterRequest(), "getter should return nil when property is nil")
+		assert.Nil(t, obj.GetInternalAigatewayInternalWebAddRouteGrantRequest(), "getter should return nil when property is nil")
 	})
 
-	t.Run("GetInternalAigatewayInternalWebAddRouteFilterRequest_NilReceiver", func(t *testing.T) {
+	t.Run("GetInternalAigatewayInternalWebAddRouteGrantRequest_NilReceiver", func(t *testing.T) {
 		t.Parallel()
-		var obj *PostGatewayUserIDRoutesIDFiltersRequestBody
+		var obj *PostGatewayUserIDRoutesIDGrantsRequestBody
 		// Should not panic - getters should handle nil receiver gracefully
 		defer func() {
 			if r := recover(); r != nil {
 				t.Errorf("Getter panicked on nil receiver: %v", r)
 			}
 		}()
-		_ = obj.GetInternalAigatewayInternalWebAddRouteFilterRequest() // Should return zero value
+		_ = obj.GetInternalAigatewayInternalWebAddRouteGrantRequest() // Should return zero value
 	})
 
 }
@@ -2669,11 +2669,11 @@ func TestJSONMarshalingGithubComMktAgiAixInternalPkgGinxResultInternalAigatewayI
 	})
 }
 
-func TestJSONMarshalingInternalAigatewayInternalWebAddRouteFilterRequest(t *testing.T) {
+func TestJSONMarshalingInternalAigatewayInternalWebAddRouteGrantRequest(t *testing.T) {
 	t.Run("MarshalUnmarshal", func(t *testing.T) {
 		t.Parallel()
 		// Arrange
-		obj := &InternalAigatewayInternalWebAddRouteFilterRequest{}
+		obj := &InternalAigatewayInternalWebAddRouteGrantRequest{}
 
 		// Act - Marshal to JSON
 		data, err := json.Marshal(obj)
@@ -2682,21 +2682,21 @@ func TestJSONMarshalingInternalAigatewayInternalWebAddRouteFilterRequest(t *test
 		assert.NotEmpty(t, data, "marshaled data should not be empty")
 
 		// Unmarshal back and verify round-trip
-		var unmarshaled InternalAigatewayInternalWebAddRouteFilterRequest
+		var unmarshaled InternalAigatewayInternalWebAddRouteGrantRequest
 		err = json.Unmarshal(data, &unmarshaled)
 		assert.NoError(t, err, "round-trip unmarshal should succeed")
 	})
 
 	t.Run("UnmarshalInvalidJSON", func(t *testing.T) {
 		t.Parallel()
-		var obj InternalAigatewayInternalWebAddRouteFilterRequest
+		var obj InternalAigatewayInternalWebAddRouteGrantRequest
 		err := json.Unmarshal([]byte(`{invalid json}`), &obj)
 		assert.Error(t, err, "unmarshaling invalid JSON should return an error")
 	})
 
 	t.Run("UnmarshalEmptyObject", func(t *testing.T) {
 		t.Parallel()
-		var obj InternalAigatewayInternalWebAddRouteFilterRequest
+		var obj InternalAigatewayInternalWebAddRouteGrantRequest
 		err := json.Unmarshal([]byte(`{}`), &obj)
 		assert.NoError(t, err, "unmarshaling empty object should succeed")
 	})
@@ -2800,17 +2800,17 @@ func TestStringGithubComMktAgiAixInternalPkgGinxResultInternalAigatewayInternalW
 	})
 }
 
-func TestStringInternalAigatewayInternalWebAddRouteFilterRequest(t *testing.T) {
+func TestStringInternalAigatewayInternalWebAddRouteGrantRequest(t *testing.T) {
 	t.Run("StringMethod", func(t *testing.T) {
 		t.Parallel()
-		obj := &InternalAigatewayInternalWebAddRouteFilterRequest{}
+		obj := &InternalAigatewayInternalWebAddRouteGrantRequest{}
 		result := obj.String()
 		assert.NotEmpty(t, result, "String() should return a non-empty representation")
 	})
 
 	t.Run("StringMethod_NilReceiver", func(t *testing.T) {
 		t.Parallel()
-		var obj *InternalAigatewayInternalWebAddRouteFilterRequest
+		var obj *InternalAigatewayInternalWebAddRouteGrantRequest
 		result := obj.String()
 		assert.Equal(t, "<nil>", result, "String() should return <nil> for nil receiver")
 	})
@@ -2894,10 +2894,10 @@ func TestExtraPropertiesGithubComMktAgiAixInternalPkgGinxResultInternalAigateway
 	})
 }
 
-func TestExtraPropertiesInternalAigatewayInternalWebAddRouteFilterRequest(t *testing.T) {
+func TestExtraPropertiesInternalAigatewayInternalWebAddRouteGrantRequest(t *testing.T) {
 	t.Run("GetExtraProperties", func(t *testing.T) {
 		t.Parallel()
-		obj := &InternalAigatewayInternalWebAddRouteFilterRequest{}
+		obj := &InternalAigatewayInternalWebAddRouteGrantRequest{}
 		// Should not panic when calling GetExtraProperties()
 		defer func() {
 			if r := recover(); r != nil {
@@ -2911,7 +2911,7 @@ func TestExtraPropertiesInternalAigatewayInternalWebAddRouteFilterRequest(t *tes
 
 	t.Run("GetExtraProperties_NilReceiver", func(t *testing.T) {
 		t.Parallel()
-		var obj *InternalAigatewayInternalWebAddRouteFilterRequest
+		var obj *InternalAigatewayInternalWebAddRouteGrantRequest
 		extraProps := obj.GetExtraProperties()
 		assert.Nil(t, extraProps, "nil receiver should return nil without panicking")
 	})

@@ -77,7 +77,7 @@ func VerifyRequestCount(
 	require.Equal(t, expected, len(result.Requests))
 }
 
-func TestUserModelsListModelVisibilityFiltersWithWireMock(
+func TestUserModelsListModelAccessGrantsWithWireMock(
 	t *testing.T,
 ) {
 	WireMockBaseURL := os.Getenv("WIREMOCK_URL")
@@ -88,23 +88,23 @@ func TestUserModelsListModelVisibilityFiltersWithWireMock(
 		option.WithBaseURL(WireMockBaseURL),
 		option.WithAPIKey("test-value"),
 	)
-	request := &mktsdkgo.GetGatewayUserIDModelsIDFiltersRequest{
+	request := &mktsdkgo.GetGatewayUserIDModelsIDGrantsRequest{
 		UserID: 1,
 		ID:     1,
 	}
-	_, invocationErr := client.UserModels.ListModelVisibilityFilters(
+	_, invocationErr := client.UserModels.ListModelAccessGrants(
 		context.TODO(),
 		request,
 		option.WithHTTPHeader(
-			http.Header{"X-Test-Id": []string{"TestUserModelsListModelVisibilityFiltersWithWireMock"}},
+			http.Header{"X-Test-Id": []string{"TestUserModelsListModelAccessGrantsWithWireMock"}},
 		),
 	)
 
 	require.NoError(t, invocationErr, "Client method call should succeed")
-	VerifyRequestCount(t, "TestUserModelsListModelVisibilityFiltersWithWireMock", "GET", "/gateway/1/models/1/filters", nil, 1)
+	VerifyRequestCount(t, "TestUserModelsListModelAccessGrantsWithWireMock", "GET", "/gateway/1/models/1/grants", nil, 1)
 }
 
-func TestUserModelsAddModelVisibilityFilterWithWireMock(
+func TestUserModelsGrantModelAccessWithWireMock(
 	t *testing.T,
 ) {
 	WireMockBaseURL := os.Getenv("WIREMOCK_URL")
@@ -115,28 +115,28 @@ func TestUserModelsAddModelVisibilityFilterWithWireMock(
 		option.WithBaseURL(WireMockBaseURL),
 		option.WithAPIKey("test-value"),
 	)
-	request := &mktsdkgo.PostGatewayUserIDModelsIDFiltersRequest{
+	request := &mktsdkgo.PostGatewayUserIDModelsIDGrantsRequest{
 		UserID: 1,
 		ID:     1,
-		Body: &mktsdkgo.PostGatewayUserIDModelsIDFiltersRequestBody{
+		Body: &mktsdkgo.PostGatewayUserIDModelsIDGrantsRequestBody{
 			StringUnknownMap: map[string]any{
 				"key": "value",
 			},
 		},
 	}
-	_, invocationErr := client.UserModels.AddModelVisibilityFilter(
+	_, invocationErr := client.UserModels.GrantModelAccess(
 		context.TODO(),
 		request,
 		option.WithHTTPHeader(
-			http.Header{"X-Test-Id": []string{"TestUserModelsAddModelVisibilityFilterWithWireMock"}},
+			http.Header{"X-Test-Id": []string{"TestUserModelsGrantModelAccessWithWireMock"}},
 		),
 	)
 
 	require.NoError(t, invocationErr, "Client method call should succeed")
-	VerifyRequestCount(t, "TestUserModelsAddModelVisibilityFilterWithWireMock", "POST", "/gateway/1/models/1/filters", nil, 1)
+	VerifyRequestCount(t, "TestUserModelsGrantModelAccessWithWireMock", "POST", "/gateway/1/models/1/grants", nil, 1)
 }
 
-func TestUserModelsRemoveModelVisibilityFilterWithWireMock(
+func TestUserModelsRevokeModelAccessWithWireMock(
 	t *testing.T,
 ) {
 	WireMockBaseURL := os.Getenv("WIREMOCK_URL")
@@ -147,19 +147,19 @@ func TestUserModelsRemoveModelVisibilityFilterWithWireMock(
 		option.WithBaseURL(WireMockBaseURL),
 		option.WithAPIKey("test-value"),
 	)
-	request := &mktsdkgo.DeleteGatewayUserIDModelsIDFiltersTargetUserIDRequest{
+	request := &mktsdkgo.DeleteGatewayUserIDModelsIDGrantsTargetUserIDRequest{
 		UserID:       1,
 		ID:           1,
 		TargetUserID: 1,
 	}
-	_, invocationErr := client.UserModels.RemoveModelVisibilityFilter(
+	_, invocationErr := client.UserModels.RevokeModelAccess(
 		context.TODO(),
 		request,
 		option.WithHTTPHeader(
-			http.Header{"X-Test-Id": []string{"TestUserModelsRemoveModelVisibilityFilterWithWireMock"}},
+			http.Header{"X-Test-Id": []string{"TestUserModelsRevokeModelAccessWithWireMock"}},
 		),
 	)
 
 	require.NoError(t, invocationErr, "Client method call should succeed")
-	VerifyRequestCount(t, "TestUserModelsRemoveModelVisibilityFilterWithWireMock", "DELETE", "/gateway/1/models/1/filters/1", nil, 1)
+	VerifyRequestCount(t, "TestUserModelsRevokeModelAccessWithWireMock", "DELETE", "/gateway/1/models/1/grants/1", nil, 1)
 }

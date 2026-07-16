@@ -159,18 +159,18 @@ func (r *RawClient) RevokeAPIKey(
 	}, nil
 }
 
-func (r *RawClient) ListVisibilityFilters(
+func (r *RawClient) ListResourceAccessGrants(
 	ctx context.Context,
-	request *mktsdkgo.GetIamVisibilityFiltersRequest,
+	request *mktsdkgo.GetIamGrantsRequest,
 	opts ...option.RequestOption,
-) (*core.Response[*mktsdkgo.GithubComMktAgiAixInternalPkgGinxResultArrayUint], error) {
+) (*core.Response[*mktsdkgo.GithubComMktAgiAixInternalPkgGinxResultArrayGithubComMktAgiAixInternalIamInternalDomainAccessGrant], error) {
 	options := core.NewRequestOptions(opts...)
 	baseURL := internal.ResolveBaseURL(
 		options.BaseURL,
 		r.baseURL,
 		"http://localhost:8080/api/v1",
 	)
-	endpointURL := baseURL + "/iam/visibility-filters"
+	endpointURL := baseURL + "/iam/grants"
 	queryParams, err := internal.QueryValues(request)
 	if err != nil {
 		return nil, err
@@ -182,7 +182,7 @@ func (r *RawClient) ListVisibilityFilters(
 		r.options.ToHeader(),
 		options.ToHeader(),
 	)
-	var response *mktsdkgo.GithubComMktAgiAixInternalPkgGinxResultArrayUint
+	var response *mktsdkgo.GithubComMktAgiAixInternalPkgGinxResultArrayGithubComMktAgiAixInternalIamInternalDomainAccessGrant
 	raw, err := r.caller.Call(
 		ctx,
 		&internal.CallParams{
@@ -201,16 +201,16 @@ func (r *RawClient) ListVisibilityFilters(
 	if err != nil {
 		return nil, err
 	}
-	return &core.Response[*mktsdkgo.GithubComMktAgiAixInternalPkgGinxResultArrayUint]{
+	return &core.Response[*mktsdkgo.GithubComMktAgiAixInternalPkgGinxResultArrayGithubComMktAgiAixInternalIamInternalDomainAccessGrant]{
 		StatusCode: raw.StatusCode,
 		Header:     raw.Header,
 		Body:       response,
 	}, nil
 }
 
-func (r *RawClient) AddVisibilityFilter(
+func (r *RawClient) GrantResourceAccess(
 	ctx context.Context,
-	request *mktsdkgo.PostIamVisibilityFiltersRequest,
+	request *mktsdkgo.PostIamGrantsRequest,
 	opts ...option.RequestOption,
 ) (*core.Response[any], error) {
 	options := core.NewRequestOptions(opts...)
@@ -219,7 +219,7 @@ func (r *RawClient) AddVisibilityFilter(
 		r.baseURL,
 		"http://localhost:8080/api/v1",
 	)
-	endpointURL := baseURL + "/iam/visibility-filters"
+	endpointURL := baseURL + "/iam/grants"
 	headers := internal.MergeHeaders(
 		r.options.ToHeader(),
 		options.ToHeader(),
@@ -249,9 +249,9 @@ func (r *RawClient) AddVisibilityFilter(
 	}, nil
 }
 
-func (r *RawClient) RemoveVisibilityFilter(
+func (r *RawClient) RevokeResourceAccess(
 	ctx context.Context,
-	request *mktsdkgo.DeleteIamVisibilityFiltersResourceTypeResourceIDUserIDRequest,
+	request *mktsdkgo.DeleteIamGrantsResourceTypeResourceIDUserIDRequest,
 	opts ...option.RequestOption,
 ) (*core.Response[any], error) {
 	options := core.NewRequestOptions(opts...)
@@ -261,7 +261,7 @@ func (r *RawClient) RemoveVisibilityFilter(
 		"http://localhost:8080/api/v1",
 	)
 	endpointURL := internal.EncodeURL(
-		baseURL+"/iam/visibility-filters/%v/%v/%v",
+		baseURL+"/iam/grants/%v/%v/%v",
 		request.ResourceType,
 		request.ResourceID,
 		request.UserID,

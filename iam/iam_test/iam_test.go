@@ -153,7 +153,7 @@ func TestIamRevokeAPIKeyWithWireMock(
 	VerifyRequestCount(t, "TestIamRevokeAPIKeyWithWireMock", "DELETE", "/iam/api-keys/1", nil, 1)
 }
 
-func TestIamListVisibilityFiltersWithWireMock(
+func TestIamListResourceAccessGrantsWithWireMock(
 	t *testing.T,
 ) {
 	WireMockBaseURL := os.Getenv("WIREMOCK_URL")
@@ -164,23 +164,23 @@ func TestIamListVisibilityFiltersWithWireMock(
 		option.WithBaseURL(WireMockBaseURL),
 		option.WithAPIKey("test-value"),
 	)
-	request := &mktsdkgo.GetIamVisibilityFiltersRequest{
+	request := &mktsdkgo.GetIamGrantsRequest{
 		ResourceType: "resource_type",
 		ResourceID:   1,
 	}
-	_, invocationErr := client.Iam.ListVisibilityFilters(
+	_, invocationErr := client.Iam.ListResourceAccessGrants(
 		context.TODO(),
 		request,
 		option.WithHTTPHeader(
-			http.Header{"X-Test-Id": []string{"TestIamListVisibilityFiltersWithWireMock"}},
+			http.Header{"X-Test-Id": []string{"TestIamListResourceAccessGrantsWithWireMock"}},
 		),
 	)
 
 	require.NoError(t, invocationErr, "Client method call should succeed")
-	VerifyRequestCount(t, "TestIamListVisibilityFiltersWithWireMock", "GET", "/iam/visibility-filters", map[string]interface{}{"resource_type": "resource_type", "resource_id": "1"}, 1)
+	VerifyRequestCount(t, "TestIamListResourceAccessGrantsWithWireMock", "GET", "/iam/grants", map[string]interface{}{"resource_type": "resource_type", "resource_id": "1"}, 1)
 }
 
-func TestIamAddVisibilityFilterWithWireMock(
+func TestIamGrantResourceAccessWithWireMock(
 	t *testing.T,
 ) {
 	WireMockBaseURL := os.Getenv("WIREMOCK_URL")
@@ -191,24 +191,24 @@ func TestIamAddVisibilityFilterWithWireMock(
 		option.WithBaseURL(WireMockBaseURL),
 		option.WithAPIKey("test-value"),
 	)
-	request := &mktsdkgo.PostIamVisibilityFiltersRequest{
+	request := &mktsdkgo.PostIamGrantsRequest{
 		StringUnknownMap: map[string]any{
 			"key": "value",
 		},
 	}
-	invocationErr := client.Iam.AddVisibilityFilter(
+	invocationErr := client.Iam.GrantResourceAccess(
 		context.TODO(),
 		request,
 		option.WithHTTPHeader(
-			http.Header{"X-Test-Id": []string{"TestIamAddVisibilityFilterWithWireMock"}},
+			http.Header{"X-Test-Id": []string{"TestIamGrantResourceAccessWithWireMock"}},
 		),
 	)
 
 	require.NoError(t, invocationErr, "Client method call should succeed")
-	VerifyRequestCount(t, "TestIamAddVisibilityFilterWithWireMock", "POST", "/iam/visibility-filters", nil, 1)
+	VerifyRequestCount(t, "TestIamGrantResourceAccessWithWireMock", "POST", "/iam/grants", nil, 1)
 }
 
-func TestIamRemoveVisibilityFilterWithWireMock(
+func TestIamRevokeResourceAccessWithWireMock(
 	t *testing.T,
 ) {
 	WireMockBaseURL := os.Getenv("WIREMOCK_URL")
@@ -219,19 +219,19 @@ func TestIamRemoveVisibilityFilterWithWireMock(
 		option.WithBaseURL(WireMockBaseURL),
 		option.WithAPIKey("test-value"),
 	)
-	request := &mktsdkgo.DeleteIamVisibilityFiltersResourceTypeResourceIDUserIDRequest{
+	request := &mktsdkgo.DeleteIamGrantsResourceTypeResourceIDUserIDRequest{
 		ResourceType: "resource_type",
 		ResourceID:   1,
 		UserID:       1,
 	}
-	invocationErr := client.Iam.RemoveVisibilityFilter(
+	invocationErr := client.Iam.RevokeResourceAccess(
 		context.TODO(),
 		request,
 		option.WithHTTPHeader(
-			http.Header{"X-Test-Id": []string{"TestIamRemoveVisibilityFilterWithWireMock"}},
+			http.Header{"X-Test-Id": []string{"TestIamRevokeResourceAccessWithWireMock"}},
 		),
 	)
 
 	require.NoError(t, invocationErr, "Client method call should succeed")
-	VerifyRequestCount(t, "TestIamRemoveVisibilityFilterWithWireMock", "DELETE", "/iam/visibility-filters/resource_type/1/1", nil, 1)
+	VerifyRequestCount(t, "TestIamRevokeResourceAccessWithWireMock", "DELETE", "/iam/grants/resource_type/1/1", nil, 1)
 }

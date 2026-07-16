@@ -14,7 +14,7 @@
       },
       "response": {
         "status": 200,
-        "body": "{\n  \"code\": 1,\n  \"data\": [\n    {\n      \"client_timestamp\": 1,\n      \"created_at\": 1,\n      \"description\": \"description\",\n      \"domain_label\": \"domain_label\",\n      \"github_issue_number\": 1,\n      \"github_issue_url\": \"github_issue_url\",\n      \"id\": 1,\n      \"reporter_id\": 1,\n      \"reporter_name\": \"reporter_name\",\n      \"review_notes\": \"review_notes\",\n      \"reviewer_id\": 1,\n      \"status\": \"status\",\n      \"title\": \"title\",\n      \"updated_at\": 1,\n      \"url\": \"url\"\n    }\n  ],\n  \"limit\": 1,\n  \"message\": \"message\",\n  \"page\": 1,\n  \"total\": 1,\n  \"user_message\": \"user_message\"\n}",
+        "body": "{\n  \"code\": 1,\n  \"data\": [\n    {\n      \"client_timestamp\": 1,\n      \"context\": [\n        1\n      ],\n      \"created_at\": 1,\n      \"description\": \"description\",\n      \"domain_label\": \"domain_label\",\n      \"github_issue_number\": 1,\n      \"github_issue_url\": \"github_issue_url\",\n      \"id\": 1,\n      \"label\": \"label\",\n      \"reporter_id\": 1,\n      \"reporter_name\": \"reporter_name\",\n      \"review_notes\": \"review_notes\",\n      \"reviewer_id\": 1,\n      \"status\": \"status\",\n      \"title\": \"title\",\n      \"updated_at\": 1,\n      \"url\": \"url\"\n    }\n  ],\n  \"limit\": 1,\n  \"message\": \"message\",\n  \"page\": 1,\n  \"total\": 1,\n  \"user_message\": \"user_message\"\n}",
         "headers": {
           "Content-Type": "application/json"
         }
@@ -51,7 +51,7 @@
       },
       "response": {
         "status": 200,
-        "body": "{\n  \"code\": 1,\n  \"data\": {\n    \"client_timestamp\": 1,\n    \"created_at\": 1,\n    \"description\": \"description\",\n    \"domain_label\": \"domain_label\",\n    \"element\": {\n      \"classes\": [\n        \"classes\"\n      ],\n      \"computed_styles\": {\n        \"key\": \"value\"\n      },\n      \"id\": \"id\",\n      \"selector\": \"selector\",\n      \"tag_name\": \"tag_name\",\n      \"text_content\": \"text_content\"\n    },\n    \"github_issue_number\": 1,\n    \"github_issue_url\": \"github_issue_url\",\n    \"id\": 1,\n    \"reporter_id\": 1,\n    \"reporter_name\": \"reporter_name\",\n    \"review_notes\": \"review_notes\",\n    \"reviewer_id\": 1,\n    \"status\": \"status\",\n    \"title\": \"title\",\n    \"updated_at\": 1,\n    \"url\": \"url\",\n    \"viewport\": {\n      \"dpr\": 1.1,\n      \"height\": 1,\n      \"width\": 1\n    }\n  },\n  \"limit\": 1,\n  \"message\": \"message\",\n  \"page\": 1,\n  \"total\": 1,\n  \"user_message\": \"user_message\"\n}",
+        "body": "{\n  \"code\": 1,\n  \"data\": {\n    \"client_timestamp\": 1,\n    \"context\": [\n      1\n    ],\n    \"created_at\": 1,\n    \"description\": \"description\",\n    \"domain_label\": \"domain_label\",\n    \"github_issue_number\": 1,\n    \"github_issue_url\": \"github_issue_url\",\n    \"id\": 1,\n    \"label\": \"label\",\n    \"reporter_id\": 1,\n    \"reporter_name\": \"reporter_name\",\n    \"review_notes\": \"review_notes\",\n    \"reviewer_id\": 1,\n    \"status\": \"status\",\n    \"title\": \"title\",\n    \"updated_at\": 1,\n    \"url\": \"url\"\n  },\n  \"limit\": 1,\n  \"message\": \"message\",\n  \"page\": 1,\n  \"total\": 1,\n  \"user_message\": \"user_message\"\n}",
         "headers": {
           "Content-Type": "application/json"
         }
@@ -87,7 +87,7 @@
       },
       "response": {
         "status": 200,
-        "body": "{\n  \"code\": 1,\n  \"data\": {\n    \"client_timestamp\": 1,\n    \"created_at\": 1,\n    \"description\": \"description\",\n    \"domain_label\": \"domain_label\",\n    \"element\": {\n      \"classes\": [\n        \"classes\"\n      ],\n      \"computed_styles\": {\n        \"key\": \"value\"\n      },\n      \"id\": \"id\",\n      \"selector\": \"selector\",\n      \"tag_name\": \"tag_name\",\n      \"text_content\": \"text_content\"\n    },\n    \"github_issue_number\": 1,\n    \"github_issue_url\": \"github_issue_url\",\n    \"id\": 1,\n    \"reporter_id\": 1,\n    \"reporter_name\": \"reporter_name\",\n    \"review_notes\": \"review_notes\",\n    \"reviewer_id\": 1,\n    \"status\": \"status\",\n    \"title\": \"title\",\n    \"updated_at\": 1,\n    \"url\": \"url\",\n    \"viewport\": {\n      \"dpr\": 1.1,\n      \"height\": 1,\n      \"width\": 1\n    }\n  },\n  \"limit\": 1,\n  \"message\": \"message\",\n  \"page\": 1,\n  \"total\": 1,\n  \"user_message\": \"user_message\"\n}",
+        "body": "{\n  \"code\": 1,\n  \"data\": {\n    \"client_timestamp\": 1,\n    \"context\": [\n      1\n    ],\n    \"created_at\": 1,\n    \"description\": \"description\",\n    \"domain_label\": \"domain_label\",\n    \"github_issue_number\": 1,\n    \"github_issue_url\": \"github_issue_url\",\n    \"id\": 1,\n    \"label\": \"label\",\n    \"reporter_id\": 1,\n    \"reporter_name\": \"reporter_name\",\n    \"review_notes\": \"review_notes\",\n    \"reviewer_id\": 1,\n    \"status\": \"status\",\n    \"title\": \"title\",\n    \"updated_at\": 1,\n    \"url\": \"url\"\n  },\n  \"limit\": 1,\n  \"message\": \"message\",\n  \"page\": 1,\n  \"total\": 1,\n  \"user_message\": \"user_message\"\n}",
         "headers": {
           "Content-Type": "application/json"
         }
@@ -185,7 +185,7 @@
       },
       "response": {
         "status": 200,
-        "body": "{\n  \"code\": 1,\n  \"data\": [\n    {\n      \"client_timestamp\": 1,\n      \"created_at\": 1,\n      \"description\": \"description\",\n      \"domain_label\": \"domain_label\",\n      \"github_issue_number\": 1,\n      \"github_issue_url\": \"github_issue_url\",\n      \"id\": 1,\n      \"reporter_id\": 1,\n      \"reporter_name\": \"reporter_name\",\n      \"review_notes\": \"review_notes\",\n      \"reviewer_id\": 1,\n      \"status\": \"status\",\n      \"title\": \"title\",\n      \"updated_at\": 1,\n      \"url\": \"url\"\n    }\n  ],\n  \"limit\": 1,\n  \"message\": \"message\",\n  \"page\": 1,\n  \"total\": 1,\n  \"user_message\": \"user_message\"\n}",
+        "body": "{\n  \"code\": 1,\n  \"data\": [\n    {\n      \"client_timestamp\": 1,\n      \"context\": [\n        1\n      ],\n      \"created_at\": 1,\n      \"description\": \"description\",\n      \"domain_label\": \"domain_label\",\n      \"github_issue_number\": 1,\n      \"github_issue_url\": \"github_issue_url\",\n      \"id\": 1,\n      \"label\": \"label\",\n      \"reporter_id\": 1,\n      \"reporter_name\": \"reporter_name\",\n      \"review_notes\": \"review_notes\",\n      \"reviewer_id\": 1,\n      \"status\": \"status\",\n      \"title\": \"title\",\n      \"updated_at\": 1,\n      \"url\": \"url\"\n    }\n  ],\n  \"limit\": 1,\n  \"message\": \"message\",\n  \"page\": 1,\n  \"total\": 1,\n  \"user_message\": \"user_message\"\n}",
         "headers": {
           "Content-Type": "application/json"
         }
@@ -2110,7 +2110,7 @@
       },
       "response": {
         "status": 200,
-        "body": "{\n  \"code\": 1,\n  \"data\": [\n    {\n      \"billing_mode\": \"billing_mode\",\n      \"cache_hit_price\": 1.1,\n      \"created_at\": 1,\n      \"currency\": \"currency\",\n      \"description\": \"description\",\n      \"enabled\": true,\n      \"id\": 1,\n      \"input_price\": 1.1,\n      \"is_default\": true,\n      \"listed_at\": 1,\n      \"max_output_tokens\": 1,\n      \"name\": \"name\",\n      \"output_price\": 1.1,\n      \"provider_id\": 1,\n      \"updated_at\": 1,\n      \"upstream_name\": \"upstream_name\",\n      \"user_id\": 1,\n      \"visibility\": \"visibility\",\n      \"wallet_id\": 1\n    }\n  ],\n  \"limit\": 1,\n  \"message\": \"message\",\n  \"page\": 1,\n  \"total\": 1,\n  \"user_message\": \"user_message\"\n}",
+        "body": "{\n  \"code\": 1,\n  \"data\": [\n    {\n      \"billing_mode\": \"billing_mode\",\n      \"buyout_price\": 1.1,\n      \"cache_hit_price\": 1.1,\n      \"created_at\": 1,\n      \"currency\": \"currency\",\n      \"description\": \"description\",\n      \"enabled\": true,\n      \"id\": 1,\n      \"input_price\": 1.1,\n      \"is_default\": true,\n      \"listed_at\": 1,\n      \"max_output_tokens\": 1,\n      \"name\": \"name\",\n      \"output_price\": 1.1,\n      \"provider_id\": 1,\n      \"updated_at\": 1,\n      \"upstream_name\": \"upstream_name\",\n      \"user_id\": 1,\n      \"visibility\": \"visibility\",\n      \"wallet_id\": 1\n    }\n  ],\n  \"limit\": 1,\n  \"message\": \"message\",\n  \"page\": 1,\n  \"total\": 1,\n  \"user_message\": \"user_message\"\n}",
         "headers": {
           "Content-Type": "application/json"
         }
@@ -2146,7 +2146,7 @@
       },
       "response": {
         "status": 201,
-        "body": "{\n  \"code\": 1,\n  \"data\": {\n    \"billing_mode\": \"billing_mode\",\n    \"cache_hit_price\": 1.1,\n    \"capabilities\": {\n      \"audio\": true,\n      \"image\": true,\n      \"pdf\": true,\n      \"reasoning\": true,\n      \"streaming\": true,\n      \"tools\": true,\n      \"video\": true\n    },\n    \"created_at\": 1,\n    \"currency\": \"currency\",\n    \"description\": \"description\",\n    \"enabled\": true,\n    \"id\": 1,\n    \"input_price\": 1.1,\n    \"is_default\": true,\n    \"listed_at\": 1,\n    \"max_output_tokens\": 1,\n    \"name\": \"name\",\n    \"output_price\": 1.1,\n    \"provider_id\": 1,\n    \"updated_at\": 1,\n    \"upstream_name\": \"upstream_name\",\n    \"user_id\": 1,\n    \"visibility\": \"visibility\",\n    \"wallet_id\": 1\n  },\n  \"limit\": 1,\n  \"message\": \"message\",\n  \"page\": 1,\n  \"total\": 1,\n  \"user_message\": \"user_message\"\n}",
+        "body": "{\n  \"code\": 1,\n  \"data\": {\n    \"billing_mode\": \"billing_mode\",\n    \"buyout_price\": 1.1,\n    \"cache_hit_price\": 1.1,\n    \"capabilities\": {\n      \"audio\": true,\n      \"image\": true,\n      \"pdf\": true,\n      \"reasoning\": true,\n      \"streaming\": true,\n      \"tools\": true,\n      \"video\": true\n    },\n    \"created_at\": 1,\n    \"currency\": \"currency\",\n    \"description\": \"description\",\n    \"enabled\": true,\n    \"id\": 1,\n    \"input_price\": 1.1,\n    \"is_default\": true,\n    \"listed_at\": 1,\n    \"max_output_tokens\": 1,\n    \"name\": \"name\",\n    \"output_price\": 1.1,\n    \"provider_id\": 1,\n    \"updated_at\": 1,\n    \"upstream_name\": \"upstream_name\",\n    \"user_id\": 1,\n    \"visibility\": \"visibility\",\n    \"wallet_id\": 1\n  },\n  \"limit\": 1,\n  \"message\": \"message\",\n  \"page\": 1,\n  \"total\": 1,\n  \"user_message\": \"user_message\"\n}",
         "headers": {
           "Content-Type": "application/json"
         }
@@ -2185,7 +2185,7 @@
       },
       "response": {
         "status": 200,
-        "body": "{\n  \"code\": 1,\n  \"data\": {\n    \"billing_mode\": \"billing_mode\",\n    \"cache_hit_price\": 1.1,\n    \"capabilities\": {\n      \"audio\": true,\n      \"image\": true,\n      \"pdf\": true,\n      \"reasoning\": true,\n      \"streaming\": true,\n      \"tools\": true,\n      \"video\": true\n    },\n    \"created_at\": 1,\n    \"currency\": \"currency\",\n    \"description\": \"description\",\n    \"enabled\": true,\n    \"id\": 1,\n    \"input_price\": 1.1,\n    \"is_default\": true,\n    \"listed_at\": 1,\n    \"max_output_tokens\": 1,\n    \"name\": \"name\",\n    \"output_price\": 1.1,\n    \"provider_id\": 1,\n    \"updated_at\": 1,\n    \"upstream_name\": \"upstream_name\",\n    \"user_id\": 1,\n    \"visibility\": \"visibility\",\n    \"wallet_id\": 1\n  },\n  \"limit\": 1,\n  \"message\": \"message\",\n  \"page\": 1,\n  \"total\": 1,\n  \"user_message\": \"user_message\"\n}",
+        "body": "{\n  \"code\": 1,\n  \"data\": {\n    \"billing_mode\": \"billing_mode\",\n    \"buyout_price\": 1.1,\n    \"cache_hit_price\": 1.1,\n    \"capabilities\": {\n      \"audio\": true,\n      \"image\": true,\n      \"pdf\": true,\n      \"reasoning\": true,\n      \"streaming\": true,\n      \"tools\": true,\n      \"video\": true\n    },\n    \"created_at\": 1,\n    \"currency\": \"currency\",\n    \"description\": \"description\",\n    \"enabled\": true,\n    \"id\": 1,\n    \"input_price\": 1.1,\n    \"is_default\": true,\n    \"listed_at\": 1,\n    \"max_output_tokens\": 1,\n    \"name\": \"name\",\n    \"output_price\": 1.1,\n    \"provider_id\": 1,\n    \"updated_at\": 1,\n    \"upstream_name\": \"upstream_name\",\n    \"user_id\": 1,\n    \"visibility\": \"visibility\",\n    \"wallet_id\": 1\n  },\n  \"limit\": 1,\n  \"message\": \"message\",\n  \"page\": 1,\n  \"total\": 1,\n  \"user_message\": \"user_message\"\n}",
         "headers": {
           "Content-Type": "application/json"
         }
@@ -2224,7 +2224,7 @@
       },
       "response": {
         "status": 200,
-        "body": "{\n  \"code\": 1,\n  \"data\": {\n    \"billing_mode\": \"billing_mode\",\n    \"cache_hit_price\": 1.1,\n    \"capabilities\": {\n      \"audio\": true,\n      \"image\": true,\n      \"pdf\": true,\n      \"reasoning\": true,\n      \"streaming\": true,\n      \"tools\": true,\n      \"video\": true\n    },\n    \"created_at\": 1,\n    \"currency\": \"currency\",\n    \"description\": \"description\",\n    \"enabled\": true,\n    \"id\": 1,\n    \"input_price\": 1.1,\n    \"is_default\": true,\n    \"listed_at\": 1,\n    \"max_output_tokens\": 1,\n    \"name\": \"name\",\n    \"output_price\": 1.1,\n    \"provider_id\": 1,\n    \"updated_at\": 1,\n    \"upstream_name\": \"upstream_name\",\n    \"user_id\": 1,\n    \"visibility\": \"visibility\",\n    \"wallet_id\": 1\n  },\n  \"limit\": 1,\n  \"message\": \"message\",\n  \"page\": 1,\n  \"total\": 1,\n  \"user_message\": \"user_message\"\n}",
+        "body": "{\n  \"code\": 1,\n  \"data\": {\n    \"billing_mode\": \"billing_mode\",\n    \"buyout_price\": 1.1,\n    \"cache_hit_price\": 1.1,\n    \"capabilities\": {\n      \"audio\": true,\n      \"image\": true,\n      \"pdf\": true,\n      \"reasoning\": true,\n      \"streaming\": true,\n      \"tools\": true,\n      \"video\": true\n    },\n    \"created_at\": 1,\n    \"currency\": \"currency\",\n    \"description\": \"description\",\n    \"enabled\": true,\n    \"id\": 1,\n    \"input_price\": 1.1,\n    \"is_default\": true,\n    \"listed_at\": 1,\n    \"max_output_tokens\": 1,\n    \"name\": \"name\",\n    \"output_price\": 1.1,\n    \"provider_id\": 1,\n    \"updated_at\": 1,\n    \"upstream_name\": \"upstream_name\",\n    \"user_id\": 1,\n    \"visibility\": \"visibility\",\n    \"wallet_id\": 1\n  },\n  \"limit\": 1,\n  \"message\": \"message\",\n  \"page\": 1,\n  \"total\": 1,\n  \"user_message\": \"user_message\"\n}",
         "headers": {
           "Content-Type": "application/json"
         }
@@ -2302,7 +2302,7 @@
       },
       "response": {
         "status": 200,
-        "body": "{\n  \"code\": 1,\n  \"data\": {\n    \"billing_mode\": \"billing_mode\",\n    \"cache_hit_price\": 1.1,\n    \"capabilities\": {\n      \"audio\": true,\n      \"image\": true,\n      \"pdf\": true,\n      \"reasoning\": true,\n      \"streaming\": true,\n      \"tools\": true,\n      \"video\": true\n    },\n    \"created_at\": 1,\n    \"currency\": \"currency\",\n    \"description\": \"description\",\n    \"enabled\": true,\n    \"id\": 1,\n    \"input_price\": 1.1,\n    \"is_default\": true,\n    \"listed_at\": 1,\n    \"max_output_tokens\": 1,\n    \"name\": \"name\",\n    \"output_price\": 1.1,\n    \"provider_id\": 1,\n    \"updated_at\": 1,\n    \"upstream_name\": \"upstream_name\",\n    \"user_id\": 1,\n    \"visibility\": \"visibility\",\n    \"wallet_id\": 1\n  },\n  \"limit\": 1,\n  \"message\": \"message\",\n  \"page\": 1,\n  \"total\": 1,\n  \"user_message\": \"user_message\"\n}",
+        "body": "{\n  \"code\": 1,\n  \"data\": {\n    \"billing_mode\": \"billing_mode\",\n    \"buyout_price\": 1.1,\n    \"cache_hit_price\": 1.1,\n    \"capabilities\": {\n      \"audio\": true,\n      \"image\": true,\n      \"pdf\": true,\n      \"reasoning\": true,\n      \"streaming\": true,\n      \"tools\": true,\n      \"video\": true\n    },\n    \"created_at\": 1,\n    \"currency\": \"currency\",\n    \"description\": \"description\",\n    \"enabled\": true,\n    \"id\": 1,\n    \"input_price\": 1.1,\n    \"is_default\": true,\n    \"listed_at\": 1,\n    \"max_output_tokens\": 1,\n    \"name\": \"name\",\n    \"output_price\": 1.1,\n    \"provider_id\": 1,\n    \"updated_at\": 1,\n    \"upstream_name\": \"upstream_name\",\n    \"user_id\": 1,\n    \"visibility\": \"visibility\",\n    \"wallet_id\": 1\n  },\n  \"limit\": 1,\n  \"message\": \"message\",\n  \"page\": 1,\n  \"total\": 1,\n  \"user_message\": \"user_message\"\n}",
         "headers": {
           "Content-Type": "application/json"
         }
@@ -2341,7 +2341,7 @@
       },
       "response": {
         "status": 200,
-        "body": "{\n  \"code\": 1,\n  \"data\": {\n    \"billing_mode\": \"billing_mode\",\n    \"cache_hit_price\": 1.1,\n    \"capabilities\": {\n      \"audio\": true,\n      \"image\": true,\n      \"pdf\": true,\n      \"reasoning\": true,\n      \"streaming\": true,\n      \"tools\": true,\n      \"video\": true\n    },\n    \"created_at\": 1,\n    \"currency\": \"currency\",\n    \"description\": \"description\",\n    \"enabled\": true,\n    \"id\": 1,\n    \"input_price\": 1.1,\n    \"is_default\": true,\n    \"listed_at\": 1,\n    \"max_output_tokens\": 1,\n    \"name\": \"name\",\n    \"output_price\": 1.1,\n    \"provider_id\": 1,\n    \"updated_at\": 1,\n    \"upstream_name\": \"upstream_name\",\n    \"user_id\": 1,\n    \"visibility\": \"visibility\",\n    \"wallet_id\": 1\n  },\n  \"limit\": 1,\n  \"message\": \"message\",\n  \"page\": 1,\n  \"total\": 1,\n  \"user_message\": \"user_message\"\n}",
+        "body": "{\n  \"code\": 1,\n  \"data\": {\n    \"billing_mode\": \"billing_mode\",\n    \"buyout_price\": 1.1,\n    \"cache_hit_price\": 1.1,\n    \"capabilities\": {\n      \"audio\": true,\n      \"image\": true,\n      \"pdf\": true,\n      \"reasoning\": true,\n      \"streaming\": true,\n      \"tools\": true,\n      \"video\": true\n    },\n    \"created_at\": 1,\n    \"currency\": \"currency\",\n    \"description\": \"description\",\n    \"enabled\": true,\n    \"id\": 1,\n    \"input_price\": 1.1,\n    \"is_default\": true,\n    \"listed_at\": 1,\n    \"max_output_tokens\": 1,\n    \"name\": \"name\",\n    \"output_price\": 1.1,\n    \"provider_id\": 1,\n    \"updated_at\": 1,\n    \"upstream_name\": \"upstream_name\",\n    \"user_id\": 1,\n    \"visibility\": \"visibility\",\n    \"wallet_id\": 1\n  },\n  \"limit\": 1,\n  \"message\": \"message\",\n  \"page\": 1,\n  \"total\": 1,\n  \"user_message\": \"user_message\"\n}",
         "headers": {
           "Content-Type": "application/json"
         }
@@ -2359,10 +2359,10 @@
       }
     },
     {
-      "id": "8807f66d-136d-4d16-bdaf-49869f8f17df",
-      "name": "List model visibility filters - default",
+      "id": "9f9b5d1d-eba5-4ae2-af9b-65ba04a3c362",
+      "name": "List model access grants - default",
       "request": {
-        "urlPathTemplate": "/gateway/{user_id}/models/{id}/filters",
+        "urlPathTemplate": "/gateway/{user_id}/models/{id}/grants",
         "method": "GET",
         "headers": {
           "Authorization": {
@@ -2380,12 +2380,12 @@
       },
       "response": {
         "status": 200,
-        "body": "{\n  \"code\": 1,\n  \"data\": [\n    1\n  ],\n  \"limit\": 1,\n  \"message\": \"message\",\n  \"page\": 1,\n  \"total\": 1,\n  \"user_message\": \"user_message\"\n}",
+        "body": "{\n  \"code\": 1,\n  \"data\": [\n    {\n      \"createdAt\": 1,\n      \"createdBy\": 1,\n      \"expiresAt\": 1,\n      \"orderNo\": \"orderNo\",\n      \"source\": \"source\",\n      \"userID\": 1\n    }\n  ],\n  \"limit\": 1,\n  \"message\": \"message\",\n  \"page\": 1,\n  \"total\": 1,\n  \"user_message\": \"user_message\"\n}",
         "headers": {
           "Content-Type": "application/json"
         }
       },
-      "uuid": "8807f66d-136d-4d16-bdaf-49869f8f17df",
+      "uuid": "9f9b5d1d-eba5-4ae2-af9b-65ba04a3c362",
       "persistent": true,
       "priority": 3,
       "metadata": {
@@ -2398,10 +2398,10 @@
       }
     },
     {
-      "id": "e20e0689-8ae1-4611-acd0-cdf139bf9bfe",
-      "name": "Add model visibility filter - default",
+      "id": "19f279b5-0cd1-4a68-842c-1cf6e737b3e7",
+      "name": "Grant model access - default",
       "request": {
-        "urlPathTemplate": "/gateway/{user_id}/models/{id}/filters",
+        "urlPathTemplate": "/gateway/{user_id}/models/{id}/grants",
         "method": "POST",
         "headers": {
           "Authorization": {
@@ -2424,7 +2424,7 @@
           "Content-Type": "application/json"
         }
       },
-      "uuid": "e20e0689-8ae1-4611-acd0-cdf139bf9bfe",
+      "uuid": "19f279b5-0cd1-4a68-842c-1cf6e737b3e7",
       "persistent": true,
       "priority": 3,
       "metadata": {
@@ -2437,10 +2437,10 @@
       }
     },
     {
-      "id": "312778a5-c351-4b99-88e7-1bfdcead9ad9",
-      "name": "Remove model visibility filter - default",
+      "id": "b97b47cb-56af-4b46-aa14-c44c55164919",
+      "name": "Revoke model access - default",
       "request": {
-        "urlPathTemplate": "/gateway/{user_id}/models/{id}/filters/{target_user_id}",
+        "urlPathTemplate": "/gateway/{user_id}/models/{id}/grants/{target_user_id}",
         "method": "DELETE",
         "headers": {
           "Authorization": {
@@ -2466,7 +2466,7 @@
           "Content-Type": "application/json"
         }
       },
-      "uuid": "312778a5-c351-4b99-88e7-1bfdcead9ad9",
+      "uuid": "b97b47cb-56af-4b46-aa14-c44c55164919",
       "persistent": true,
       "priority": 3,
       "metadata": {
@@ -2838,10 +2838,10 @@
       }
     },
     {
-      "id": "c36159a7-9fb6-431f-9985-0f0ecea45703",
-      "name": "List route visibility filters - default",
+      "id": "89bd655d-1e79-4511-8959-bfd717d1bace",
+      "name": "List route access grants - default",
       "request": {
-        "urlPathTemplate": "/gateway/{user_id}/routes/{id}/filters",
+        "urlPathTemplate": "/gateway/{user_id}/routes/{id}/grants",
         "method": "GET",
         "headers": {
           "Authorization": {
@@ -2859,12 +2859,12 @@
       },
       "response": {
         "status": 200,
-        "body": "{\n  \"code\": 1,\n  \"data\": [\n    1\n  ],\n  \"limit\": 1,\n  \"message\": \"message\",\n  \"page\": 1,\n  \"total\": 1,\n  \"user_message\": \"user_message\"\n}",
+        "body": "{\n  \"code\": 1,\n  \"data\": [\n    {\n      \"createdAt\": 1,\n      \"createdBy\": 1,\n      \"expiresAt\": 1,\n      \"orderNo\": \"orderNo\",\n      \"source\": \"source\",\n      \"userID\": 1\n    }\n  ],\n  \"limit\": 1,\n  \"message\": \"message\",\n  \"page\": 1,\n  \"total\": 1,\n  \"user_message\": \"user_message\"\n}",
         "headers": {
           "Content-Type": "application/json"
         }
       },
-      "uuid": "c36159a7-9fb6-431f-9985-0f0ecea45703",
+      "uuid": "89bd655d-1e79-4511-8959-bfd717d1bace",
       "persistent": true,
       "priority": 3,
       "metadata": {
@@ -2877,10 +2877,10 @@
       }
     },
     {
-      "id": "d37463de-a13c-4285-a129-3b4a3638234f",
-      "name": "Add route visibility filter - default",
+      "id": "079573e2-a1f2-4ee2-b458-2600a4bebbab",
+      "name": "Grant route access - default",
       "request": {
-        "urlPathTemplate": "/gateway/{user_id}/routes/{id}/filters",
+        "urlPathTemplate": "/gateway/{user_id}/routes/{id}/grants",
         "method": "POST",
         "headers": {
           "Authorization": {
@@ -2903,7 +2903,7 @@
           "Content-Type": "application/json"
         }
       },
-      "uuid": "d37463de-a13c-4285-a129-3b4a3638234f",
+      "uuid": "079573e2-a1f2-4ee2-b458-2600a4bebbab",
       "persistent": true,
       "priority": 3,
       "metadata": {
@@ -2916,10 +2916,10 @@
       }
     },
     {
-      "id": "6ce3852a-d018-41e4-9d22-cd1cb167c560",
-      "name": "Remove route visibility filter - default",
+      "id": "ff9e08c6-8f42-49ca-89f4-5187b0b686dc",
+      "name": "Revoke route access - default",
       "request": {
-        "urlPathTemplate": "/gateway/{user_id}/routes/{id}/filters/{target_user_id}",
+        "urlPathTemplate": "/gateway/{user_id}/routes/{id}/grants/{target_user_id}",
         "method": "DELETE",
         "headers": {
           "Authorization": {
@@ -2945,7 +2945,7 @@
           "Content-Type": "application/json"
         }
       },
-      "uuid": "6ce3852a-d018-41e4-9d22-cd1cb167c560",
+      "uuid": "ff9e08c6-8f42-49ca-89f4-5187b0b686dc",
       "persistent": true,
       "priority": 3,
       "metadata": {
@@ -3351,10 +3351,10 @@
       }
     },
     {
-      "id": "5fa0469b-f121-4fa9-bf67-e5602132125a",
-      "name": "List visibility filters - default",
+      "id": "1fbdcb56-2c4e-434e-a4be-fe4c3581b49c",
+      "name": "List resource access grants - default",
       "request": {
-        "urlPathTemplate": "/iam/visibility-filters",
+        "urlPathTemplate": "/iam/grants",
         "method": "GET",
         "headers": {
           "Authorization": {
@@ -3372,12 +3372,12 @@
       },
       "response": {
         "status": 200,
-        "body": "{\n  \"code\": 1,\n  \"data\": [\n    1\n  ],\n  \"limit\": 1,\n  \"message\": \"message\",\n  \"page\": 1,\n  \"total\": 1,\n  \"user_message\": \"user_message\"\n}",
+        "body": "{\n  \"code\": 1,\n  \"data\": [\n    {\n      \"createdAt\": 1,\n      \"createdBy\": 1,\n      \"expiresAt\": 1,\n      \"orderNo\": \"orderNo\",\n      \"source\": \"source\",\n      \"userID\": 1\n    }\n  ],\n  \"limit\": 1,\n  \"message\": \"message\",\n  \"page\": 1,\n  \"total\": 1,\n  \"user_message\": \"user_message\"\n}",
         "headers": {
           "Content-Type": "application/json"
         }
       },
-      "uuid": "5fa0469b-f121-4fa9-bf67-e5602132125a",
+      "uuid": "1fbdcb56-2c4e-434e-a4be-fe4c3581b49c",
       "persistent": true,
       "priority": 3,
       "metadata": {
@@ -3391,10 +3391,10 @@
       "postServeActions": []
     },
     {
-      "id": "0423caac-cabd-4710-8880-687a94569106",
-      "name": "Add visibility filter - default",
+      "id": "a8f1fa0e-d770-4fc0-b1fe-8b0bc0053300",
+      "name": "Grant resource access - default",
       "request": {
-        "urlPathTemplate": "/iam/visibility-filters",
+        "urlPathTemplate": "/iam/grants",
         "method": "POST",
         "headers": {
           "Authorization": {
@@ -3409,7 +3409,7 @@
           "Content-Type": "application/json"
         }
       },
-      "uuid": "0423caac-cabd-4710-8880-687a94569106",
+      "uuid": "a8f1fa0e-d770-4fc0-b1fe-8b0bc0053300",
       "persistent": true,
       "priority": 3,
       "metadata": {
@@ -3422,10 +3422,10 @@
       }
     },
     {
-      "id": "0ece0ca9-3e50-47a3-bd81-5e4cf2eef202",
-      "name": "Remove visibility filter - default",
+      "id": "bb864c7b-f7ee-418c-a5cd-509d661f3705",
+      "name": "Revoke resource access - default",
       "request": {
-        "urlPathTemplate": "/iam/visibility-filters/{resource_type}/{resource_id}/{user_id}",
+        "urlPathTemplate": "/iam/grants/{resource_type}/{resource_id}/{user_id}",
         "method": "DELETE",
         "headers": {
           "Authorization": {
@@ -3451,7 +3451,7 @@
           "Content-Type": "application/json"
         }
       },
-      "uuid": "0ece0ca9-3e50-47a3-bd81-5e4cf2eef202",
+      "uuid": "bb864c7b-f7ee-418c-a5cd-509d661f3705",
       "persistent": true,
       "priority": 3,
       "metadata": {

@@ -34,13 +34,13 @@ func NewClient(options *core.RequestOptions) *Client {
 	}
 }
 
-// Return all users who have filter access to a model
-func (c *Client) ListModelVisibilityFilters(
+// Return all access grants for a model
+func (c *Client) ListModelAccessGrants(
 	ctx context.Context,
-	request *mktsdkgo.GetGatewayUserIDModelsIDFiltersRequest,
+	request *mktsdkgo.GetGatewayUserIDModelsIDGrantsRequest,
 	opts ...option.RequestOption,
-) (*mktsdkgo.GithubComMktAgiAixInternalPkgGinxResultArrayUint, error) {
-	response, err := c.WithRawResponse.ListModelVisibilityFilters(
+) (*mktsdkgo.GithubComMktAgiAixInternalPkgGinxResultArrayGithubComMktAgiAixInternalIamAccessGrant, error) {
+	response, err := c.WithRawResponse.ListModelAccessGrants(
 		ctx,
 		request,
 		opts...,
@@ -51,13 +51,13 @@ func (c *Client) ListModelVisibilityFilters(
 	return response.Body, nil
 }
 
-// Grant a user access to a private model via filter
-func (c *Client) AddModelVisibilityFilter(
+// Grant a user access to a private model
+func (c *Client) GrantModelAccess(
 	ctx context.Context,
-	request *mktsdkgo.PostGatewayUserIDModelsIDFiltersRequest,
+	request *mktsdkgo.PostGatewayUserIDModelsIDGrantsRequest,
 	opts ...option.RequestOption,
 ) (*mktsdkgo.GithubComMktAgiAixInternalPkgGinxResultAny, error) {
-	response, err := c.WithRawResponse.AddModelVisibilityFilter(
+	response, err := c.WithRawResponse.GrantModelAccess(
 		ctx,
 		request,
 		opts...,
@@ -68,13 +68,13 @@ func (c *Client) AddModelVisibilityFilter(
 	return response.Body, nil
 }
 
-// Revoke a user's access to a filtered model
-func (c *Client) RemoveModelVisibilityFilter(
+// Revoke a user's access to a model
+func (c *Client) RevokeModelAccess(
 	ctx context.Context,
-	request *mktsdkgo.DeleteGatewayUserIDModelsIDFiltersTargetUserIDRequest,
+	request *mktsdkgo.DeleteGatewayUserIDModelsIDGrantsTargetUserIDRequest,
 	opts ...option.RequestOption,
 ) (*mktsdkgo.GithubComMktAgiAixInternalPkgGinxResultAny, error) {
-	response, err := c.WithRawResponse.RemoveModelVisibilityFilter(
+	response, err := c.WithRawResponse.RevokeModelAccess(
 		ctx,
 		request,
 		opts...,

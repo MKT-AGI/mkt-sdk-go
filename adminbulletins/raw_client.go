@@ -36,7 +36,7 @@ func (r *RawClient) ListAllBulletinsAdmin(
 	ctx context.Context,
 	request *mktsdkgo.GetAdminBulletinsRequest,
 	opts ...option.RequestOption,
-) (*core.Response[*mktsdkgo.GithubComMktAgiAixInternalPkgGinxResultArrayGithubComMktAgiAixInternalBulletinDomainBulletin], error) {
+) (*core.Response[*mktsdkgo.GithubComMktAgiAixInternalPkgGinxResultArrayGithubComMktAgiAixInternalBulletinInternalDomainBulletin], error) {
 	options := core.NewRequestOptions(opts...)
 	baseURL := internal.ResolveBaseURL(
 		options.BaseURL,
@@ -55,7 +55,7 @@ func (r *RawClient) ListAllBulletinsAdmin(
 		r.options.ToHeader(),
 		options.ToHeader(),
 	)
-	var response *mktsdkgo.GithubComMktAgiAixInternalPkgGinxResultArrayGithubComMktAgiAixInternalBulletinDomainBulletin
+	var response *mktsdkgo.GithubComMktAgiAixInternalPkgGinxResultArrayGithubComMktAgiAixInternalBulletinInternalDomainBulletin
 	raw, err := r.caller.Call(
 		ctx,
 		&internal.CallParams{
@@ -74,7 +74,7 @@ func (r *RawClient) ListAllBulletinsAdmin(
 	if err != nil {
 		return nil, err
 	}
-	return &core.Response[*mktsdkgo.GithubComMktAgiAixInternalPkgGinxResultArrayGithubComMktAgiAixInternalBulletinDomainBulletin]{
+	return &core.Response[*mktsdkgo.GithubComMktAgiAixInternalPkgGinxResultArrayGithubComMktAgiAixInternalBulletinInternalDomainBulletin]{
 		StatusCode: raw.StatusCode,
 		Header:     raw.Header,
 		Body:       response,
@@ -85,7 +85,7 @@ func (r *RawClient) CreateANewBulletin(
 	ctx context.Context,
 	request *mktsdkgo.PostAdminBulletinsRequest,
 	opts ...option.RequestOption,
-) (*core.Response[*mktsdkgo.GithubComMktAgiAixInternalPkgGinxResultGithubComMktAgiAixInternalBulletinDomainBulletin], error) {
+) (*core.Response[*mktsdkgo.GithubComMktAgiAixInternalPkgGinxResultGithubComMktAgiAixInternalBulletinInternalDomainBulletin], error) {
 	options := core.NewRequestOptions(opts...)
 	baseURL := internal.ResolveBaseURL(
 		options.BaseURL,
@@ -97,7 +97,7 @@ func (r *RawClient) CreateANewBulletin(
 		r.options.ToHeader(),
 		options.ToHeader(),
 	)
-	var response *mktsdkgo.GithubComMktAgiAixInternalPkgGinxResultGithubComMktAgiAixInternalBulletinDomainBulletin
+	var response *mktsdkgo.GithubComMktAgiAixInternalPkgGinxResultGithubComMktAgiAixInternalBulletinInternalDomainBulletin
 	raw, err := r.caller.Call(
 		ctx,
 		&internal.CallParams{
@@ -117,7 +117,7 @@ func (r *RawClient) CreateANewBulletin(
 	if err != nil {
 		return nil, err
 	}
-	return &core.Response[*mktsdkgo.GithubComMktAgiAixInternalPkgGinxResultGithubComMktAgiAixInternalBulletinDomainBulletin]{
+	return &core.Response[*mktsdkgo.GithubComMktAgiAixInternalPkgGinxResultGithubComMktAgiAixInternalBulletinInternalDomainBulletin]{
 		StatusCode: raw.StatusCode,
 		Header:     raw.Header,
 		Body:       response,
@@ -128,7 +128,7 @@ func (r *RawClient) GetBulletinByIDAdmin(
 	ctx context.Context,
 	request *mktsdkgo.GetAdminBulletinsIDRequest,
 	opts ...option.RequestOption,
-) (*core.Response[*mktsdkgo.GithubComMktAgiAixInternalPkgGinxResultGithubComMktAgiAixInternalBulletinDomainBulletin], error) {
+) (*core.Response[*mktsdkgo.GithubComMktAgiAixInternalPkgGinxResultGithubComMktAgiAixInternalBulletinInternalDomainBulletin], error) {
 	options := core.NewRequestOptions(opts...)
 	baseURL := internal.ResolveBaseURL(
 		options.BaseURL,
@@ -143,7 +143,7 @@ func (r *RawClient) GetBulletinByIDAdmin(
 		r.options.ToHeader(),
 		options.ToHeader(),
 	)
-	var response *mktsdkgo.GithubComMktAgiAixInternalPkgGinxResultGithubComMktAgiAixInternalBulletinDomainBulletin
+	var response *mktsdkgo.GithubComMktAgiAixInternalPkgGinxResultGithubComMktAgiAixInternalBulletinInternalDomainBulletin
 	raw, err := r.caller.Call(
 		ctx,
 		&internal.CallParams{
@@ -162,7 +162,7 @@ func (r *RawClient) GetBulletinByIDAdmin(
 	if err != nil {
 		return nil, err
 	}
-	return &core.Response[*mktsdkgo.GithubComMktAgiAixInternalPkgGinxResultGithubComMktAgiAixInternalBulletinDomainBulletin]{
+	return &core.Response[*mktsdkgo.GithubComMktAgiAixInternalPkgGinxResultGithubComMktAgiAixInternalBulletinInternalDomainBulletin]{
 		StatusCode: raw.StatusCode,
 		Header:     raw.Header,
 		Body:       response,
@@ -173,7 +173,7 @@ func (r *RawClient) UpdateABulletin(
 	ctx context.Context,
 	request *mktsdkgo.PutAdminBulletinsIDRequest,
 	opts ...option.RequestOption,
-) (*core.Response[*mktsdkgo.GithubComMktAgiAixInternalPkgGinxResultGithubComMktAgiAixInternalBulletinDomainBulletin], error) {
+) (*core.Response[*mktsdkgo.GithubComMktAgiAixInternalPkgGinxResultGithubComMktAgiAixInternalBulletinInternalDomainBulletin], error) {
 	options := core.NewRequestOptions(opts...)
 	baseURL := internal.ResolveBaseURL(
 		options.BaseURL,
@@ -189,7 +189,7 @@ func (r *RawClient) UpdateABulletin(
 		options.ToHeader(),
 	)
 	headers.Add("Content-Type", "application/json")
-	var response *mktsdkgo.GithubComMktAgiAixInternalPkgGinxResultGithubComMktAgiAixInternalBulletinDomainBulletin
+	var response *mktsdkgo.GithubComMktAgiAixInternalPkgGinxResultGithubComMktAgiAixInternalBulletinInternalDomainBulletin
 	raw, err := r.caller.Call(
 		ctx,
 		&internal.CallParams{
@@ -209,7 +209,7 @@ func (r *RawClient) UpdateABulletin(
 	if err != nil {
 		return nil, err
 	}
-	return &core.Response[*mktsdkgo.GithubComMktAgiAixInternalPkgGinxResultGithubComMktAgiAixInternalBulletinDomainBulletin]{
+	return &core.Response[*mktsdkgo.GithubComMktAgiAixInternalPkgGinxResultGithubComMktAgiAixInternalBulletinInternalDomainBulletin]{
 		StatusCode: raw.StatusCode,
 		Header:     raw.Header,
 		Body:       response,

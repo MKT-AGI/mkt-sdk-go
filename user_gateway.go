@@ -185,29 +185,31 @@ func (g *GetGatewayUserIDModelsRequest) SetUserID(userID int) {
 
 var (
 	githubComMktAgiAixInternalAigatewayInternalDomainModelFieldBillingMode     = big.NewInt(1 << 0)
-	githubComMktAgiAixInternalAigatewayInternalDomainModelFieldCacheHitPrice   = big.NewInt(1 << 1)
-	githubComMktAgiAixInternalAigatewayInternalDomainModelFieldCapabilities    = big.NewInt(1 << 2)
-	githubComMktAgiAixInternalAigatewayInternalDomainModelFieldCreatedAt       = big.NewInt(1 << 3)
-	githubComMktAgiAixInternalAigatewayInternalDomainModelFieldCurrency        = big.NewInt(1 << 4)
-	githubComMktAgiAixInternalAigatewayInternalDomainModelFieldDescription     = big.NewInt(1 << 5)
-	githubComMktAgiAixInternalAigatewayInternalDomainModelFieldEnabled         = big.NewInt(1 << 6)
-	githubComMktAgiAixInternalAigatewayInternalDomainModelFieldID              = big.NewInt(1 << 7)
-	githubComMktAgiAixInternalAigatewayInternalDomainModelFieldInputPrice      = big.NewInt(1 << 8)
-	githubComMktAgiAixInternalAigatewayInternalDomainModelFieldIsDefault       = big.NewInt(1 << 9)
-	githubComMktAgiAixInternalAigatewayInternalDomainModelFieldListedAt        = big.NewInt(1 << 10)
-	githubComMktAgiAixInternalAigatewayInternalDomainModelFieldMaxOutputTokens = big.NewInt(1 << 11)
-	githubComMktAgiAixInternalAigatewayInternalDomainModelFieldName            = big.NewInt(1 << 12)
-	githubComMktAgiAixInternalAigatewayInternalDomainModelFieldOutputPrice     = big.NewInt(1 << 13)
-	githubComMktAgiAixInternalAigatewayInternalDomainModelFieldProviderID      = big.NewInt(1 << 14)
-	githubComMktAgiAixInternalAigatewayInternalDomainModelFieldUpdatedAt       = big.NewInt(1 << 15)
-	githubComMktAgiAixInternalAigatewayInternalDomainModelFieldUpstreamName    = big.NewInt(1 << 16)
-	githubComMktAgiAixInternalAigatewayInternalDomainModelFieldUserID          = big.NewInt(1 << 17)
-	githubComMktAgiAixInternalAigatewayInternalDomainModelFieldVisibility      = big.NewInt(1 << 18)
-	githubComMktAgiAixInternalAigatewayInternalDomainModelFieldWalletID        = big.NewInt(1 << 19)
+	githubComMktAgiAixInternalAigatewayInternalDomainModelFieldBuyoutPrice     = big.NewInt(1 << 1)
+	githubComMktAgiAixInternalAigatewayInternalDomainModelFieldCacheHitPrice   = big.NewInt(1 << 2)
+	githubComMktAgiAixInternalAigatewayInternalDomainModelFieldCapabilities    = big.NewInt(1 << 3)
+	githubComMktAgiAixInternalAigatewayInternalDomainModelFieldCreatedAt       = big.NewInt(1 << 4)
+	githubComMktAgiAixInternalAigatewayInternalDomainModelFieldCurrency        = big.NewInt(1 << 5)
+	githubComMktAgiAixInternalAigatewayInternalDomainModelFieldDescription     = big.NewInt(1 << 6)
+	githubComMktAgiAixInternalAigatewayInternalDomainModelFieldEnabled         = big.NewInt(1 << 7)
+	githubComMktAgiAixInternalAigatewayInternalDomainModelFieldID              = big.NewInt(1 << 8)
+	githubComMktAgiAixInternalAigatewayInternalDomainModelFieldInputPrice      = big.NewInt(1 << 9)
+	githubComMktAgiAixInternalAigatewayInternalDomainModelFieldIsDefault       = big.NewInt(1 << 10)
+	githubComMktAgiAixInternalAigatewayInternalDomainModelFieldListedAt        = big.NewInt(1 << 11)
+	githubComMktAgiAixInternalAigatewayInternalDomainModelFieldMaxOutputTokens = big.NewInt(1 << 12)
+	githubComMktAgiAixInternalAigatewayInternalDomainModelFieldName            = big.NewInt(1 << 13)
+	githubComMktAgiAixInternalAigatewayInternalDomainModelFieldOutputPrice     = big.NewInt(1 << 14)
+	githubComMktAgiAixInternalAigatewayInternalDomainModelFieldProviderID      = big.NewInt(1 << 15)
+	githubComMktAgiAixInternalAigatewayInternalDomainModelFieldUpdatedAt       = big.NewInt(1 << 16)
+	githubComMktAgiAixInternalAigatewayInternalDomainModelFieldUpstreamName    = big.NewInt(1 << 17)
+	githubComMktAgiAixInternalAigatewayInternalDomainModelFieldUserID          = big.NewInt(1 << 18)
+	githubComMktAgiAixInternalAigatewayInternalDomainModelFieldVisibility      = big.NewInt(1 << 19)
+	githubComMktAgiAixInternalAigatewayInternalDomainModelFieldWalletID        = big.NewInt(1 << 20)
 )
 
 type GithubComMktAgiAixInternalAigatewayInternalDomainModel struct {
 	BillingMode     *string                                                             `json:"billing_mode,omitempty" url:"billing_mode,omitempty"`
+	BuyoutPrice     *float64                                                            `json:"buyout_price,omitempty" url:"buyout_price,omitempty"`
 	CacheHitPrice   *float64                                                            `json:"cache_hit_price,omitempty" url:"cache_hit_price,omitempty"`
 	Capabilities    *GithubComMktAgiAixInternalAigatewayInternalDomainModelCapabilities `json:"capabilities,omitempty" url:"capabilities,omitempty"`
 	CreatedAt       *int                                                                `json:"created_at,omitempty" url:"created_at,omitempty"`
@@ -225,7 +227,7 @@ type GithubComMktAgiAixInternalAigatewayInternalDomainModel struct {
 	UpdatedAt       *int                                                                `json:"updated_at,omitempty" url:"updated_at,omitempty"`
 	UpstreamName    *string                                                             `json:"upstream_name,omitempty" url:"upstream_name,omitempty"`
 	UserID          *int                                                                `json:"user_id,omitempty" url:"user_id,omitempty"`
-	// "private" | "public" | "filter"
+	// "private" | "public"
 	Visibility *string `json:"visibility,omitempty" url:"visibility,omitempty"`
 	WalletID   *int    `json:"wallet_id,omitempty" url:"wallet_id,omitempty"`
 
@@ -241,6 +243,13 @@ func (g *GithubComMktAgiAixInternalAigatewayInternalDomainModel) GetBillingMode(
 		return nil
 	}
 	return g.BillingMode
+}
+
+func (g *GithubComMktAgiAixInternalAigatewayInternalDomainModel) GetBuyoutPrice() *float64 {
+	if g == nil {
+		return nil
+	}
+	return g.BuyoutPrice
 }
 
 func (g *GithubComMktAgiAixInternalAigatewayInternalDomainModel) GetCacheHitPrice() *float64 {
@@ -395,6 +404,13 @@ func (g *GithubComMktAgiAixInternalAigatewayInternalDomainModel) require(field *
 func (g *GithubComMktAgiAixInternalAigatewayInternalDomainModel) SetBillingMode(billingMode *string) {
 	g.BillingMode = billingMode
 	g.require(githubComMktAgiAixInternalAigatewayInternalDomainModelFieldBillingMode)
+}
+
+// SetBuyoutPrice sets the BuyoutPrice field and marks it as non-optional;
+// this prevents an empty or null value for this field from being omitted during serialization.
+func (g *GithubComMktAgiAixInternalAigatewayInternalDomainModel) SetBuyoutPrice(buyoutPrice *float64) {
+	g.BuyoutPrice = buyoutPrice
+	g.require(githubComMktAgiAixInternalAigatewayInternalDomainModelFieldBuyoutPrice)
 }
 
 // SetCacheHitPrice sets the CacheHitPrice field and marks it as non-optional;
@@ -1114,24 +1130,27 @@ func (g *GithubComMktAgiAixInternalPkgGinxResultGithubComMktAgiAixInternalAigate
 
 var (
 	internalAigatewayInternalWebUserModelRequestFieldBillingMode     = big.NewInt(1 << 0)
-	internalAigatewayInternalWebUserModelRequestFieldCacheHitPrice   = big.NewInt(1 << 1)
-	internalAigatewayInternalWebUserModelRequestFieldCurrency        = big.NewInt(1 << 2)
-	internalAigatewayInternalWebUserModelRequestFieldDescription     = big.NewInt(1 << 3)
-	internalAigatewayInternalWebUserModelRequestFieldEnabled         = big.NewInt(1 << 4)
-	internalAigatewayInternalWebUserModelRequestFieldInputPrice      = big.NewInt(1 << 5)
-	internalAigatewayInternalWebUserModelRequestFieldIsDefault       = big.NewInt(1 << 6)
-	internalAigatewayInternalWebUserModelRequestFieldMaxOutputTokens = big.NewInt(1 << 7)
-	internalAigatewayInternalWebUserModelRequestFieldName            = big.NewInt(1 << 8)
-	internalAigatewayInternalWebUserModelRequestFieldOutputPrice     = big.NewInt(1 << 9)
-	internalAigatewayInternalWebUserModelRequestFieldProviderID      = big.NewInt(1 << 10)
-	internalAigatewayInternalWebUserModelRequestFieldUpstreamName    = big.NewInt(1 << 11)
-	internalAigatewayInternalWebUserModelRequestFieldVisibility      = big.NewInt(1 << 12)
-	internalAigatewayInternalWebUserModelRequestFieldWalletID        = big.NewInt(1 << 13)
+	internalAigatewayInternalWebUserModelRequestFieldBuyoutPrice     = big.NewInt(1 << 1)
+	internalAigatewayInternalWebUserModelRequestFieldCacheHitPrice   = big.NewInt(1 << 2)
+	internalAigatewayInternalWebUserModelRequestFieldCurrency        = big.NewInt(1 << 3)
+	internalAigatewayInternalWebUserModelRequestFieldDescription     = big.NewInt(1 << 4)
+	internalAigatewayInternalWebUserModelRequestFieldEnabled         = big.NewInt(1 << 5)
+	internalAigatewayInternalWebUserModelRequestFieldInputPrice      = big.NewInt(1 << 6)
+	internalAigatewayInternalWebUserModelRequestFieldIsDefault       = big.NewInt(1 << 7)
+	internalAigatewayInternalWebUserModelRequestFieldMaxOutputTokens = big.NewInt(1 << 8)
+	internalAigatewayInternalWebUserModelRequestFieldName            = big.NewInt(1 << 9)
+	internalAigatewayInternalWebUserModelRequestFieldOutputPrice     = big.NewInt(1 << 10)
+	internalAigatewayInternalWebUserModelRequestFieldProviderID      = big.NewInt(1 << 11)
+	internalAigatewayInternalWebUserModelRequestFieldUpstreamName    = big.NewInt(1 << 12)
+	internalAigatewayInternalWebUserModelRequestFieldVisibility      = big.NewInt(1 << 13)
+	internalAigatewayInternalWebUserModelRequestFieldWalletID        = big.NewInt(1 << 14)
 )
 
 type InternalAigatewayInternalWebUserModelRequest struct {
 	// BillingMode is the billing mode: "token" (default) or "per_request".
 	BillingMode *string `json:"billing_mode,omitempty" url:"billing_mode,omitempty"`
+	// BuyoutPrice is the optional buyout price for marketplace purchase (NULL = not available).
+	BuyoutPrice *float64 `json:"buyout_price,omitempty" url:"buyout_price,omitempty"`
 	// CacheHitPrice is the cache hit price per 1M tokens (CNY). 0 means same as input_price.
 	CacheHitPrice *float64 `json:"cache_hit_price,omitempty" url:"cache_hit_price,omitempty"`
 	// Currency is the billing currency (CNY or USD, default CNY).
@@ -1171,6 +1190,13 @@ func (i *InternalAigatewayInternalWebUserModelRequest) GetBillingMode() *string 
 		return nil
 	}
 	return i.BillingMode
+}
+
+func (i *InternalAigatewayInternalWebUserModelRequest) GetBuyoutPrice() *float64 {
+	if i == nil {
+		return nil
+	}
+	return i.BuyoutPrice
 }
 
 func (i *InternalAigatewayInternalWebUserModelRequest) GetCacheHitPrice() *float64 {
@@ -1283,6 +1309,13 @@ func (i *InternalAigatewayInternalWebUserModelRequest) require(field *big.Int) {
 func (i *InternalAigatewayInternalWebUserModelRequest) SetBillingMode(billingMode *string) {
 	i.BillingMode = billingMode
 	i.require(internalAigatewayInternalWebUserModelRequestFieldBillingMode)
+}
+
+// SetBuyoutPrice sets the BuyoutPrice field and marks it as non-optional;
+// this prevents an empty or null value for this field from being omitted during serialization.
+func (i *InternalAigatewayInternalWebUserModelRequest) SetBuyoutPrice(buyoutPrice *float64) {
+	i.BuyoutPrice = buyoutPrice
+	i.require(internalAigatewayInternalWebUserModelRequestFieldBuyoutPrice)
 }
 
 // SetCacheHitPrice sets the CacheHitPrice field and marks it as non-optional;

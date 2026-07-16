@@ -83,13 +83,13 @@ func (c *Client) RevokeAPIKey(
 	return nil
 }
 
-// 列出资源的可见性过滤器用户列表。返回被添加到可见性白名单中的用户 ID。
-func (c *Client) ListVisibilityFilters(
+// 列出资源的所有访问授权记录。
+func (c *Client) ListResourceAccessGrants(
 	ctx context.Context,
-	request *mktsdkgo.GetIamVisibilityFiltersRequest,
+	request *mktsdkgo.GetIamGrantsRequest,
 	opts ...option.RequestOption,
-) (*mktsdkgo.GithubComMktAgiAixInternalPkgGinxResultArrayUint, error) {
-	response, err := c.WithRawResponse.ListVisibilityFilters(
+) (*mktsdkgo.GithubComMktAgiAixInternalPkgGinxResultArrayGithubComMktAgiAixInternalIamInternalDomainAccessGrant, error) {
+	response, err := c.WithRawResponse.ListResourceAccessGrants(
 		ctx,
 		request,
 		opts...,
@@ -100,13 +100,13 @@ func (c *Client) ListVisibilityFilters(
 	return response.Body, nil
 }
 
-// 添加可见性过滤器，将指定用户添加到资源的可见性白名单中。
-func (c *Client) AddVisibilityFilter(
+// 授予用户资源访问权限。将指定用户加入资源的授权白名单。
+func (c *Client) GrantResourceAccess(
 	ctx context.Context,
-	request *mktsdkgo.PostIamVisibilityFiltersRequest,
+	request *mktsdkgo.PostIamGrantsRequest,
 	opts ...option.RequestOption,
 ) error {
-	_, err := c.WithRawResponse.AddVisibilityFilter(
+	_, err := c.WithRawResponse.GrantResourceAccess(
 		ctx,
 		request,
 		opts...,
@@ -117,13 +117,13 @@ func (c *Client) AddVisibilityFilter(
 	return nil
 }
 
-// 移除可见性过滤器，将指定用户从资源的可见性白名单中移除。
-func (c *Client) RemoveVisibilityFilter(
+// 撤销用户的资源访问权限，将指定用户从资源的授权白名单中移除。
+func (c *Client) RevokeResourceAccess(
 	ctx context.Context,
-	request *mktsdkgo.DeleteIamVisibilityFiltersResourceTypeResourceIDUserIDRequest,
+	request *mktsdkgo.DeleteIamGrantsResourceTypeResourceIDUserIDRequest,
 	opts ...option.RequestOption,
 ) error {
-	_, err := c.WithRawResponse.RemoveVisibilityFilter(
+	_, err := c.WithRawResponse.RevokeResourceAccess(
 		ctx,
 		request,
 		opts...,

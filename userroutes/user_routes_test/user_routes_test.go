@@ -184,7 +184,7 @@ func TestUserRoutesDeleteUserModelRouteWithWireMock(
 	VerifyRequestCount(t, "TestUserRoutesDeleteUserModelRouteWithWireMock", "DELETE", "/gateway/1/routes/1", nil, 1)
 }
 
-func TestUserRoutesListRouteVisibilityFiltersWithWireMock(
+func TestUserRoutesListRouteAccessGrantsWithWireMock(
 	t *testing.T,
 ) {
 	WireMockBaseURL := os.Getenv("WIREMOCK_URL")
@@ -195,23 +195,23 @@ func TestUserRoutesListRouteVisibilityFiltersWithWireMock(
 		option.WithBaseURL(WireMockBaseURL),
 		option.WithAPIKey("test-value"),
 	)
-	request := &mktsdkgo.GetGatewayUserIDRoutesIDFiltersRequest{
+	request := &mktsdkgo.GetGatewayUserIDRoutesIDGrantsRequest{
 		UserID: 1,
 		ID:     1,
 	}
-	_, invocationErr := client.UserRoutes.ListRouteVisibilityFilters(
+	_, invocationErr := client.UserRoutes.ListRouteAccessGrants(
 		context.TODO(),
 		request,
 		option.WithHTTPHeader(
-			http.Header{"X-Test-Id": []string{"TestUserRoutesListRouteVisibilityFiltersWithWireMock"}},
+			http.Header{"X-Test-Id": []string{"TestUserRoutesListRouteAccessGrantsWithWireMock"}},
 		),
 	)
 
 	require.NoError(t, invocationErr, "Client method call should succeed")
-	VerifyRequestCount(t, "TestUserRoutesListRouteVisibilityFiltersWithWireMock", "GET", "/gateway/1/routes/1/filters", nil, 1)
+	VerifyRequestCount(t, "TestUserRoutesListRouteAccessGrantsWithWireMock", "GET", "/gateway/1/routes/1/grants", nil, 1)
 }
 
-func TestUserRoutesAddRouteVisibilityFilterWithWireMock(
+func TestUserRoutesGrantRouteAccessWithWireMock(
 	t *testing.T,
 ) {
 	WireMockBaseURL := os.Getenv("WIREMOCK_URL")
@@ -222,28 +222,28 @@ func TestUserRoutesAddRouteVisibilityFilterWithWireMock(
 		option.WithBaseURL(WireMockBaseURL),
 		option.WithAPIKey("test-value"),
 	)
-	request := &mktsdkgo.PostGatewayUserIDRoutesIDFiltersRequest{
+	request := &mktsdkgo.PostGatewayUserIDRoutesIDGrantsRequest{
 		UserID: 1,
 		ID:     1,
-		Body: &mktsdkgo.PostGatewayUserIDRoutesIDFiltersRequestBody{
+		Body: &mktsdkgo.PostGatewayUserIDRoutesIDGrantsRequestBody{
 			StringUnknownMap: map[string]any{
 				"key": "value",
 			},
 		},
 	}
-	_, invocationErr := client.UserRoutes.AddRouteVisibilityFilter(
+	_, invocationErr := client.UserRoutes.GrantRouteAccess(
 		context.TODO(),
 		request,
 		option.WithHTTPHeader(
-			http.Header{"X-Test-Id": []string{"TestUserRoutesAddRouteVisibilityFilterWithWireMock"}},
+			http.Header{"X-Test-Id": []string{"TestUserRoutesGrantRouteAccessWithWireMock"}},
 		),
 	)
 
 	require.NoError(t, invocationErr, "Client method call should succeed")
-	VerifyRequestCount(t, "TestUserRoutesAddRouteVisibilityFilterWithWireMock", "POST", "/gateway/1/routes/1/filters", nil, 1)
+	VerifyRequestCount(t, "TestUserRoutesGrantRouteAccessWithWireMock", "POST", "/gateway/1/routes/1/grants", nil, 1)
 }
 
-func TestUserRoutesRemoveRouteVisibilityFilterWithWireMock(
+func TestUserRoutesRevokeRouteAccessWithWireMock(
 	t *testing.T,
 ) {
 	WireMockBaseURL := os.Getenv("WIREMOCK_URL")
@@ -254,19 +254,19 @@ func TestUserRoutesRemoveRouteVisibilityFilterWithWireMock(
 		option.WithBaseURL(WireMockBaseURL),
 		option.WithAPIKey("test-value"),
 	)
-	request := &mktsdkgo.DeleteGatewayUserIDRoutesIDFiltersTargetUserIDRequest{
+	request := &mktsdkgo.DeleteGatewayUserIDRoutesIDGrantsTargetUserIDRequest{
 		UserID:       1,
 		ID:           1,
 		TargetUserID: 1,
 	}
-	_, invocationErr := client.UserRoutes.RemoveRouteVisibilityFilter(
+	_, invocationErr := client.UserRoutes.RevokeRouteAccess(
 		context.TODO(),
 		request,
 		option.WithHTTPHeader(
-			http.Header{"X-Test-Id": []string{"TestUserRoutesRemoveRouteVisibilityFilterWithWireMock"}},
+			http.Header{"X-Test-Id": []string{"TestUserRoutesRevokeRouteAccessWithWireMock"}},
 		),
 	)
 
 	require.NoError(t, invocationErr, "Client method call should succeed")
-	VerifyRequestCount(t, "TestUserRoutesRemoveRouteVisibilityFilterWithWireMock", "DELETE", "/gateway/1/routes/1/filters/1", nil, 1)
+	VerifyRequestCount(t, "TestUserRoutesRevokeRouteAccessWithWireMock", "DELETE", "/gateway/1/routes/1/grants/1", nil, 1)
 }

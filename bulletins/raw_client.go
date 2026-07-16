@@ -36,7 +36,7 @@ func (r *RawClient) ListPublishedBulletins(
 	ctx context.Context,
 	request *mktsdkgo.GetBulletinsRequest,
 	opts ...option.RequestOption,
-) (*core.Response[*mktsdkgo.GithubComMktAgiAixInternalPkgGinxResultArrayGithubComMktAgiAixInternalBulletinDomainBulletin], error) {
+) (*core.Response[*mktsdkgo.GithubComMktAgiAixInternalPkgGinxResultArrayGithubComMktAgiAixInternalBulletinInternalDomainBulletin], error) {
 	options := core.NewRequestOptions(opts...)
 	baseURL := internal.ResolveBaseURL(
 		options.BaseURL,
@@ -55,7 +55,7 @@ func (r *RawClient) ListPublishedBulletins(
 		r.options.ToHeader(),
 		options.ToHeader(),
 	)
-	var response *mktsdkgo.GithubComMktAgiAixInternalPkgGinxResultArrayGithubComMktAgiAixInternalBulletinDomainBulletin
+	var response *mktsdkgo.GithubComMktAgiAixInternalPkgGinxResultArrayGithubComMktAgiAixInternalBulletinInternalDomainBulletin
 	raw, err := r.caller.Call(
 		ctx,
 		&internal.CallParams{
@@ -73,7 +73,7 @@ func (r *RawClient) ListPublishedBulletins(
 	if err != nil {
 		return nil, err
 	}
-	return &core.Response[*mktsdkgo.GithubComMktAgiAixInternalPkgGinxResultArrayGithubComMktAgiAixInternalBulletinDomainBulletin]{
+	return &core.Response[*mktsdkgo.GithubComMktAgiAixInternalPkgGinxResultArrayGithubComMktAgiAixInternalBulletinInternalDomainBulletin]{
 		StatusCode: raw.StatusCode,
 		Header:     raw.Header,
 		Body:       response,
@@ -84,7 +84,7 @@ func (r *RawClient) GetBulletinByID(
 	ctx context.Context,
 	request *mktsdkgo.GetBulletinsIDRequest,
 	opts ...option.RequestOption,
-) (*core.Response[*mktsdkgo.GithubComMktAgiAixInternalPkgGinxResultGithubComMktAgiAixInternalBulletinDomainBulletin], error) {
+) (*core.Response[*mktsdkgo.GithubComMktAgiAixInternalPkgGinxResultGithubComMktAgiAixInternalBulletinInternalDomainBulletin], error) {
 	options := core.NewRequestOptions(opts...)
 	baseURL := internal.ResolveBaseURL(
 		options.BaseURL,
@@ -99,7 +99,7 @@ func (r *RawClient) GetBulletinByID(
 		r.options.ToHeader(),
 		options.ToHeader(),
 	)
-	var response *mktsdkgo.GithubComMktAgiAixInternalPkgGinxResultGithubComMktAgiAixInternalBulletinDomainBulletin
+	var response *mktsdkgo.GithubComMktAgiAixInternalPkgGinxResultGithubComMktAgiAixInternalBulletinInternalDomainBulletin
 	raw, err := r.caller.Call(
 		ctx,
 		&internal.CallParams{
@@ -118,7 +118,7 @@ func (r *RawClient) GetBulletinByID(
 	if err != nil {
 		return nil, err
 	}
-	return &core.Response[*mktsdkgo.GithubComMktAgiAixInternalPkgGinxResultGithubComMktAgiAixInternalBulletinDomainBulletin]{
+	return &core.Response[*mktsdkgo.GithubComMktAgiAixInternalPkgGinxResultGithubComMktAgiAixInternalBulletinInternalDomainBulletin]{
 		StatusCode: raw.StatusCode,
 		Header:     raw.Header,
 		Body:       response,
